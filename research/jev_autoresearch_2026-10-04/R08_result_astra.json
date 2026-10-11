@@ -1,0 +1,1158 @@
+{
+  "schema": "r08-independent-astra-result-review-v1",
+  "status": "ACCEPT_R08_RESULT_NO_NEW_SUCCESS",
+  "reviewer": "Astra",
+  "formal_summary": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_final_summary.json",
+    "sha256": "9960708faefd3bb4196d665e4b4b4b462ed268ed242890d8a4897f65340a9222"
+  },
+  "cases": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\case_packets.json",
+    "sha256": "6cbabd878886dca924d637eb38651b03315e64f4953f910c65e64a4d8f64fd03"
+  },
+  "statistics": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\statistics.json",
+    "sha256": "0a770a2e2400ebe2ace9954cd46d7e5bac76a571806f743e18f2ee829cb56bd6"
+  },
+  "accounting": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_phase_accounting_write61.json",
+    "sha256": "c844557a7c72d197821a7a0b067e7f1e1d7ba1fda13dc146ac07531c865c9492"
+  },
+  "primary_qids": [
+    "c0_q23",
+    "c1_q76",
+    "c2_q41",
+    "c3_q87",
+    "c4_q4",
+    "c5_q13",
+    "c6_q25",
+    "c7_q126",
+    "c7_q19",
+    "c7_q68",
+    "c8_q70",
+    "c9_q148",
+    "c9_q60"
+  ],
+  "peer_qids": [
+    "c0_q112",
+    "c1_q3",
+    "c2_q110",
+    "c3_q34",
+    "c4_q25",
+    "c4_q55",
+    "c5_q34",
+    "c7_q124",
+    "c7_q149",
+    "c7_q6",
+    "c8_q116",
+    "c9_q1",
+    "c9_q49"
+  ],
+  "source_sessions_read": [
+    {
+      "conversation": 0,
+      "sessions": [
+        "session_6",
+        "session_7",
+        "session_8"
+      ],
+      "context": {
+        "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\source_contexts\\conv_0.json",
+        "sha256": "659f0f11bea6068903f2cbf3a21c3653ad691871e80c1ad45a6331a5a74e7828"
+      }
+    },
+    {
+      "conversation": 1,
+      "sessions": [
+        "session_1",
+        "session_2",
+        "session_15"
+      ],
+      "context": {
+        "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\source_contexts\\conv_1.json",
+        "sha256": "d11218f95d4bafdd098b2af8e4f1a89c56deaa227ea9c8def8290697239ab3e0"
+      }
+    },
+    {
+      "conversation": 2,
+      "sessions": [
+        "session_19",
+        "session_22"
+      ],
+      "context": {
+        "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\source_contexts\\conv_2.json",
+        "sha256": "95020a8fa99ee3111559e6f58037fc9366d17ba97a0a11705ca23a2e3ff50782"
+      }
+    },
+    {
+      "conversation": 3,
+      "sessions": [
+        "session_3",
+        "session_19",
+        "session_29"
+      ],
+      "context": {
+        "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\source_contexts\\conv_3.json",
+        "sha256": "b22ed44c942bea22201c7305b233cfaec4e7bb8cad290f923ff89fdfca1ca2d5"
+      }
+    },
+    {
+      "conversation": 4,
+      "sessions": [
+        "session_1",
+        "session_2",
+        "session_6",
+        "session_7",
+        "session_11",
+        "session_16",
+        "session_20",
+        "session_21",
+        "session_22",
+        "session_26"
+      ],
+      "context": {
+        "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\source_contexts\\conv_4.json",
+        "sha256": "2c5c69c4ebb98936d38f27221e11e22e57b2fdb012dadabb43d9d0ddb548322b"
+      }
+    },
+    {
+      "conversation": 5,
+      "sessions": [
+        "session_9",
+        "session_12",
+        "session_24"
+      ],
+      "context": {
+        "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\source_contexts\\conv_5.json",
+        "sha256": "a402e1d47c363ba8c0c2e9f124549cb34c0178d89c6cc355d383384639590e57"
+      }
+    },
+    {
+      "conversation": 6,
+      "sessions": [
+        "session_13"
+      ],
+      "context": {
+        "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\source_contexts\\conv_6.json",
+        "sha256": "51ca30e7c9709c5277113e1e54158180133030067ca73a7767345f4ecd587df6"
+      }
+    },
+    {
+      "conversation": 7,
+      "sessions": [
+        "session_1",
+        "session_2",
+        "session_10",
+        "session_11",
+        "session_19",
+        "session_23"
+      ],
+      "context": {
+        "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\source_contexts\\conv_7.json",
+        "sha256": "e66c6b0e0a0a8b116bfac83978e3a6145382589f8b1233c04a17a562f95e96c9"
+      }
+    },
+    {
+      "conversation": 8,
+      "sessions": [
+        "session_5",
+        "session_11",
+        "session_21"
+      ],
+      "context": {
+        "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\source_contexts\\conv_8.json",
+        "sha256": "49948502bc4f4ce6f54024cc704504e09255dde8def9b3d1f436c8621512768c"
+      }
+    },
+    {
+      "conversation": 9,
+      "sessions": [
+        "session_1",
+        "session_2",
+        "session_4",
+        "session_12",
+        "session_16",
+        "session_22",
+        "session_28"
+      ],
+      "context": {
+        "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r08_postterminal_packets_v1\\source_contexts\\conv_9.json",
+        "sha256": "59f19035dfa29b1ebd7259a107b688caf8b1d80e6716b98a4624b30e16ded635"
+      }
+    }
+  ],
+  "full_session_count": 41,
+  "case_reviews": [
+    {
+      "qid": "c0_q112",
+      "role": "peer",
+      "qualitative_type": "retained_specific_anchor_abstention",
+      "finding_zh": "4a9e9e14 sunset/palmtree仍J2；D8:6caption+正文lastweek及D8:8一起画明确。JEV弃答不是删目标，cheap则确实删该fact。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D8:6"
+      ],
+      "answers": {
+        "baseline": "A sunset with a palm tree",
+        "cheap": "Insufficient evidence",
+        "jev": "Insufficient evidence."
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c0_q23",
+      "role": "primary",
+      "qualitative_type": "retained_value_and_evaluation_boundary",
+      "finding_zh": "8c7be45b Charlotte rank1、8f4ab68b未命名推荐书rank5→4均留；新答加未命名书，不能称书目证据被删。D6:10正文明确Charlotte，D7:8正文和caption不明确Nothing is Impossible；不把图片URL识别当本轮模型可见标题。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D7:8",
+        "D6:10"
+      ],
+      "answers": {
+        "baseline": "Charlotte's Web",
+        "cheap": "Insufficient evidence",
+        "jev": "Charlotte's Web (and an unnamed book recommended by Caroline)"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c1_q3",
+      "role": "peer",
+      "qualitative_type": "comparison_endpoints_tradeoff",
+      "finding_zh": "R08补dd9304d6 Jon失业→studio但删Gina82785/48e545/18240等失业创业端；N0原来也缺Jon失业端。D1:2–4和D2:1共同支持gold；不能说从完整gold支持退化，也不能把新Jon一端叫完整补链。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D1:2",
+        "D1:3",
+        "D1:4",
+        "D2:1"
+      ],
+      "answers": {
+        "baseline": "They both dance, share a love for contemporary dance, and are entrepreneurs / business owners.",
+        "cheap": "They both dance and run their own businesses.",
+        "jev": "They both dance, use dance as stress relief, and share a love for contemporary dance."
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 1.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c1_q76",
+      "role": "primary",
+      "qualitative_type": "retained_partial_relation_abstention",
+      "finding_zh": "c476d486 grand opening/support/celebrate rank1不变仍弃答；D15:6–20完整原文明确兴奋，bank仅保留参加支持庆祝，不能宣称逐字保留情绪全部限定。无新R01外事实入选。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D15:18",
+        "D15:19"
+      ],
+      "answers": {
+        "baseline": "Supportive and celebratory",
+        "cheap": "Supportive and celebratory",
+        "jev": "Insufficient evidence"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 1.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c2_q110",
+      "role": "peer",
+      "qualitative_type": "retained_report_vs_event_time",
+      "finding_zh": "ae07947a gym仍rank3；D19:1六月16日报告lastweek加入。Q问该日分享消息，不是加入日期；新弃答不能用June9对June16为必然不支持，更不能改fact日期贴gold。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D19:1"
+      ],
+      "answers": {
+        "baseline": "She joined a gym",
+        "cheap": "She joined a gym (and is trying out kundalini yoga) and took a vacation to Florida with her family.",
+        "jev": "Insufficient evidence."
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 1.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": [
+        "5a29d6d4-7e38-432d-93fd-7a9da3fb5d3f"
+      ]
+    },
+    {
+      "qid": "c2_q41",
+      "role": "primary",
+      "qualitative_type": "cheap_removed_inferential_anchor",
+      "finding_zh": "9a3c01c4 weekly ocean walks被cheap删除、JEV10→8保留。D22:15–17正文+caption支持每周海边散步，住得近仍是推断，不是直接地址陈述。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D22:15"
+      ],
+      "answers": {
+        "baseline": "A beach",
+        "cheap": "Insufficient evidence.",
+        "jev": "A beach"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 1.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c3_q34",
+      "role": "peer",
+      "qualitative_type": "retained_title_and_source_modality",
+      "finding_zh": "dbacb7f8 ACOTAR仍rank4；D19:14只说fantasy，标题来自image query，D19:16赞同指代。D3:15–20 LittleWomen明确电影推荐。generic fantasy更窄但非凭空；gold把电影/书混合，不能把loss归删书名。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D3:17",
+        "D19:14",
+        "D19:16"
+      ],
+      "answers": {
+        "baseline": "A fantasy series (leading him to read Sarah J. Maas's 'A Court of Thorns and Roses' series)",
+        "cheap": "A fantasy series (leading him to choose the 'A Court of Thorns and Roses' series by Sarah J. Maas)",
+        "jev": "A fantasy series"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 1.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c3_q87",
+      "role": "primary",
+      "qualitative_type": "retained_geographical_inference_gain",
+      "finding_zh": "8e1a4024 Tampa旅行JEV rank10不变，D29:6明确Tampa；Florida需要地理知识。两新臂正确不能归新增池外发现。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D29:6"
+      ],
+      "answers": {
+        "baseline": "Insufficient evidence",
+        "cheap": "Florida",
+        "jev": "Florida"
+      },
+      "official_labels": {
+        "baseline": 0.0,
+        "cheap": 1.0,
+        "jev": 1.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c4_q25",
+      "role": "peer",
+      "qualitative_type": "new_to_N0_comparison_endpoint",
+      "finding_zh": "JEV保5732d58d Tim signed ball并新增7b71b16b John signed ball，D7:7–11+D16:7–9明确两端。后者不是new-to-R01；唯一新R01外61895738 plaque不贡献signed ball。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D7:7",
+        "D7:9",
+        "D16:7",
+        "D16:9"
+      ],
+      "answers": {
+        "baseline": "Insufficient evidence",
+        "cheap": "Insufficient evidence",
+        "jev": "A signed basketball"
+      },
+      "official_labels": {
+        "baseline": 0.0,
+        "cheap": 0.0,
+        "jev": 1.0
+      },
+      "new_to_R01_selected_jev": [
+        "61895738-a915-44da-8185-07a556f0d46b"
+      ]
+    },
+    {
+      "qid": "c4_q4",
+      "role": "primary",
+      "qualitative_type": "list_completeness_not_proven",
+      "finding_zh": "新增4840b0a6 Wheel of Time在JEV13、D26:36–38明确喜欢原书系列，却最终答案未列；补95719113 castles书入答案。YES不等gold列表完整；cheap与N0多项近同义，Judge差不全代表语义变化。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D1:14",
+        "D2:7",
+        "D6:8",
+        "D11:26",
+        "D20:21",
+        "D26:36",
+        "D22:13"
+      ],
+      "answers": {
+        "baseline": "* \"The Alchemist\" by Paulo Coelho\n* An impactful book about how small changes make big differences\n* Harry Potter series\n* Game of Thrones / A Song of Ice and Fire series (including \"A Storm of Swords\" and \"A Dance with Dragons\")\n* \"The Name of the Wind\" by Patrick Rothfuss",
+        "cheap": "Based on the provided facts, the books and book series Tim has read (or is reading) are:\n\n- *The Alchemist*\n- An unnamed book about how small changes make big differences\n- The *Harry Potter* series\n- *A Dance with Dragons* (and the *Game of Thrones* series)\n- *The Name of the Wind* (currently reading as of January 2024)",
+        "jev": "Books Tim has read (or is reading) include:\n- An impactful book about how small changes make big differences\n- 'The Alchemist' by Paulo Coelho\n- The Harry Potter series by J.K. Rowling\n- The Game of Thrones / A Song of Ice and Fire series by George R. R. Martin (including 'A Storm of Swords' and 'A Dance with Dragons')\n- 'The Name of the Wind' by Patrick Rothfuss\n- A book about castles in the UK"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 1.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c4_q55",
+      "role": "peer",
+      "qualitative_type": "near_equivalent_evaluation_and_date_scope",
+      "finding_zh": "948ae28e under-year rank1留，两答都early2023仅括号不同而YES/NO。D1:3新球队不等首次职业，D21:4不到一年也不精确May；保留评分但不把语义近同翻转归删证据。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D1:3",
+        "D21:4"
+      ],
+      "answers": {
+        "baseline": "Around early 2023 (just under a year prior to December 2023)",
+        "cheap": "Around early 2023",
+        "jev": "Around early 2023"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c5_q13",
+      "role": "primary",
+      "qualitative_type": "retained_event_observation_date_gain",
+      "finding_zh": "071f1842搬家事实原rank3保留；D9:1/17六月26日说已搬新家且拆箱，支持近期/截至该日，不是明确当天搬家。新答around June26不应当成精确日期修复。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D9:1"
+      ],
+      "answers": {
+        "baseline": "Insufficient evidence",
+        "cheap": "Around June 26, 2023",
+        "jev": "Around June 26, 2023"
+      },
+      "official_labels": {
+        "baseline": 0.0,
+        "cheap": 1.0,
+        "jev": 1.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c5_q34",
+      "role": "peer",
+      "qualitative_type": "retained_approximate_temporal_endpoints",
+      "finding_zh": "f2110d99 Buddy与44a1acf3 Toby均留，19/20旧fact保留；D12:1截至July11有Toby，D24:2 recently adopt Buddy截至Oct19，约三个月有观察月依据但无两精确收养日。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D12:1",
+        "D24:2"
+      ],
+      "answers": {
+        "baseline": "Approximately 3 months",
+        "cheap": "3 months",
+        "jev": "Insufficient evidence"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 1.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c6_q25",
+      "role": "primary",
+      "qualitative_type": "cheap_removed_comparison_endpoint",
+      "finding_zh": "43f02086 Liverpool和15a36d4a ManCity JEV前2均留；cheap删John端。D13:12–19明确不同球队，是真实比较端点保留差异，但JEV无new-to-R01。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D13:12",
+        "D13:15"
+      ],
+      "answers": {
+        "baseline": "No",
+        "cheap": "Insufficient evidence.",
+        "jev": "No"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 1.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c7_q124",
+      "role": "peer",
+      "qualitative_type": "retained_compound_clause_not_used",
+      "finding_zh": "6a96abf5三准备项+找时间地点原3→J2；D10:18–23完整支持三准备动作。新答只末尾计划及十月出行，不能叫检索漏三动作；新R01外Deborah时间管理fact不是其补证。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D10:20"
+      ],
+      "answers": {
+        "baseline": "By gathering information, watching videos, getting a beginners' guide, finding time and a location for lessons, and planning a surfing outing with Deborah for October 2023.",
+        "cheap": "By finding time and a location for lessons and planning a surfing outing with Deborah for October 2023.",
+        "jev": "By finding time and a location for lessons, and planning a surfing outing with Deborah for October 2023."
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": [
+        "6f4da273-dccb-46dc-bd6e-df5bb1888287"
+      ]
+    },
+    {
+      "qid": "c7_q126",
+      "role": "primary",
+      "qualitative_type": "new_to_N0_relation_not_new_to_R01",
+      "finding_zh": "01518081 instrumental/mellow/savana补到JEV13及cheap10，D11:5–10同瑜伽话题明确Deborah偏好。可支持N0→新集的关系补证；该事实已在旧R01池，不能归本轮独立发现。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D11:8"
+      ],
+      "answers": {
+        "baseline": "Insufficient evidence.",
+        "cheap": "Instrumental tracks with mellow melodies",
+        "jev": "Instrumental tracks with mellow melodies"
+      },
+      "official_labels": {
+        "baseline": 0.0,
+        "cheap": 1.0,
+        "jev": 1.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c7_q149",
+      "role": "peer",
+      "qualitative_type": "stored_value_but_lost_qualifier",
+      "finding_zh": "da568e30推荐三游戏仍rank1；D19:8明确AnimalCrossing calming/cute，但bank省略逐游戏形容映射。不能称完整限定证据留存；无源组织/压缩不能还原该限定。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D19:8"
+      ],
+      "answers": {
+        "baseline": "Animal Crossing: New Horizons",
+        "cheap": "Animal Crossing: New Horizons",
+        "jev": "Insufficient evidence"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 1.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c7_q19",
+      "role": "primary",
+      "qualitative_type": "retained_two_events_abstention",
+      "finding_zh": "77a9bcfd Paris2010与1607baa2 Paris约2022原4/5→J2/3，D1:8和D2:22–24两事件。JEV弃答不是删两锚；两个不同年份经历支持至少两次语用推断，非完整旅行计数日志。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D2:24",
+        "D1:8"
+      ],
+      "answers": {
+        "baseline": "At least twice",
+        "cheap": "Insufficient evidence",
+        "jev": "Insufficient evidence"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c7_q6",
+      "role": "peer",
+      "qualitative_type": "cheap_removed_actor_endpoint",
+      "finding_zh": "JEV保a2b7e142 Deborah amulet与77a9bcfd Jolene pendant；cheap删后者。D1:8–10明确Jolene礼物与Deborah相似pendant，Deborah赠与关系需更多bank上下文，不以同源scope认证。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D1:8",
+        "D1:9"
+      ],
+      "answers": {
+        "baseline": "Deborah has an amulet, and Jolene has a heart-shaped pendant with a bird on it.",
+        "cheap": "Deborah has an amulet from her mother; there is insufficient evidence regarding a gift for Jolene.",
+        "jev": "Deborah has an amulet, and Jolene has a heart-shaped pendant with a bird on it."
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 1.0
+      },
+      "new_to_R01_selected_jev": [
+        "0c034965-0ef9-4397-9ca7-d4237b2a9911",
+        "5c0d7218-1613-4d6b-8cf7-c3d84c142645",
+        "e1550e4d-8ca9-4a8f-9da3-f8c7f3e0e240"
+      ]
+    },
+    {
+      "qid": "c7_q68",
+      "role": "primary",
+      "qualitative_type": "cheap_removed_time_place_anchor",
+      "finding_zh": "aef18125 Rio约2020原/J1，cheap删除。D23:18于2023说三年前Rio；Brazil仍地理桥，around2020合理而非精确日期。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D23:18"
+      ],
+      "answers": {
+        "baseline": "Around 2020",
+        "cheap": "Insufficient evidence",
+        "jev": "Around 2020"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 1.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c8_q116",
+      "role": "peer",
+      "qualitative_type": "retained_painting_with_sharing_scope",
+      "finding_zh": "1a3203b9两幅画原19→J5保留；D11:8caption cactus，D11:10正文同时支持sunset+cactus，非imagequery污染幻觉。bank未明shared-with-Sam/October分享关系，obsdate非eventdate；新弃答不是删画。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D11:8"
+      ],
+      "answers": {
+        "baseline": "A watercolor sunset and a watercolor painting of a cactus in the desert",
+        "cheap": "Insufficient evidence",
+        "jev": "Insufficient evidence."
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c8_q70",
+      "role": "primary",
+      "qualitative_type": "retained_interval_precision",
+      "finding_zh": "955d80aa结婚与62968e94相识两端保留；D5:1上周Canada及D21:2–4上周结婚/同一女友，不给精确开始交往日。4–5months→five为近似取整/评价边界，不能说必要日期被删。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D5:1",
+        "D21:1"
+      ],
+      "answers": {
+        "baseline": "Around 4 to 5 months (from the week of July 31, 2023, until the week of December 19, 2023)",
+        "cheap": "Insufficient evidence.",
+        "jev": "Approximately five months"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c9_q1",
+      "role": "peer",
+      "qualitative_type": "case_only_judge_flip",
+      "finding_zh": "N0 A red Ferrari 488 GTB与JEV a red Ferrari 488 GTB仅首字母，YES/NO。新增e832ac38 mansion仍未答；D1:3/9–11新住处不明确购买，D2正文汽车无具体型号、query有型号。不重判不称语义退化。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D1:3",
+        "D2:1"
+      ],
+      "answers": {
+        "baseline": "A red Ferrari 488 GTB",
+        "cheap": "A red Ferrari 488 GTB",
+        "jev": "a red Ferrari 488 GTB"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 1.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c9_q148",
+      "role": "primary",
+      "qualitative_type": "retained_content_missing_inspiration_link",
+      "finding_zh": "32c48e23 car-mod blog rank1保留；新4a40cfa7 Subaru/headlights在20但没恢复blog激励他人关系。D28:8–16原文明确对应关系；bank分散/漏限定而非完整充分支持证书。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D28:10"
+      ],
+      "answers": {
+        "baseline": "Car modifications, advice, and DIY projects",
+        "cheap": "Car modifications (including his passion, advice, and DIY projects)",
+        "jev": "Insufficient evidence."
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 1.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c9_q49",
+      "role": "peer",
+      "qualitative_type": "retained_direct_two_fact_support_abstention",
+      "finding_zh": "d849f827 childhood garage engine与6a07d10c dad restoration原/J前2保留。D12:2–4及D22:5明确父子修车、小时候父亲车库，JEV弃答是可用性/生成变化，非两锚被删。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D12:2",
+        "D12:4",
+        "D22:5"
+      ],
+      "answers": {
+        "baseline": "Worked on cars, including restoring an old car, and tinkered with engines",
+        "cheap": "Tinkered with engines",
+        "jev": "Insufficient evidence."
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 1.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": []
+    },
+    {
+      "qid": "c9_q60",
+      "role": "primary",
+      "qualitative_type": "gift_qualification_ambiguity",
+      "finding_zh": "c62f2dcd guitar与74f5d72e necklace仍J1/2；D4:26明确necklace gift，D16:14 custom made by artist friend不明确gift。唯一主包新R01外3条是Dave城市/旅行/场地尾项，不是缺失gift关系。",
+      "read_scope": "all three selected20 via full union with ranks; all gold-neighbor records; full original sessions listed below",
+      "source_turns": [
+        "D4:24",
+        "D4:26",
+        "D16:14"
+      ],
+      "answers": {
+        "baseline": "A gold necklace with a diamond pendant and a custom-made guitar with a shiny purple finish and an octopus design",
+        "cheap": "A gold necklace with a diamond pendant",
+        "jev": "A gold necklace with a diamond pendant"
+      },
+      "official_labels": {
+        "baseline": 1.0,
+        "cheap": 0.0,
+        "jev": 0.0
+      },
+      "new_to_R01_selected_jev": [
+        "03ca85bf-5165-444a-9fa8-88fa8de23bab",
+        "ba9fce51-32ae-4bb1-ad5d-106b45ca14b3",
+        "7d4ee4f3-a023-41f6-a671-b7540ca9584f"
+      ]
+    }
+  ],
+  "metrics": {
+    "baseline": {
+      "denominator": 1540,
+      "judge_correct": 1153,
+      "judge_missing": 0,
+      "official_f1_fixed_denominator": 0.5104400011392458,
+      "official_f1_missing": 0,
+      "reader_answer_whitespace_word_mean_valid": 5.73051948051948,
+      "reader_inherited": 1540,
+      "reader_with_event_refs": 0,
+      "judge_percent_fixed_denominator": 74.87012987012987
+    },
+    "cheap": {
+      "denominator": 1540,
+      "judge_correct": 1055,
+      "judge_missing": 0,
+      "official_f1_fixed_denominator": 0.47005309101890325,
+      "official_f1_missing": 0,
+      "reader_answer_whitespace_word_mean_valid": 5.137012987012987,
+      "reader_inherited": 0,
+      "reader_with_event_refs": 1540,
+      "judge_percent_fixed_denominator": 68.50649350649351
+    },
+    "jev": {
+      "denominator": 1540,
+      "judge_correct": 1184,
+      "judge_missing": 0,
+      "official_f1_fixed_denominator": 0.5241735183327876,
+      "official_f1_missing": 0,
+      "reader_answer_whitespace_word_mean_valid": 6.238961038961039,
+      "reader_inherited": 9,
+      "reader_with_event_refs": 1531,
+      "judge_percent_fixed_denominator": 76.88311688311688
+    }
+  },
+  "paired": {
+    "cheap": {
+      "judge_transitions": {
+        "1_to_1": 1023,
+        "1_to_0": 130,
+        "0_to_0": 355,
+        "0_to_1": 32
+      },
+      "by_conversation": {
+        "0": {
+          "1_to_1": 92,
+          "1_to_0": 10,
+          "0_to_0": 48,
+          "0_to_1": 2
+        },
+        "1": {
+          "1_to_1": 51,
+          "1_to_0": 5,
+          "0_to_0": 23,
+          "0_to_1": 2
+        },
+        "2": {
+          "1_to_1": 120,
+          "1_to_0": 10,
+          "0_to_0": 20,
+          "0_to_1": 2
+        },
+        "3": {
+          "1_to_1": 136,
+          "0_to_0": 47,
+          "1_to_0": 10,
+          "0_to_1": 6
+        },
+        "4": {
+          "1_to_1": 113,
+          "1_to_0": 18,
+          "0_to_0": 44,
+          "0_to_1": 3
+        },
+        "5": {
+          "1_to_1": 81,
+          "0_to_0": 30,
+          "1_to_0": 9,
+          "0_to_1": 3
+        },
+        "6": {
+          "0_to_0": 30,
+          "1_to_1": 107,
+          "1_to_0": 12,
+          "0_to_1": 1
+        },
+        "7": {
+          "1_to_1": 123,
+          "1_to_0": 24,
+          "0_to_0": 37,
+          "0_to_1": 7
+        },
+        "8": {
+          "1_to_1": 104,
+          "1_to_0": 20,
+          "0_to_0": 30,
+          "0_to_1": 2
+        },
+        "9": {
+          "1_to_1": 96,
+          "1_to_0": 12,
+          "0_to_0": 46,
+          "0_to_1": 4
+        }
+      },
+      "by_official_category": {
+        "1": {
+          "1_to_0": 54,
+          "1_to_1": 168,
+          "0_to_0": 50,
+          "0_to_1": 10
+        },
+        "2": {
+          "1_to_1": 241,
+          "0_to_0": 56,
+          "1_to_0": 20,
+          "0_to_1": 4
+        },
+        "3": {
+          "1_to_1": 35,
+          "0_to_0": 52,
+          "1_to_0": 5,
+          "0_to_1": 4
+        },
+        "4": {
+          "1_to_1": 579,
+          "0_to_0": 197,
+          "1_to_0": 51,
+          "0_to_1": 14
+        }
+      },
+      "f1_directions": {
+        "same": 1173,
+        "down": 236,
+        "up": 131
+      }
+    },
+    "jev": {
+      "judge_transitions": {
+        "1_to_1": 1129,
+        "0_to_0": 332,
+        "1_to_0": 24,
+        "0_to_1": 55
+      },
+      "by_conversation": {
+        "0": {
+          "1_to_1": 99,
+          "0_to_0": 46,
+          "1_to_0": 3,
+          "0_to_1": 4
+        },
+        "1": {
+          "1_to_1": 53,
+          "1_to_0": 3,
+          "0_to_1": 3,
+          "0_to_0": 22
+        },
+        "2": {
+          "1_to_1": 129,
+          "0_to_0": 20,
+          "0_to_1": 2,
+          "1_to_0": 1
+        },
+        "3": {
+          "1_to_1": 145,
+          "0_to_0": 43,
+          "0_to_1": 10,
+          "1_to_0": 1
+        },
+        "4": {
+          "1_to_1": 128,
+          "0_to_0": 40,
+          "0_to_1": 7,
+          "1_to_0": 3
+        },
+        "5": {
+          "1_to_1": 88,
+          "0_to_0": 28,
+          "0_to_1": 5,
+          "1_to_0": 2
+        },
+        "6": {
+          "0_to_0": 26,
+          "1_to_1": 118,
+          "0_to_1": 5,
+          "1_to_0": 1
+        },
+        "7": {
+          "1_to_1": 143,
+          "1_to_0": 4,
+          "0_to_0": 36,
+          "0_to_1": 8
+        },
+        "8": {
+          "1_to_1": 122,
+          "0_to_1": 3,
+          "0_to_0": 29,
+          "1_to_0": 2
+        },
+        "9": {
+          "1_to_1": 104,
+          "1_to_0": 4,
+          "0_to_0": 42,
+          "0_to_1": 8
+        }
+      },
+      "by_official_category": {
+        "1": {
+          "1_to_1": 213,
+          "1_to_0": 9,
+          "0_to_1": 22,
+          "0_to_0": 38
+        },
+        "2": {
+          "1_to_1": 257,
+          "0_to_0": 54,
+          "1_to_0": 4,
+          "0_to_1": 6
+        },
+        "3": {
+          "1_to_1": 40,
+          "0_to_0": 50,
+          "0_to_1": 6
+        },
+        "4": {
+          "1_to_1": 619,
+          "0_to_0": 190,
+          "0_to_1": 21,
+          "1_to_0": 11
+        }
+      },
+      "f1_directions": {
+        "same": 1219,
+        "down": 148,
+        "up": 173
+      }
+    }
+  },
+  "threshold": {
+    "required_correct": 1200,
+    "jev_correct": 1184,
+    "delta_pp": 2.012987012987013,
+    "met": false,
+    "new_successful_families": 0,
+    "prior_successful_families": 1
+  },
+  "architecture_findings_zh": [
+    "55gain/24loss净31；相对cheap150gain/21loss是弱对照优势，不是达到绝对成功阈值。",
+    "R08扩池同时更改whole80请求、共同fact新概率和Reader采样；比历史R03多8正确不是发现模块的因果消融。",
+    "26实际阅读样本不是总体机制比例。主13中12题JEV没有new-to-R01事实，唯一gift题的新3条均非目标关系。对全部1540发现入选诊断依赖正式export统计而非样本外推。",
+    "原N0充分与否必须逐关系核查；值/主题仍在不等限定关系完整，source input scope不等semantic recall。",
+    "全部原分数保留；near-equivalent Judge flips单列，不重新Judge或改gold。"
+  ],
+  "cost": {
+    "new_embedding": {
+      "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+      "available": true,
+      "physical_attempts": 60,
+      "cache_events": 0,
+      "physical_status_counts": {
+        "http_success": 60
+      },
+      "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+      "physical_attempts_by_model": {
+        "gemini-embedding-001": 60
+      },
+      "usage_unknown_attempts": 60,
+      "token_fields": {
+        "prompt": {
+          "recorded_attempts": 0,
+          "missing_attempts": 60,
+          "recorded_token_sum": 0
+        },
+        "output": {
+          "recorded_attempts": 0,
+          "missing_attempts": 60,
+          "recorded_token_sum": 0
+        },
+        "thinking": {
+          "recorded_attempts": 0,
+          "missing_attempts": 60,
+          "recorded_token_sum": 0
+        },
+        "total": {
+          "recorded_attempts": 0,
+          "missing_attempts": 60,
+          "recorded_token_sum": 0
+        }
+      },
+      "missing_ledgers": [],
+      "total_cost_usd": null,
+      "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+      "missing_thinking_is_not_zero": true
+    },
+    "new_jev": {
+      "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+      "available": true,
+      "physical_attempts": 1485,
+      "cache_events": 10,
+      "physical_status_counts": {
+        "http_success": 1484,
+        "transport_or_unknown": 1
+      },
+      "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+      "physical_attempts_by_model": {
+        "jev-1.13.0": 1485
+      },
+      "usage_unknown_attempts": 1,
+      "token_fields": {
+        "prompt": {
+          "recorded_attempts": 1484,
+          "missing_attempts": 1,
+          "recorded_token_sum": 32077071
+        },
+        "output": {
+          "recorded_attempts": 1484,
+          "missing_attempts": 1,
+          "recorded_token_sum": 2142896
+        },
+        "thinking": {
+          "recorded_attempts": 0,
+          "missing_attempts": 1485,
+          "recorded_token_sum": 0
+        },
+        "total": {
+          "recorded_attempts": 0,
+          "missing_attempts": 1485,
+          "recorded_token_sum": 0
+        }
+      },
+      "missing_ledgers": [],
+      "total_cost_usd": null,
+      "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+      "missing_thinking_is_not_zero": true
+    },
+    "new_qa": {
+      "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+      "available": true,
+      "physical_attempts": 4140,
+      "cache_events": 195,
+      "physical_status_counts": {
+        "http_success": 4122,
+        "transport_or_unknown": 17,
+        "http_failure": 1
+      },
+      "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+      "physical_attempts_by_model": {
+        "gemini-3.8-flash": 4140
+      },
+      "usage_unknown_attempts": 18,
+      "token_fields": {
+        "prompt": {
+          "recorded_attempts": 4122,
+          "missing_attempts": 18,
+          "recorded_token_sum": 4524233
+        },
+        "output": {
+          "recorded_attempts": 4113,
+          "missing_attempts": 27,
+          "recorded_token_sum": 27045
+        },
+        "thinking": {
+          "recorded_attempts": 2682,
+          "missing_attempts": 1458,
+          "recorded_token_sum": 508775
+        },
+        "total": {
+          "recorded_attempts": 4122,
+          "missing_attempts": 18,
+          "recorded_token_sum": 5060053
+        }
+      },
+      "missing_ledgers": [],
+      "total_cost_usd": null,
+      "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+      "missing_thinking_is_not_zero": true
+    },
+    "cold_limit": "R06 facet generation and exact R03 donors are inherited historical cost, not free deployment; unavailable embedding/transport usage stays unknown; no invoice inferred."
+  },
+  "next_direction_status": "DISCUSSION_ONLY_NO_PROTOCOL_VOTE",
+  "next_candidate_zh": "同N0原20的受约束extractive evidence organization/compression；共用提案、cheap全合法使用、JEV压缩/保原择一，零rawsource/零改Reader prompt。具体窗口/完整限定/门控尚未冻结；不能恢复原bank遗漏，不能自动称第二独立成功。",
+  "research_limits_zh": "实际读MEMO arxiv2609.07471v1方法和LoCoMo表1；其训练式source span/representation policy为直接先例，LoCoMo效果小且混合，非本地收益担保。",
+  "new_api_calls": 0,
+  "original_artifacts_modified": false
+}

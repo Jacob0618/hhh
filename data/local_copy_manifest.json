@@ -1,0 +1,95 @@
+{
+  "status": "preparation_only",
+  "local_copy": "D:\\jev mem\\data\\locomo10.json",
+  "source_sha256": "79fa87e90f04081343b8c8debecb80a9a6842b76a7aa537dc9fdf651ea698ff4",
+  "selection_manifest": "D:\\jev mem\\research\\locomo_1540_manifest.json",
+  "conversations": [
+    {
+      "conversation_index": 0,
+      "sample_id": "conv-26",
+      "sessions": 19,
+      "raw_turns": 419,
+      "nonempty_text_turns": 419,
+      "included_questions": 152
+    },
+    {
+      "conversation_index": 1,
+      "sample_id": "conv-30",
+      "sessions": 19,
+      "raw_turns": 369,
+      "nonempty_text_turns": 369,
+      "included_questions": 81
+    },
+    {
+      "conversation_index": 2,
+      "sample_id": "conv-41",
+      "sessions": 32,
+      "raw_turns": 663,
+      "nonempty_text_turns": 663,
+      "included_questions": 152
+    },
+    {
+      "conversation_index": 3,
+      "sample_id": "conv-42",
+      "sessions": 29,
+      "raw_turns": 629,
+      "nonempty_text_turns": 629,
+      "included_questions": 199
+    },
+    {
+      "conversation_index": 4,
+      "sample_id": "conv-43",
+      "sessions": 29,
+      "raw_turns": 680,
+      "nonempty_text_turns": 680,
+      "included_questions": 178
+    },
+    {
+      "conversation_index": 5,
+      "sample_id": "conv-44",
+      "sessions": 28,
+      "raw_turns": 675,
+      "nonempty_text_turns": 675,
+      "included_questions": 123
+    },
+    {
+      "conversation_index": 6,
+      "sample_id": "conv-47",
+      "sessions": 31,
+      "raw_turns": 689,
+      "nonempty_text_turns": 689,
+      "included_questions": 150
+    },
+    {
+      "conversation_index": 7,
+      "sample_id": "conv-48",
+      "sessions": 30,
+      "raw_turns": 681,
+      "nonempty_text_turns": 681,
+      "included_questions": 191
+    },
+    {
+      "conversation_index": 8,
+      "sample_id": "conv-49",
+      "sessions": 25,
+      "raw_turns": 509,
+      "nonempty_text_turns": 509,
+      "included_questions": 156
+    },
+    {
+      "conversation_index": 9,
+      "sample_id": "conv-50",
+      "sessions": 30,
+      "raw_turns": 568,
+      "nonempty_text_turns": 568,
+      "included_questions": 158
+    }
+  ],
+  "totals": {
+    "sessions": 272,
+    "raw_turns": 5882,
+    "nonempty_text_turns": 5882,
+    "included_questions": 1540
+  },
+  "note": "Turn counts are static source counts, not calls executed. Benchmark also appends existing image captions/search text."
+}

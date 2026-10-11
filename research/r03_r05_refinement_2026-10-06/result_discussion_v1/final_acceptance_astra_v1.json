@@ -1,0 +1,186 @@
+{
+  "status": "accepted_formal_integrity_complete_research_target_not_met",
+  "created_utc": "2026-10-06T14:57:34.791186+00:00",
+  "summary": {
+    "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\heartbeat_20261006T1052\\live_qa_v2\\final_summary_v1.json",
+    "sha256": "01aa05237a252832135f9c03122d16ee8d6f1aab0b0b2e97d16f2836533567e5",
+    "created_utc": "2026-10-06T14:45:29.722142+00:00",
+    "audit_status": "no_invalid_artifacts",
+    "errors": [],
+    "audit_errors": []
+  },
+  "checks": {
+    "rows_exactly_aligned": 10780,
+    "answers_selected_ids_question_reference_aligned": true,
+    "three_metric_values_aligned": true,
+    "formal_contrasts_aligned": 8,
+    "factorial_three_metrics_aligned": true,
+    "missing_selection_reader_judge_qa_each": 0,
+    "missing_metric_scores_each": 0,
+    "imputed_slots_each": 0,
+    "qa_recovery_needed": 0,
+    "qa_recovery_phases_in_summary": 0,
+    "model_calls_in_summary": 0,
+    "raw_audit_rerun_by_this_review": false
+  },
+  "arms": {
+    "baseline": {
+      "judge_correct": 1153,
+      "judge_percent": 74.87012987012987,
+      "official_f1": 0.5104400011392458
+    },
+    "r03_original": {
+      "judge_correct": 1183,
+      "judge_percent": 76.81818181818181,
+      "official_f1": 0.5254691075101523
+    },
+    "r03_refined": {
+      "judge_correct": 1183,
+      "judge_percent": 76.81818181818181,
+      "official_f1": 0.5251380403434767
+    },
+    "original_source_closure": {
+      "judge_correct": 1294,
+      "judge_percent": 84.02597402597402,
+      "official_f1": 0.5990208328136579
+    },
+    "refined_source_closure": {
+      "judge_correct": 1293,
+      "judge_percent": 83.96103896103895,
+      "official_f1": 0.5980512124602374
+    },
+    "original_multi_source_closure": {
+      "judge_correct": 1302,
+      "judge_percent": 84.54545454545455,
+      "official_f1": 0.6023800523572205
+    },
+    "refined_multi_source_closure": {
+      "judge_correct": 1301,
+      "judge_percent": 84.48051948051948,
+      "official_f1": 0.6006461411524147
+    }
+  },
+  "formal_contrasts": {
+    "r03_original_minus_baseline": {
+      "left": "baseline",
+      "right": "r03_original",
+      "wins": 49,
+      "losses": 19,
+      "net": 30,
+      "judge_delta_pp": 1.948051948051948,
+      "judge_bootstrap95_pp": [
+        1.1698777545425474,
+        2.7933142394575303
+      ]
+    },
+    "r03_refined_minus_r03_original": {
+      "left": "r03_original",
+      "right": "r03_refined",
+      "wins": 1,
+      "losses": 1,
+      "net": 0,
+      "judge_delta_pp": 0.0,
+      "judge_bootstrap95_pp": [
+        0.0,
+        0.0
+      ]
+    },
+    "original_source_closure_minus_r03_original": {
+      "left": "r03_original",
+      "right": "original_source_closure",
+      "wins": 133,
+      "losses": 22,
+      "net": 111,
+      "judge_delta_pp": 7.207792207792208,
+      "judge_bootstrap95_pp": [
+        5.341114129324513,
+        9.626630411020928
+      ]
+    },
+    "refined_source_closure_minus_r03_refined": {
+      "left": "r03_refined",
+      "right": "refined_source_closure",
+      "wins": 133,
+      "losses": 23,
+      "net": 110,
+      "judge_delta_pp": 7.142857142857142,
+      "judge_bootstrap95_pp": [
+        5.209512501388094,
+        9.563940937742853
+      ]
+    },
+    "refined_source_closure_minus_original_source_closure": {
+      "left": "original_source_closure",
+      "right": "refined_source_closure",
+      "wins": 0,
+      "losses": 1,
+      "net": -1,
+      "judge_delta_pp": -0.06493506493506493,
+      "judge_bootstrap95_pp": [
+        -0.20285350844019664,
+        0.0
+      ]
+    },
+    "original_multi_source_closure_minus_original_source_closure": {
+      "left": "original_source_closure",
+      "right": "original_multi_source_closure",
+      "wins": 13,
+      "losses": 5,
+      "net": 8,
+      "judge_delta_pp": 0.5194805194805194,
+      "judge_bootstrap95_pp": [
+        0.0,
+        1.0659229208924945
+      ]
+    },
+    "refined_multi_source_closure_minus_refined_source_closure": {
+      "left": "refined_source_closure",
+      "right": "refined_multi_source_closure",
+      "wins": 13,
+      "losses": 5,
+      "net": 8,
+      "judge_delta_pp": 0.5194805194805194,
+      "judge_bootstrap95_pp": [
+        0.05803571428571437,
+        1.0239533394052822
+      ]
+    },
+    "refined_multi_source_closure_minus_original_multi_source_closure": {
+      "left": "original_multi_source_closure",
+      "right": "refined_multi_source_closure",
+      "wins": 0,
+      "losses": 1,
+      "net": -1,
+      "judge_delta_pp": -0.06493506493506493,
+      "judge_bootstrap95_pp": [
+        -0.2024394149674389,
+        0.0
+      ]
+    }
+  },
+  "mechanism_conclusions": "Confirmed same underlying rows and labels as prior review; mechanisms remain descriptive hypotheses, not proved causal pathways.",
+  "research_conclusion": {
+    "r03_refinement_net": 0,
+    "r05_refinement_net_each_base": 8,
+    "r05_refinement_pp_each_base": 0.5194805194805194,
+    "strict_over3pp_target_met_r03": false,
+    "strict_over3pp_target_met_r05": false,
+    "best_observed_arm": "original_multi_source_closure",
+    "best_observed_judge_count": 1302,
+    "judge_interaction": 0,
+    "realized_r03_edit_scope": 41,
+    "realized_scope_max_possible_pp": 2.662337662337662
+  },
+  "limits": [
+    "No untouched holdout; descriptive analysis of inspected dataset",
+    "Two R05 base comparisons reuse same questions and correlated evidence, not independent replications",
+    "20 facts do not equal fixed context tokens; character counts are not token counts",
+    "Composite policy effect includes proposals/windows/guard/closure/render; no cheap-selector matched ablation",
+    "Judge flips can reflect target specificity or label sensitivity; do not silently relabel official outcomes",
+    "Post-hoc cases cannot estimate prevalence of mechanisms",
+    "No new experiments or tuning authorized or performed"
+  ],
+  "missingness_scope_note": "All planned scientific selection/Reader/Judge/QA artifacts and scores are complete. This does not assert unknown provider token/transport usage is zero.",
+  "prior_case_review_sha256": "6228eaab717a8c90021bfaf0cc67c8becb27dad72afd133b4da9b2e2df94a0c8",
+  "prior_provisional_report_sha256": "af5e409393ab1e82d00b8b37a4ead18ad5104fb4996563e592e7e0d3d5d671e0"
+}

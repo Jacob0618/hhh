@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/snap-research/locomo",
+  "latest_commit_affecting_file": "cbfbc1dba6bc53d00625212a0f22d55ffee7c1fc",
+  "commit_utc": "2024-08-10T00:53:23Z",
+  "pinned_download_url": "https://raw.githubusercontent.com/snap-research/locomo/cbfbc1dba6bc53d00625212a0f22d55ffee7c1fc/data/locomo10.json",
+  "original_download_url": "https://raw.githubusercontent.com/snap-research/locomo/main/data/locomo10.json",
+  "sha256": "79fa87e90f04081343b8c8debecb80a9a6842b76a7aa537dc9fdf651ea698ff4",
+  "pinned_bytes_match_original": true
+}

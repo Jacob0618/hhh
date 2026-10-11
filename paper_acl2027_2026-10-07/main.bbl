@@ -1,0 +1,80 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Chhikara et~al.(2025)Chhikara, Khant, Aryan, Singh, and
+  Yadav}]{chhikara2025mem0}
+Prateek Chhikara, Dev Khant, Saket Aryan, Taranjeet Singh, and Deshraj Yadav.
+  2025.
+\newblock \href {https://doi.org/10.48550/arXiv.2504.19413} {{Mem0}: Building
+  production-ready {AI} agents with scalable long-term memory}.
+\newblock \emph{Preprint}, arXiv:2504.19413.
+
+\bibitem[{Jiang et~al.(2026)Jiang, Li, and Li}]{jiang2026jevmem}
+Dongming Jiang, Yi~Li, and Bingzhe Li. 2026.
+\newblock \href {https://doi.org/10.48550/arXiv.2609.23986} {{Jev-Mem}:
+  System-one-controlled agentic memory for efficient {AI} agents}.
+\newblock \emph{Preprint}, arXiv:2609.23986.
+
+\bibitem[{Lewis et~al.(2020)Lewis, Perez, Piktus, Petroni, Karpukhin, Goyal,
+  K{\"u}ttler, Lewis, Yih, Rockt{\"a}schel, Riedel, and Kiela}]{lewis2020rag}
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
+  Karpukhin, Naman Goyal, Heinrich K{\"u}ttler, Mike Lewis, Wen-tau Yih, Tim
+  Rockt{\"a}schel, Sebastian Riedel, and Douwe Kiela. 2020.
+\newblock \href {https://arxiv.org/abs/2005.11401} {Retrieval-augmented
+  generation for knowledge-intensive {NLP} tasks}.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~33, pages 9459--9474.
+
+\bibitem[{Liu et~al.(2024)Liu, Lin, Hewitt, Paranjape, Bevilacqua, Petroni, and
+  Liang}]{liu-etal-2024-lost}
+Nelson~F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua,
+  Fabio Petroni, and Percy Liang. 2024.
+\newblock \href {https://doi.org/10.1162/tacl_a_00638} {Lost in the middle: How
+  language models use long contexts}.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  12:157--173.
+
+\bibitem[{Maharana et~al.(2024)Maharana, Lee, Tulyakov, Bansal, Barbieri, and
+  Fang}]{maharana-etal-2024-evaluating}
+Adyasha Maharana, Dong-Ho Lee, Sergey Tulyakov, Mohit Bansal, Francesco
+  Barbieri, and Yuwei Fang. 2024.
+\newblock \href {https://doi.org/10.18653/v1/2024.acl-long.747} {Evaluating
+  very long-term conversational memory of {LLM} agents}.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 13851--13870,
+  Bangkok, Thailand. Association for Computational Linguistics.
+
+\bibitem[{Packer et~al.(2023)Packer, Wooders, Lin, Fang, Patil, Stoica, and
+  Gonzalez}]{packer2023memgpt}
+Charles Packer, Sarah Wooders, Kevin Lin, Vivian Fang, Shishir~G. Patil, Ion
+  Stoica, and Joseph~E. Gonzalez. 2023.
+\newblock \href {https://doi.org/10.48550/arXiv.2310.08560} {{MemGPT}: Towards
+  {LLM}s as operating systems}.
+\newblock \emph{Preprint}, arXiv:2310.08560.
+
+\bibitem[{{TypeSafe AI}(2026)}]{typesafe2026jev}
+{TypeSafe AI}. 2026.
+\newblock \href {https://docs.typesafe.ai/introduction} {{Jev}: Introduction}.
+\newblock Technical documentation.
+\newblock Accessed October 7, 2026.
+
+\bibitem[{Xu et~al.(2025{\natexlab{a}})Xu, Wen, Jia, Zhang, Zhang, Wang, Guo,
+  Tang, Zhao, Chen, and Xu}]{xu2025memgas}
+Derong Xu, Yi~Wen, Pengyue Jia, Yingyi Zhang, Wenlin Zhang, Yichao Wang,
+  Huifeng Guo, Ruiming Tang, Xiangyu Zhao, Enhong Chen, and Tong Xu.
+  2025{\natexlab{a}}.
+\newblock \href {https://doi.org/10.48550/arXiv.2505.19549} {From single to
+  multi-granularity: Toward long-term memory association and selection of
+  conversational agents}.
+\newblock \emph{Preprint}, arXiv:2505.19549.
+\newblock Version 2.
+
+\bibitem[{Xu et~al.(2025{\natexlab{b}})Xu, Liang, Mei, Gao, Tan, and
+  Zhang}]{xu2025amem}
+Wujiang Xu, Zujie Liang, Kai Mei, Hang Gao, Juntao Tan, and Yongfeng Zhang.
+  2025{\natexlab{b}}.
+\newblock \href {https://doi.org/10.48550/arXiv.2502.12110} {{A-MEM}: Agentic
+  memory for {LLM} agents}.
+\newblock \emph{Preprint}, arXiv:2502.12110.
+
+\end{thebibliography}

@@ -1,0 +1,98 @@
+{
+  "created_utc": "2026-10-04T03:51:03.034832+00:00",
+  "summary": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r05_final_summary.json",
+    "sha256": "723c9abba21c654bbb69e7e45c2c8143a62bdad81f743041a107c0498121a77d"
+  },
+  "category_results": [
+    {
+      "category": 1,
+      "n": 282,
+      "baseline": {
+        "judge_correct": 222,
+        "official_f1_pct": 40.80172574076245
+      },
+      "cheap": {
+        "judge_correct": 226,
+        "official_f1_pct": 43.41259196381082
+      },
+      "jev": {
+        "judge_correct": 222,
+        "official_f1_pct": 42.475728113371254
+      },
+      "jev_vs_baseline": {
+        "gains": 8,
+        "losses": 8
+      }
+    },
+    {
+      "category": 2,
+      "n": 321,
+      "baseline": {
+        "judge_correct": 261,
+        "official_f1_pct": 63.02299769625657
+      },
+      "cheap": {
+        "judge_correct": 266,
+        "official_f1_pct": 64.00780769939648
+      },
+      "jev": {
+        "judge_correct": 271,
+        "official_f1_pct": 65.23422320151292
+      },
+      "jev_vs_baseline": {
+        "gains": 13,
+        "losses": 3
+      }
+    },
+    {
+      "category": 3,
+      "n": 96,
+      "baseline": {
+        "judge_correct": 40,
+        "official_f1_pct": 28.282323920180456
+      },
+      "cheap": {
+        "judge_correct": 42,
+        "official_f1_pct": 29.951718190234622
+      },
+      "jev": {
+        "judge_correct": 42,
+        "official_f1_pct": 30.444685930186075
+      },
+      "jev_vs_baseline": {
+        "gains": 3,
+        "losses": 1
+      }
+    },
+    {
+      "category": 4,
+      "n": 841,
+      "baseline": {
+        "judge_correct": 630,
+        "official_f1_pct": 52.50438544555691
+      },
+      "cheap": {
+        "judge_correct": 718,
+        "official_f1_pct": 63.20546655422717
+      },
+      "jev": {
+        "judge_correct": 730,
+        "official_f1_pct": 64.31185120602399
+      },
+      "jev_vs_baseline": {
+        "gains": 110,
+        "losses": 10
+      }
+    }
+  ],
+  "actual_mean_reader_words": {
+    "baseline": 5.73051948051948,
+    "cheap": 6.21948051948052,
+    "jev": 6.312987012987013
+  },
+  "notes": [
+    "Category analysis descriptive, no subset threshold stop or tuning",
+    "Exact frozen1540, same Reader/Judge. Source augmentation adds input information/tokens."
+  ]
+}

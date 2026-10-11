@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "requests": [
+    {
+      "phase": "firstpass",
+      "request_hash": "c9564d5be33212dedc5b6e8333a9f073905baf14bc16288d66f0c999f907bbdc",
+      "stage": "qa_reader_gemini25_ablation_plain_v1",
+      "context": {
+        "method": "amem",
+        "conversation": 2,
+        "query_id": "c2_q42",
+        "phase": "firstpass"
+      },
+      "physical_attempts": 1,
+      "raw_sha256": "df449ca42ef4df0a4c80382cc36b1388a8373f1d57de5ec912f0624cd4826976",
+      "intent_sha256": "ec37fa2de7b96e9a97db93df3a67cbde3d477864335869e040cfd7c275e04759"
+    },
+    {
+      "phase": "firstpass",
+      "request_hash": "462feab2179dc5a6a76aadb37b187044b30dd1b587b7e3e8005f0750b3823b8c",
+      "stage": "reference_judge_gemini25_ablation_plain_v1",
+      "context": {
+        "method": "amem",
+        "conversation": 2,
+        "query_id": "c2_q42",
+        "phase": "firstpass"
+      },
+      "physical_attempts": 1,
+      "raw_sha256": "2aba3f61442ada600e309c5661e294d0df15ab6c565b770581a2acabaf71bdd2",
+      "intent_sha256": "c0f4b3b7517b5da7aaf16e659e919b33618f12c040fe6e45c1c8d16fbba454b6"
+    }
+  ],
+  "legacy_raw_inventory": {
+    "status": "passed",
+    "errors": [],
+    "inventory": [
+      {
+        "api": "api_firstpass",
+        "request_hash": "462feab2179dc5a6a76aadb37b187044b30dd1b587b7e3e8005f0750b3823b8c",
+        "raw_sha256": "2aba3f61442ada600e309c5661e294d0df15ab6c565b770581a2acabaf71bdd2",
+        "intent_sha256": "c0f4b3b7517b5da7aaf16e659e919b33618f12c040fe6e45c1c8d16fbba454b6",
+        "operation": "generateContent"
+      },
+      {
+        "api": "api_firstpass",
+        "request_hash": "c9564d5be33212dedc5b6e8333a9f073905baf14bc16288d66f0c999f907bbdc",
+        "raw_sha256": "df449ca42ef4df0a4c80382cc36b1388a8373f1d57de5ec912f0624cd4826976",
+        "intent_sha256": "ec37fa2de7b96e9a97db93df3a67cbde3d477864335869e040cfd7c275e04759",
+        "operation": "generateContent"
+      },
+      {
+        "api": "api_method",
+        "request_hash": "1802b8f3f2aacae0514197993db94c2e22f597b25e4274b91cd15f23f5180761",
+        "raw_sha256": "3425d24a5bb26e1f6c0d600632f4100cad31ac94cfa44dae1f0805c946e1f3dd",
+        "intent_sha256": "393fd0de41064cf3b6f1fb6ef9b38d44673dd908dc9e890f37da3ca162464105",
+        "operation": "generateContent"
+      }
+    ]
+  }
+}

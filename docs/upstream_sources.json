@@ -1,0 +1,116 @@
+{
+  "submodules": [
+    {
+      "path": "upstream/mem0",
+      "origin": "https://github.com/mem0ai/mem0.git",
+      "commit": "94c3fe9f238f3dbf29c9ce98643bd71eb13077cd",
+      "license_header": "Apache-2.0",
+      "license": {
+        "path": "upstream/mem0/LICENSE",
+        "bytes": 11550,
+        "sha256": "bdc813b8cc3d9cbd6b26024eacc677cba327eeb6e598e02cc291b0b63ca5b05e"
+      }
+    },
+    {
+      "path": "upstream/mem0/evaluation",
+      "origin": "https://github.com/mem0ai/memory-benchmarks",
+      "commit": "4b61c5d31b9c668a12b4f5e78064248a02c82d2b",
+      "license_header": "Apache-2.0",
+      "license": {
+        "path": "upstream/mem0/evaluation/LICENSE",
+        "bytes": 10948,
+        "sha256": "0f844b3383897e9823c4fc534fedaf7b83c3fcad7dd758f41d63edd9c5fe1515"
+      }
+    },
+    {
+      "path": "upstream/baselines_v1/amem",
+      "origin": "https://github.com/WujiangXu/A-mem.git",
+      "commit": "0c8039f28fdcc08189a23c07a3437d9d2482f9c2",
+      "license_header": "MIT",
+      "license": {
+        "path": "upstream/baselines_v1/amem/LICENSE",
+        "bytes": 1146,
+        "sha256": "dc109f631e462ed61faa782e465b9dca947b95b500baff6de873a179dae2c714"
+      }
+    },
+    {
+      "path": "upstream/baselines_v1/vmem",
+      "origin": "https://github.com/Dingyi-Kang/V-Mem.git",
+      "commit": "36916b14dc5241e04acbf5cd0f3c40799bc09550",
+      "license_header": "MIT",
+      "license": {
+        "path": "upstream/baselines_v1/vmem/LICENSE",
+        "bytes": 1095,
+        "sha256": "8e3e781fca3e06a008ccafe4c20f1d4828f551766ae818c19ee77b7a3692f804"
+      }
+    },
+    {
+      "path": "upstream/baselines_v1/prism",
+      "origin": "https://github.com/jingyip-cat/PRISM.git",
+      "commit": "fdc09e6bfe31f9c2852eb830ee07de1d750472f4",
+      "license_header": "MIT",
+      "license": {
+        "path": "upstream/baselines_v1/prism/LICENSE",
+        "bytes": 1089,
+        "sha256": "e3074a3ed8b59ae0458401adb9c66d2231b14028f2eec9f425b753baabd77f85"
+      }
+    }
+  ],
+  "simplemem_vendor": {
+    "origin": "https://github.com/aiming-lab/SimpleMem",
+    "commit": "db80b6a7c591e0ea730a058e9f5fc4eb06572299",
+    "files": [
+      {
+        "path": "upstream/baselines_v1/simplemem/LICENSE",
+        "bytes": 1067,
+        "sha256": "276dc8cc9eb5a8c59d1edca3283163815d2caa512b17bd0bf053050304b4cd3e"
+      },
+      {
+        "path": "upstream/baselines_v1/simplemem/simplemem/core/answer_generator.py",
+        "bytes": 4811,
+        "sha256": "ba8946134e9db0de63da00a9f223229800d2487c6fd34d22d7c5296093d0470c"
+      },
+      {
+        "path": "upstream/baselines_v1/simplemem/simplemem/core/config_default.py",
+        "bytes": 4851,
+        "sha256": "77b06780502e42a62ed308eee75dadd2a8192f20b127177bb14b5c614cc622cf"
+      },
+      {
+        "path": "upstream/baselines_v1/simplemem/simplemem/core/database/vector_store.py",
+        "bytes": 6424,
+        "sha256": "a7519fa27cfcfdceb4e146780c948c96e2840cea11965a94c296b786623fff29"
+      },
+      {
+        "path": "upstream/baselines_v1/simplemem/simplemem/core/database/vector_store_backend.py",
+        "bytes": 10319,
+        "sha256": "2406f5c267f9013af0dc34c8668def8b20b3e66326827c57d975f6129f502c26"
+      },
+      {
+        "path": "upstream/baselines_v1/simplemem/simplemem/core/hybrid_retriever.py",
+        "bytes": 39148,
+        "sha256": "63d6a3522e8a4c5d3a073b5dbf8ac003844c37993bf16033bb5c9a3807db5381"
+      },
+      {
+        "path": "upstream/baselines_v1/simplemem/simplemem/core/memory_builder.py",
+        "bytes": 17967,
+        "sha256": "ade5d9c252158ede2d0bd4ca3da027e913d6e88dbe616e00f5962178053c9dc7"
+      },
+      {
+        "path": "upstream/baselines_v1/simplemem/simplemem/core/models/memory_entry.py",
+        "bytes": 2751,
+        "sha256": "487209f5d6981a12568ec3f6f4597d2bd1437a82a0ef9af85c5dc755bc2947c8"
+      },
+      {
+        "path": "upstream/baselines_v1/simplemem/simplemem/core/utils/embedding.py",
+        "bytes": 6521,
+        "sha256": "da72ef639c5c0f6a6d9a0ecd5f4f45f65019da52e32191571ac718ff0b7c6d68"
+      }
+    ]
+  },
+  "license_and_provenance_boundaries": [
+    "Own locomo_official_metrics.py explicitly records no license found for pinned snap-research/locomo metric source. This is not resolved by the Apache license on a different memory-benchmarks repository.",
+    "summarize_pilot400.verified_official_metric requires research/sources/locomo_evaluation_cbfbc1.py SHA 8e3be5d57ff2ff9ec5cd05939592f468c5f3f1fd95d13e431932bdf6bf0fd6fd. It is not in this whitelist; preserve URL/commit/hash and retrieval instructions if externalized.",
+    "Dataset local-copy manifest records provenance/hash, not an explicit redistribution grant. Do not label data as covered by code MIT/Apache licenses without evidence.",
+    "ACL template provenance is commit d5adc823ff0f80f98c80405ca0ab66c68e684409 of acl-org/acl-style-files; retain supplied attribution/provenance."
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "module-stack-ready-review-v1",
+  "status": "ready",
+  "created_utc": "2026-10-05T15:47:29.704139+00:00",
+  "code_sha256": {
+    "jev_mem/evidence_ordering_r02.py": "aa6007b284d0ee5f1c2ec1f019feefc0d983997991e2ddb467ad2d583961a03e",
+    "tools/prepare_evidence_ordering_r02.py": "7628e41a2c78acf69cb8a69a530f91740fb9fc2338479e41966c38f03367a365",
+    "jev_mem/evidence_exchange_r01.py": "d0ece7e2bcdc2f919d87fb903382649c0e7ce348f746d6838b9184ddb86eb371",
+    "tools/prepare_evidence_exchange_r01.py": "0415bb8e872ef416f7742f2c5784e79e62dc0bd1db73e839da9e9161b3433379",
+    "tools/pilot400_recovery_rank_v1.py": "564033fcc6b02451ced23ebf3f7d778bafd25f4b95fae37ec3bf2dd3fcc40858",
+    "jev_mem/routing.py": "6b8d99095064cd67132040c8a4774e0c2c30b62906f97c14d36c75ddf82d63db",
+    "jev_mem/pilot400.py": "f9fd4d10e74ddff328b96598fed5be2c2b24dce09a7097f030312367becadc25",
+    "jev_mem/selection.py": "e6190813f1492a63a06813e51b9fac0446cc8b220295f3cd121a967d8190e49a",
+    "tools/score_evidence_ordering_r02.py": "24167126ed84f40c3dc468cf23024a8959565984bb378af5973c7d5c409ca715",
+    "tools/snapshot_evidence_ordering_r02.py": "3e5240b0622c2563da766970fde23c0930a6ef0f38034945bde908d48796e074",
+    "tools/run_evidence_ordering_qa_r02.py": "9462b69fdd5c72834367e44b1f82cbca5e7166d4d58dad2a84de25090b7a21fb",
+    "tools/summarize_evidence_ordering_r02.py": "adc214a57195519a6a5b1c2607f75cb9703afecc9f3cdad50b84642d0e92db82",
+    "tools/run_evidence_exchange_qa_r01.py": "d93cf7ddaa981aac80c959d69edce0df48e5c4288d97d239cff7987e2f67238f",
+    "tools/summarize_evidence_exchange_r01.py": "91dc7456fc5490d466a813e0b5c455e38df1d67e1b224135bc60e3e5fb0856bc",
+    "tools/score_evidence_exchange_r01.py": "f2e8021b5cb13c64d796d26d618143e93a8985c40c2878858c984c7d6b508648",
+    "jev_mem/gemini38_provider_v1.py": "d27799022569c526c4237009b21335642048f9fd1a9161dcbaed4ba5181aaffe",
+    "jev_mem/providers.py": "34d0f9cc3c3607e41c8b69b854d65d012e3de78078f6a9d38605f2b760be1dd6",
+    "jev_mem/paced_embedding_api.py": "148f19fd8018c4ea6d3b855bae88cec64fba30550b2b3362683da1d1330e1582",
+    "jev_mem/sdk20_cached_api.py": "be4684c0cf035c6dca74bbf418eba166830201001d6872f103d24c0bc4c09b16",
+    "tools/check_experiment_health.py": "e1533a73fbb3f914c19256feed21eef6c38739a5f878b7a84ac87a558ebfe68b",
+    "jev_mem/evidence_selection_r03.py": "63e0a566f7560d547ef64c7d95035afeadc513b764c44ea5e2bf6a27d1a10411",
+    "tools/prepare_evidence_selection_r03.py": "db1c0bfcdfc538ecd4b741f8fb3679c37c8b94396b663720f5c3229c2b9ec1e9",
+    "tools/score_evidence_selection_r03.py": "7b5175d90e5615a8b2416ff2724c5aa88209ba1617d7a6e68297570b2bd23a53",
+    "tools/snapshot_evidence_selection_r03.py": "be4d1fbce3b1039d2734d1dd35dfcb1d55481b9d34e70451f628117e9e6b5c01",
+    "tools/run_evidence_selection_qa_r03.py": "0000faad4bcfd79cfdc0ad3cc15ad39fd0aca8692fdc57c714bf56f3bee86911",
+    "tools/summarize_evidence_selection_r03.py": "dd8f7df273c43ec5a5a93a0475a9d262e0a78be4eccced084254f03695619925",
+    "jev_mem/source_append_r05.py": "7d7bdd7480339500c3e7af3b5e499d8bb31bf7ced15c820e7ff237ec4923bd84",
+    "tools/prepare_source_append_r05.py": "ea2a578f37f77e3fd11e552e5159155e35457db87ace35a02bfc4a879449eaba",
+    "tools/score_source_append_r05.py": "8c4310d520a92a804418865a4338f5fafa0c782197562a173078fd67cd98555a",
+    "tools/snapshot_source_append_r05.py": "e2d43d848900977eab3354a65d72a37db02d65c7f9d1f3a94dc75c0aa38ca053",
+    "tools/run_source_append_qa_r05.py": "7c6a1935f9573ed7e2697e8ddf8ffd0c3b18d761d6847edd68d352af0436246f",
+    "tools/summarize_source_append_r05.py": "7cedd1e3bc9c89214d5bd133fe6ae766735e0b464ec312225592a4711a6f95db",
+    "jev_mem/data.py": "7b7ad57e6de336c91c8005f1d24d2638a1dd73e16044a5b2a0561222e7e187bd",
+    "jev_mem/source_support_stack_v1.py": "0b6c0f90f253a6bb38e73df13551d9fea9599e525971f84054f7b7c0e99da6f5",
+    "tools/module_stack_archive_v1.py": "34ef9571568643ee51f7766c29fb5dee1ec2771ac82b56428016bb38ee144986",
+    "tools/prepare_module_stack_v1.py": "fa8adeee38d9f3cde7a81435321b17c650154f4c916db94945924416c95c92d3",
+    "tools/score_module_stack_v1.py": "c9e30a5a580b0c94fe434a4e2ac1ba15df88d0be579311bf8642c8238b656afe",
+    "tools/run_module_stack_qa_v1.py": "da9ddd9893fb5d218e56665ebb427b5b3f9898706603b2c84f150ab3673231b4",
+    "tools/summarize_module_stack_v1.py": "3d7e93b196cbfc17fa9448ddc26ea3687548ac656d54cfd482410dacbbe87e93",
+    "tools/run_module_stack_pipeline_v1.py": "72ad76978d72df3b28da7f1bb1c1ac1f845fea7248097b058d73eb63fcc49907"
+  },
+  "protocol_sha256": "dead470d64d2596d06ab95ae74b5c51781ac2b7025e9d559a08a3abcffc409aa",
+  "models_dispatched_before_review": 0,
+  "offline_tests": {
+    "passed": 58,
+    "failed": 0
+  },
+  "independent_reviews": [
+    {
+      "reviewer": "module_merge_astra",
+      "design": "research/module_stack_2026-10-05/astra_design.md",
+      "decision": "agree; source core, archive and pipeline audited; exact bound source replay before phases; unknown blocks"
+    },
+    {
+      "reviewer": "module_merge_sol",
+      "design": "research/module_stack_2026-10-05/sol_design.md",
+      "decision": "agree; source core and original QA/summary bytecode reviewed"
+    },
+    {
+      "reviewer": "stack_qa_adapter",
+      "decision": "agree; durable dispatcher failure and inventory tests, real 12289 baseline proof and1540 signatures passed"
+    }
+  ],
+  "archive_selection_inputs_verified": 6160,
+  "genuine_original_proof_input_bindings": 12289,
+  "genuine_original_baseline_signatures_verified": 1540,
+  "preflight_namespace_not_executed": "runs/module_stack_v1_20261005",
+  "main_ladder": [
+    "baseline",
+    "pool_old_jev",
+    "pool_new_jev",
+    "stack_source"
+  ],
+  "source_mechanisms": [
+    "support partial-claim locator",
+    "adjacent evidence closure"
+  ],
+  "existing_source_unchanged": true,
+  "content_sha256": "fbb63242f7f8ae9bcef172858e360a7928a5123f1da219030677f386192072b6"
+}

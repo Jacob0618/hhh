@@ -1,0 +1,176 @@
+{
+  "schema": "r05-source-context-append-protocol-v1",
+  "status": "FINAL_V1_AWAITING_THREE_EXACT_SHA_VOTES",
+  "round": 5,
+  "title": "Bounded source-context append to the unchanged N0 evidence slots",
+  "hypothesis": "With the N0 memory text and evidence order retained, bounded source input context may restore explicit relations or temporal wording lost in compression; JEV may select more useful attachments than a shared lexical proposer. This is an exploratory hypothesis, not a guarantee.",
+  "population": 1540,
+  "arms": [
+    "baseline",
+    "cheap",
+    "jev"
+  ],
+  "upstream": "Locked N0 session bank and original SDK20 only; no R03 selection/R04 answer routing dependency.",
+  "input_refs": {
+    "session_source_allowlist": {
+      "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r02_session_source_allowlist_61.json",
+      "sha256": "f4ff4f13b0fe942cf558cb0f88c0237acec478db6b543fa4a2fb5347916dde10"
+    },
+    "n0_lineage": {
+      "path": "D:\\jev mem\\runs\\evidence_exchange_r01_v1\\selected_inputs.json",
+      "sha256": "bb659bc05b5e7f8f480db4a542d33276758c1e3e1fdbe11e9a67205cc1a26979"
+    },
+    "n0_manifest": {
+      "path": "D:\\jev mem\\runs\\evidence_exchange_r01_v1\\run_manifest.json",
+      "sha256": "fb541f03a87abd444cc2848a467a3827053eb34904ec2fc815f52feacdb71657"
+    },
+    "prior_qa_for_exact_reuse": {
+      "path": "D:\\jev mem\\runs\\evidence_selection_qa_r03_v1\\run_manifest.json",
+      "sha256": "a4a8028beb0b455e9d0763e75588ac50b2628103ae153adf0bcafa5b1d043ac4"
+    },
+    "bm25_implementation": {
+      "path": "D:\\jev mem\\tools\\pilot400_recovery_rank_v1.py",
+      "sha256": "564033fcc6b02451ced23ebf3f7d778bafd25f4b95fae37ec3bf2dd3fcc40858"
+    },
+    "bm25_tokenizer_constants": {
+      "path": "D:\\jev mem\\jev_mem\\routing.py",
+      "sha256": "6b8d99095064cd67132040c8a4774e0c2c30b62906f97c14d36c75ddf82d63db"
+    },
+    "writer_media_rendering_reference_only": {
+      "path": "D:\\jev mem\\jev_mem\\data.py",
+      "sha256": "7b7ad57e6de336c91c8005f1d24d2638a1dd73e16044a5b2a0561222e7e187bd"
+    }
+  },
+  "inputs": {
+    "source_authority": "Use only the20 exact bank/group_inputs paths+SHA in the allowlist, including recovered conv3. Read group_inputs.envelopes; zip source_turn_ids and messages with exact length/uniqueness validation.",
+    "selector_fields": [
+      "query_id",
+      "conversation",
+      "question",
+      "reference_date",
+      "original ordered20 IDs/text/observation_date",
+      "each original fact input_scope.session_id/source_turn_ids",
+      "allowlisted envelope observation_date/source_turn_ids/messages.content"
+    ],
+    "not_selector_fields": [
+      "gold/reference answer",
+      "Judge result",
+      "prior Reader answers",
+      "R04 decisions/errors",
+      "QA success/failure",
+      "embedding vectors",
+      "image query/search metadata",
+      "image URLs"
+    ],
+    "lineage_note": "Original QA lineage may retain offline reference for unchanged evaluation. Construct selector state exclusively from the listed fields; no gold-derived candidate eligibility.",
+    "scope": "For each original20 fact, only input_scope.source_turn_ids within its declared current session. No historical_turn_ids, existing_memory_ids expansion, inferred source support or whole-conversation lookup.",
+    "hard_errors": [
+      "bank/file SHA mismatch",
+      "20canonical IDs/text/date/order mismatch",
+      "duplicate/malformed source_turn_id mapping",
+      "scope lists a turn outside declared session",
+      "pool/request includes gold or forbidden metadata"
+    ],
+    "locator_unknown": "Absent or empty current scope yields no candidate for that fact with explicit reason; no outside-scope refill and no implication that the bank/source lacks evidence."
+  },
+  "source_projection": {
+    "policy": "Restricted verbatim view of original Writer input, not full byte-identical Writer input. Original Writer saw rendered image query+caption. Original N0 text remains unchanged.",
+    "speaker_text": "Retain exact non-media substrings of messages.content including speaker prefix; retain source offsets. Do not paraphrase, summarize, normalize event dates or correct original facts.",
+    "caption": "Extract exact caption from the known renderings [Sharing image - query: Q. The image shows: C] and [Sharing image that shows: C]; expose C as machine_caption, not as a speaker assertion. Never expose Q or URLs.",
+    "unknown_media": "Omit unresolved Sharing-image bracket annotation and record unresolved_media; preserve other exact speaker text. Never guess missing caption or consult image/file/network.",
+    "records": "Source turn ID, original session ID/observation_date, exact speaker_text spans and separately labeled machine_caption spans. Date means source observation date, not event occurrence.",
+    "window": "Center plus immediate predecessor and successor in original session order only if each is in that anchor fact current scope. Do not jump across an excluded intervening turn, cross sessions or fill beyond scope. Record left/right absent or excluded markers in provenance.",
+    "caps": "Each fully rendered source attachment at most4096 UTF8bytes. Reject oversize whole candidates before ranking, no clipping or adaptive window shortening. Two attachments at most8192 added UTF8bytes; this is not a token cap.",
+    "packet_view": {
+      "session_id": "exact original session ID",
+      "source_observation_date": "exact original envelope observation_date",
+      "turns": "In original order, each object has source_turn_id, speaker_text (concatenated exact non-media spans), machine_captions (list of exact caption strings). Keep empty captions list. Speaker prefix remains part of speaker_text; do not infer names."
+    },
+    "packet_serialization": "json.dumps(packet_view, ensure_ascii=False, sort_keys=True, separators=(comma,colon)); separators are literal ASCII comma and colon, no spaces. UTF8 encode without BOM. Full attachment is the fixed actualLF wrapper around this JSON. The4096byte cap includes both wrapper delimiters and rendered JSON; original fact prefix excluded.",
+    "provenance": "Offline fileSHA+envelope/message JSON pointer+source turn ID+exact character offsets for every included speaker/caption span, omitted media reasons, current scope, center, origin aliases, boundary_missing/excluded left/right. No generated source quote. All actual displayed substrings must replay from allowlisted group_inputs bytes."
+  },
+  "proposer": {
+    "bm25": "Use exact frozen stable_bm25 and engine._tokens; K1=1.2,B=.75, sorted unique query-term accumulation.",
+    "corpus": "For each query, unique original turns from the union of permitted current scopes of its original20facts, in original envelope array order then source_turn_ids/messages order. Same corpus and IDF for question and every anchor.",
+    "document_render": "Concatenate exact speaker_text spans without added text; then, for each caption in original order, append actualLF + Machine caption: + one ASCII space + caption. No observation-date, session-ID or turn-ID tokens enter BM25.",
+    "query_render": "Original question only. No added reference date.",
+    "anchor_render": "Original fact text only. No added observation date.",
+    "candidate_per_fact": "For each of20 facts, evaluate its permissible center turns. Require both question-to-center BM25 and anchor-to-center BM25 strictlypositive; only full bounded windows. Choose one center by question score descending, anchor score descending, original turn order ascending. Both positive lexical scores are heuristic overlap, not semantic support.",
+    "dedup": "Identity is conversation+session+ordered included source turn IDs with identical projected bytes. Keep one packet; bind to origin with highest anchor-to-center score, then earliest original20 slot, then earliest center turn. Save all origin fact/center aliases offline.",
+    "candidate_order": "After dedup, sort by question-to-center score descending, canonical anchor-to-center score descending, anchor original20 position ascending, canonical center turn order ascending. Retain first4; no outside refill.",
+    "n_candidates": "0..4; if0 both remainN0. If1or2 both append all available candidates with no JEV dispatch because no ranking choice is needed.",
+    "slot_invariant": "Every original fact contributes at mostone center before dedup; canonical anchor slots must therefore be distinct after dedup. Assert this, do not silently append multiple packets to one slot or invent a replacement candidate."
+  },
+  "cheap": {
+    "policy": "For n>=3 take first2 packets in frozen proposer order; for n<=2 use all. No new temporal/actor inference, no answer or label input.",
+    "metadata_access": "Uses the same candidate packet views/anchor facts/dates available to JEV. Its lexical ordering intentionally does not interpret dates or add time rules; difference in semantic processing is the tested backend distinction."
+  },
+  "jev": {
+    "model": "jev-1.13.0",
+    "endpoint": "systemone",
+    "one_logical_request_per_query": true,
+    "dispatch": "Only n=3or4; one shared state with question/reference_date and n isolated Noul questions. Each question instructions embeds exact original anchor fact text/observation_date and exact rendered packet. Key names do not substitute for model-visible text.",
+    "predicate": "Does this quoted source context provide an explicit detail, relation, condition, speaker attribution, or temporal wording requested by the question that is absent or less explicit in this one original memory? A partial requested list item may count. Judge only the displayed source and this memory; do not assume completeness of the other19 memories or full conversation. Do not invent a bridge or treat source observation date or machine caption as a speaker assertion/event date. Related topic alone is insufficient.",
+    "meaning": "Raw pYES estimates local usefulness/explicitness under the model; not calibrated truth, full-set novelty, completeness or nondegradation.",
+    "decision": "Require all n scores valid. Sort pYES descending, tie frozen candidate index ascending; append top2. No probability cutoff; even uniformly low valid scores still rank and append2.",
+    "failure": "Any missing/invalid/nonfinite/bool probability, wrong model/type/keys, malformed response or unresolved technical outcome causes entire JEV query to retain exact N0 without partial attachments.",
+    "response": "Reuse strict Noul parser semantics, dynamic contiguous keys for3or4; probabilities in[0,1].",
+    "signature_utf8_byte_cap": 131072,
+    "oversize": "No dispatch, exact N0; never clip, split or replace fields to force request fit.",
+    "question_keys": "For n=3 use f00,f01,f02; for n=4 additionally f03, aligned to frozen candidate_order. Each type is noul. Keys are transport identifiers, not model-visible references."
+  },
+  "reader_representation": {
+    "baseline": "Exact original20 and frozen Reader prompt/config.",
+    "augmentation": "Keep all20 originalIDs, originaltext as an unchanged prefix, observation_dates and order. Append the selected packet after its bound anchor text using a fixed data-only source-context wrapper; no instruction to answer, no generated claim, no reindex/embedding/retrieval. Each packet bound to one slot; at most2 slots.",
+    "wrapper": "\n\n[Source input context; source observation date is not necessarily event date; machine captions are annotations]\n{rendered_packet}\n[End source input context]",
+    "replay": "Store per-query derived Reader fact view and original-bank/turn-offset/packetSHA provenance. Same ID does not imply same request: only exact final full Reader signature may reuse old results. Persist actual Reader first; independent exact full Judge signature reuse includes valid oldNO.",
+    "unchanged_evaluator": "gemini-3.8-flash low, no temperature,8192 maxoutput, same original Reader/Judge prompts, same fixed1540gold; no extra answer candidate or retry for semantic quality.",
+    "wrapper_note": "The decoded JSON wrapper contains actualLF U+000A characters, not literal backslash+n. Replace only {rendered_packet} with canonical serialized packet_view. The identical complete attachment string is used for cap calculation, JEV question and final Reader append."
+  },
+  "transport": {
+    "per_phase_retries": 2,
+    "firstpass": "Reuse frozen provider retries=2: at most3 physical attempts per phase on its existing retryable statuses/requests.RequestException. A readtimeout may occur after server processing, so bounded internal retry can repeat remote processing; no exactly-once remote guarantee. Retain every known attempt and unknownusage.",
+    "uniform_recovery": "After all firstpass terminal, at mostone new namespace recovery for eligible known technical failures; same signature and retries2, total max6. HTTP200malformed is ineligible. No recovery ifnoneeligible.",
+    "crash": "At mostone audited versioned process recovery; pipeline setup failures do not count scientific rounds and must retain failure evidence.",
+    "unknown_stage": "A persisted request intention with an unresolved stage outcome cannot be relaunched as a new logical request or technical recovery. This stage-level rule does not claim the inherited provider never internally retries a transport timeout."
+  },
+  "reporting": {
+    "primary": "Fixed1540 Judge correct; missing countedzero sensitivity and terminal/recovery tables; N0 must validate1153, min1200 for strict>3pp.",
+    "comparisons": [
+      "cheap−N0 source-access total effect",
+      "JEV−N0 complete module effect",
+      "JEV−cheap incremental choice effect under shared allowed source/caps"
+    ],
+    "limits": [
+      "Same20 slots is not equal information or equal tokens.",
+      "Same max2 attachments/cap does not imply equal realized input length.",
+      "Pointwise local novelty does not ensure complementary multi-hop coverage or preservation of all relevant context.",
+      "Source lookup failure does not imply no source evidence.",
+      "No calibration/source-truth/nondegradation or paper novelty guarantee.",
+      "Local new-information scoring can undervalue a useful clearer restatement when the original memory already contains the answer.",
+      "Keeping all original facts does not guarantee unchanged Reader behavior; added irrelevant or conflicting source context may distract it.",
+      "Source-only captions exclude image-search query metadata seen by the original Writer; restricted input projection is a deliberate shared policy, not full original-input copying."
+    ],
+    "costs": "Count source scan turns/bytes, candidate counts/exclusions, actual attachment counts/bytes, Reader/Judge tokenusage, JEV physical/cache/unknownusage and cold required pipeline. No newindex/embedding; no invoice inferred from usage.",
+    "diagnostics": [
+      "n0/n1/n2/n3/n4 candidate distribution",
+      "scope/media/oversize exclusions",
+      "identical/different attachment sets and fallback",
+      "full query/fact BM25 scores and chosen center/aliases",
+      "paired gain/loss,category/conv",
+      "length/count strata descriptive only; no posthoc rule tuning"
+    ],
+    "independence": "This module attaches source context toN0 independently ofR03/R04. Whether it qualifies as a distinct successful component still requires actual >3pp and separate test; do not count a composition orcheaponly success."
+  },
+  "execution_gate": "No production API until final exact protocol has three actual reviewer votes, new implementation tests and1540prepared source/derived-view binding review. This draft is not a vote.",
+  "draft_provenance": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\R05_source_append_protocol_draft_v1.json",
+    "sha256": "5e7cc20e2a0ba52334231f05f105e764e7e51210ae875b20cb6d5cebee10b63d",
+    "revisions": [
+      "BM25 matches text/caption only; observed/reference dates remain displayed but do not create empty lexical matches.",
+      "Explicit actualLF/renderedJSON serialization and contiguous Noulkeys.",
+      "Distinct anchor-slot hard invariant and boundary flags.",
+      "Truthful frozen provider transport retry disclosure."
+    ]
+  }
+}

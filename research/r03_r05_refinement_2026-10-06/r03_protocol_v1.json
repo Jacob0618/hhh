@@ -1,0 +1,30 @@
+{
+  "schema": "r03-refinement-v1-protocol",
+  "policy": {
+    "version": "r03-refinement-v1",
+    "pool_cap": 80,
+    "selected_count": 20,
+    "questions_per_batch": 32,
+    "signature_utf8_byte_cap": 131072,
+    "swap_counts": [
+      1,
+      2,
+      4
+    ],
+    "set_proposal_cap": 4,
+    "set_acceptance_strict_gt": 0.5,
+    "set_maximum_tie_tolerance": 1e-12,
+    "pointwise_threshold": null,
+    "complement_threshold": null,
+    "ranking_tie": "original_pool_index",
+    "donor_order": "reverse_precision_ranking_within_preliminary20",
+    "reader_order": "original_pool_order",
+    "failure_action": "whole_query_original_OJ20",
+    "unknown_action": "raise_needs_review",
+    "oversize_action": "no_dispatch_no_truncation_no_adaptive_batch",
+    "calibration": "uncalibrated_operational_scores_not_truth_probabilities"
+  },
+  "precision_predicate": "Does this memory explicitly supply at least one fact or relation required by the original question, with the requested subject, relation direction, event identity and material conditions? Partial requested list members or necessary reasoning links may count; the memory need not answer the whole question. Topic or actor overlap alone is insufficient. Preserve negation, planned versus completed status, and the question temporal scope. Do not invent an unstated bridge or infer an event date solely from observation_date. A memory need not repeat every question word when its relation is explicit. Assess memory-relative usefulness, not source truth.",
+  "complement_predicate": "Compared with all selected_memories in state, does this candidate explicitly add a distinct fact, requested list member, necessary reasoning link, or clarification of a subject, relation, event, condition or time that is needed by the original question and absent or less explicit in that set? Mere paraphrase, shared topic or a different event is insufficient. Partial requested list members may count; do not invent unknown members or require the candidate to complete the entire answer. Preserve negation, planned versus completed status and temporal scope. Observation date is not by itself event date. Assess only the displayed memories; this does not certify source truth or completeness of the resulting answer.",
+  "set_predicate": "Compare proposed_memories with original_memories for the original question. Does the proposed set provide a strict net improvement in explicit question-required evidence, through additional necessary coverage or clearer subject, relation, event, condition or time, without losing a necessary list member or reasoning link supplied by the original set? Evaluate each set using only the twenty keys assigned to that set in original_memories or PROPOSED_MEMORY_KEYS_JSON. Other fact_table entries and keys belonging only to another set must not fill a gap in the set being evaluated. Read each assigned memory from fact_table. More topical text, redundancy or length alone is not improvement. Keep speaker/subject and relation direction, negation, planned versus completed status, and temporal scope; do not invent bridges or turn observation dates into event dates. If the sets are equally useful, or the proposed set trades away required evidence without a clear net gain, answer NO. Assess memory-relative evidence only, not source truth or guaranteed Reader accuracy."
+}

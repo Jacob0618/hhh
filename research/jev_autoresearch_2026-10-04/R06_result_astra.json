@@ -1,0 +1,266 @@
+{
+  "schema": "r06-result-review-astra-v1",
+  "reviewer": "astra",
+  "created_utc": "2026-10-04T05:28:45.168549+00:00",
+  "decision": "ACCEPT_R06_RESULT_NO_NEW_SUCCESS_COMPONENT",
+  "summary": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r06_final_summary.json",
+    "sha256": "6cd6da8ef088e017d5fa31a7c3256582c3aa26d7903451efed5dcfbb64c41e21"
+  },
+  "audit_status": "no_invalid_artifacts",
+  "audit_errors": [],
+  "all_4620_valid": true,
+  "uniform_recovery_used": false,
+  "case_review": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\R06_case_review_astra.json",
+    "sha256": "8acd9c6b937b195ff1ee925a30bdbe4a670a48f8edcc6b70b9549b30bae6e5a5"
+  },
+  "phase_accounting": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r06_phase_accounting_write61.json",
+    "sha256": "ce9b552004fb2143f3ad43c3a6880e1a87e669d0a399bd733a31db5becf666dd"
+  },
+  "metrics": {
+    "baseline": {
+      "correct": 1153,
+      "denominator": 1540,
+      "official_f1": 0.5104400011392458
+    },
+    "cheap": {
+      "correct": 1031,
+      "denominator": 1540,
+      "official_f1": 0.4596021951147667
+    },
+    "jev": {
+      "correct": 1179,
+      "denominator": 1540,
+      "official_f1": 0.5252987888862497
+    }
+  },
+  "paired": {
+    "cheap_vs_baseline": {
+      "gains": 33,
+      "losses": 155,
+      "net_questions": -122,
+      "judge_absolute_pp": -7.922077922077922
+    },
+    "jev_vs_baseline": {
+      "gains": 48,
+      "losses": 22,
+      "net_questions": 26,
+      "judge_absolute_pp": 1.6883116883116882
+    },
+    "jev_vs_cheap": {
+      "gains": 175,
+      "losses": 27,
+      "net_questions": 148,
+      "judge_absolute_pp": 9.61038961038961
+    }
+  },
+  "threshold": {
+    "baseline_correct": 1153,
+    "required_correct": 1200,
+    "jev_correct": 1179,
+    "met": false,
+    "successful_new_component_count": 0,
+    "R05_successful_component_remains_one": true,
+    "family": "original-bank retrieval, same as R03; not R05 sourceappend"
+  },
+  "algorithm_diagnostics": {
+    "m_distribution": {
+      "2": 1217,
+      "1": 46,
+      "4": 6,
+      "3": 271
+    },
+    "jev_zero_fill_slots": 29093,
+    "total_slots": 30800,
+    "jev_zero_fill_fraction": 0.9445779220779221,
+    "positive_steps_per_query": 1.1084415584415583,
+    "meaning": "Observed max-coverage saturation; not a theorem of at most m positive steps and not by itself proof facets have no effect.",
+    "counterexample_to_m_bound": [
+      [
+        0.6,
+        0.6
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "assigned_25_cases_same_members_as_own_facet0_top20": true,
+    "full_1540_equivalence_review": {
+      "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\R06_original_q_equivalence_retrieval61.json",
+      "sha256": "ee3d8dd282907aabb748b02baeb563fed3f1a7a1eb67b5331a7fc1b9051bee25"
+    },
+    "full_1540_equivalence_as_reported_by_peer": 1539,
+    "scalar_diagnostic_does_not_rerun_reader_or_equal_R03_scores": true
+  },
+  "physical_cost": {
+    "facet": {
+      "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+      "available": true,
+      "physical_attempts": 1534,
+      "cache_events": 11,
+      "physical_status_counts": {
+        "http_success": 1529,
+        "transport_or_unknown": 5
+      },
+      "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+      "physical_attempts_by_model": {
+        "gemini-3.8-flash": 1534
+      },
+      "usage_unknown_attempts": 5,
+      "token_fields": {
+        "prompt": {
+          "recorded_attempts": 1529,
+          "missing_attempts": 5,
+          "recorded_token_sum": 378063
+        },
+        "output": {
+          "recorded_attempts": 1529,
+          "missing_attempts": 5,
+          "recorded_token_sum": 30576
+        },
+        "thinking": {
+          "recorded_attempts": 34,
+          "missing_attempts": 1500,
+          "recorded_token_sum": 9411
+        },
+        "total": {
+          "recorded_attempts": 1529,
+          "missing_attempts": 5,
+          "recorded_token_sum": 418050
+        }
+      },
+      "missing_ledgers": [],
+      "total_cost_usd": null,
+      "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+      "missing_thinking_is_not_zero": true
+    },
+    "jev_matrix": {
+      "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+      "available": true,
+      "physical_attempts": 3298,
+      "cache_events": 23,
+      "physical_status_counts": {
+        "http_success": 3294,
+        "transport_or_unknown": 4
+      },
+      "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+      "physical_attempts_by_model": {
+        "jev-1.13.0": 3298
+      },
+      "usage_unknown_attempts": 4,
+      "token_fields": {
+        "prompt": {
+          "recorded_attempts": 3294,
+          "missing_attempts": 4,
+          "recorded_token_sum": 50655236
+        },
+        "output": {
+          "recorded_attempts": 3294,
+          "missing_attempts": 4,
+          "recorded_token_sum": 4756536
+        },
+        "thinking": {
+          "recorded_attempts": 0,
+          "missing_attempts": 3298,
+          "recorded_token_sum": 0
+        },
+        "total": {
+          "recorded_attempts": 0,
+          "missing_attempts": 3298,
+          "recorded_token_sum": 0
+        }
+      },
+      "missing_ledgers": [],
+      "total_cost_usd": null,
+      "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+      "missing_thinking_is_not_zero": true
+    },
+    "new_qa": {
+      "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+      "available": true,
+      "physical_attempts": 4244,
+      "cache_events": 184,
+      "physical_status_counts": {
+        "http_success": 4150,
+        "transport_or_unknown": 94
+      },
+      "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+      "physical_attempts_by_model": {
+        "gemini-3.8-flash": 4244
+      },
+      "usage_unknown_attempts": 94,
+      "token_fields": {
+        "prompt": {
+          "recorded_attempts": 4150,
+          "missing_attempts": 94,
+          "recorded_token_sum": 4531785
+        },
+        "output": {
+          "recorded_attempts": 4141,
+          "missing_attempts": 103,
+          "recorded_token_sum": 27331
+        },
+        "thinking": {
+          "recorded_attempts": 2678,
+          "missing_attempts": 1566,
+          "recorded_token_sum": 502334
+        },
+        "total": {
+          "recorded_attempts": 4150,
+          "missing_attempts": 94,
+          "recorded_token_sum": 5061450
+        }
+      },
+      "missing_ledgers": [],
+      "total_cost_usd": null,
+      "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+      "missing_thinking_is_not_zero": true
+    },
+    "cold_pipeline": {
+      "exact_cold_invoice_available": false,
+      "writer_usage": null,
+      "embedding_usage": null,
+      "note": "Frozen Writer/index costs are not reconstructed and are not zero. Facet generation is common overhead for cheap/JEV; per-facet JEV matrices are extra. Selected QA calls and shared cache ownership cannot be split into independent arm invoices.",
+      "judge_is_evaluation_excluded_from_deployment": true,
+      "no_source_append_or_reembedding": true
+    }
+  },
+  "review_conclusions": [
+    "JEV beats N0 by26 questions but does not reach the strict+3pp criterion. Its large advantage over weak cheap control is not absolute task success.",
+    "Assigned source cases separate added relation/list members from retained-but-unused evidence, temporal/platform qualifier omissions, true historical/current-state interference, and ambiguous near-identical Judge labels.",
+    "R06 versus R03 net+3 is not a causal facet ablation: predicate, scores and selected sets also differ.",
+    "Exact source/stage provenance does not certify semantic truth. Repeated seen1540 development does not produce heldout generalization evidence.",
+    "No threshold, facet, Judge, source or QA-prompt change is justified inside R06."
+  ],
+  "primary_sources_actual_read": [
+    {
+      "url": "https://arxiv.org/html/2609.36130v1",
+      "sections": "3.1-3.2 and abstract",
+      "type": "preprint",
+      "consequence": "Citation-only absence is not unsupported memory; expanded pre-write history remains retrieval-bounded; compositional relation support and admission are distinct."
+    },
+    {
+      "url": "https://arxiv.org/html/2604.11628v1",
+      "sections": "3.1-3.2",
+      "type": "preprint",
+      "consequence": "Raw-turn/session retrieval and query pruning are prior art; performance cannot be transferred to this fixed20 system."
+    },
+    {
+      "url": "https://arxiv.org/html/2607.22448v3",
+      "sections": "Limitations and conclusion",
+      "type": "preprint",
+      "consequence": "Layerwise checkpoint versus behavioral loss distinction useful; substring labels and unavailable raw main-sweep trials prevent numerical transfer."
+    }
+  ],
+  "next_direction_status": "DISCUSSION_ONLY_NO_PROTOCOL_VOTE",
+  "preferred_candidate": "query-independent write omission repair, with original records retained and shared bounded proposed new source-supported relational records; requires precise candidate and admission controls, cold index costs, and genuine separation from merely persisting R05 append windows.",
+  "alternative_and_risk": "OriginalN020 evidence organization could test retained-but-unused failures without source access, but generated rewrites may delete qualifiers or become an unacknowledged second Reader; no current launch agreement.",
+  "model_calls_by_reviewer": 0
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "local_only_large_evidence_v1",
+  "note": "These files are not included in Git. Hashes establish identity, not a remote backup or full raw replay.",
+  "files": [
+    {
+      "path": "research/r03_r05_refinement_2026-10-06/heartbeat_20261006T1052/live_qa_v2/final_summary_v1.json",
+      "original_absolute_path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\heartbeat_20261006T1052\\live_qa_v2\\final_summary_v1.json",
+      "bytes": 73803219,
+      "sha256": "01aa05237a252832135f9c03122d16ee8d6f1aab0b0b2e97d16f2836533567e5",
+      "group": "gemini38_canonical_full_summary",
+      "uploaded": false,
+      "status": "retained locally; not deleted"
+    },
+    {
+      "path": "research/gemini25_ablation_2026-10-07/heartbeat_20261007T1814/billing_resume_v1/live_v1/final_summary_v1.json",
+      "original_absolute_path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\heartbeat_20261007T1814\\billing_resume_v1\\live_v1\\final_summary_v1.json",
+      "bytes": 60836972,
+      "sha256": "a73ac20650ac3f135ae07404ca4042a1ccb42fe1574ca9109c5edd63fb2d15d3",
+      "group": "gemini25_canonical_full_summary_and_seal",
+      "uploaded": false,
+      "status": "retained locally; not deleted"
+    },
+    {
+      "path": "runs/gemini25_ablation_qa_v1_20261007_recovery_v1/qa_raw_audit_seal.json",
+      "original_absolute_path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007_recovery_v1\\qa_raw_audit_seal.json",
+      "bytes": 8413808,
+      "sha256": "47add7457042dc06e1ebbc249d400290735b94d54fe3a262b26465b04c88260f",
+      "group": "gemini25_canonical_full_summary_and_seal",
+      "uploaded": false,
+      "status": "retained locally; not deleted"
+    },
+    {
+      "path": "research/baseline_execution_2026-10-08/simplemem_native_v2/result_review_v1/independent_result_review_v1.json",
+      "original_absolute_path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\simplemem_native_v2\\result_review_v1\\independent_result_review_v1.json",
+      "bytes": 11409526,
+      "sha256": "ab8006782ce4c9028f6b1c6b5c5ba356c79845a70253ba23128754985bc29199",
+      "group": "baseline_extended_provenance",
+      "uploaded": false,
+      "status": "retained locally; not deleted"
+    },
+    {
+      "path": "research/baseline_execution_2026-10-08/simplemem_native_v2_lifecycle/archive_manifest.json",
+      "original_absolute_path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\simplemem_native_v2_lifecycle\\archive_manifest.json",
+      "bytes": 31062949,
+      "sha256": "9f2087aa069baa82ea6a052c474fbbaad6b8282f7253c130f4aaae5e882ea637",
+      "group": "baseline_extended_provenance",
+      "uploaded": false,
+      "status": "retained locally; not deleted"
+    },
+    {
+      "path": "runs/five_baselines_gemini25_v1_20261008/amem_native_v4/retrieval_continuation_v1/results/continuation_archive_v2/archive_manifest.json",
+      "original_absolute_path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\retrieval_continuation_v1\\results\\continuation_archive_v2\\archive_manifest.json",
+      "bytes": 58717768,
+      "sha256": "4c98b5248f518dcd40d2da3fc4a230978fea20fab1807a4f5c30c88e37c48a66",
+      "group": "baseline_extended_provenance",
+      "uploaded": false,
+      "status": "retained locally; not deleted"
+    },
+    {
+      "path": "runs/five_baselines_gemini25_v1_20261008/amem_native_v4/retrieval_continuation_v1/results/continuation_archive/evidence.zip",
+      "original_absolute_path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\retrieval_continuation_v1\\results\\continuation_archive\\evidence.zip",
+      "bytes": 452226813,
+      "sha256": "20d5b7372eaa2f75616696fcf8dfdac8096d7c0a7c805a91ba929edde769f6e8",
+      "group": "large_baseline_raw_archives",
+      "uploaded": false,
+      "status": "retained locally; not deleted"
+    },
+    {
+      "path": "runs/five_baselines_gemini25_v1_20261008/amem_native_v4/retrieval_continuation_v1/results/continuation_archive_v2/evidence.zip",
+      "original_absolute_path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\retrieval_continuation_v1\\results\\continuation_archive_v2\\evidence.zip",
+      "bytes": 452384086,
+      "sha256": "6e2078a51c8b32daaf3daff8efb3735fbc5c242799c11b7a0acba7f171d48b9c",
+      "group": "large_baseline_raw_archives",
+      "uploaded": false,
+      "status": "retained locally; not deleted"
+    },
+    {
+      "path": "research/baseline_execution_2026-10-08/simplemem_native_v2_lifecycle/evidence.zip",
+      "original_absolute_path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\simplemem_native_v2_lifecycle\\evidence.zip",
+      "bytes": 220933156,
+      "sha256": "d7052ac7da17e174004354653a3a5be001276c6461534f0a8a5cf0b8776c7dd1",
+      "group": "large_baseline_raw_archives",
+      "uploaded": false,
+      "status": "retained locally; not deleted"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "simplemem-native-v2-cleanup-receipt-v1",
+  "method": "simplemem",
+  "cleanup_plan": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\simplemem_native_v2_lifecycle\\cleanup_plan.json",
+    "sha256": "ad119e0ecb68f1c0d83e33b9c4d9e7b52c52f0052fdb25370e48d56eaa1922ff"
+  },
+  "cleanup_review": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\simplemem_native_v2_lifecycle_review_v1\\independent_cleanup_review_v1.json",
+    "sha256": "cbaf3d8dbeeb5ced8db6370f75292b25caa14dea397362f677987edd8fe6a993"
+  },
+  "archive": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\simplemem_native_v2_lifecycle\\evidence.zip",
+    "sha256": "d7052ac7da17e174004354653a3a5be001276c6461534f0a8a5cf0b8776c7dd1"
+  },
+  "archive_manifest": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\simplemem_native_v2_lifecycle\\archive_manifest.json",
+    "sha256": "9f2087aa069baa82ea6a052c474fbbaad6b8282f7253c130f4aaae5e882ea637"
+  },
+  "intent": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\simplemem_native_v2_lifecycle\\cleanup_execution_intent.json",
+    "sha256": "7ac4edd4ddea2281efa393e37a6503fcae2d7850c4cda2f748af47efac2aa0b8"
+  },
+  "removal_receipts": [
+    {
+      "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\simplemem_native_v2_lifecycle\\removal_original.json",
+      "sha256": "744bd7434a77c7aa488755fcaaeac6e6a086390cff055712c9069118080229bc"
+    },
+    {
+      "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\simplemem_native_v2_lifecycle\\removal_continuation.json",
+      "sha256": "944e024ceb99d882b810862072bb88daa3e1484ecbb0f878bf0b514357c3faf0"
+    }
+  ],
+  "scope": "real ZIP raw/native/provenance/QA replay; disposed database bytes validated before deletion under independent certificate; no DB search replay",
+  "completed_utc": "2026-10-09T07:58:46.362075+00:00"
+}

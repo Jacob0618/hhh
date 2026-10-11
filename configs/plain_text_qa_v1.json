@@ -1,0 +1,70 @@
+{
+  "schema": "plain-text-qa-protocol-v1",
+  "created_utc": "2026-09-28T16:44:02.451825+00:00",
+  "status": "offline_validated_not_run",
+  "user_authorization": "2026-09-29 explicit Reader and Judge both without JSON model output",
+  "evaluation_protocol": "plain-text-answer-and-reference-judge-v1",
+  "reader_protocol": "brief_answer_plain_text_v1",
+  "judge_protocol": "user_reference_contains_binary_v1",
+  "provider_protocol": "guarded-plain-text-evaluation-transport-v1",
+  "models": {
+    "reader": "gemini-2.5-flash",
+    "judge": "gemini-3.5-flash-lite"
+  },
+  "reader_stage": "qa_reader_plain_text_v1",
+  "judge_stage": "reference_judge_plain_text_v1",
+  "generation": {
+    "temperature": 0,
+    "maxOutputTokens": 2048,
+    "reader_thinkingBudget": 0,
+    "json_output": false,
+    "responseMimeType": null,
+    "responseSchema": null
+  },
+  "prompts": {
+    "reader_system": "Answer a question about the named people using the supplied memories.\nMemories may describe either human speaker. Preserve attribution, negation, plans,\nand changes over time. Observation dates date the conversation, not necessarily the\nevent. Combine complementary facts. For lists/counts include all supported relevant\nitems and avoid duplicates. Reasonable inferences must be grounded in the memories;\ndo not invent biographical events, dates, names, or links. If evidence is insufficient,\nsay so. Return only the shortest complete answer: a name, date, phrase, or list as\nappropriate. Do not add explanation, background, introductory sentences, or related\nbut unasked facts. Do not shorten a required list by omitting its items.\nReturn only the plain-text answer.",
+    "judge_template": "I will give you a question, a reference answer, and a response from a model. Please answer [[yes]] if the response contains the reference answer. Otherwise, answer [[no]]. If the response is equivalent to the correct answer or contains all the intermediate steps to get the reference answer, you should also answer [[yes]]. If the response only contains a subset of the information required by the answer, answer [[no]].\n\n[User Question]\n{question}\n\n[The Start of Reference Answer]\n{answer}\n[The End of Reference Answer]\n\n[The Start of Model’s Response]\n{response}\n[The End of Model’s Response]\n\nIs the model response correct? Answer [[yes]] or [[no]] only."
+  },
+  "selected_facts": {
+    "budget": 20,
+    "source": "unchanged native SDK20 selection",
+    "reader_evidence_ids": "local f1..f20 in input only; no model citation output required"
+  },
+  "response_policy": {
+    "reader": "keep exact nonempty text; do not json.loads or strip/rewrite answer",
+    "judge": "strip surrounding whitespace and accept only entire [[yes]] or [[no]]; other output technical failure",
+    "raw_preserved": true,
+    "model_citations": "not_collected_null",
+    "no_reason_or_completeness": "do_not_fabricate"
+  },
+  "persistence_order": [
+    "persist successful read_answer result and lexical metrics",
+    "call judge_answer",
+    "persist judge success or technical failure independently"
+  ],
+  "comparison_policy": "Apply same version to every new compared arm. Historical65.639 is a separate old protocol; if its originalSDK20 bank is included, reuse fixed retrieval20 but regenerate Reader and Judge under this protocol.",
+  "old_array_compat_applied": false,
+  "new_model_calls": 0,
+  "current_writer_protocol_unchanged": "9a5854fe760c32912edc5fcc179abbae374ccacfa97f594b7b65e53838b4f481",
+  "source_sha256": {
+    "jev_mem/evaluation_plain_text_v1.py": "d42b66fe6e5c8d854a1530d7687a720dd2cc308974749621ccdfa2cb2d744b85",
+    "jev_mem/plain_text_api_v1.py": "ba69cfd01c264a96a2419964c3cd063d71842d8c19a274a8b0b3717e4f29892e",
+    "jev_mem/evaluation.py": "fbfd4f8f5c7b6a8c0f2000696d42e0dfb39b299e0d13c529b5dfeb3ee3299afc",
+    "jev_mem/providers.py": "34d0f9cc3c3607e41c8b69b854d65d012e3de78078f6a9d38605f2b760be1dd6",
+    "jev_mem/sdk20_cached_api.py": "be4684c0cf035c6dca74bbf418eba166830201001d6872f103d24c0bc4c09b16",
+    "jev_mem/paced_embedding_api.py": "148f19fd8018c4ea6d3b855bae88cec64fba30550b2b3362683da1d1330e1582",
+    "tests/test_plain_text_evaluation_v1.py": "19ac0140dcc1f77de4b6c7ada5bc5fe87d38248b63b23049784d53bb92fb1470"
+  },
+  "offline_validation": {
+    "unit_tests_passed": 15,
+    "root_actual_generate_body_probe_passed": true,
+    "root_probe_model_calls": 0,
+    "active_writer_manifest_rechecked": true
+  },
+  "notes": [
+    "No newQA runner or new QA namespace has been launched.",
+    "An execution manifest must bind this protocol and all bank, selection, question and date sources.",
+    "Official LoCoMo F1 and custom token F1 remain separate; Judge failures must not silently change Reader/F1 denominator."
+  ],
+  "content_sha256": "84df199afda9908f1e6e34bdd92c7af6db23b00523e33d27656de9d8afa42cf2"
+}

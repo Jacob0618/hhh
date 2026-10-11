@@ -1,0 +1,35 @@
+{
+  "schema": "r03-r05-finite-comparison-closeout-v1",
+  "created_utc": "2026-10-06T15:57:23.542154+00:00",
+  "status": "finite_comparison_complete",
+  "summary": {
+    "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\heartbeat_20261006T1052\\live_qa_v2\\final_summary_v1.json",
+    "sha256": "01aa05237a252832135f9c03122d16ee8d6f1aab0b0b2e97d16f2836533567e5"
+  },
+  "report": {
+    "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\final_readout_v1.md",
+    "sha256": "078902c7b57b898eb4d0b99a5e4e7d41bb2173173aaf1f030cb9b822e116f8a0"
+  },
+  "digest": {
+    "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\final_result_digest_v1.json",
+    "sha256": "62e5b8627eb7d51eac408803f868bf3ab3efc4da653d9d395b90c12c253da6a6"
+  },
+  "discussion": {
+    "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\result_discussion_v1\\final_discussion_consensus_v1.json",
+    "sha256": "9eafa60fc00ff91758d914500a46df6f64ec427b39b5e3f2a54791f387de6715"
+  },
+  "planned": 10780,
+  "reader_valid": 10780,
+  "judge_valid": 10780,
+  "missing": 0,
+  "qa_recovery_eligible": 0,
+  "automation": {
+    "id": "jev-10",
+    "status": "PAUSED",
+    "method": "automation_update_then_toml_verify",
+    "task_archived": false
+  },
+  "goal_two_components_each_greater_than_3pp": false,
+  "new_experiment_started": false,
+  "observer_health02_pending": true
+}

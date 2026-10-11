@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "query_id": "c2_q42",
+  "request_hash": "1802b8f3f2aacae0514197993db94c2e22f597b25e4274b91cd15f23f5180761",
+  "logical_replacements": 1,
+  "physical_attempts": 1,
+  "marker_sha256": "5f452b8ec6f3f4b9388d46a2f791ff754015bac6871086e9be8e1abf57671748",
+  "intent_sha256": "393fd0de41064cf3b6f1fb6ef9b38d44673dd908dc9e890f37da3ca162464105",
+  "raw_sha256": "3425d24a5bb26e1f6c0d600632f4100cad31ac94cfa44dae1f0805c946e1f3dd",
+  "parser_sha256": "1c1bff87afcafcfbb2a485889539074d85739f1cffb82b30b41c3d347e69e779",
+  "native_call_sha256": "2158f87165a18669dd4ff58107ba384a979e69821a9966dbb5395f24b357925b",
+  "capture_sha256": "846d1b8f1d9f993689fa9bb82d7428dfaceb2c65ad5ea80eb82cc5b62e16a4cd",
+  "result_payload_sha256": "b1016423ffec69bb154a69cb047317c3556fc6d41ed0e877c8778d510b2531f0",
+  "bank": {
+    "state": {
+      "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\native\\c2\\state.json",
+      "sha256": "880972df50275d5351da9e33f5b15ef4affe7f0534dda279966423c8f4effcbd"
+    },
+    "embeddings": {
+      "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\native\\c2\\cache\\embeddings.npy",
+      "sha256": "ed2fde476eccc82144967dd6ef7fa13ed98940b54a2eb9a222e6ebe33bf02825"
+    },
+    "memory_sha256": "23efd639ef18b666a045a44274f6c05b8df7d55e6196e4064edf840e7d5f258a",
+    "notes": 663,
+    "sessions": 32
+  },
+  "replacement_certificate": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\heartbeat_20261008T2147\\independent_single_query_failure_qualification_v2.json",
+    "sha256": "530b5d46a92db9714701a9b0469efc0fd371cb1e51bbb8cb9e572cd9af6be885"
+  },
+  "seed_search": "unchanged native retrieval over bound source vectors; retained formatter/evidence replayed without re-encoding"
+}

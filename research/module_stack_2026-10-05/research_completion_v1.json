@@ -1,0 +1,96 @@
+{
+  "schema": "module-stack-research-completion-v1",
+  "created_utc": "2026-10-05T19:08:46.828714+00:00",
+  "status": "experiment_and_joint_analysis_complete",
+  "arms": 9,
+  "questions_per_arm": 1540,
+  "slots": 13860,
+  "reader_valid": 13860,
+  "judge_valid": 13860,
+  "missing": 0,
+  "extra_qa_recovery_jobs": 0,
+  "audit_status": "no_invalid_artifacts",
+  "additional_model_calls_during_result_analysis": 0,
+  "joint_reviewers": [
+    "gpt-6-astra",
+    "gpt-6.1-sol"
+  ],
+  "consensus_confirmed_by_both": true,
+  "two_independent_components_each_over3pp_established": false,
+  "best_tested_arm": "stack_closure",
+  "best_judge_correct": 1291,
+  "best_judge_percent": 83.83116883116882,
+  "best_official_f1": 59.06275257876542,
+  "baseline_judge_correct": 1153,
+  "gain_vs_baseline": 158,
+  "loss_vs_baseline": 20,
+  "no_automatic_further_experiment": true,
+  "heartbeat_disposition": "pause after final report publication; tool confirmation saved separately",
+  "evidence": {
+    "summary": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\live_v1\\final_summary_v1.json",
+      "sha256": "ee1039384934b84b6da183dbe4c13904ca9355fdcdf3d2b633c8813b80123686",
+      "bytes": 174545771
+    },
+    "root_report": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\result_report_2026-10-06.md",
+      "sha256": "0ec6062451fb79efdfacb585b566b2be979b19ec433903847ce218cbf7d11290",
+      "bytes": 12959
+    },
+    "derived": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\derived_results_v1.json",
+      "sha256": "3075fd85b006a191e08e78a87ea306061c0a7922cbfd237e876ad0edc5cd1499",
+      "bytes": 235122
+    },
+    "astra_md": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\results_astra_v1.md",
+      "sha256": "bc20093808da7ef8b96c79219cd8740c4a20f3367447ac090dd1d6a895323e31",
+      "bytes": 17457
+    },
+    "astra_json": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\results_astra_v1.json",
+      "sha256": "503f5a05f0892fc07f56ee97b950f1a63c16bbb6e4987416a087aff686790f26",
+      "bytes": 1263514
+    },
+    "sol_md": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\results_sol_v1.md",
+      "sha256": "665cee7edb9d62b45d2c2ef5a283c26f19810377931a2d568ab80bef34882e25",
+      "bytes": 13518
+    },
+    "sol_json": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\results_sol_v1.json",
+      "sha256": "c97b7535026b6324579bad784c56659f5cf540cad17649e2d1712ff14b94299b",
+      "bytes": 206198
+    },
+    "sol_case_material": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\case_material_sol_v1.json",
+      "sha256": "5c732f391d604acfc4ec67f39ab3b7101359c1603e2aa2dc6ce3be0b42d3b0b0",
+      "bytes": 4123193
+    },
+    "technical_review": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\technical_terminal_review_v1.json",
+      "sha256": "c176da6273039d0d7751edb2424cff56eeba92e344a5ea35b1483e61bb8afdae",
+      "bytes": 15343511
+    },
+    "logical_reader_usage": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\logical_reader_token_sizes_v1.json",
+      "sha256": "9b8691342efad1060a644fa8ea5a5aafdd322e9fd7fb774e37d208bdbb6c47b5",
+      "bytes": 6904
+    },
+    "health_a": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\heartbeat_20261006_0253\\health_a.json",
+      "sha256": "f1628219984aab1c0c1a405fa131dd6a9395564ec1db71ff070382b9571cc2af",
+      "bytes": 313183
+    },
+    "health_b": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\heartbeat_20261006_0253\\health_b.json",
+      "sha256": "f385e207be54b4bce6cb2dae88918b2440897c1cf94dc26dea1ff53ead128dda",
+      "bytes": 335804
+    },
+    "pipeline_status": {
+      "path": "D:\\jev mem\\research\\module_stack_2026-10-05\\live_v1\\status.json",
+      "sha256": "b0591b3fd4113fecdfbb4fc98c52865c55b2ad84383294013bd157ad4ab5b628",
+      "bytes": 4899
+    }
+  }
+}

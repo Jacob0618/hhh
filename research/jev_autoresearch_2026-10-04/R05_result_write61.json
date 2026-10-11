@@ -1,0 +1,1371 @@
+{
+  "schema": "r05-result-write61-v1",
+  "formal_summary": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r05_final_summary.json",
+    "sha256": "723c9abba21c654bbb69e7e45c2c8143a62bdad81f743041a107c0498121a77d"
+  },
+  "packets": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r05_postterminal_packets_v1\\case_packets.json",
+    "sha256": "bd53fee4c94a5f830a1cf53a7291eb11c7f82d33782989c793da483f004b45a0"
+  },
+  "statistics": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r05_postterminal_packets_v1\\statistics.json",
+    "sha256": "182a7d50aeb2857cbe423f05ac2fe863ad29add4140a506ca6c37d3c3fd6ec73"
+  },
+  "audit_status": "no_invalid_artifacts",
+  "actual_api_calls_in_review": 0,
+  "primary_view": "final_with_uniform_technical_recovery",
+  "metrics": {
+    "baseline": {
+      "denominator": 1540,
+      "judge_correct": 1153,
+      "judge_missing": 0,
+      "official_f1_fixed_denominator": 0.5104400011392458,
+      "official_f1_missing": 0,
+      "reader_answer_whitespace_word_mean_valid": 5.73051948051948,
+      "reader_inherited": 1540,
+      "reader_with_event_refs": 0,
+      "judge_percent_fixed_denominator": 74.87012987012987
+    },
+    "cheap": {
+      "denominator": 1540,
+      "judge_correct": 1252,
+      "judge_missing": 0,
+      "official_f1_fixed_denominator": 0.5767533735303139,
+      "official_f1_missing": 0,
+      "reader_answer_whitespace_word_mean_valid": 6.21948051948052,
+      "reader_inherited": 0,
+      "reader_with_event_refs": 1540,
+      "judge_percent_fixed_denominator": 81.2987012987013
+    },
+    "jev": {
+      "denominator": 1540,
+      "judge_correct": 1265,
+      "judge_missing": 0,
+      "official_f1_fixed_denominator": 0.5839434914884434,
+      "official_f1_missing": 0,
+      "reader_answer_whitespace_word_mean_valid": 6.312987012987013,
+      "reader_inherited": 0,
+      "reader_with_event_refs": 1540,
+      "judge_percent_fixed_denominator": 82.14285714285714
+    }
+  },
+  "paired": {
+    "baseline__cheap": {
+      "denominator": 1540,
+      "judge_transitions": {
+        "1_to_1": 1132,
+        "0_to_0": 267,
+        "1_to_0": 21,
+        "0_to_1": 120
+      },
+      "net_percentage_points": 6.428571428571429,
+      "by_category": {
+        "1": {
+          "1_to_1": 218,
+          "0_to_1": 8,
+          "0_to_0": 52,
+          "1_to_0": 4
+        },
+        "2": {
+          "1_to_1": 255,
+          "0_to_0": 49,
+          "1_to_0": 6,
+          "0_to_1": 11
+        },
+        "3": {
+          "1_to_1": 39,
+          "0_to_0": 53,
+          "0_to_1": 3,
+          "1_to_0": 1
+        },
+        "4": {
+          "1_to_1": 620,
+          "0_to_1": 98,
+          "0_to_0": 113,
+          "1_to_0": 10
+        }
+      },
+      "by_conversation": {
+        "0": {
+          "1_to_1": 100,
+          "0_to_0": 31,
+          "1_to_0": 2,
+          "0_to_1": 19
+        },
+        "1": {
+          "1_to_1": 54,
+          "0_to_0": 13,
+          "1_to_0": 2,
+          "0_to_1": 12
+        },
+        "2": {
+          "1_to_1": 129,
+          "0_to_0": 16,
+          "0_to_1": 6,
+          "1_to_0": 1
+        },
+        "3": {
+          "1_to_1": 142,
+          "0_to_0": 35,
+          "1_to_0": 4,
+          "0_to_1": 18
+        },
+        "4": {
+          "1_to_1": 129,
+          "0_to_0": 37,
+          "0_to_1": 10,
+          "1_to_0": 2
+        },
+        "5": {
+          "1_to_1": 88,
+          "0_to_0": 25,
+          "0_to_1": 8,
+          "1_to_0": 2
+        },
+        "6": {
+          "0_to_0": 25,
+          "1_to_1": 119,
+          "0_to_1": 6
+        },
+        "7": {
+          "1_to_1": 143,
+          "1_to_0": 4,
+          "0_to_0": 28,
+          "0_to_1": 16
+        },
+        "8": {
+          "1_to_1": 123,
+          "0_to_1": 9,
+          "0_to_0": 23,
+          "1_to_0": 1
+        },
+        "9": {
+          "1_to_1": 105,
+          "0_to_0": 34,
+          "0_to_1": 16,
+          "1_to_0": 3
+        }
+      },
+      "by_candidate_count_score_status_transition": [
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "0_to_0",
+          "denominator": 267,
+          "cheap_added_utf8_bytes_mean": 1741.0374531835207,
+          "jev_added_utf8_bytes_mean": 1765.378277153558
+        },
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "0_to_1",
+          "denominator": 120,
+          "cheap_added_utf8_bytes_mean": 1776.4166666666667,
+          "jev_added_utf8_bytes_mean": 1788.8916666666667
+        },
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "1_to_0",
+          "denominator": 21,
+          "cheap_added_utf8_bytes_mean": 1664.0,
+          "jev_added_utf8_bytes_mean": 1636.904761904762
+        },
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "1_to_1",
+          "denominator": 1132,
+          "cheap_added_utf8_bytes_mean": 1735.3719081272084,
+          "jev_added_utf8_bytes_mean": 1741.0159010600707
+        }
+      ]
+    },
+    "baseline__jev": {
+      "denominator": 1540,
+      "judge_transitions": {
+        "1_to_1": 1131,
+        "0_to_0": 253,
+        "0_to_1": 134,
+        "1_to_0": 22
+      },
+      "net_percentage_points": 7.2727272727272725,
+      "by_category": {
+        "1": {
+          "1_to_1": 214,
+          "0_to_0": 52,
+          "0_to_1": 8,
+          "1_to_0": 8
+        },
+        "2": {
+          "1_to_1": 258,
+          "0_to_0": 47,
+          "0_to_1": 13,
+          "1_to_0": 3
+        },
+        "3": {
+          "1_to_1": 39,
+          "0_to_0": 53,
+          "0_to_1": 3,
+          "1_to_0": 1
+        },
+        "4": {
+          "1_to_1": 620,
+          "0_to_1": 110,
+          "0_to_0": 101,
+          "1_to_0": 10
+        }
+      },
+      "by_conversation": {
+        "0": {
+          "1_to_1": 101,
+          "0_to_0": 27,
+          "0_to_1": 23,
+          "1_to_0": 1
+        },
+        "1": {
+          "1_to_1": 53,
+          "0_to_0": 12,
+          "1_to_0": 3,
+          "0_to_1": 13
+        },
+        "2": {
+          "1_to_1": 129,
+          "0_to_0": 15,
+          "0_to_1": 7,
+          "1_to_0": 1
+        },
+        "3": {
+          "1_to_1": 141,
+          "0_to_0": 32,
+          "1_to_0": 5,
+          "0_to_1": 21
+        },
+        "4": {
+          "1_to_1": 127,
+          "1_to_0": 4,
+          "0_to_0": 38,
+          "0_to_1": 9
+        },
+        "5": {
+          "1_to_1": 89,
+          "0_to_0": 24,
+          "1_to_0": 1,
+          "0_to_1": 9
+        },
+        "6": {
+          "0_to_0": 23,
+          "1_to_1": 118,
+          "0_to_1": 8,
+          "1_to_0": 1
+        },
+        "7": {
+          "1_to_1": 145,
+          "1_to_0": 2,
+          "0_to_0": 28,
+          "0_to_1": 16
+        },
+        "8": {
+          "1_to_1": 124,
+          "0_to_1": 8,
+          "0_to_0": 24
+        },
+        "9": {
+          "1_to_1": 104,
+          "1_to_0": 4,
+          "0_to_0": 30,
+          "0_to_1": 20
+        }
+      },
+      "by_candidate_count_score_status_transition": [
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "0_to_0",
+          "denominator": 253,
+          "cheap_added_utf8_bytes_mean": 1747.312252964427,
+          "jev_added_utf8_bytes_mean": 1764.1699604743083
+        },
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "0_to_1",
+          "denominator": 134,
+          "cheap_added_utf8_bytes_mean": 1760.8731343283582,
+          "jev_added_utf8_bytes_mean": 1788.7164179104477
+        },
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "1_to_0",
+          "denominator": 22,
+          "cheap_added_utf8_bytes_mean": 1649.1363636363637,
+          "jev_added_utf8_bytes_mean": 1658.2272727272727
+        },
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "1_to_1",
+          "denominator": 1131,
+          "cheap_added_utf8_bytes_mean": 1735.7241379310344,
+          "jev_added_utf8_bytes_mean": 1740.6931918656057
+        }
+      ]
+    },
+    "cheap__jev": {
+      "denominator": 1540,
+      "judge_transitions": {
+        "1_to_1": 1237,
+        "0_to_0": 260,
+        "0_to_1": 28,
+        "1_to_0": 15
+      },
+      "net_percentage_points": 0.8441558441558441,
+      "by_category": {
+        "1": {
+          "1_to_1": 219,
+          "1_to_0": 7,
+          "0_to_0": 53,
+          "0_to_1": 3
+        },
+        "2": {
+          "1_to_1": 265,
+          "0_to_0": 49,
+          "0_to_1": 6,
+          "1_to_0": 1
+        },
+        "3": {
+          "1_to_1": 41,
+          "0_to_0": 53,
+          "0_to_1": 1,
+          "1_to_0": 1
+        },
+        "4": {
+          "1_to_1": 712,
+          "0_to_0": 105,
+          "0_to_1": 18,
+          "1_to_0": 6
+        }
+      },
+      "by_conversation": {
+        "0": {
+          "1_to_1": 118,
+          "0_to_0": 27,
+          "0_to_1": 6,
+          "1_to_0": 1
+        },
+        "1": {
+          "1_to_1": 64,
+          "0_to_0": 13,
+          "1_to_0": 2,
+          "0_to_1": 2
+        },
+        "2": {
+          "1_to_1": 135,
+          "0_to_0": 16,
+          "0_to_1": 1
+        },
+        "3": {
+          "1_to_1": 158,
+          "0_to_0": 35,
+          "0_to_1": 4,
+          "1_to_0": 2
+        },
+        "4": {
+          "1_to_1": 135,
+          "1_to_0": 4,
+          "0_to_0": 38,
+          "0_to_1": 1
+        },
+        "5": {
+          "1_to_1": 95,
+          "0_to_0": 24,
+          "1_to_0": 1,
+          "0_to_1": 3
+        },
+        "6": {
+          "0_to_0": 23,
+          "1_to_1": 124,
+          "0_to_1": 2,
+          "1_to_0": 1
+        },
+        "7": {
+          "1_to_1": 159,
+          "0_to_0": 30,
+          "0_to_1": 2
+        },
+        "8": {
+          "1_to_1": 131,
+          "0_to_0": 23,
+          "0_to_1": 1,
+          "1_to_0": 1
+        },
+        "9": {
+          "1_to_1": 118,
+          "1_to_0": 3,
+          "0_to_0": 31,
+          "0_to_1": 6
+        }
+      },
+      "by_candidate_count_score_status_transition": [
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "0_to_0",
+          "denominator": 260,
+          "cheap_added_utf8_bytes_mean": 1739.923076923077,
+          "jev_added_utf8_bytes_mean": 1752.1846153846154
+        },
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "0_to_1",
+          "denominator": 28,
+          "cheap_added_utf8_bytes_mean": 1693.607142857143,
+          "jev_added_utf8_bytes_mean": 1791.5357142857142
+        },
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "1_to_0",
+          "denominator": 15,
+          "cheap_added_utf8_bytes_mean": 1731.4,
+          "jev_added_utf8_bytes_mean": 1816.5333333333333
+        },
+        {
+          "candidate_count": "4",
+          "jev_score_status": "complete",
+          "transition": "1_to_1",
+          "denominator": 1237,
+          "cheap_added_utf8_bytes_mean": 1739.401778496362,
+          "jev_added_utf8_bytes_mean": 1744.744543249798
+        }
+      ]
+    }
+  },
+  "category_metrics": {
+    "baseline": {
+      "1": {
+        "denominator": 282,
+        "judge_correct": 222,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 78.72340425531915,
+        "official_f1_fixed_group_denominator": 0.4080172574076246,
+        "official_f1_missing": 0
+      },
+      "2": {
+        "denominator": 321,
+        "judge_correct": 261,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 81.30841121495327,
+        "official_f1_fixed_group_denominator": 0.6302299769625661,
+        "official_f1_missing": 0
+      },
+      "3": {
+        "denominator": 96,
+        "judge_correct": 40,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 41.666666666666664,
+        "official_f1_fixed_group_denominator": 0.2828232392018046,
+        "official_f1_missing": 0
+      },
+      "4": {
+        "denominator": 841,
+        "judge_correct": 630,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 74.91082045184304,
+        "official_f1_fixed_group_denominator": 0.5250438544555696,
+        "official_f1_missing": 0
+      }
+    },
+    "cheap": {
+      "1": {
+        "denominator": 282,
+        "judge_correct": 226,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 80.1418439716312,
+        "official_f1_fixed_group_denominator": 0.43412591963810826,
+        "official_f1_missing": 0
+      },
+      "2": {
+        "denominator": 321,
+        "judge_correct": 266,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 82.86604361370716,
+        "official_f1_fixed_group_denominator": 0.6400780769939654,
+        "official_f1_missing": 0
+      },
+      "3": {
+        "denominator": 96,
+        "judge_correct": 42,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 43.75,
+        "official_f1_fixed_group_denominator": 0.2995171819023462,
+        "official_f1_missing": 0
+      },
+      "4": {
+        "denominator": 841,
+        "judge_correct": 718,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 85.37455410225921,
+        "official_f1_fixed_group_denominator": 0.6320546655422726,
+        "official_f1_missing": 0
+      }
+    },
+    "jev": {
+      "1": {
+        "denominator": 282,
+        "judge_correct": 222,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 78.72340425531915,
+        "official_f1_fixed_group_denominator": 0.4247572811337125,
+        "official_f1_missing": 0
+      },
+      "2": {
+        "denominator": 321,
+        "judge_correct": 271,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 84.42367601246106,
+        "official_f1_fixed_group_denominator": 0.6523422320151298,
+        "official_f1_missing": 0
+      },
+      "3": {
+        "denominator": 96,
+        "judge_correct": 42,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 43.75,
+        "official_f1_fixed_group_denominator": 0.3044468593018608,
+        "official_f1_missing": 0
+      },
+      "4": {
+        "denominator": 841,
+        "judge_correct": 730,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 86.8014268727705,
+        "official_f1_fixed_group_denominator": 0.6431185120602406,
+        "official_f1_missing": 0
+      }
+    }
+  },
+  "conversation_metrics": {
+    "baseline": {
+      "0": {
+        "denominator": 152,
+        "judge_correct": 102,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 67.10526315789474,
+        "official_f1_fixed_group_denominator": 0.46983861299202667,
+        "official_f1_missing": 0
+      },
+      "1": {
+        "denominator": 81,
+        "judge_correct": 56,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 69.1358024691358,
+        "official_f1_fixed_group_denominator": 0.41482210599857666,
+        "official_f1_missing": 0
+      },
+      "2": {
+        "denominator": 152,
+        "judge_correct": 130,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 85.52631578947368,
+        "official_f1_fixed_group_denominator": 0.5834756283470748,
+        "official_f1_missing": 0
+      },
+      "3": {
+        "denominator": 199,
+        "judge_correct": 146,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 73.36683417085428,
+        "official_f1_fixed_group_denominator": 0.4396493381443564,
+        "official_f1_missing": 0
+      },
+      "4": {
+        "denominator": 178,
+        "judge_correct": 131,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 73.59550561797752,
+        "official_f1_fixed_group_denominator": 0.5155302491417564,
+        "official_f1_missing": 0
+      },
+      "5": {
+        "denominator": 123,
+        "judge_correct": 90,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 73.17073170731707,
+        "official_f1_fixed_group_denominator": 0.49168032153269625,
+        "official_f1_missing": 0
+      },
+      "6": {
+        "denominator": 150,
+        "judge_correct": 119,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 79.33333333333333,
+        "official_f1_fixed_group_denominator": 0.5934202689868323,
+        "official_f1_missing": 0
+      },
+      "7": {
+        "denominator": 191,
+        "judge_correct": 147,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 76.96335078534031,
+        "official_f1_fixed_group_denominator": 0.5471262688828041,
+        "official_f1_missing": 0
+      },
+      "8": {
+        "denominator": 156,
+        "judge_correct": 124,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 79.48717948717949,
+        "official_f1_fixed_group_denominator": 0.5296325918412396,
+        "official_f1_missing": 0
+      },
+      "9": {
+        "denominator": 158,
+        "judge_correct": 108,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 68.35443037974683,
+        "official_f1_fixed_group_denominator": 0.4842096345990973,
+        "official_f1_missing": 0
+      }
+    },
+    "cheap": {
+      "0": {
+        "denominator": 152,
+        "judge_correct": 119,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 78.28947368421052,
+        "official_f1_fixed_group_denominator": 0.5601207554353803,
+        "official_f1_missing": 0
+      },
+      "1": {
+        "denominator": 81,
+        "judge_correct": 66,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 81.48148148148148,
+        "official_f1_fixed_group_denominator": 0.5241032630382674,
+        "official_f1_missing": 0
+      },
+      "2": {
+        "denominator": 152,
+        "judge_correct": 135,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 88.8157894736842,
+        "official_f1_fixed_group_denominator": 0.6310475664738179,
+        "official_f1_missing": 0
+      },
+      "3": {
+        "denominator": 199,
+        "judge_correct": 160,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 80.40201005025126,
+        "official_f1_fixed_group_denominator": 0.521195726447186,
+        "official_f1_missing": 0
+      },
+      "4": {
+        "denominator": 178,
+        "judge_correct": 139,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 78.08988764044943,
+        "official_f1_fixed_group_denominator": 0.5685945023902719,
+        "official_f1_missing": 0
+      },
+      "5": {
+        "denominator": 123,
+        "judge_correct": 96,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 78.04878048780488,
+        "official_f1_fixed_group_denominator": 0.5482256817647513,
+        "official_f1_missing": 0
+      },
+      "6": {
+        "denominator": 150,
+        "judge_correct": 125,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 83.33333333333333,
+        "official_f1_fixed_group_denominator": 0.6426736966736966,
+        "official_f1_missing": 0
+      },
+      "7": {
+        "denominator": 191,
+        "judge_correct": 159,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 83.24607329842932,
+        "official_f1_fixed_group_denominator": 0.6254328000749398,
+        "official_f1_missing": 0
+      },
+      "8": {
+        "denominator": 156,
+        "judge_correct": 132,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 84.61538461538461,
+        "official_f1_fixed_group_denominator": 0.5801402161030393,
+        "official_f1_missing": 0
+      },
+      "9": {
+        "denominator": 158,
+        "judge_correct": 121,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 76.58227848101266,
+        "official_f1_fixed_group_denominator": 0.5441147033381152,
+        "official_f1_missing": 0
+      }
+    },
+    "jev": {
+      "0": {
+        "denominator": 152,
+        "judge_correct": 124,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 81.57894736842105,
+        "official_f1_fixed_group_denominator": 0.5791380631376319,
+        "official_f1_missing": 0
+      },
+      "1": {
+        "denominator": 81,
+        "judge_correct": 66,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 81.48148148148148,
+        "official_f1_fixed_group_denominator": 0.5218499622662306,
+        "official_f1_missing": 0
+      },
+      "2": {
+        "denominator": 152,
+        "judge_correct": 136,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 89.47368421052632,
+        "official_f1_fixed_group_denominator": 0.6403789299994596,
+        "official_f1_missing": 0
+      },
+      "3": {
+        "denominator": 199,
+        "judge_correct": 162,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 81.4070351758794,
+        "official_f1_fixed_group_denominator": 0.528215039023866,
+        "official_f1_missing": 0
+      },
+      "4": {
+        "denominator": 178,
+        "judge_correct": 136,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 76.40449438202248,
+        "official_f1_fixed_group_denominator": 0.5678813053917792,
+        "official_f1_missing": 0
+      },
+      "5": {
+        "denominator": 123,
+        "judge_correct": 98,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 79.67479674796748,
+        "official_f1_fixed_group_denominator": 0.5328677945719217,
+        "official_f1_missing": 0
+      },
+      "6": {
+        "denominator": 150,
+        "judge_correct": 126,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 84.0,
+        "official_f1_fixed_group_denominator": 0.6434596496459241,
+        "official_f1_missing": 0
+      },
+      "7": {
+        "denominator": 191,
+        "judge_correct": 161,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 84.29319371727749,
+        "official_f1_fixed_group_denominator": 0.6363247161765088,
+        "official_f1_missing": 0
+      },
+      "8": {
+        "denominator": 156,
+        "judge_correct": 132,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 84.61538461538461,
+        "official_f1_fixed_group_denominator": 0.5803229968345465,
+        "official_f1_missing": 0
+      },
+      "9": {
+        "denominator": 158,
+        "judge_correct": 124,
+        "judge_missing": 0,
+        "judge_percent_fixed_group_denominator": 78.48101265822785,
+        "official_f1_fixed_group_denominator": 0.5779037176656814,
+        "official_f1_missing": 0
+      }
+    }
+  },
+  "f1_directions": {
+    "cheap": {
+      "same": 1079,
+      "down": 128,
+      "up": 333
+    },
+    "jev": {
+      "same": 1079,
+      "up": 345,
+      "down": 116
+    }
+  },
+  "answer_changes": {
+    "cheap": 726,
+    "jev": 717
+  },
+  "cheap_jev_equivalence_counts": {
+    "ordered_candidate_indices_equal": 332,
+    "candidate_indices_set_equal": 469,
+    "packet_set_equal": 469,
+    "final_selected_facts_equal": 469,
+    "full_reader_signature_equal": 469
+  },
+  "review_denominators": {
+    "unique_cases": 21,
+    "primary": 11,
+    "peer": 10,
+    "all_packet_qids": 31,
+    "JEV_losses_read_here": 14,
+    "all_JEV_losses": 22,
+    "not_population_representative": true,
+    "fixed_gains_not_exhaustive": true
+  },
+  "reviewed_JEV_loss_primary_mechanism_counts": {
+    "event_or_gold_anchor_ambiguity": 3,
+    "suspected_judge_semantic_inconsistency": 3,
+    "core_retained_abstention": 8
+  },
+  "cases": [
+    {
+      "index": 0,
+      "qid": "c0_q101",
+      "role": "primary",
+      "category": 4,
+      "jev_vs_N0_loss": false,
+      "qualitative_primary_mechanism": "existing_core_discourse_grounding",
+      "anchors": [
+        "28db8ccd",
+        "D5:6",
+        "D5:7",
+        "D5:8"
+      ],
+      "actual_source_quotes": [
+        "Did you make it?",
+        "Yeah, I made this bowl in my class."
+      ],
+      "reasoning": "Original first fact already says Melanie crafted a black-and-white flower bowl. Added D5:7 asks Did you make it? and D5:8 answers Yeah, I made this bowl in my class. This makes the photo referent explicit; it is not proof that the original core maker relation was absent. Both controls select the same packets and answer Yes.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/0",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 2,
+      "qid": "c0_q57",
+      "role": "peer",
+      "category": 2,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "event_or_gold_anchor_ambiguity",
+      "anchors": [
+        "b5685a84",
+        "f82fe953",
+        "D12:1",
+        "D14:1"
+      ],
+      "actual_source_quotes": [
+        "Recently, I had a not-so-great experience on a hike.",
+        "I went hiking last week and got into a bad spot with some people."
+      ],
+      "reasoning": "Both original hike reports remain. Added August17 D12:1 recent upsetting encounter receives attention and new answer only returns shortly beforeAug17. Gold uses August25 last-week report D14:1. Baseline returned both dates; uncertainty whether these refer to one or two events remains. F1 rises .533→.6 while Judge falls.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/2",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 3,
+      "qid": "c0_q6",
+      "role": "primary",
+      "category": 2,
+      "jev_vs_N0_loss": false,
+      "qualitative_primary_mechanism": "unchanged_core_cheap_abstention",
+      "anchors": [
+        "c4f64a03",
+        "D2:7",
+        "D12:10",
+        "D12:11",
+        "D12:12"
+      ],
+      "actual_source_quotes": [
+        "We're thinking about going camping next month."
+      ],
+      "reasoning": "Original first fact retains the June camping plan. Cheap adds two later unrelated windows and abstains; JEV includes May25 D2:7 thinking about going camping next month and retains June2023. Packet0 D12:10–12 concerns friendship and coping, not camping. This suggests context use/distraction; it does not isolate a causal effect of any single extra sentence.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/3",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 5,
+      "qid": "c0_q85",
+      "role": "peer",
+      "category": 4,
+      "jev_vs_N0_loss": false,
+      "qualitative_primary_mechanism": "existing_core_discourse_grounding",
+      "anchors": [
+        "605f957b",
+        "D2:7",
+        "D2:8"
+      ],
+      "actual_source_quotes": [
+        "Any fun plans for the summer?",
+        "Researching adoption agencies"
+      ],
+      "reasoning": "Adoption-agency fact already selected at rank11, but May25 D2:7 asks summer plans and D2:8 replies researching adoption. Both added routes recover that explicit discourse relation. New answers also retain other summer plans, so this is not proof the gold is an exhaustive summer-plan list.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/5",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 6,
+      "qid": "c0_q9",
+      "role": "primary",
+      "category": 2,
+      "jev_vs_N0_loss": false,
+      "qualitative_primary_mechanism": "new_explicit_relation_and_relative_time",
+      "anchors": [
+        "f8941ac0",
+        "D3:10",
+        "D3:11",
+        "D3:12"
+      ],
+      "actual_source_quotes": [
+        "Here's a pic from when we met up last week!"
+      ],
+      "reasoning": "Original first fact records long-term friends and mentors but not the meetup last week. Both routes add D3:11 with the meeting relation and relative week. JEV retains the relative phrasing; cheap uses week of June2. This is a substantive added detail, shared by cheap and JEV, not an exclusive JEV Judge gain.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/6",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 8,
+      "qid": "c1_q24",
+      "role": "peer",
+      "category": 1,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "suspected_judge_semantic_inconsistency",
+      "anchors": [
+        "cfbd9822",
+        "1b61ee25",
+        "D16:6"
+      ],
+      "actual_source_quotes": [
+        "Yesterday I chose to go to networking events to make things happen."
+      ],
+      "reasoning": "N0/cheap answer fair onApr24; JEV only adds parentheses around the same date. All omit original networking evidence, and JEV additionally appends exact D16:6 networking. YES→NO is a suspected semantic-label inconsistency; not evidence that JEV removed networking. Gold dance-competition evidence pointer D8:4 is Gina own promotion and cannot certify Jon participated.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/8",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 9,
+      "qid": "c1_q75",
+      "role": "primary",
+      "category": 4,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "event_or_gold_anchor_ambiguity",
+      "anchors": [
+        "c476d486",
+        "D15:12",
+        "D15:18"
+      ],
+      "actual_source_quotes": [
+        "Can't wait for tomorrow's grand opening!",
+        "Let's live it up and make some great memories tomorrow."
+      ],
+      "reasoning": "New answer quotes real D15:18 Cannot wait for tomorrow grand opening. Gold instead anchors D15:12 live it up and make memories. Original summary of supporting/celebrating remains. A narrower true quotation fails the chosen gold anchor; do not call the quoted sentence an objectively fabricated fact.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/9",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 11,
+      "qid": "c3_q147",
+      "role": "peer",
+      "category": 4,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "event_or_gold_anchor_ambiguity",
+      "anchors": [
+        "1f4a1e8f",
+        "D4:3",
+        "D4:4",
+        "D18:9",
+        "D26:17",
+        "D26:18"
+      ],
+      "actual_source_quotes": [
+        "I whipped up some chocolate and vanilla swirl.",
+        "That looks delicious!",
+        "I love it when you make coconut milk icecream, it's so good!"
+      ],
+      "reasoning": "New chocolate-and-vanilla answer matches added D4:3 and Joanna D4:4 looks delicious; gold anchors D18:9 coconut milk icecream so good. All coconut facts remain. This is a real alternative ice-cream event matching broad question wording; classify ambiguous event anchoring, not unsupported invented flavor. Candidate3 has another delicious/coconut exchange but neither backend selected it.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/11",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 12,
+      "qid": "c3_q171",
+      "role": "primary",
+      "category": 4,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "core_retained_abstention",
+      "anchors": [
+        "98ddde44",
+        "D24:12",
+        "D24:13",
+        "D24:14"
+      ],
+      "actual_source_quotes": [
+        "I'm gonna keep grinding and moving ahead."
+      ],
+      "reasoning": "Original first fact still explicitly determined to keep pushing forward, but both new answers abstain. Added D24:11–13 ends at Nate encouragement, missing Joanna own D24:14 response. This is a concrete local-window boundary plus failure to use the retained summary; no original fact was deleted.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/12",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 14,
+      "qid": "c3_q49",
+      "role": "peer",
+      "category": 1,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "core_retained_abstention",
+      "anchors": [
+        "98ddde44",
+        "360659e8",
+        "D14:1",
+        "D24:12"
+      ],
+      "actual_source_quotes": [
+        "I got a rejection letter from a major company.",
+        "another rejection from a production company."
+      ],
+      "reasoning": "Original first two facts and two distinct rejection source reports remain. Appended script-screening/completion windows do not explicitly deny those two events. New answers abstain; no evidence deletion. Source supports at least the two recorded rejections rather than an exhaustive lifetime count.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/14",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 15,
+      "qid": "c3_q58",
+      "role": "primary",
+      "category": 1,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "suspected_judge_semantic_inconsistency",
+      "anchors": [
+        "72c04537",
+        "01924b8a",
+        "fb8879e0",
+        "D27:23",
+        "D27:25"
+      ],
+      "actual_source_quotes": [
+        "I highly reccomend it if you've never played it before."
+      ],
+      "reasoning": "The three returned lists contain the same fantasy series, space-opera series and writing convention, with item order/bullets changing. All omit many gold items; baseline YES versus JEV NO does not demonstrate a newly lost list item. JEV window D27:24–26 misses the explicit game recommendation D27:23. Query metadata supplies some named book references; runtime excluded it and this is not evidence of all list completeness.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/15",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 17,
+      "qid": "c4_q154",
+      "role": "peer",
+      "category": 4,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "core_retained_abstention",
+      "anchors": [
+        "e11e5bd5",
+        "D23:3",
+        "D23:4",
+        "D23:5"
+      ],
+      "actual_source_quotes": [
+        "The atmosphere in the arena was really electric and playing against our rivals added an extra level of intensity."
+      ],
+      "reasoning": "Original first fact keeps electric atmosphere. Both source routes add D23:2–4, ending at how did it feel and omitting answer D23:5 electric plus intensity. JEV adds unrelated pre-season window and abstains; cheap still electric. Truncation is a candidate limitation, not proof that the retained correct clue ceased to exist.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/17",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 18,
+      "qid": "c4_q4",
+      "role": "primary",
+      "category": 1,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "suspected_judge_semantic_inconsistency",
+      "anchors": [
+        "b7445de3",
+        "32a19728",
+        "c431b133",
+        "D26:36"
+      ],
+      "actual_source_quotes": [
+        "It's based on a book series that I love."
+      ],
+      "reasoning": "All routes list the same HarryPotter/GoT/Alchemist/NameOfWind/unnamed-small-changes books, with group names and order differing. Baseline and cheap YES, JEV NO cannot be treated as a demonstrated loss of a substantive book. Hobbit and WheelOfTime are not recovered by these four local candidates; gold-neighbor D26:36 explicitly gives WheelOfTime as a loved book series.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/18",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 20,
+      "qid": "c5_q6",
+      "role": "peer",
+      "category": 2,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "core_retained_abstention",
+      "anchors": [
+        "fe531aeb",
+        "D2:1"
+      ],
+      "actual_source_quotes": [
+        "We adopted another puppy called Pixie."
+      ],
+      "reasoning": "Original adoption and April2 observation remain; both append exact April2 We adopted Pixie. Cheap says shortly beforeApr2; JEV abstains after also adding Andrew adoption search in May (wrong actor). Approximate source-time upper bound is useful but exact adoption date is not given. No claim unknown event date can be invented from observation date.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/20",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 21,
+      "qid": "c6_q44",
+      "role": "primary",
+      "category": 3,
+      "jev_vs_N0_loss": false,
+      "qualitative_primary_mechanism": "new_explicit_relation_and_relative_time",
+      "anchors": [
+        "2e36424c",
+        "D21:13",
+        "D21:14",
+        "D21:15"
+      ],
+      "actual_source_quotes": [
+        "I don't mind meeting up, but why Starbucks? Maybe we can have a beer somewhere?"
+      ],
+      "reasoning": "Selected originals include day off/dark-beer dislike/pub plan but not the explicit Starbucks question and beer alternative. Both routes append the same packet set despite reversed score-index lists. D21:14 gives the proposed alternative; neither source nor gold warrants a general claim that he always drinks beer on days off.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/21",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 23,
+      "qid": "c7_q140",
+      "role": "peer",
+      "category": 4,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "core_retained_abstention",
+      "anchors": [
+        "bd8beb95",
+        "D15:9",
+        "D15:10",
+        "D24:9",
+        "D24:10"
+      ],
+      "actual_source_quotes": [
+        "Do you two have a favorite game to play together?",
+        "we love playing \"It takes two\" together!"
+      ],
+      "reasoning": "Original first fact keeps ItTakesTwo with partner and source D15:9–10 supports that response. Added packets concern Deborah husband, Battlefield1, or favorite game with mom. JEV gives .42/.32 to Battlefield/mom windows and abstains. Actor/relationship-specific utility was not resolved, but it is not proof p means truth or evidence deletion.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/23",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 24,
+      "qid": "c7_q19",
+      "role": "primary",
+      "category": 1,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "core_retained_abstention",
+      "anchors": [
+        "77a9bcfd",
+        "1607baa2",
+        "D1:8",
+        "D2:24"
+      ],
+      "actual_source_quotes": [
+        "she gave it to me in 2010  in Paris.",
+        "I bought it a year ago in Paris."
+      ],
+      "reasoning": "Original rank3 and rank4 keep Paris2010 pendant and Paris2022 snake purchase. New windows are about Susie/coping rather than France; both routes abstain. Two observed episodes support at least twice but do not prove an exhaustive lifetime total. Do not call this deleted evidence or source-established exactly two visits.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/24",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 26,
+      "qid": "c9_q19",
+      "role": "peer",
+      "category": 1,
+      "jev_vs_N0_loss": false,
+      "qualitative_primary_mechanism": "suspected_judge_semantic_inconsistency",
+      "anchors": [
+        "bf558665",
+        "998d11a8",
+        "D24:17",
+        "D24:19",
+        "D12:7"
+      ],
+      "actual_source_quotes": [
+        "I'm actually going to Tokyo next month after the tour ends.",
+        "I was excited to explore Shinjuku."
+      ],
+      "reasoning": "All answers name musicfestival plus tourconcert withFrankOcean. Only cheap YES despite near-synonymous incomplete content. Gold Shinjuku mixes future plan and past/future wording; Ferrari-dealership source does not explicitly locate Tokyo in this turn. Neither new route provides the complete four-item gold list. Not a substantive complete-list gain.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/26",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 27,
+      "qid": "c9_q39",
+      "role": "primary",
+      "category": 3,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "core_retained_abstention",
+      "anchors": [
+        "47e02f6f",
+        "27a94c8b",
+        "4a40cfa7"
+      ],
+      "actual_source_quotes": [],
+      "reasoning": "Classic-muscle-car interests and Subaru project remain in the first three facts. New windows include workshop/career/restoration and unrelated music. Both routes change DodgeCharger to abstention. The comparison requires general car-type knowledge/preferences and has no gold source turn, so this is not a proved erased explicit Dodge preference.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/27",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 29,
+      "qid": "c9_q60",
+      "role": "peer",
+      "category": 1,
+      "jev_vs_N0_loss": true,
+      "qualitative_primary_mechanism": "core_retained_abstention",
+      "anchors": [
+        "74f5d72e",
+        "c62f2dcd",
+        "D4:26",
+        "D16:14"
+      ],
+      "actual_source_quotes": [
+        "I got it from another artist as a gift",
+        "I had this custom made by my Japanese artist friend."
+      ],
+      "reasoning": "Original necklace gift stays rank1 and JEV adds explicit artist-as-gift D4:26, yet abstains. This loses a supported partial answer. Baseline guitar inclusion is not independently certified: D16:14 says had custom made by friend, not received as gift. Reject wholesale conclusion that baseline full two-item answer was source-true.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/29",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    },
+    {
+      "index": 30,
+      "qid": "c9_q8",
+      "role": "primary",
+      "category": 2,
+      "jev_vs_N0_loss": false,
+      "qualitative_primary_mechanism": "time_conflict_and_coarsening",
+      "anchors": [
+        "27a94c8b",
+        "fe5036fe",
+        "D4:1"
+      ],
+      "actual_source_quotes": [
+        "I finally opened my own car maintenance shop!"
+      ],
+      "reasoning": "Originals conflict between May2023/May1 observation and weekMay9. Added May1 source says finally opened; this establishes already open by that observation, not exact opening day. JEV coarsens to aroundMay2023; cheap still says specifically weekMay9 yet receives YES. Therefore benchmark gain is not a demonstrated exact-date correction.",
+      "review_status": "actual_read_full_original20_all4windows_gold_neighbors",
+      "all_source_semantic_exhaustiveness": false,
+      "gold_or_scores_modified": false,
+      "packet_pointer": "/packets/30",
+      "evidence_scope": "provided complete packet; not whole-bank semantic absence"
+    }
+  ],
+  "numeric_component_vote": {
+    "R05_source_append_family_success": true,
+    "JEV_correct": 1265,
+    "baseline_correct": 1153,
+    "fixed_minimum": 1200,
+    "number_of_new_independent_successful_families": 1,
+    "cheap_and_jev_counted_separately": false,
+    "whole_phenomenon_isolated_to_JEV": false,
+    "JEV_increment_vs_cheap_pp": 0.8441558441558441
+  },
+  "costs": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r05_phase_accounting_write61.json",
+    "sha256": "d2abb6d804fa9ff1c5c862f0ca7ddb3d97c6afa249f7b3dffe6beebae9b551ef",
+    "new_physical_selector": 1533,
+    "selector_transport_usage_unknown": 4,
+    "new_physical_QA": 3816,
+    "QA_transport_usage_unknown": 189,
+    "writer_embedding_cold_cost": null,
+    "inherited_N0_history_separate": true
+  },
+  "next_direction": {
+    "status": "proposal_under_peer_challenge_not_frozen",
+    "preferred": "QA-free question-facet evidence composition in unchanged original bank/pool",
+    "independence": "independent of R05 sourceappend; within retrieval family already tried by R03; not yet successful",
+    "requirements": [
+      "same frozen R01 pool≤80",
+      "no source windows or answer/gold/labels in selection",
+      "original question kept alongside bounded answer-free facets",
+      "same facets and candidate access for cheap/JEV",
+      "precise greedy max-coverage ranking and ties/fill",
+      "partial bridge/list contribution not individual sufficiency",
+      "any facet or score unknown leaves exact original N020",
+      "restore pool order, no Reader/Judge prompt changes"
+    ],
+    "objections": [
+      "Already-present facts can still be ignored; coverage cannot guarantee Reader enumeration or counting.",
+      "Max scalar p is a heuristic objective, not statistical evidence coverage or truth.",
+      "Decomposition can drift and omit relations; raw-source writing repair opportunity audit was weak and expensive.",
+      "Do not retune per-qid thresholds or append windows to repair the 22 observed losses."
+    ]
+  }
+}

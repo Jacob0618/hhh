@@ -1,0 +1,304 @@
+{
+  "schema": "final-acceptance-sol-v1",
+  "created_utc": "2026-10-06T14:57:03.425232+00:00",
+  "status": "accepted_formal_summary_aligned",
+  "summary": {
+    "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\heartbeat_20261006T1052\\live_qa_v2\\final_summary_v1.json",
+    "sha256": "01aa05237a252832135f9c03122d16ee8d6f1aab0b0b2e97d16f2836533567e5",
+    "audit_status": "no_invalid_artifacts"
+  },
+  "compact_rows_matched": 10780,
+  "scalar_identity_and_metrics_checks": 107933,
+  "all_pairs_and_category_flip_lists_matched": 21,
+  "official_contrasts_matched": 8,
+  "interaction_matched": true,
+  "contrasts_and_cluster_intervals": {
+    "r03_original_minus_baseline": {
+      "official_locomo_f1": {
+        "other_minus_baseline": 0.015029106370906485,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.006440300008368083,
+          0.022519387422218276
+        ]
+      },
+      "custom_token_f1": {
+        "other_minus_baseline": 0.011933635948153642,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.003989480181890616,
+          0.019375890655494044
+        ]
+      },
+      "judge_correct": {
+        "other_minus_baseline": 0.01948051948051948,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.011698777545425474,
+          0.027933142394575304
+        ]
+      }
+    },
+    "r03_refined_minus_r03_original": {
+      "official_locomo_f1": {
+        "other_minus_baseline": -0.00033106716667555204,
+        "cluster_bootstrap_95_percentile_interval": [
+          -0.0012033836601784327,
+          0.00042129818731908994
+        ]
+      },
+      "custom_token_f1": {
+        "other_minus_baseline": 4.525632602492753e-05,
+        "cluster_bootstrap_95_percentile_interval": [
+          -0.0006840259134088612,
+          0.0006824498188262532
+        ]
+      },
+      "judge_correct": {
+        "other_minus_baseline": 0.0,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "original_source_closure_minus_r03_original": {
+      "official_locomo_f1": {
+        "other_minus_baseline": 0.07355172530350565,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.059120298202211694,
+          0.08803679460610592
+        ]
+      },
+      "custom_token_f1": {
+        "other_minus_baseline": 0.06997445934379584,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.0551344246218347,
+          0.08505695557308586
+        ]
+      },
+      "judge_correct": {
+        "other_minus_baseline": 0.07207792207792207,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.05341114129324513,
+          0.09626630411020928
+        ]
+      }
+    },
+    "refined_source_closure_minus_r03_refined": {
+      "official_locomo_f1": {
+        "other_minus_baseline": 0.07291317211676099,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.05904522874238942,
+          0.08695487332105163
+        ]
+      },
+      "custom_token_f1": {
+        "other_minus_baseline": 0.06899198479245569,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.05510737466133413,
+          0.08309063668425902
+        ]
+      },
+      "judge_correct": {
+        "other_minus_baseline": 0.07142857142857142,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.05209512501388094,
+          0.09563940937742853
+        ]
+      }
+    },
+    "refined_source_closure_minus_original_source_closure": {
+      "official_locomo_f1": {
+        "other_minus_baseline": -0.0009696203534202287,
+        "cluster_bootstrap_95_percentile_interval": [
+          -0.0018148236168148845,
+          -9.984925535738349e-05
+        ]
+      },
+      "custom_token_f1": {
+        "other_minus_baseline": -0.000937218225315203,
+        "cluster_bootstrap_95_percentile_interval": [
+          -0.0016164907475854956,
+          -0.0002261796325839853
+        ]
+      },
+      "judge_correct": {
+        "other_minus_baseline": -0.0006493506493506494,
+        "cluster_bootstrap_95_percentile_interval": [
+          -0.0020285350844019665,
+          0.0
+        ]
+      }
+    },
+    "original_multi_source_closure_minus_original_source_closure": {
+      "official_locomo_f1": {
+        "other_minus_baseline": 0.003359219543562284,
+        "cluster_bootstrap_95_percentile_interval": [
+          -0.00016913626006721826,
+          0.007194276145314245
+        ]
+      },
+      "custom_token_f1": {
+        "other_minus_baseline": 0.004043827349171723,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.0010537732886168646,
+          0.007179054341599452
+        ]
+      },
+      "judge_correct": {
+        "other_minus_baseline": 0.005194805194805195,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.0,
+          0.010659229208924944
+        ]
+      }
+    },
+    "refined_multi_source_closure_minus_refined_source_closure": {
+      "official_locomo_f1": {
+        "other_minus_baseline": 0.0025949286921768612,
+        "cluster_bootstrap_95_percentile_interval": [
+          -0.00027616135291047154,
+          0.005276649123821786
+        ]
+      },
+      "custom_token_f1": {
+        "other_minus_baseline": 0.003972030277378781,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.0010776876887730396,
+          0.006807038292383845
+        ]
+      },
+      "judge_correct": {
+        "other_minus_baseline": 0.005194805194805195,
+        "cluster_bootstrap_95_percentile_interval": [
+          0.0005803571428571437,
+          0.010239533394052822
+        ]
+      }
+    },
+    "refined_multi_source_closure_minus_original_multi_source_closure": {
+      "official_locomo_f1": {
+        "other_minus_baseline": -0.0017339112048056515,
+        "cluster_bootstrap_95_percentile_interval": [
+          -0.003586416974170649,
+          -0.00013983828284899738
+        ]
+      },
+      "custom_token_f1": {
+        "other_minus_baseline": -0.0010090152971081452,
+        "cluster_bootstrap_95_percentile_interval": [
+          -0.0019030096732348934,
+          -0.00017371132313570383
+        ]
+      },
+      "judge_correct": {
+        "other_minus_baseline": -0.0006493506493506494,
+        "cluster_bootstrap_95_percentile_interval": [
+          -0.002024394149674389,
+          0.0
+        ]
+      }
+    }
+  },
+  "qa_usage": {
+    "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+    "available": true,
+    "physical_attempts": 2256,
+    "cache_events": 4382,
+    "physical_status_counts": {
+      "http_success": 2255,
+      "transport_or_unknown": 1
+    },
+    "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+    "physical_attempts_by_model": {
+      "gemini-3.8-flash": 2256
+    },
+    "usage_unknown_attempts": 1,
+    "token_fields": {
+      "prompt": {
+        "recorded_attempts": 2255,
+        "missing_attempts": 1,
+        "recorded_token_sum": 3568023
+      },
+      "output": {
+        "recorded_attempts": 2252,
+        "missing_attempts": 4,
+        "recorded_token_sum": 20428
+      },
+      "thinking": {
+        "recorded_attempts": 992,
+        "missing_attempts": 1264,
+        "recorded_token_sum": 205939
+      },
+      "total": {
+        "recorded_attempts": 2255,
+        "missing_attempts": 1,
+        "recorded_token_sum": 3794390
+      }
+    },
+    "missing_ledgers": [],
+    "total_cost_usd": null,
+    "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+    "missing_thinking_is_not_zero": true
+  },
+  "source_usage": {
+    "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+    "available": true,
+    "physical_attempts": 22595,
+    "cache_events": 23647,
+    "physical_status_counts": {
+      "http_success": 19471,
+      "transport_or_unknown": 124,
+      "http_failure": 3000
+    },
+    "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+    "physical_attempts_by_model": {
+      "jev-1.13.0": 22595
+    },
+    "usage_unknown_attempts": 3124,
+    "token_fields": {
+      "prompt": {
+        "recorded_attempts": 19471,
+        "missing_attempts": 3124,
+        "recorded_token_sum": 75656024
+      },
+      "output": {
+        "recorded_attempts": 19471,
+        "missing_attempts": 3124,
+        "recorded_token_sum": 4624216
+      },
+      "thinking": {
+        "recorded_attempts": 0,
+        "missing_attempts": 22595,
+        "recorded_token_sum": 0
+      },
+      "total": {
+        "recorded_attempts": 0,
+        "missing_attempts": 22595,
+        "recorded_token_sum": 0
+      }
+    },
+    "missing_ledgers": [],
+    "total_cost_usd": null,
+    "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+    "missing_thinking_is_not_zero": true
+  },
+  "historical_usage_in_new_cost": false,
+  "measured_added_utf8_bytes": {
+    "baseline": 0,
+    "r03_original": 0,
+    "r03_refined": 0,
+    "original_source_closure": 2806089,
+    "refined_source_closure": 2806309,
+    "original_multi_source_closure": 2798750,
+    "refined_multi_source_closure": 2798633
+  },
+  "byte_count_is_token_count": false,
+  "cost_usd": null,
+  "cost_limitations": [
+    "No adopted tariff or paid invoice; dollar total cannot be calculated from recorded tokens alone",
+    "Missing thinking,total or failed-attempt usage is unknown, not zero",
+    "QA/cache/historical inheritance are separated;warm reuse not independent replication",
+    "JEV physical attempts include preserved failures and recovery;status does not establish amount charged"
+  ],
+  "raw_audit_rerun_by_sol": false,
+  "model_calls": 0
+}

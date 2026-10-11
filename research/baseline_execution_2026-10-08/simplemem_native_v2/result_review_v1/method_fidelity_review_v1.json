@@ -1,0 +1,20 @@
+{
+  "status": "passed_with_declared_adaptations",
+  "source_revision": "db80b6a7c591e0ea730a058e9f5fc4eb06572299",
+  "variant": "SimpleMem text path with Gemini2.5 generation and Gemini embedding001768; external shared Reader/Judge",
+  "build": "10 one-time chronological raw dialogue builds, native40/2 windows with cross-session final flush; speaker/date/caption retained; source reconstruction and forbidden derived fields checked in full original proof",
+  "retrieval": "Native semantic25/keyword5/structured5, planning and reflection up to2rounds; complete native retrieved context, no top20 truncation",
+  "continuation": "Original terminal bank exact byte copy, no writer rebuild or corpus re-embedding; native keyword empty branch, three cached malformed-analysis parses/default, explicit empty targeted_queries only when exact case-certified. All unseen suffix requests require qualified prefix boundary.",
+  "original_failed_retrievals": 70,
+  "failure_kind_counts": {
+    "native_analysis_cached_default": 3,
+    "native_keyword_syntax_empty": 65,
+    "native_keyword_field_empty": 1,
+    "native_empty_missing_queries": 1
+  },
+  "prefix_raw_order": "All original request signatures/stages/context/native response payloads and new native compatibility journals replayed, no original seen signature re-issued physically.",
+  "source_attribution_limit": "Window provenance is not proof each generated memory fact is faithful to its source; this audit verifies retained provenance/format/requests, not manual factual adjudication of all memory text.",
+  "database_scope": "All original and copied database files bound by SHA, no DB engine/search opened or rerun. This is not the later bank cleanup certificate.",
+  "equal_budget": false,
+  "gold_input": "Native build consumes conversation only; retrieval receives question only; gold enters shared scoring/judge, not memory/query planning."
+}

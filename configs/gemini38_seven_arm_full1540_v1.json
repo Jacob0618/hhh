@@ -1,0 +1,73 @@
+{
+  "schema": "gemini38-seven-arm-full1540-v1",
+  "user_authorization": "2026-10-03_seven_arms_once_all_writer_reader_judge_rebuild",
+  "historical_lock": {
+    "path": "D:\\jev mem\\configs\\sdk20_full1540_locked_v1.json",
+    "sha256": "3a795ff19e32847f02a583b93f094b60a9cbaf247f51bb9d36f4cf12993dc75b"
+  },
+  "writer_manifest": {
+    "path": "D:\\jev mem\\runs\\gemini38_rebuild_v1_20261003\\run_manifest.json",
+    "sha256": "c370e15ff32541a76f550385e92b67f1c5b7c26bbe4f012bfd28db1d9311c057"
+  },
+  "writer_protocol_sha256": "672e196f5a7963ed97ac2a9d4c1cf2511d7410c992802e6b51a58ebabf41fbc9",
+  "arms": [
+    "baseline",
+    "source_local_context",
+    "hybrid_rank",
+    "hybrid_types",
+    "hybrid_types_no_relation",
+    "boundary_multiscale",
+    "boundary_neighbor"
+  ],
+  "repetitions": 1,
+  "questions_per_arm": 1540,
+  "total_slots": 10780,
+  "physical_banks": 40,
+  "models": {
+    "writer": "gemini-3.8-flash",
+    "reader": "gemini-3.8-flash",
+    "judge": "gemini-3.8-flash",
+    "embedding": "gemini-embedding-001",
+    "embedding_dimensions": 768,
+    "jev": "jev-1.13.0"
+  },
+  "writer_generation": {
+    "maxOutputTokens": 16384,
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json"
+  },
+  "reader_generation": {
+    "maxOutputTokens": 8192,
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    }
+  },
+  "judge_generation": {
+    "maxOutputTokens": 8192,
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    }
+  },
+  "evaluation_protocol": "gemini38-plain-reader-paper-era-mem0-judge-format-variant-v1",
+  "reader_system": "Answer a question about the named people using the supplied memories.\nMemories may describe either human speaker. Preserve attribution, negation, plans,\nand changes over time. Observation dates date the conversation, not necessarily the\nevent. Combine complementary facts. For lists/counts include all supported relevant\nitems and avoid duplicates. Reasonable inferences must be grounded in the memories;\ndo not invent biographical events, dates, names, or links. If evidence is insufficient,\nsay so. Return only the shortest complete answer: a name, date, phrase, or list as\nappropriate. Do not add explanation, background, introductory sentences, or related\nbut unasked facts. Do not shorten a required list by omitting its items.\nReturn only the plain-text answer.",
+  "judge_template": "\nYour task is to label an answer to a question as ’CORRECT’ or ’WRONG’. You will be given the following data:\n    (1) a question (posed by one user to another user), \n    (2) a ’gold’ (ground truth) answer, \n    (3) a generated answer\nwhich you will score as CORRECT/WRONG.\n\nThe point of the question is to ask about something one user should know about the other user based on their prior conversations.\nThe gold answer will usually be a concise and short answer that includes the referenced topic, for example:\nQuestion: Do you remember what I got the last time I went to Hawaii?\nGold answer: A shell necklace\nThe generated answer might be much longer, but you should be generous with your grading - as long as it touches on the same topic as the gold answer, it should be counted as CORRECT. \n\nFor time related questions, the gold answer will be a specific date, month, year, etc. The generated answer might be much longer or use relative time references (like \"last Tuesday\" or \"next month\"), but you should be generous with your grading - as long as it refers to the same date or time period as the gold answer, it should be counted as CORRECT. Even if the format differs (e.g., \"May 7th\" vs \"7 May\"), consider it CORRECT if it's the same date.\n\nNow it’s time for the real question:\nQuestion: {question}\nGold answer: {gold_answer}\nGenerated answer: {generated_answer}\n\nReturn only [[yes]] if CORRECT or [[no]] if WRONG. Do not return JSON or an explanation.\n",
+  "judge_template_sha256": "01f99e87d454148cc3408e690366b579b75522a94b9d6a0a22978f510a4eedbf",
+  "judge_source_commit": "cdee6a4ff0c0cdf1757b21c9792fe00299bb80ed",
+  "judge_format_adapted": true,
+  "qa_word_cap": null,
+  "selected_facts": 20,
+  "concurrency": {
+    "max_active_conversations": 8,
+    "qa_threads_per_conversation": 4,
+    "embedding_interval_seconds": 3,
+    "jev_http_per_second": 15
+  },
+  "same_phase_exact_judge_request_shared": true,
+  "retry_valid_no_or_yes": false,
+  "technical_recovery": "one_uniform_phase_only_after_all_firstpass_terminal",
+  "new_writer_bank_required": true,
+  "old_scores_unchanged": true,
+  "content_sha256": "6b1052d1865c83f5a0bb9fb18cee6e435714e4bbd7e1668643a9bc7164c7b392"
+}

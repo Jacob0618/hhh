@@ -1,0 +1,40 @@
+# Credentials, environments, downloaded models, and disposable runtime state.
+.private/
+.venv*/
+.tools/
+cache/
+runtime/
+models/
+*.env
+.env*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.sqlite*
+*.db
+*.db-*
+*.log
+*.tmp
+*.download
+
+# Historical trees are opt-in. Selected result/evidence leaves are tracked
+# explicitly in docs/repository_snapshot.json; never git add these wholesale.
+/archives/
+/runs/
+/research/
+/upstream/
+
+# Keep manuscript source/PDF, not local TeX executables or rendered caches.
+/paper_acl2027_2026-10-07/build_tools/
+/paper_acl2027_2026-10-07/render*/
+/paper_acl2027_2026-10-07/reference/
+/paper_acl2027_2026-10-07/compile*.txt
+/paper_acl2027_2026-10-07/JEV_Mem_ACL2027_source_v1.zip
+/paper_acl2027_2026-10-07/template/*
+!/paper_acl2027_2026-10-07/template/provenance.json
+/paper_acl2027_2026-10-07/template_smoke.*
+*.aux
+*.blg
+*.out
+*.synctex.gz

@@ -1,0 +1,1321 @@
+{
+  "schema": "gemini25-ablation-writer-source-semantic-review-v1",
+  "status": "reviewed_with_limitations",
+  "created_utc": "2026-10-07T15:22:53.652226+00:00",
+  "protocol_sha256": "b7379121c22b384d0b1a1c0d81099ca255cb70ac00b759eb4a36c2530a4defe4",
+  "structural_audit": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\full_structural_v1.json",
+    "sha256": "72faf1c0490396c60e596d9021c7962789dcacec02af8ad969910cb2d9d351e8"
+  },
+  "qa_gold_used": false,
+  "reviewer": "Root consolidation of two independent source reviewers and unchanged development source review",
+  "component_reviews": [
+    {
+      "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\development_semantic_v1.json",
+      "sha256": "db70f272f85eed8a56fb2ef504902568f23a6a11b3164b0548064a9c5529f360"
+    },
+    {
+      "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\heartbeat_20261007T1510\\semantic_c2_c5_v1.json",
+      "sha256": "2d507431b44cb307371859f0d2f17823a313be7374d59f1ddfb61428ba5abb49"
+    },
+    {
+      "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\heartbeat_20261007T1510\\semantic_c6_c9_v1.json",
+      "sha256": "766d3ed8c4942ec246cb3280cdda9817ef8d7f579385ebe94c9008d4de2e588f"
+    }
+  ],
+  "banks": [
+    {
+      "conversation": 0,
+      "arm": "session",
+      "bank": {
+        "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_0\\session\\bank.json",
+        "sha256": "6737d526d966be204d054d8ca694d4cc75574a88bc66117e35ad1a16f5f4d60b"
+      },
+      "reviewed_journals": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_0\\session\\native\\session_audit\\gemini38_c0_session_8e52b91ee43d\\session_1_3a1d7b6848ba.json",
+          "sha256": "e568e8a7f3aeec39551e1af944bddbf232833db8828519d79d0822e7be5212c8"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_0\\session\\native\\session_audit\\gemini38_c0_session_8e52b91ee43d\\session_19_a5d297901a37.json",
+          "sha256": "9484412bbb45200435436663c9e601cb7791bfa3a3898379bacb3d88101b7421"
+        }
+      ],
+      "blocking_implementation_error": false,
+      "notes": [
+        "Read complete source messages, parsed memory, added facts, history and retrieved-existing-memory context for session_1 and session_19. Session_1 support-group yesterday maps to 2023-05-07 and painting last year to 2022; session_19 last Friday and yesterday map to 2023-10-20 and 2023-10-21. Source/date/generation-to-ADD structural audit passed.",
+        "Main named-speaker claims are supported in these targets, but extraction combines several propositions and repeats adoption and acceptance facts. Session_19 uses mentors as a paraphrase of people Caroline looked up to; this is less literal and is retained as a native-generation limitation.",
+        "Source image metadata conflicts with spoken sunrise (image caption sunset); generated fact follows the spoken claim. Images, omitted minor remarks and paraphrase breadth are not manually corrected. No QA or gold was consulted."
+      ]
+    },
+    {
+      "conversation": 1,
+      "arm": "session",
+      "bank": {
+        "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_1\\session\\bank.json",
+        "sha256": "8ed9226325d9d79fb520059f34f892fbb9d1cf2a1f5683f9890b54359c221e7f"
+      },
+      "reviewed_journals": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_1\\session\\native\\session_audit\\gemini38_c1_session_316b0dfbc2b6\\session_1_3a1d7b6848ba.json",
+          "sha256": "22a5211fb1ce30478f6829c8f55aed964dbe0cbd0818f444ecdb00b5a2863fa8"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_1\\session\\native\\session_audit\\gemini38_c1_session_316b0dfbc2b6\\session_19_a5d297901a37.json",
+          "sha256": "e60fcb95f62e8ff118416c6ede17fcb246e9fc3161f9a0fc71bb8574c098e443"
+        }
+      ],
+      "blocking_implementation_error": false,
+      "notes": [
+        "Read complete source messages and parsed/added records for session_1 and session_19 and final history/existing memories. Job loss yesterday ->2023-01-19, next Friday ->2023-01-27, last year ->2022, next month ->February2023; final last Friday ->2023-07-21. Named events and Shia LaBeouf attribution are present in the source.",
+        "Native attributed_to is inconsistent with original dialogue role in session_1: Gina opens the user turn, but generated Jon records are marked user and Gina records assistant. Named text preserves Jon/Gina identities. This is a retained model-output limitation, not an adapter mutation or a corrected metadata field.",
+        "Some past rehearsing is generalized to habitual rehearsal and motivational statements are redundant with existing memories. No precision/recall guarantee for all173facts follows from these two sampled sessions. No QA or gold was consulted."
+      ]
+    },
+    {
+      "conversation": 2,
+      "arm": "session",
+      "bank": {
+        "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_2\\session\\bank.json",
+        "sha256": "fe52b8d42d7ca2d99ab9bd95c8bf51554d69274e7fc0fb7f4215a37a71dbb5ef"
+      },
+      "source_generation_persistence_passed": true,
+      "reviewed_journals": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_2\\session\\native\\session_audit\\gemini38_c2_session_cf3631f8f9eb\\session_1_3a1d7b6848ba.json",
+          "sha256": "a0269e65d7c6e7f6c070ea891ade4b9d1a40b509612e77b95bb8706dc274c06e"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_2\\session\\native\\session_audit\\gemini38_c2_session_cf3631f8f9eb\\session_32_7d92808156cb.json",
+          "sha256": "c1b05c78854c991dd594d0492ebcb20bb6eccec103ac4ed062e05ea808208a06"
+        }
+      ],
+      "blocking_implementation_error": false,
+      "notes": [
+        "Read the complete current messages, native parsed_memory, persisted fact records, history and retrieved-existing-memory context of every bound first/final/structural-review target listed below. No QA or gold was consulted.",
+        "Native output errors, omissions and ambiguity detailed below are preserved; sampled parsed texts exactly match persisted ADD fact texts. No adapter/serialization/persistence mutation was found in these targets.",
+        "This is an assistant source-only sample review, not an exhaustive accuracy certification or a human review of every fact."
+      ],
+      "journal_reviews": [
+        {
+          "session_id": "session_1",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_2\\session\\native\\session_audit\\gemini38_c2_session_cf3631f8f9eb\\session_1_3a1d7b6848ba.json",
+            "sha256": "a0269e65d7c6e7f6c070ea891ade4b9d1a40b509612e77b95bb8706dc274c06e"
+          },
+          "observation_date": "2022-12-17",
+          "prompt_current_date": "2026-09-27",
+          "all_current_messages_read": true,
+          "all_parsed_memory_read": true,
+          "all_fact_records_read": true,
+          "all_history_context_read": true,
+          "all_existing_memory_context_read": true,
+          "source_turn_count": 16,
+          "history_message_count": 0,
+          "existing_memory_count": 0,
+          "parsed_item_count": 9,
+          "persisted_fact_count": 9,
+          "parsed_texts_equal_persisted_texts": true,
+          "sdk_warnings": [],
+          "findings": [
+            {
+              "dimension": "date",
+              "assessment": "native_temporal_attachment_error",
+              "source_turn_ids": [
+                "D1:10"
+              ],
+              "parsed_item_ids": [
+                "6"
+              ],
+              "fact_ids": [
+                "b74ec504-cc85-4dc7-a6e3-5da4ff0c3e21"
+              ],
+              "detail": "The 2022-12-17 dialogue says the school photograph depicts last year after funding. Parsed item 6 / persisted b74ec504-cc85-4dc7-a6e3-5da4ff0c3e21 instead says John shared an image around 2021. The prior year belongs to the depicted school, not the present act of sharing. This is already in native parsed_memory and was persisted unchanged."
+            },
+            {
+              "dimension": "date",
+              "assessment": "native_event_paraphrase",
+              "source_turn_ids": [
+                "D1:2"
+              ],
+              "parsed_item_ids": [
+                "0"
+              ],
+              "fact_ids": [
+                "04842291-79bc-4cd4-983c-719b027fea26"
+              ],
+              "detail": "Yesterday correctly resolves to 2022-12-16, but the source dates returning from the family road trip; the generated fact says went on a trip around that date. It loses the return-event distinction."
+            },
+            {
+              "dimension": "person",
+              "assessment": "native_speaker_scope_broadening",
+              "source_turn_ids": [
+                "D1:4",
+                "D1:5"
+              ],
+              "parsed_item_ids": [
+                "2"
+              ],
+              "fact_ids": [
+                "7589dc3f-e69e-4a6c-8ef8-639fac63f2ec"
+              ],
+              "detail": "John says kickboxing gives him energy; Maria supplies the stay-in-shape and de-stress evaluation. The generated John fact combines both, broadening the reported first-person experience."
+            },
+            {
+              "dimension": "negation",
+              "assessment": "preserved_meaning",
+              "source_turn_ids": [
+                "D1:10"
+              ],
+              "parsed_item_ids": [
+                "5"
+              ],
+              "fact_ids": [
+                "476a6310-149c-474f-a867-f6ad9997dcf6"
+              ],
+              "detail": "John does not want future generations to experience deficient education and infrastructure. The positive paraphrase about adequate future funding preserves the intended direction, without reversing the negative."
+            },
+            {
+              "dimension": "context",
+              "assessment": "checked",
+              "source_turn_ids": [],
+              "parsed_item_ids": [],
+              "fact_ids": [],
+              "detail": "All 16 messages, all 9 parsed/persisted facts and empty history/existing context were read. John=user and Maria=assistant are retained in the named facts; source image descriptions were treated as part of the supplied source rather than separately verified images."
+            }
+          ]
+        },
+        {
+          "session_id": "session_32",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_2\\session\\native\\session_audit\\gemini38_c2_session_cf3631f8f9eb\\session_32_7d92808156cb.json",
+            "sha256": "c1b05c78854c991dd594d0492ebcb20bb6eccec103ac4ed062e05ea808208a06"
+          },
+          "observation_date": "2023-08-16",
+          "prompt_current_date": "2026-09-27",
+          "all_current_messages_read": true,
+          "all_parsed_memory_read": true,
+          "all_fact_records_read": true,
+          "all_history_context_read": true,
+          "all_existing_memory_context_read": true,
+          "source_turn_count": 17,
+          "history_message_count": 10,
+          "existing_memory_count": 10,
+          "parsed_item_count": 6,
+          "persisted_fact_count": 6,
+          "parsed_texts_equal_persisted_texts": true,
+          "sdk_warnings": [],
+          "findings": [
+            {
+              "dimension": "date",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D32:14"
+              ],
+              "parsed_item_ids": [
+                "4"
+              ],
+              "fact_ids": [
+                "356ed477-c776-49bf-a7b9-06e15f4c3add"
+              ],
+              "detail": "Last Friday in the 2023-08-16 dialogue maps to 2023-08-11 for Maria volunteering at the shelter front desk."
+            },
+            {
+              "dimension": "scope",
+              "assessment": "native_contextual_inference",
+              "source_turn_ids": [
+                "D32:5",
+                "D32:6",
+                "D32:7"
+              ],
+              "parsed_item_ids": [
+                "2"
+              ],
+              "fact_ids": [
+                "7e76ef14-9276-4500-bd00-5f7062ed707b"
+              ],
+              "detail": "The source says a group task took two hours before discussing donations. The generated fact explicitly makes this the duration of collecting the canned food, toiletries and clothing. This is plausible discourse resolution, but more specific than the explicit source linkage."
+            },
+            {
+              "dimension": "person",
+              "assessment": "native_joint_attribution",
+              "source_turn_ids": [
+                "D32:15",
+                "D32:16",
+                "D32:17"
+              ],
+              "parsed_item_ids": [
+                "5"
+              ],
+              "fact_ids": [
+                "96e43a46-f2d9-449d-923d-76a10947cf16"
+              ],
+              "detail": "The final kindness statement is a joint John-and-Maria claim while attributed_to=user. The named joint text is retained, but its metadata does not encode both participants."
+            },
+            {
+              "dimension": "context",
+              "assessment": "checked",
+              "source_turn_ids": [],
+              "parsed_item_ids": [],
+              "fact_ids": [],
+              "detail": "All 17 current messages, 6 parsed/persisted facts, 10 history messages and 10 retrieved existing memories were read. Existing memories already include joining the brigade, mutual community support and kindness; the final output repeats some of those themes. History about John family leisure and Maria animal interests was not reassigned to the brigade event."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "conversation": 3,
+      "arm": "session",
+      "bank": {
+        "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_3\\session\\bank.json",
+        "sha256": "445f079d62c7a1165464a8bb17c086bd55cc577bfd7251ad1072f9875a51daca"
+      },
+      "source_generation_persistence_passed": true,
+      "reviewed_journals": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_3\\session\\native\\session_audit\\gemini38_c3_session_e3c5d0dc2ee7\\session_1_3a1d7b6848ba.json",
+          "sha256": "da82b4a1cb9fb0bdd9876243965e513c25db4763820a7d97cad1bee2076297cf"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_3\\session\\native\\session_audit\\gemini38_c3_session_e3c5d0dc2ee7\\session_29_906ba13f506e.json",
+          "sha256": "5f2e6a290410c85842bb35568220b1d4bb6116eeb6cc91630d23620afb40a246"
+        }
+      ],
+      "blocking_implementation_error": false,
+      "notes": [
+        "Read the complete current messages, native parsed_memory, persisted fact records, history and retrieved-existing-memory context of every bound first/final/structural-review target listed below. No QA or gold was consulted.",
+        "Native output errors, omissions and ambiguity detailed below are preserved; sampled parsed texts exactly match persisted ADD fact texts. No adapter/serialization/persistence mutation was found in these targets.",
+        "This is an assistant source-only sample review, not an exhaustive accuracy certification or a human review of every fact."
+      ],
+      "journal_reviews": [
+        {
+          "session_id": "session_1",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_3\\session\\native\\session_audit\\gemini38_c3_session_e3c5d0dc2ee7\\session_1_3a1d7b6848ba.json",
+            "sha256": "da82b4a1cb9fb0bdd9876243965e513c25db4763820a7d97cad1bee2076297cf"
+          },
+          "observation_date": "2022-01-21",
+          "prompt_current_date": "2026-09-27",
+          "all_current_messages_read": true,
+          "all_parsed_memory_read": true,
+          "all_fact_records_read": true,
+          "all_history_context_read": true,
+          "all_existing_memory_context_read": true,
+          "source_turn_count": 22,
+          "history_message_count": 0,
+          "existing_memory_count": 0,
+          "parsed_item_count": 9,
+          "persisted_fact_count": 9,
+          "parsed_texts_equal_persisted_texts": true,
+          "sdk_warnings": [],
+          "findings": [
+            {
+              "dimension": "omission",
+              "assessment": "native_negative_preference_omitted",
+              "source_turn_ids": [
+                "D1:8"
+              ],
+              "parsed_item_ids": [],
+              "fact_ids": [],
+              "detail": "Joanna explicitly says she is not into games. None of the 9 generated items preserves this negative preference. The model does not assert the opposite, so this is an omission rather than a polarity reversal."
+            },
+            {
+              "dimension": "date",
+              "assessment": "native_approximation",
+              "source_turn_ids": [
+                "D1:3",
+                "D1:18"
+              ],
+              "parsed_item_ids": [
+                "1",
+                "6"
+              ],
+              "fact_ids": [
+                "004c3204-19b2-41f4-8750-b7ad0b057523",
+                "0b97f979-c684-476e-9954-d656a51054f5"
+              ],
+              "detail": "Last week is rendered around 2022-01-14, and around three years ago is rendered around January 2019. These are approximate conversions tied to observation_date 2022-01-21; the source does not establish those exact day/month values."
+            },
+            {
+              "dimension": "person",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D1:3",
+                "D1:7",
+                "D1:10",
+                "D1:11",
+                "D1:13",
+                "D1:14"
+              ],
+              "parsed_item_ids": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+              ],
+              "fact_ids": [
+                "004c3204-19b2-41f4-8750-b7ad0b057523",
+                "fa2c94d1-da10-46ac-b7a2-c74e99914441",
+                "c206fd16-95ef-44a1-8e4b-e9f77cd35cd3",
+                "f5f0c174-f501-49c6-bbaa-cf6a1cf29d76",
+                "97b238ce-273e-45ea-8dae-9f9c7ae68657"
+              ],
+              "detail": "Nate is the CS:GO tournament winner and action/sci-fi fan; Joanna has the writing/reading/nature and drama/romcom preferences. Named speakers and attributed_to match Nate=assistant and Joanna=user."
+            },
+            {
+              "dimension": "omission",
+              "assessment": "native_minor_preference_omitted",
+              "source_turn_ids": [
+                "D1:17"
+              ],
+              "parsed_item_ids": [],
+              "fact_ids": [],
+              "detail": "Nate also says he likes watching classics and plans to try the recommended film; these remarks are not separate generated memories."
+            },
+            {
+              "dimension": "context",
+              "assessment": "checked",
+              "source_turn_ids": [],
+              "parsed_item_ids": [],
+              "fact_ids": [],
+              "detail": "All 22 current messages, 9 parsed/persisted facts and empty history/existing context were read. The movie title is supplied in source image-query text, not invented from an inaccessible image."
+            }
+          ]
+        },
+        {
+          "session_id": "session_29",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_3\\session\\native\\session_audit\\gemini38_c3_session_e3c5d0dc2ee7\\session_29_906ba13f506e.json",
+            "sha256": "5f2e6a290410c85842bb35568220b1d4bb6116eeb6cc91630d23620afb40a246"
+          },
+          "observation_date": "2022-11-11",
+          "prompt_current_date": "2026-09-27",
+          "all_current_messages_read": true,
+          "all_parsed_memory_read": true,
+          "all_fact_records_read": true,
+          "all_history_context_read": true,
+          "all_existing_memory_context_read": true,
+          "source_turn_count": 15,
+          "history_message_count": 10,
+          "existing_memory_count": 10,
+          "parsed_item_count": 9,
+          "persisted_fact_count": 9,
+          "parsed_texts_equal_persisted_texts": true,
+          "sdk_warnings": [],
+          "findings": [
+            {
+              "dimension": "date",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D29:6"
+              ],
+              "parsed_item_ids": [
+                "2"
+              ],
+              "fact_ids": [
+                "c9779440-d811-4cc1-a404-6b62037b2e1e"
+              ],
+              "detail": "Yesterday resolves from 2022-11-11 to around 2022-11-10 for Nate taking turtles to the beach in Tampa."
+            },
+            {
+              "dimension": "negation",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D29:8"
+              ],
+              "parsed_item_ids": [
+                "3"
+              ],
+              "fact_ids": [
+                "aff569f0-5ce9-4c5e-993c-8d7c2e6ffaeb"
+              ],
+              "detail": "Nate says the turtles do not require much looking after; the negative qualification survives in the generated fact."
+            },
+            {
+              "dimension": "scope",
+              "assessment": "native_ambiguous_referent",
+              "source_turn_ids": [
+                "D29:10",
+                "D29:12",
+                "D29:13"
+              ],
+              "parsed_item_ids": [
+                "7",
+                "8"
+              ],
+              "fact_ids": [
+                "401bf4bf-0153-4113-a1f3-0840d43f2682",
+                "d16e880f-e555-4a22-9eed-c06496706ef7"
+              ],
+              "detail": "Nate offers Wanna give it a try after showing ice cream and mentioning a recipe; Joanna responds that the ice cream looks mouthwatering. The model resolves this as offering and trying the recipe. Tasting the ice cream is also a reasonable reading. Retrieved context includes an earlier recipe request and sent recipe, so this is a context-conditioned ambiguity, not proof of a new recipe exchange."
+            },
+            {
+              "dimension": "omission",
+              "assessment": "native_minor_detail_generalization",
+              "source_turn_ids": [
+                "D29:5"
+              ],
+              "parsed_item_ids": [
+                "1"
+              ],
+              "fact_ids": [
+                "03bd4502-df41-430f-881a-5a6fa11af4db"
+              ],
+              "detail": "The source identifies the admiring actor as she; the fact uses they. Script praise and Joanna getting chills remain, but the explicit gender detail is generalized."
+            },
+            {
+              "dimension": "context",
+              "assessment": "checked",
+              "source_turn_ids": [],
+              "parsed_item_ids": [],
+              "fact_ids": [],
+              "detail": "All 15 current messages, 9 parsed/persisted facts, 10 history messages and 10 retrieved existing memories were read. Joanna turtle allergy appears in history and an existing memory, so its absence from the new ADD list does not imply deletion or loss from the bank."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "conversation": 4,
+      "arm": "session",
+      "bank": {
+        "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_4\\session\\bank.json",
+        "sha256": "b1dae8531fa323b18dfb5a93c0cc182f4ac66d93fd2caa4e5c6ff8059e5ccc2f"
+      },
+      "source_generation_persistence_passed": true,
+      "reviewed_journals": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_4\\session\\native\\session_audit\\gemini38_c4_session_14dcf9d3f539\\session_1_3a1d7b6848ba.json",
+          "sha256": "c01f7d6e5a87f75ef7d597ee906f8578e235d23d5eef3adfed080c30d2289bae"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_4\\session\\native\\session_audit\\gemini38_c4_session_14dcf9d3f539\\session_29_906ba13f506e.json",
+          "sha256": "84236366646baf59fde0ddfef4151dc82eb213242c2407c10594c966ef031f12"
+        }
+      ],
+      "blocking_implementation_error": false,
+      "notes": [
+        "Read the complete current messages, native parsed_memory, persisted fact records, history and retrieved-existing-memory context of every bound first/final/structural-review target listed below. No QA or gold was consulted.",
+        "Native output errors, omissions and ambiguity detailed below are preserved; sampled parsed texts exactly match persisted ADD fact texts. No adapter/serialization/persistence mutation was found in these targets.",
+        "This is an assistant source-only sample review, not an exhaustive accuracy certification or a human review of every fact."
+      ],
+      "journal_reviews": [
+        {
+          "session_id": "session_1",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_4\\session\\native\\session_audit\\gemini38_c4_session_14dcf9d3f539\\session_1_3a1d7b6848ba.json",
+            "sha256": "c01f7d6e5a87f75ef7d597ee906f8578e235d23d5eef3adfed080c30d2289bae"
+          },
+          "observation_date": "2023-05-21",
+          "prompt_current_date": "2026-09-27",
+          "all_current_messages_read": true,
+          "all_parsed_memory_read": true,
+          "all_fact_records_read": true,
+          "all_history_context_read": true,
+          "all_existing_memory_context_read": true,
+          "source_turn_count": 20,
+          "history_message_count": 0,
+          "existing_memory_count": 0,
+          "parsed_item_count": 11,
+          "persisted_fact_count": 11,
+          "parsed_texts_equal_persisted_texts": true,
+          "sdk_warnings": [],
+          "findings": [
+            {
+              "dimension": "date",
+              "assessment": "preserved_and_approximate",
+              "source_turn_ids": [
+                "D1:7",
+                "D1:14",
+                "D1:18"
+              ],
+              "parsed_item_ids": [
+                "2",
+                "6",
+                "9"
+              ],
+              "fact_ids": [
+                "20b61750-374c-4b38-8e83-45254134803d",
+                "c918cf7d-9a8c-4510-84e7-34fe502dc027",
+                "aca5f407-31bf-4f5c-b612-a349f996c344"
+              ],
+              "detail": "From observation_date 2023-05-21, next week is rendered week of May 22; a few years ago remains a few years before May 2023. Last week is rendered around the week of May 14: this is an approximate week label whose boundary convention is not explicit in the source, and should not be treated as an exact event date."
+            },
+            {
+              "dimension": "negation",
+              "assessment": "native_negative_experience_omitted",
+              "source_turn_ids": [
+                "D1:18",
+                "D1:19"
+              ],
+              "parsed_item_ids": [
+                "10"
+              ],
+              "fact_ids": [
+                "16bb928d-d1e2-44f3-a539-09dee4731b0e"
+              ],
+              "detail": "John answers No to having visited real Potter places and puts them on his future to-do list. The generated fact retains the future plan but omits the explicit not-yet-visited claim."
+            },
+            {
+              "dimension": "person",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D1:2",
+                "D1:5",
+                "D1:7",
+                "D1:15",
+                "D1:16",
+                "D1:18"
+              ],
+              "parsed_item_ids": [
+                "0",
+                "1",
+                "2",
+                "7",
+                "8",
+                "9"
+              ],
+              "fact_ids": [
+                "aa8b9d92-c9f0-46ba-96e4-0b94025f4fde",
+                "10bf4d7d-f12b-4bda-a4aa-66c582e06434",
+                "20b61750-374c-4b38-8e83-45254134803d",
+                "b11718bc-f21a-4fa7-a65e-a7bbd1941cbe",
+                "004db223-9c3d-4485-bd2d-763e14e53b65",
+                "aca5f407-31bf-4f5c-b612-a349f996c344"
+              ],
+              "detail": "Tim owns the fan project and London visit; John owns the Minnesota Wolves signing, shooting-guard role and sneaker collection. Named facts and attributed_to match Tim=user and John=assistant. The team name is retained as stated in source, without outside correction."
+            },
+            {
+              "dimension": "context",
+              "assessment": "checked",
+              "source_turn_ids": [],
+              "parsed_item_ids": [],
+              "fact_ids": [],
+              "detail": "All 20 current messages, 11 parsed/persisted facts and empty history/existing context were read. Tim future wish to explore more Potter places is also omitted from the new facts; his earlier London visit is preserved."
+            }
+          ]
+        },
+        {
+          "session_id": "session_29",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_4\\session\\native\\session_audit\\gemini38_c4_session_14dcf9d3f539\\session_29_906ba13f506e.json",
+            "sha256": "84236366646baf59fde0ddfef4151dc82eb213242c2407c10594c966ef031f12"
+          },
+          "observation_date": "2024-01-12",
+          "prompt_current_date": "2026-09-27",
+          "all_current_messages_read": true,
+          "all_parsed_memory_read": true,
+          "all_fact_records_read": true,
+          "all_history_context_read": true,
+          "all_existing_memory_context_read": true,
+          "source_turn_count": 15,
+          "history_message_count": 10,
+          "existing_memory_count": 10,
+          "parsed_item_count": 4,
+          "persisted_fact_count": 4,
+          "parsed_texts_equal_persisted_texts": true,
+          "sdk_warnings": [],
+          "findings": [
+            {
+              "dimension": "date",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D29:4"
+              ],
+              "parsed_item_ids": [
+                "1"
+              ],
+              "fact_ids": [
+                "6c776d20-5a52-4146-9e57-c9d2c31f1753"
+              ],
+              "detail": "Last week in the 2024-01-12 dialogue is rendered around January 1-7, 2024 for the beverage-company endorsement, matching the prior calendar week."
+            },
+            {
+              "dimension": "negation",
+              "assessment": "preserved_meaning",
+              "source_turn_ids": [
+                "D29:6",
+                "D29:8"
+              ],
+              "parsed_item_ids": [
+                "1"
+              ],
+              "fact_ids": [
+                "6c776d20-5a52-4146-9e57-c9d2c31f1753"
+              ],
+              "detail": "The statement that training hours were not for nothing is paraphrased as hard work paying off; the intended positive evaluation is preserved."
+            },
+            {
+              "dimension": "person",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D29:3",
+                "D29:9",
+                "D29:12",
+                "D29:13"
+              ],
+              "parsed_item_ids": [
+                "0",
+                "2",
+                "3"
+              ],
+              "fact_ids": [
+                "a9367604-28e0-48ef-96c5-d64d738c5140",
+                "6d79371b-4510-4456-9cb6-2936cd40e4a6",
+                "ea1a341e-4ad4-4bbb-8b53-e533f466db95"
+              ],
+              "detail": "Visa research and adding Barcelona belong to Tim; the Barcelona recommendation belongs to John. No specific beverage brand is invented."
+            },
+            {
+              "dimension": "context",
+              "assessment": "checked",
+              "source_turn_ids": [],
+              "parsed_item_ids": [],
+              "fact_ids": [],
+              "detail": "All 15 current messages, 4 parsed/persisted facts, 10 history messages and 10 retrieved existing memories were read. An existing outdoor-gear endorsement around December 12, 2023 is not merged into the current beverage endorsement. History about charity basketball and The Name of the Wind is not promoted to a current-session event."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "conversation": 5,
+      "arm": "session",
+      "bank": {
+        "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_5\\session\\bank.json",
+        "sha256": "db8541410ce6e49ee97c7f13532e1839da1f9037d3b9a1a47b4cb50e4ce6c410"
+      },
+      "source_generation_persistence_passed": true,
+      "reviewed_journals": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_5\\session\\native\\session_audit\\gemini38_c5_session_e2a303b8de8d\\session_1_3a1d7b6848ba.json",
+          "sha256": "8b1a193151d366334954e0dbbdb8387f27e5ce12f73273775eb152ab71262af5"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_5\\session\\native\\session_audit\\gemini38_c5_session_e2a303b8de8d\\session_28_42a3ec7f5bda.json",
+          "sha256": "6e9696edc16961c60680bfa76c3280d4912241dade14de7a153cfd469f0cae1d"
+        }
+      ],
+      "blocking_implementation_error": false,
+      "notes": [
+        "Read the complete current messages, native parsed_memory, persisted fact records, history and retrieved-existing-memory context of every bound first/final/structural-review target listed below. No QA or gold was consulted.",
+        "Native output errors, omissions and ambiguity detailed below are preserved; sampled parsed texts exactly match persisted ADD fact texts. No adapter/serialization/persistence mutation was found in these targets.",
+        "This is an assistant source-only sample review, not an exhaustive accuracy certification or a human review of every fact."
+      ],
+      "journal_reviews": [
+        {
+          "session_id": "session_1",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_5\\session\\native\\session_audit\\gemini38_c5_session_e2a303b8de8d\\session_1_3a1d7b6848ba.json",
+            "sha256": "8b1a193151d366334954e0dbbdb8387f27e5ce12f73273775eb152ab71262af5"
+          },
+          "observation_date": "2023-03-27",
+          "prompt_current_date": "2026-09-27",
+          "all_current_messages_read": true,
+          "all_parsed_memory_read": true,
+          "all_fact_records_read": true,
+          "all_history_context_read": true,
+          "all_existing_memory_context_read": true,
+          "source_turn_count": 24,
+          "history_message_count": 0,
+          "existing_memory_count": 0,
+          "parsed_item_count": 7,
+          "persisted_fact_count": 7,
+          "parsed_texts_equal_persisted_texts": true,
+          "sdk_warnings": [],
+          "findings": [
+            {
+              "dimension": "date",
+              "assessment": "native_approximation",
+              "source_turn_ids": [
+                "D1:2"
+              ],
+              "parsed_item_ids": [
+                "0"
+              ],
+              "fact_ids": [
+                "ff150f3c-8968-42c3-b285-3128c45f5960"
+              ],
+              "detail": "Last week relative to 2023-03-27 is rendered around March 20, 2023 for Andrew starting as a Financial Analyst. The approximation is a plausible prior-week anchor, but the source does not specify the start day."
+            },
+            {
+              "dimension": "person",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D1:7",
+                "D1:9"
+              ],
+              "parsed_item_ids": [
+                "1",
+                "2"
+              ],
+              "fact_ids": [
+                "bdad6de0-129d-49a2-8bc5-39d819246b1e",
+                "3c855b25-8c43-4419-9c70-5ca46d2f79dd"
+              ],
+              "detail": "Audrey explicitly names Pepper, Precious and Panda and says she has had them for three years. The generated three-dog fact follows the named spoken source despite the image description showing two dogs; the image count was not used to overwrite the spoken claim."
+            },
+            {
+              "dimension": "negation",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D1:12",
+                "D1:18"
+              ],
+              "parsed_item_ids": [
+                "3",
+                "5"
+              ],
+              "fact_ids": [
+                "0cf4c614-6bcd-409e-80fc-6ea1327234bd",
+                "d3ccca0f-2335-4258-a1ec-221523c44c82"
+              ],
+              "detail": "Andrew not currently having pets and not specifically going bird-watching are both preserved; casual bird spotting while hiking is distinguished from dedicated bird-watching."
+            },
+            {
+              "dimension": "omission",
+              "assessment": "native_minor_event_omitted",
+              "source_turn_ids": [
+                "D1:3",
+                "D1:5",
+                "D1:21"
+              ],
+              "parsed_item_ids": [],
+              "fact_ids": [],
+              "detail": "The new collars/tags purchase and Audrey intention to try Fox Hollow are omitted, though the Fox Hollow recommendation itself is retained."
+            },
+            {
+              "dimension": "context",
+              "assessment": "checked",
+              "source_turn_ids": [],
+              "parsed_item_ids": [],
+              "fact_ids": [],
+              "detail": "All 24 current messages, 7 parsed/persisted facts and empty history/existing context were read. Audrey=user and Andrew=assistant are consistent in named facts and attribution."
+            }
+          ]
+        },
+        {
+          "session_id": "session_28",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_5\\session\\native\\session_audit\\gemini38_c5_session_e2a303b8de8d\\session_28_42a3ec7f5bda.json",
+            "sha256": "6e9696edc16961c60680bfa76c3280d4912241dade14de7a153cfd469f0cae1d"
+          },
+          "observation_date": "2023-11-22",
+          "prompt_current_date": "2026-09-27",
+          "all_current_messages_read": true,
+          "all_parsed_memory_read": true,
+          "all_fact_records_read": true,
+          "all_history_context_read": true,
+          "all_existing_memory_context_read": true,
+          "source_turn_count": 18,
+          "history_message_count": 10,
+          "existing_memory_count": 10,
+          "parsed_item_count": 13,
+          "persisted_fact_count": 13,
+          "parsed_texts_equal_persisted_texts": true,
+          "sdk_warnings": [],
+          "findings": [
+            {
+              "dimension": "date",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D28:1"
+              ],
+              "parsed_item_ids": [
+                "0"
+              ],
+              "fact_ids": [
+                "80964961-2284-4d34-bcc6-6797c45f09b2"
+              ],
+              "detail": "Last Friday in the 2023-11-22 dialogue maps to November 17, 2023 for Audrey pet-salon visit. Andrew adoption the other day remains recently rather than acquiring an invented calendar date."
+            },
+            {
+              "dimension": "negation",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D28:6"
+              ],
+              "parsed_item_ids": [
+                "3"
+              ],
+              "fact_ids": [
+                "e3b93011-5a11-4687-92b4-7a81a8ecbe69"
+              ],
+              "detail": "Andrew has not yet taken his dogs to the groomer, but plans to do so soon; both negative present state and future plan survive."
+            },
+            {
+              "dimension": "person",
+              "assessment": "native_joint_subject_resolution",
+              "source_turn_ids": [
+                "D28:8",
+                "D28:12",
+                "D28:13"
+              ],
+              "parsed_item_ids": [
+                "5",
+                "9"
+              ],
+              "fact_ids": [
+                "7a0b272f-a3a7-46f6-bee2-a86427bbcaaa",
+                "25a21647-d1e7-4e28-aaf9-976825484f4f"
+              ],
+              "detail": "Andrew says we named Scout and we bought supplies; Audrey later refers to Andrew and his girlfriend. Generated facts resolve we to the couple. The dialogue supports that interpretation, but it is a cross-turn subject resolution rather than explicit identification inside each original utterance. Their adventurous spirit remains ambiguous in the generated naming sentence."
+            },
+            {
+              "dimension": "scope",
+              "assessment": "preserved",
+              "source_turn_ids": [
+                "D28:10",
+                "D28:11",
+                "D28:12",
+                "D28:13"
+              ],
+              "parsed_item_ids": [
+                "6",
+                "7",
+                "8",
+                "10"
+              ],
+              "fact_ids": [
+                "a382397a-c397-4587-acab-f3e0cdf5372e",
+                "a83461a4-e7bc-4dcb-b65b-17e47842a9fb",
+                "b58d1caa-53d5-405c-b918-4110117b5d92",
+                "6334f5f7-aa12-4531-babe-696176442378"
+              ],
+              "detail": "The park visit remains planned, Audrey gradual-exposure and introduction guidance stays advice, and Andrew current use of a leash stays current behavior. Scout, Toby and Buddy are assigned to Andrew rather than Audrey."
+            },
+            {
+              "dimension": "context",
+              "assessment": "checked",
+              "source_turn_ids": [],
+              "parsed_item_ids": [],
+              "fact_ids": [],
+              "detail": "All 18 current messages, 13 parsed/persisted facts, 10 history messages and 10 retrieved existing memories were read. Existing advice to care for Toby and Buddy before more adoption is not substituted for the later actual Scout adoption. The early no-pets fact and later dogs are separated by observation dates; this review does not claim the bank resolves all time-varying state. The image query mentions four dogs while its caption shows one; the new facts do not invent a precise dog count from that mismatch."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "conversation": 6,
+      "arm": "session",
+      "bank": {
+        "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_6\\session\\bank.json",
+        "sha256": "a48367f0a2c81fd879eced7bf8e5472548cb7ee5e07f70d1e53d4935e4254303"
+      },
+      "reviewed_journals": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_6\\session\\native\\session_audit\\gemini38_c6_session_291899319ece\\session_1_3a1d7b6848ba.json",
+          "sha256": "603fd26eacee71e5130315e842a94a93c7ae87f7ab1859dac0e1fa1c48d842c0"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_6\\session\\native\\session_audit\\gemini38_c6_session_291899319ece\\session_31_307f595da5e8.json",
+          "sha256": "53941a76490cc5c8672150bc83bdfe20ccecc107a9ac59eabeffe28a5dfc8989"
+        }
+      ],
+      "reviewed_raw_responses": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_6\\session\\native\\api_cache\\79db9311c027f5aae11596883b84fed0f3bc31b998365a01aa1dc4ad9866d8c9.json",
+          "sha256": "9bde80fa1709a1aa828c40ec31fa0ea31fcdab1a51ba285cb6b98690aa12871f"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_6\\session\\native\\api_cache\\db65228b7d838fd26dd19c80ae305cd8eee7d4ad612659e52bc1854644fd51d3.json",
+          "sha256": "06ba32bac429f917125403bcc95da26cb6b8ffe65f9ec4ea696432adc32d20d2"
+        }
+      ],
+      "blocking_implementation_error": false,
+      "semantic_correctness_verified": false,
+      "notes": [
+        "Read all source messages, all parsed/added records and all supplied history/existing context in session_1 and session_31. John and James remain correctly distinguished in fact text and parsed role labels. On observation date 2022-03-17, yesterday bowling maps to 2022-03-16; the 2022-11-07 weekend collaboration maps plausibly to November 5-6, 2022. The system current_date 2026-09-27 is not used for these dates.",
+        "session_1 D1:36 next Saturday is resolved to March 26, 2022. The following Saturday after Thursday March 17 is March 19; English next Saturday can also mean the next-week Saturday. The source does not disambiguate, so the generated exact date is a native temporal overprecision/ambiguity, not a demonstrated adapter date shift.",
+        "session_1 omits explicit negative constraints: D1:5 John has not played The Witcher 3 yet, while memory 3 retains only his plan to try it; D1:10 James has not worked with languages other than Python/C++, while memory 9 retains only his future interest. John dislikes bowling and his large-finger explanation are preserved in memory 21.",
+        "session_31 D31:14 says John still has not gotten a dog, but memory 6 retains only the wish to get one. D31:13 three dogs and more than three is too much are preserved; this does not by itself conflict with the older session_1 two-dog count because observation dates differ.",
+        "session_31 memory 8 names the cousin's dog Luna correctly from D31:20-22, but golden retriever is present only in the image query, not the spoken breed or actual image caption. Treat that breed as query-derived and visually unverified."
+      ],
+      "findings": [
+        {
+          "kind": "temporal_ambiguity",
+          "session_id": "session_1",
+          "source_turn_ids": [
+            "D1:36"
+          ],
+          "parsed_memory_ids": [
+            "26"
+          ],
+          "fact_ids": [
+            "94672ddc-e18e-4c1b-bffd-c79313c390da"
+          ],
+          "source_excerpt": "Let`s do it next Saturday!",
+          "output_excerpt": "James and John plan to try VR gaming together on March 26, 2022.",
+          "assessment": "Exact date disambiguates an ambiguous next Saturday; March 19 is the immediately following Saturday. Retain native ambiguity; no date correction.",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_6\\session\\native\\session_audit\\gemini38_c6_session_291899319ece\\session_1_3a1d7b6848ba.json",
+            "sha256": "603fd26eacee71e5130315e842a94a93c7ae87f7ab1859dac0e1fa1c48d842c0"
+          },
+          "raw_response": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_6\\session\\native\\api_cache\\79db9311c027f5aae11596883b84fed0f3bc31b998365a01aa1dc4ad9866d8c9.json",
+            "sha256": "9bde80fa1709a1aa828c40ec31fa0ea31fcdab1a51ba285cb6b98690aa12871f"
+          }
+        },
+        {
+          "kind": "negation_omission",
+          "session_id": "session_31",
+          "source_turn_ids": [
+            "D31:14"
+          ],
+          "parsed_memory_ids": [
+            "6"
+          ],
+          "fact_ids": [
+            "30f9f432-8740-49be-aba2-9a315f171f53"
+          ],
+          "source_excerpt": "I still haven’t gotten a dog, but I still really want one.",
+          "output_excerpt": "John still wants to get a dog and asked James about his experience of having dogs.",
+          "assessment": "Desire retained; explicit current non-ownership omitted.",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_6\\session\\native\\session_audit\\gemini38_c6_session_291899319ece\\session_31_307f595da5e8.json",
+            "sha256": "53941a76490cc5c8672150bc83bdfe20ccecc107a9ac59eabeffe28a5dfc8989"
+          },
+          "raw_response": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_6\\session\\native\\api_cache\\db65228b7d838fd26dd19c80ae305cd8eee7d4ad612659e52bc1854644fd51d3.json",
+            "sha256": "06ba32bac429f917125403bcc95da26cb6b8ffe65f9ec4ea696432adc32d20d2"
+          }
+        }
+      ],
+      "reviewed_sessions": [
+        {
+          "session_id": "session_1",
+          "observation_date": "2022-03-17",
+          "current_date": "2026-09-27",
+          "source_messages": 37,
+          "parsed_memories": 27,
+          "persisted_facts": 27,
+          "history_messages": 0,
+          "existing_memories": 0,
+          "empty_extraction": false,
+          "full_source_and_context_read": true,
+          "parsed_to_add_text_equal": true
+        },
+        {
+          "session_id": "session_31",
+          "observation_date": "2022-11-07",
+          "current_date": "2026-09-27",
+          "source_messages": 25,
+          "parsed_memories": 9,
+          "persisted_facts": 9,
+          "history_messages": 10,
+          "existing_memories": 10,
+          "empty_extraction": false,
+          "full_source_and_context_read": true,
+          "parsed_to_add_text_equal": true
+        }
+      ]
+    },
+    {
+      "conversation": 7,
+      "arm": "session",
+      "bank": {
+        "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_7\\session\\bank.json",
+        "sha256": "f8223328f6ceec037eb05bd917272fa54cd383c9f7d04fa9758a91cda7133462"
+      },
+      "reviewed_journals": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_7\\session\\native\\session_audit\\gemini38_c7_session_99d5d722b455\\session_1_3a1d7b6848ba.json",
+          "sha256": "f487fb523ecd0963febbc7cee7ffd0fb1fed9d7578c68faefd5d05caf2ab7cc2"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_7\\session\\native\\session_audit\\gemini38_c7_session_99d5d722b455\\session_30_627fed6314c7.json",
+          "sha256": "2c55c2b16d682504c47769542535fa347ccc0fbf9ac33aff6557a34c2aab8bb2"
+        }
+      ],
+      "reviewed_raw_responses": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_7\\session\\native\\api_cache\\7ac61a63d9dbfca5ad990c2fe2ecf4b781a124c28bdf5b58524f9079c92a20b1.json",
+          "sha256": "9dfdeceb182aa282581a3526c1e726cfed46a34fb38f0f0b5436bd5bdb4e8ee4"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_7\\session\\native\\api_cache\\74bc186b7791c740e1359b4feaaf1556040177c211758e46998edb1ea8fcc103.json",
+          "sha256": "804f222c1a982f5fe17f0b8585f62b520e8e88e1e57a6b998921598c5fa196dc"
+        }
+      ],
+      "blocking_implementation_error": false,
+      "semantic_correctness_verified": false,
+      "notes": [
+        "Read complete session_1 and session_30 source messages, parsed/added records and history/existing context. The first session separates Deborah's mother, bench, pendant and yoga motivation from Jolene's mother, engineering and pendant. January 23 last week -> week of January 16; last year -> 2022; final September 20 next month -> October 2023 are supported.",
+        "session_1 does not separately preserve Deborah's last photo with her mother (D1:5), Jolene's room in her mother's house (D1:6), or the pendant's reminder to pursue goals (D1:10), although the central bereavement and pendant facts are extracted. These are omissions, not completeness approval.",
+        "session_30 memory 2 follows Jolene's spoken sunrise in D30:4 while the image caption says sunset over a valley with a horse. The incompatible image metadata is not reconciled. The phrase recently returned is not explicitly anchored in the fact text, though the fact metadata correctly carries 2023-09-20.",
+        "session_30 memory 7 says a small sprout cracking through pavement; D30:14 image query says small sprout crack pavement, but its image caption says a plant growing out of a corner of a building. This is a concrete native query-versus-caption specificity mismatch, not verified visual evidence. Named speakers remain correct."
+      ],
+      "findings": [
+        {
+          "kind": "image_query_caption_conflict",
+          "session_id": "session_30",
+          "source_turn_ids": [
+            "D30:14"
+          ],
+          "parsed_memory_ids": [
+            "7"
+          ],
+          "fact_ids": [
+            "d4f455b1-274a-46a6-9a84-b590db248950"
+          ],
+          "source_excerpt": "query: small sprout crack pavement growth thrive. The image shows: a photo of a plant growing out of a corner of a building",
+          "output_excerpt": "Jolene has a photo of a small sprout cracking through pavement",
+          "assessment": "Output adopts query detail rather than caption detail; visual claim is not independently verified.",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_7\\session\\native\\session_audit\\gemini38_c7_session_99d5d722b455\\session_30_627fed6314c7.json",
+            "sha256": "2c55c2b16d682504c47769542535fa347ccc0fbf9ac33aff6557a34c2aab8bb2"
+          },
+          "raw_response": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_7\\session\\native\\api_cache\\74bc186b7791c740e1359b4feaaf1556040177c211758e46998edb1ea8fcc103.json",
+            "sha256": "804f222c1a982f5fe17f0b8585f62b520e8e88e1e57a6b998921598c5fa196dc"
+          }
+        }
+      ],
+      "reviewed_sessions": [
+        {
+          "session_id": "session_1",
+          "observation_date": "2023-01-23",
+          "current_date": "2026-09-27",
+          "source_messages": 18,
+          "parsed_memories": 8,
+          "persisted_facts": 8,
+          "history_messages": 0,
+          "existing_memories": 0,
+          "empty_extraction": false,
+          "full_source_and_context_read": true,
+          "parsed_to_add_text_equal": true
+        },
+        {
+          "session_id": "session_30",
+          "observation_date": "2023-09-20",
+          "current_date": "2026-09-27",
+          "source_messages": 18,
+          "parsed_memories": 9,
+          "persisted_facts": 9,
+          "history_messages": 10,
+          "existing_memories": 10,
+          "empty_extraction": false,
+          "full_source_and_context_read": true,
+          "parsed_to_add_text_equal": true
+        }
+      ]
+    },
+    {
+      "conversation": 8,
+      "arm": "session",
+      "bank": {
+        "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_8\\session\\bank.json",
+        "sha256": "b6cdaceb47934cee14ecbe94d41fc2c164a53abc59081f635c0c37da3592a683"
+      },
+      "reviewed_journals": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_8\\session\\native\\session_audit\\gemini38_c8_session_a0a4a66881c1\\session_1_3a1d7b6848ba.json",
+          "sha256": "4c7530ef5a2811d9be5adc2c582ccac3795213e4040c19f414f7f1e61bc26aae"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_8\\session\\native\\session_audit\\gemini38_c8_session_a0a4a66881c1\\session_25_bca75cc93d82.json",
+          "sha256": "7045c854b0b07a1fff1b0f8d3e82f37e7d47d34d2097262e2ad174bd5ad04a11"
+        }
+      ],
+      "reviewed_raw_responses": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_8\\session\\native\\api_cache\\96fe0700054f84efe6c5f466d0b41b4f42d2aeba33c5a9824c45eee4cc7c249c.json",
+          "sha256": "a7ff10ebf10824843938f205f5de86c89e46532db9f60972af819d6493c4c628"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_8\\session\\native\\api_cache\\6c2c9c8cb2aaf51dd9b64efc5717b7d7aece8c2d8b452db895b79be644dc4912.json",
+          "sha256": "e902bcfeb83ae7606784bdd9a029f4287a8f1e0c03070f1959d65b2307bac98b"
+        }
+      ],
+      "blocking_implementation_error": false,
+      "semantic_correctness_verified": false,
+      "notes": [
+        "Read complete session_1 and session_25 source messages, parsed/added records and history/existing context. Evan's old Prius breakdown, intention to repair/sell it and new Prius remain a transition rather than an invented completed sale. The family Rockies trip, Sam hiking with his dad at age ten, and Evan's friend introducing watercolor are supported.",
+        "session_1 D1:13 says Sam has not tried painting; memory 3 captures only his interest. D1:7 it has been ages since hiking and D1:11 no other hobbies so far are also omitted. Memory 1 dates last week to around the week of May 11, 2023; this is approximate rather than a precise calendar-week range. No 2026 date substitution was found.",
+        "session_25 parsed memories 0, 3 and 6 name Sam correctly but mark attributed_to=user, although Sam's supporting D25:1/5/7/13 messages carry role assistant. The same labels occur in the recorded LLM response, so this is a native role-label error retained without metadata correction; persisted fact text still names Sam.",
+        "session_25 keeps the explicit no enjoyable exercise yet negation and the partner's not thrilled but understood accident qualification. Last summer/spring are anchored to 2023 and last week to early January 2024, consistent with the 2024-01-11 observation date. It does not invent a specific disease or explicit rose-bush damage details absent from this context."
+      ],
+      "findings": [
+        {
+          "kind": "native_role_label_error",
+          "session_id": "session_25",
+          "source_turn_ids": [
+            "D25:1",
+            "D25:5",
+            "D25:7",
+            "D25:13"
+          ],
+          "parsed_memory_ids": [
+            "0",
+            "3",
+            "6"
+          ],
+          "fact_ids": [
+            "3c65b00b-1e19-47c0-80ad-5cb858ba5159",
+            "f53eebe4-19e9-4668-9ec0-47e5ae65a6e1",
+            "898b35e0-eb0f-45b8-b9d1-dbc5a82771d9"
+          ],
+          "source_excerpt": "Sam: ... (role assistant in each cited message)",
+          "output_excerpt": "parsed memories 0, 3 and 6: attributed_to=user, while their text names Sam",
+          "assessment": "Role labels disagree with source roles. The LLM response itself contains them; no implementation rewrite or person-name swap in persisted text was observed.",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_8\\session\\native\\session_audit\\gemini38_c8_session_a0a4a66881c1\\session_25_bca75cc93d82.json",
+            "sha256": "7045c854b0b07a1fff1b0f8d3e82f37e7d47d34d2097262e2ad174bd5ad04a11"
+          },
+          "raw_response": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_8\\session\\native\\api_cache\\6c2c9c8cb2aaf51dd9b64efc5717b7d7aece8c2d8b452db895b79be644dc4912.json",
+            "sha256": "e902bcfeb83ae7606784bdd9a029f4287a8f1e0c03070f1959d65b2307bac98b"
+          }
+        }
+      ],
+      "reviewed_sessions": [
+        {
+          "session_id": "session_1",
+          "observation_date": "2023-05-18",
+          "current_date": "2026-09-27",
+          "source_messages": 22,
+          "parsed_memories": 5,
+          "persisted_facts": 5,
+          "history_messages": 0,
+          "existing_memories": 0,
+          "empty_extraction": false,
+          "full_source_and_context_read": true,
+          "parsed_to_add_text_equal": true
+        },
+        {
+          "session_id": "session_25",
+          "observation_date": "2024-01-11",
+          "current_date": "2026-09-27",
+          "source_messages": 20,
+          "parsed_memories": 8,
+          "persisted_facts": 8,
+          "history_messages": 10,
+          "existing_memories": 10,
+          "empty_extraction": false,
+          "full_source_and_context_read": true,
+          "parsed_to_add_text_equal": true
+        }
+      ]
+    },
+    {
+      "conversation": 9,
+      "arm": "session",
+      "bank": {
+        "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_9\\session\\bank.json",
+        "sha256": "79511656b1d0e16aac8d1c547a3d9e3b6d4645e4b1b8343034773d2df653d45b"
+      },
+      "reviewed_journals": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_9\\session\\native\\session_audit\\gemini38_c9_session_d4865d4d7afb\\session_1_3a1d7b6848ba.json",
+          "sha256": "268523af0a9c1270a2fed2a0344ebca48faff1707998f87f0994ad42e437c73b"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_9\\session\\native\\session_audit\\gemini38_c9_session_d4865d4d7afb\\session_30_627fed6314c7.json",
+          "sha256": "600f528c82dd0cf14f1021810e6273bdcc3d19f014810e1055ad3c580d2d4147"
+        }
+      ],
+      "reviewed_raw_responses": [
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_9\\session\\native\\api_cache\\d35857ca3bba2a9052c05eeb638e7d5ef297d0ee2c22a1f44230880c05cc4ba6.json",
+          "sha256": "d921d8a3fa629b96f4e32a38db0f173f8eb134fcb59e791603c9ec92433bdb4c"
+        },
+        {
+          "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_9\\session\\native\\api_cache\\a8f713e0441391ad750b3384f574557a40b8f901c441c7d3e7f1d1897472f688.json",
+          "sha256": "ee6f22832ead0f76111db8f1ddcd80ed4ffbd54170750fc41a5a00df73ba8629"
+        }
+      ],
+      "blocking_implementation_error": false,
+      "semantic_correctness_verified": false,
+      "notes": [
+        "Read complete session_1 and session_30 source messages, parsed/added records and history/existing context. session_1 contains an actual native factual tense/completion error: memory 1 says Calvin moved to a new mansion in Japan even though D1:7 says he has never been there and D1:9 says he will go next month. This is not merely stylistic wording. The recorded LLM response already contains this statement and persistence preserves it exactly. Memories 3 and 4 retain the conflicting never-been/April-2023 plan, so the extracted set is internally inconsistent.",
+        "session_1 April 2023 for next month, subsequent few months in Japan then Boston, potential musician collaboration, and never having visited the recommended park are otherwise supported. Image query mansion entrance japan is stronger than the actual caption building with a sign; the image alone does not establish that he completed a move.",
+        "session_30 yesterday gala -> November 16, 2023 and this month vintage camera -> November 2023 are supported. Last week photo is converted to around November 10, which is an approximate single-day anchor rather than the full prior week. Dave's photography and Calvin's music/performance identities are retained.",
+        "session_30 memory 0 substantially repeats the supplied existing-memory photography fact d18c5738-0375-4030-8387-52d825d64257, while adding scenery around his area; memories 1 and 2 overlap on the gala conversation. D30:17-19 Dave's separate claim of finding a better bench spot and the joint plan to visit it are not captured. These are deduplication/omission limitations, not evidence of perfect completeness."
+      ],
+      "findings": [
+        {
+          "kind": "native_factual_tense_completion_error",
+          "session_id": "session_1",
+          "source_turn_ids": [
+            "D1:3",
+            "D1:7",
+            "D1:9"
+          ],
+          "parsed_memory_ids": [
+            "1",
+            "3",
+            "4"
+          ],
+          "fact_ids": [
+            "584545a2-163b-4a99-833b-efb3420bac47",
+            "465fa349-ca24-4539-b79c-1ae9c6bf1855",
+            "7ef7b403-a720-4a27-9c68-0532a6b7f177"
+          ],
+          "source_excerpts": [
+            {
+              "turn_id": "D1:3",
+              "text": "Here's my new mansion - pretty cool huh?"
+            },
+            {
+              "turn_id": "D1:7",
+              "text": "Never been there before. Fascinated by the traditions and can't wait to get a taste of the culture."
+            },
+            {
+              "turn_id": "D1:9",
+              "text": "I'm heading there next month. I'll be staying in such a nice place while I'm there."
+            }
+          ],
+          "output_excerpt": "Calvin moved to a new mansion in Japan, as shown in an image of a mansion entrance.",
+          "assessment": "Actual native semantic error: a planned future visit/stay has been rendered as a completed move. Both native LLM response and persisted ADD text carry it. Non-blocking implementation status does not make this fact correct.",
+          "journal": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_9\\session\\native\\session_audit\\gemini38_c9_session_d4865d4d7afb\\session_1_3a1d7b6848ba.json",
+            "sha256": "268523af0a9c1270a2fed2a0344ebca48faff1707998f87f0994ad42e437c73b"
+          },
+          "raw_response": {
+            "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_9\\session\\native\\api_cache\\d35857ca3bba2a9052c05eeb638e7d5ef297d0ee2c22a1f44230880c05cc4ba6.json",
+            "sha256": "d921d8a3fa629b96f4e32a38db0f173f8eb134fcb59e791603c9ec92433bdb4c"
+          }
+        }
+      ],
+      "reviewed_sessions": [
+        {
+          "session_id": "session_1",
+          "observation_date": "2023-03-23",
+          "current_date": "2026-09-27",
+          "source_messages": 19,
+          "parsed_memories": 9,
+          "persisted_facts": 9,
+          "history_messages": 0,
+          "existing_memories": 0,
+          "empty_extraction": false,
+          "full_source_and_context_read": true,
+          "parsed_to_add_text_equal": true
+        },
+        {
+          "session_id": "session_30",
+          "observation_date": "2023-11-17",
+          "current_date": "2026-09-27",
+          "source_messages": 24,
+          "parsed_memories": 10,
+          "persisted_facts": 10,
+          "history_messages": 10,
+          "existing_memories": 10,
+          "empty_extraction": false,
+          "full_source_and_context_read": true,
+          "parsed_to_add_text_equal": true
+        }
+      ]
+    }
+  ],
+  "semantic_correctness_verified": false,
+  "limitations": [
+    "Assistant source-only review of 20 required first/final sessions and185 generated ADD records; not all2301facts and not human accuracy labels.",
+    "No blocking implementation error was found; this does not certify generated fact semantics. Definite native errors include future trip/stay rendered as a completed move, photo time attached to sharing, and role-label mistakes.",
+    "Negative constraints omitted, speaker scope broadened, ambiguous dates/referents, image-query/caption conflicts and redundant memories are retained exactly. No source, prompt, raw, facts or metadata manually corrected.",
+    "The three arms share these same ten banks. No QA/gold or resulting score was used to decide review or changes."
+  ],
+  "content_sha256": "27b931142d83d13c97ca422b2f95fca893f57b682f7dc55d438a311ea0bde9ca"
+}

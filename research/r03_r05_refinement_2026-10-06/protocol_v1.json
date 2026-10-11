@@ -1,0 +1,119 @@
+{
+  "schema": "r03-r05-refinement-research-protocol-v1",
+  "arms": [
+    "baseline",
+    "r03_original",
+    "r03_refined",
+    "original_source_closure",
+    "refined_source_closure",
+    "original_multi_source_closure",
+    "refined_multi_source_closure"
+  ],
+  "questions_per_arm": 1540,
+  "phases": [
+    "precision",
+    "complement",
+    "sets",
+    "multi_compare",
+    "closure",
+    "rank"
+  ],
+  "r03": {
+    "schema": "r03-refinement-v1-protocol",
+    "policy": {
+      "version": "r03-refinement-v1",
+      "pool_cap": 80,
+      "selected_count": 20,
+      "questions_per_batch": 32,
+      "signature_utf8_byte_cap": 131072,
+      "swap_counts": [
+        1,
+        2,
+        4
+      ],
+      "set_proposal_cap": 4,
+      "set_acceptance_strict_gt": 0.5,
+      "set_maximum_tie_tolerance": 1e-12,
+      "pointwise_threshold": null,
+      "complement_threshold": null,
+      "ranking_tie": "original_pool_index",
+      "donor_order": "reverse_precision_ranking_within_preliminary20",
+      "reader_order": "original_pool_order",
+      "failure_action": "whole_query_original_OJ20",
+      "unknown_action": "raise_needs_review",
+      "oversize_action": "no_dispatch_no_truncation_no_adaptive_batch",
+      "calibration": "uncalibrated_operational_scores_not_truth_probabilities"
+    },
+    "precision_predicate": "Does this memory explicitly supply at least one fact or relation required by the original question, with the requested subject, relation direction, event identity and material conditions? Partial requested list members or necessary reasoning links may count; the memory need not answer the whole question. Topic or actor overlap alone is insufficient. Preserve negation, planned versus completed status, and the question temporal scope. Do not invent an unstated bridge or infer an event date solely from observation_date. A memory need not repeat every question word when its relation is explicit. Assess memory-relative usefulness, not source truth.",
+    "complement_predicate": "Compared with all selected_memories in state, does this candidate explicitly add a distinct fact, requested list member, necessary reasoning link, or clarification of a subject, relation, event, condition or time that is needed by the original question and absent or less explicit in that set? Mere paraphrase, shared topic or a different event is insufficient. Partial requested list members may count; do not invent unknown members or require the candidate to complete the entire answer. Preserve negation, planned versus completed status and temporal scope. Observation date is not by itself event date. Assess only the displayed memories; this does not certify source truth or completeness of the resulting answer.",
+    "set_predicate": "Compare proposed_memories with original_memories for the original question. Does the proposed set provide a strict net improvement in explicit question-required evidence, through additional necessary coverage or clearer subject, relation, event, condition or time, without losing a necessary list member or reasoning link supplied by the original set? Evaluate each set using only the twenty keys assigned to that set in original_memories or PROPOSED_MEMORY_KEYS_JSON. Other fact_table entries and keys belonging only to another set must not fill a gap in the set being evaluated. Read each assigned memory from fact_table. More topical text, redundancy or length alone is not improvement. Keep speaker/subject and relation direction, negation, planned versus completed status, and temporal scope; do not invent bridges or turn observation dates into event dates. If the sets are equally useful, or the proposed set trades away required evidence without a clear net gain, answer NO. Assess memory-relative evidence only, not source truth or guaranteed Reader accuracy."
+  },
+  "r05": {
+    "schema": "r05-refinement-v1-protocol",
+    "policy": {
+      "version": "r05-refinement-v1",
+      "original_anchor_cap": 4,
+      "alternative_per_anchor": 1,
+      "variant_cap": 8,
+      "support_threshold_strict_gt": 0.5,
+      "comparison_threshold_strict_gt": 0.5,
+      "questions_per_request": 4,
+      "attachment_cap": 2,
+      "attachment_utf8_byte_cap": 4096,
+      "signature_utf8_byte_cap": 131072,
+      "alternative_order": "whole_window_query_bm25_then_support_probability_then_center_position",
+      "query_corpus": "all_eligible_S8_windows_before_support_filter",
+      "collision": "earliest_original_candidate_merge_aliases_no_refill",
+      "unknown": "raise_and_stop_review",
+      "failed": "keep_all_original_packets",
+      "calibration": "operational_uncalibrated_half_threshold_not_truth_probability"
+    },
+    "comparison_predicate": "Compared with the original source attachment, does the alternative source attachment add or clarify an explicit detail, relation, condition, speaker attribution or temporal wording requested by the question, while retaining the original attachment's support needed to answer that question? Assess only this displayed original memory and these two alternative windows. Preserve subject, negation, quantities, planned versus completed status and event relationships. A related topic, a larger window, or support for a different claim in the memory alone is insufficient. Do not invent bridges or assume completeness of other memories or the conversation. Source observation date is not event date; machine captions are annotations, not speaker assertions.",
+    "support_protocol_sha256": "2a724b685d52b186e6f36b0fdef6e156df15bc2510dfb975d8c98ba748868c50",
+    "closure_predicate": "Compared with the displayed base source window, do the added complete adjacent turns supply an explicit answer, referent, speaker attribution, condition or temporal relationship needed to interpret evidence requested by the question and missing or unresolved in the base window? Added text must close a concrete evidence relation, not merely mention a related topic. Judge only the displayed original memory, base window and proposed extension. Preserve negation and planned versus completed status; do not invent event bridges. Source observation date is not event date and machine captions are annotations. A larger window alone is not a benefit.",
+    "local_predicate": "Does this quoted source context provide an explicit detail, relation, condition, speaker attribution, or temporal wording requested by the question that is absent or less explicit in this one original memory? A partial requested list item may count. Judge only the displayed source and this memory; do not assume completeness of the other19 memories or full conversation. Do not invent a bridge or treat source observation date or machine caption as a speaker assertion/event date. Related topic alone is insufficient."
+  },
+  "reference_arms": [
+    "baseline",
+    "r03_original"
+  ],
+  "new_arms": [
+    "r03_refined",
+    "original_source_closure",
+    "refined_source_closure",
+    "original_multi_source_closure",
+    "refined_multi_source_closure"
+  ],
+  "main_ladder": [
+    "baseline",
+    "r03_original",
+    "r03_refined",
+    "refined_source_closure",
+    "refined_multi_source_closure"
+  ],
+  "matched_source_factorial": {
+    "T0M0": "original_source_closure",
+    "T1M0": "refined_source_closure",
+    "T0M1": "original_multi_source_closure",
+    "T1M1": "refined_multi_source_closure"
+  },
+  "closure": "frozen original C enabled equally in all four source arms, after window comparison",
+  "qa": "unchanged Gemini3.8 Flash low thinking/no temperature/8192 plaintext Reader and Judge; no 15-word cap",
+  "reuse": "only matching complete request signatures with preserved producer/consumer/raw proofs; references require exact inheritance",
+  "pool": "same old R03 80 facts, original order, no R08/new retrieval; final20 unique facts",
+  "support_reuse": "preserved completed module-stack per-fact support plans/scores after full raw audit, no recreated caches",
+  "failure": "uniform once after full stage for known technical failures, existing retries2; successful NO not retried; unknown blocks",
+  "no_gold_in_selection": true,
+  "new_writer_embedding_banks": false,
+  "one_finite_round": true,
+  "launch_requires": "exact frozen code + offline actual-data checks + independent integration review",
+  "interpretation": [
+    "R04/R06 temporarily deferred, not shown universally ineffective",
+    "R03 is composite precision plus complement plus set guard, not an isolated calibrated probability effect",
+    "R05 M is a complete alternative-window strategy, no new cheap-selection control in this finite round",
+    "R05 retains original top4 anchors and may still miss evidence outside them",
+    "20 facts does not mean equal context tokens; report actual tokens and attachment bytes",
+    "shared exact caches and inherited references are not independent QA replications",
+    "all conversations have been inspected; no untouched holdout or novelty claim"
+  ]
+}

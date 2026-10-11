@@ -1,0 +1,71 @@
+{
+  "status": "preparation_only",
+  "mem0_commit": "94c3fe9f238f3dbf29c9ce98643bd71eb13077cd",
+  "benchmark_commit": "4b61c5d31b9c668a12b4f5e78064248a02c82d2b",
+  "snapshots": [
+    {
+      "kind": "verbatim_source",
+      "source": "D:\\jev mem\\upstream\\mem0\\mem0\\configs\\prompts.py",
+      "snapshot": "mem0_prompts_source.py",
+      "sha256": "908103e53bdef67fa835700857a56c515c4bfc09abc970b26f27c1dbfc626cf9",
+      "commit": "94c3fe9f238f3dbf29c9ce98643bd71eb13077cd"
+    },
+    {
+      "kind": "exact_string_literal",
+      "symbol": "ADDITIVE_EXTRACTION_PROMPT",
+      "source": "D:\\jev mem\\upstream\\mem0\\mem0\\configs\\prompts.py",
+      "start_line": 468,
+      "end_line": 944,
+      "snapshot": "active_additive_system.txt",
+      "sha256": "ad19187a37813ef77ee156e714c0650e6ec749e0264bdc07d499bc9b24115155",
+      "commit": "94c3fe9f238f3dbf29c9ce98643bd71eb13077cd"
+    },
+    {
+      "kind": "exact_string_literal",
+      "symbol": "AGENT_CONTEXT_SUFFIX",
+      "source": "D:\\jev mem\\upstream\\mem0\\mem0\\configs\\prompts.py",
+      "start_line": 947,
+      "end_line": 957,
+      "snapshot": "conditional_agent_suffix.txt",
+      "sha256": "04d709c8ef32bb65ea74c5a91ca99d283d76bea2ee1b25059cb94956c96230ad",
+      "commit": "94c3fe9f238f3dbf29c9ce98643bd71eb13077cd"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": "D:\\jev mem\\upstream\\mem0\\evaluation\\benchmarks\\locomo\\prompts.py",
+      "snapshot": "locomo_prompts_source.py",
+      "sha256": "f912c301773cfd724fef030e273c54d47290e4dcf25781a83fe0b7ff681b64ee",
+      "commit": "4b61c5d31b9c668a12b4f5e78064248a02c82d2b"
+    },
+    {
+      "kind": "exact_string_literal",
+      "symbol": "ANSWER_GENERATION_PROMPT",
+      "source": "D:\\jev mem\\upstream\\mem0\\evaluation\\benchmarks\\locomo\\prompts.py",
+      "start_line": 40,
+      "end_line": 98,
+      "snapshot": "upstream_locomo_answer_template.txt",
+      "sha256": "79c9f09bcc8d5e9e8b7e9786af587b02a67d366ab79285fc148b73fd20f6297b",
+      "commit": "4b61c5d31b9c668a12b4f5e78064248a02c82d2b"
+    },
+    {
+      "kind": "exact_string_literal",
+      "symbol": "JUDGE_SYSTEM_PROMPT",
+      "source": "D:\\jev mem\\upstream\\mem0\\evaluation\\benchmarks\\locomo\\prompts.py",
+      "start_line": 203,
+      "end_line": 203,
+      "snapshot": "upstream_locomo_judge_system.txt",
+      "sha256": "36c007917faf1ab84516cdca577fb523711a9b993706fbae8ae37806e6f9adcc",
+      "commit": "4b61c5d31b9c668a12b4f5e78064248a02c82d2b"
+    },
+    {
+      "kind": "exact_string_literal",
+      "symbol": "_JUDGE_TEMPLATE",
+      "source": "D:\\jev mem\\upstream\\mem0\\evaluation\\benchmarks\\locomo\\prompts.py",
+      "start_line": 218,
+      "end_line": 245,
+      "snapshot": "upstream_locomo_judge_template.txt",
+      "sha256": "84265445248347879e14b4db1a5d4e32ee0ae3425c00d81268e8ff1d6d1b4754",
+      "commit": "4b61c5d31b9c668a12b4f5e78064248a02c82d2b"
+    }
+  ]
+}

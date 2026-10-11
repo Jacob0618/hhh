@@ -1,0 +1,39 @@
+{
+  "schema": "amem-four-root-retrieval-cleanup-receipt-v1",
+  "completed_utc": "2026-10-09T01:50:34.598132+00:00",
+  "cleanup_plan": {
+    "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\retrieval_continuation_v1\\cleanup_plan_retrieval_v2.json",
+    "sha256": "72c05cbd4b5d558abbd992b3e206aeec5d353955fd07f785f27c55fd4ddee73e"
+  },
+  "archive": {
+    "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\retrieval_continuation_v1\\results\\continuation_archive_v2\\evidence.zip",
+    "sha256": "6e2078a51c8b32daaf3daff8efb3735fbc5c242799c11b7a0acba7f171d48b9c"
+  },
+  "archive_manifest": {
+    "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\retrieval_continuation_v1\\results\\continuation_archive_v2\\archive_manifest.json",
+    "sha256": "4c98b5248f518dcd40d2da3fc4a230978fea20fab1807a4f5c30c88e37c48a66"
+  },
+  "cleanup_review": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\amem_retrieval_continuation_v1\\cleanup_review_v2\\independent_cleanup_review_final_v1.json",
+    "sha256": "7a962667cd6f74444f5f27412140c0239ebd44f4f3240fdad80d50f04b3467a7"
+  },
+  "per_root_receipts": [
+    {
+      "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\retrieval_continuation_v1\\results\\continuation_archive\\cleanup_v1.json",
+      "sha256": "011d4fde28093542231077c8c411bce6f0bb5b22f062f582c586bf9831a0cf03"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\retrieval_continuation_v1\\results\\continuation_archive\\cleanup_v2.json",
+      "sha256": "025886aa137c1cfe875811649cd0dc1af7650947d21a6e5886a06a6b4ade816b"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\retrieval_continuation_v1\\results\\continuation_archive\\cleanup_v3.json",
+      "sha256": "3782343e1d5a4e71d88ee893db49168e28254fddaf89168959b01f50cafca320"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\retrieval_continuation_v1\\results\\continuation_archive\\cleanup_v4.json",
+      "sha256": "cb6a894716bcd7f1cb65528c5d8d03becdb506ef818f4a96d589f10bcdb70f71"
+    }
+  ],
+  "retained_evidence_verified": true
+}

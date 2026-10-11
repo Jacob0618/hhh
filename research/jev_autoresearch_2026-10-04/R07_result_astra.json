@@ -1,0 +1,175 @@
+{
+  "schema": "r07-result-review-astra-v1",
+  "status": "ACCEPT_FORMAL_RESULT_AND_CASE_REVIEW",
+  "formal_summary": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r07_final_summary.json",
+    "sha256": "959fc18932d34126c4717c16b5c95cda156c83a320049ddbcf7e1ff4d833401f"
+  },
+  "cases": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r07_postterminal_packets_v1\\case_packets.json",
+    "sha256": "9f66fefbfca8003e3c3b5ee466618cf5c8d9ccdca9fad90620266fdb4082fb2b"
+  },
+  "statistics": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r07_postterminal_packets_v1\\statistics.json",
+    "sha256": "fb987a181142e4de04531f29b28d947ce6af5dd91be84d20325fe355fdeb5956"
+  },
+  "prior_candidate_audit": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r07_write_admission_review_write61\\result.md",
+    "sha256": "400bfe5aa5b3224a7cf6052cf86799ccbc20e03832c0a969a00703f89262fa3f"
+  },
+  "phase_accounting": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r07_phase_accounting_write61.json",
+    "sha256": "f2e8000d44befe126b7a37343fd8db997b35d114f37ffa4b1477ba5c689cdfee"
+  },
+  "audit_status": "no_invalid_artifacts",
+  "valid_jobs": 4620,
+  "baseline_correct": 1153,
+  "cheap_correct": 1156,
+  "jev_correct": 1156,
+  "jev_gain_loss": [
+    10,
+    7
+  ],
+  "cheap_gain_loss": [
+    11,
+    8
+  ],
+  "net_percentage_points": 0.19480519480519481,
+  "official_f1_percent": {
+    "baseline": 51.04400011392458,
+    "cheap": 51.30145166792791,
+    "jev": 51.16083122704206
+  },
+  "numeric_success": false,
+  "additional_successful_components": 0,
+  "primary_qids": [
+    "c3_q177",
+    "c4_q49",
+    "c6_q68",
+    "c7_q172",
+    "c9_q8"
+  ],
+  "peer_qids": [
+    "c3_q100",
+    "c4_q17",
+    "c5_q47",
+    "c7_q162",
+    "c9_q19"
+  ],
+  "cases_reviewed": [
+    {
+      "qid": "c3_q177",
+      "role": "primary",
+      "actual_read": "all three selected20 text/date/order, actual answers/labels and complete provided gold-turn neighbors",
+      "source_scope": "D25:7–9",
+      "finding": "原20中rank2已完整表达画人物用于可视化以辅助编剧；仅13/14互换，两新臂正确。没有新增补足入选，不是写入补回该关系的证据。",
+      "annotation_authority": "assistant qualitative, not human gold"
+    },
+    {
+      "qid": "c4_q49",
+      "role": "primary",
+      "actual_read": "all three selected20 text/date/order, actual answers/labels and complete provided gold-turn neighbors",
+      "source_scope": "D18:1–3; D19:5–7",
+      "finding": "前季伤、近期伤仍前2；删除的是篮球失误担当，与伤次数无直接关系。新臂弃答不能归因伤证据丢失。多次观测及是否同一伤保留歧义。",
+      "annotation_authority": "assistant qualitative, not human gold"
+    },
+    {
+      "qid": "c6_q68",
+      "role": "primary",
+      "actual_read": "all three selected20 text/date/order, actual answers/labels and complete provided gold-turn neighbors",
+      "source_scope": "完整c6/session_1，尤其D1:11–16",
+      "finding": "狗遛养护app值仍rank8；with John合作边在原D1:11–12明确，却未进入这条bank描述。cheap仅顺序变化正确、JEV弃答；不能称整个关系已充分表示，也不是新增fact治好。",
+      "annotation_authority": "assistant qualitative, not human gold"
+    },
+    {
+      "qid": "c7_q172",
+      "role": "primary",
+      "actual_read": "all three selected20 text/date/order, actual answers/labels and complete provided gold-turn neighbors",
+      "source_scope": "完整c7/session_24，D24:6–10",
+      "finding": "mom游戏名rank4保留，仅12/13顺序互换。Nintendo Wii图描述在source，bank没有该平台限定。新增臂弃答不是游戏名检索丢失；不以外部游戏知识改gold。",
+      "annotation_authority": "assistant qualitative, not human gold"
+    },
+    {
+      "qid": "c9_q8",
+      "role": "primary",
+      "actual_read": "all three selected20 text/date/order, actual answers/labels and complete provided gold-turn neighbors",
+      "source_scope": "完整c9/session_4，D4:1–3",
+      "finding": "新答增加around May仍同时含May9周而JudgeYES。May1原话是已开业观测上界，不能当精确开业日期证据；仅19/20换序，不是日期修复。",
+      "annotation_authority": "assistant qualitative, not human gold"
+    },
+    {
+      "qid": "c3_q100",
+      "role": "peer",
+      "actual_read": "all three selected20 text/date/order, actual answers/labels and complete provided gold-turn neighbors",
+      "source_scope": "D2:11–13; 所选第三只Nov9原fact",
+      "finding": "新增护理fact在14，旧3years/since2019与第三只记录均保留；新答区分两只与第三只，JudgeNO并不能证明新fact不真实或时长证据删除。",
+      "annotation_authority": "assistant qualitative, not human gold"
+    },
+    {
+      "qid": "c4_q17",
+      "role": "peer",
+      "actual_read": "all three selected20 text/date/order, actual answers/labels and complete provided gold-turn neighbors",
+      "source_scope": "D3:2–4; D5:1–3; D22:3–5; D23:6–8; D24:1–3",
+      "finding": "新增GoT未读rank13与篮球赢数无关。原胜利事实仍前列，弃答变6不能称新增赛事信息直接贡献；六场唯一事件是否完全去重非本审计认证。",
+      "annotation_authority": "assistant qualitative, not human gold"
+    },
+    {
+      "qid": "c5_q47",
+      "role": "peer",
+      "actual_read": "all three selected20 text/date/order, actual answers/labels and complete provided gold-turn neighbors",
+      "source_scope": "D24:1–3; D28:5–7",
+      "finding": "Buddy/Scout近似观测月原rank1/2未丢，移除Toby养护建议。recently与other day不支持精确日期差；新弃答属于利用/约束不确定，不能称日期证据被删。",
+      "annotation_authority": "assistant qualitative, not human gold"
+    },
+    {
+      "qid": "c7_q162",
+      "role": "peer",
+      "actual_read": "all three selected20 text/date/order, actual answers/labels and complete provided gold-turn neighbors",
+      "source_scope": "D22:7–9",
+      "finding": "green-tech disadvantaged原rank3仍在，新JEV入career impact非新增持久fact；但确切future sustainable/environment原source关系没有所选完整表达。cheap沿原序正确/JEV弃答，不能把近似value当完整意图覆盖。",
+      "annotation_authority": "assistant qualitative, not human gold"
+    },
+    {
+      "qid": "c9_q19",
+      "role": "peer",
+      "actual_read": "all three selected20 text/date/order, actual answers/labels and complete provided gold-turn neighbors",
+      "source_scope": "D3:1–2; D12:6–8; 完整c9/session_24与session_7",
+      "finding": "新答仍仅festival+performances，缺gold其余列表；旧/新近义但Judge异值。D12文本为Ferrari dealership，image query才car museum japan；D24过去照片与未来Tokyo计划混叙，不能把所有gold列表无条件当已访问证据。",
+      "annotation_authority": "assistant qualitative, not human gold"
+    }
+  ],
+  "source_audit_read_scope": {
+    "read_prior_all25_notes": true,
+    "independently_read_complete_current_sessions": [
+      "c4_s022",
+      "c6_s013",
+      "c7_s013"
+    ],
+    "not_claimed": "Not an independent exhaustive semantic rereview of all25 or272 sessions."
+  },
+  "peer_responses": {
+    "football": "Full D13:10 Not least because of this supports partial football motivation; accept writeSol correction.",
+    "Dune": "D22:12 John reading, D22:13 Tim not yet; inspected Dune prefix only John. Possible novelty false rejection, model cause unknown.",
+    "studio": "Yoga discourse14–24 supports pragmatic yoga-studio reading, but bench/window do not equate this location with mothers room. Keep uncertainty."
+  },
+  "bottleneck_decomposition": {
+    "sessions": 272,
+    "valid_empty": 245,
+    "known_malformed": 8,
+    "valid_nonempty": 19,
+    "proposals": 25,
+    "cheap_accepted": 25,
+    "jev_accepted": 20,
+    "interpretation": "Candidate shortage precedes JEV admission. Empty output is no completeness certificate. Rejecting5 cannot explain245 empty; format failures remainfailed; no retrospective salvage or threshold tuning."
+  },
+  "causal_limits": [
+    "Bank additions also alter native ranking and order even when no new record reaches Reader.",
+    "All5 primary cases selected zero supplements; indirect retrieval effects and answer/Judge boundaries dominate these examples, not a population mechanism proportion.",
+    "Same Judge total is no JEV-specific improvement; JEV official F1 is below cheap.",
+    "Original failed native records and first-attempt4JEV46cache0HTTP stay disclosed; exact numeric replay is not full Memory.add semantic replay.",
+    "Frozen1540 is repeatedly exposed, not blind validation; QA missing0 does not certify semantic truth."
+  ],
+  "next_protocol_status": "NOT_VOTED; compare query-adaptive same-bank discovery versus evidence organization with both peers",
+  "new_model_calls": 0,
+  "production_edits": false
+}

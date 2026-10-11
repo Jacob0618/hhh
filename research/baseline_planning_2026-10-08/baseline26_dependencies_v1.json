@@ -1,0 +1,77 @@
+{
+  "schema": "baseline26-dependencies-v1",
+  "checked_date": "2026-10-08",
+  "status": "static_research_only",
+  "model_downloaded": false,
+  "model_loaded": false,
+  "api_inference_called": false,
+  "runtime_verified": false,
+  "methods": [
+    {
+      "name": "V-Mem",
+      "scope": "LoCoMo text branch",
+      "repository": "https://github.com/Dingyi-Kang/V-Mem",
+      "revision": "36916b14dc5241e04acbf5cd0f3c40799bc09550",
+      "native_local_models": ["sentence-transformers/all-MiniLM-L6-v2"],
+      "gpu_required": false,
+      "local_generative_llm_required": false,
+      "gemini_embedding_adapter_possible": true,
+      "models_remaining_if_embedding_replaced": [],
+      "excluded_from_this_branch": ["SigLIP image encoder", "DINOv2 image encoder ablation"],
+      "sources": ["run_locomo.py", "embeddings.py", "README.md"]
+    },
+    {
+      "name": "PRISM",
+      "repository": "https://github.com/jingyip-cat/PRISM",
+      "revision": "fdc09e6bfe31f9c2852eb830ee07de1d750472f4",
+      "native_local_models": ["sentence-transformers/all-MiniLM-L6-v2"],
+      "gpu_required": false,
+      "local_generative_llm_required": false,
+      "gemini_embedding_adapter_possible": true,
+      "models_remaining_if_embedding_replaced": [],
+      "n3_reranker": "API LLM via qa_model; no separate local reranker weights",
+      "n3_note": "HyperMem no-reranker decision does not remove PRISM N3; removal is an algorithm ablation",
+      "sources": ["config.example.py", "mmem/utils/embedding.py", "mmem/retrieval/reranker.py", "mmem/utils/llm.py"]
+    },
+    {
+      "name": "StructMem",
+      "repository": "https://github.com/zjunlp/LightMem",
+      "revision": "8449d574df6bae1bdf3314a1564da65e2f37e046",
+      "scope": "official LoCoMo build example with event extraction and summaries",
+      "native_local_models": ["text encoder configurable path", "LLMLingua-2 configurable path"],
+      "local_generative_llm_required": false,
+      "example_device": "cuda",
+      "gemini_embedding_adapter_possible": true,
+      "models_remaining_if_embedding_replaced": ["LLMLingua-2 for precompression and attention-based topic segmentation"],
+      "llmlingua_config_class_default": "microsoft/llmlingua-2-bert-base-multilingual-cased-meetingbank",
+      "locomo_example_model": "/path/to/llmlingua-model",
+      "allowed_cached_alternative": "microsoft/llmlingua-2-xlm-roberta-large-meetingbank",
+      "cached_alternative_paper_checkpoint_equivalence_verified": false,
+      "precomp_topic_shared": true,
+      "default_process_workers": 5,
+      "sources": ["experiments/locomo/add_locomo.py", "src/lightmem/configs/pre_compressor/llmlingua_2.py", "src/lightmem/factory/topic_segmenter/llmlingua_2.py", "src/lightmem/factory/text_embedder/openai.py"]
+    }
+  ],
+  "existing_cache": {
+    "inventory": "local_model_cache_inventory_v1.json",
+    "minilm": {
+      "revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+      "safetensors_bytes": 90868376,
+      "sentence_transformer_config_present": true,
+      "max_seq_length": 256,
+      "ram_capacity_planning_gib_per_process": [1, 3],
+      "ram_measured": false
+    },
+    "llmlingua_xlm_roberta": {
+      "revision": "ebaba9b0e874dadd3003ffcff828e4397e568089",
+      "safetensors_bytes": 2235829648,
+      "runtime_memory_measured": false
+    }
+  },
+  "user_decisions_from_parent": {
+    "A-Mem": {"embedding": "local MiniLM"},
+    "SimpleMem": {"embedding": "gemini-embedding-001", "dimensions": 768},
+    "HyperMem": {"embedding": "gemini-embedding-001", "dimensions": 768, "reranker": false},
+    "new_baseline_encoder_decision": "not specified; dependency alternatives only"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "amem-single-retrieval-full-cohort-union-v1",
+  "method": "amem",
+  "self_root": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\retrieval_continuation_v1",
+  "parent_root": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4",
+  "work_owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1",
+  "conversation_sources": {
+    "0": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2",
+    "1": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v3",
+    "2": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4",
+    "3": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2",
+    "4": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v3",
+    "5": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v3",
+    "6": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2",
+    "7": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v3",
+    "8": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2",
+    "9": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v3"
+  },
+  "effective_query_overrides": {
+    "c2_q42": {
+      "query_id": "c2_q42",
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1",
+      "leaf": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1\\results\\firstpass\\c2_q42",
+      "retrieval_path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1\\results\\c2\\retrieval\\c2_q42.json",
+      "phase": "firstpass",
+      "bindings": {
+        "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1\\results\\c2\\retrieval\\c2_q42.json": "846d1b8f1d9f993689fa9bb82d7428dfaceb2c65ad5ea80eb82cc5b62e16a4cd",
+        "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1\\results\\firstpass\\c2_q42\\reader.json": "b1ccd083abc7721b3b38cbc09dc32feeca002986805afd4259ee029f476550d3",
+        "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1\\results\\firstpass\\c2_q42\\judge.json": "58059d873fd1ffde975b1ff92a4548b4a68e01486cc514324c1ee3e19f59bdb6",
+        "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1\\results\\firstpass\\c2_q42\\outcome.json": "402c4d6a29f942a6e58603b65a49d1be8b85be6e019618b69730ead8d3dfc0d5"
+      }
+    }
+  },
+  "audit_status": "no_invalid_artifacts",
+  "created_utc": "2026-10-08T22:34:50.552064+00:00",
+  "firstpass": {
+    "slots": 1540,
+    "reader_valid": 1539,
+    "judge_valid": 1539,
+    "missing_reader": 1,
+    "missing_judge": 1,
+    "official_f1_valid_percent": 43.204176961671806,
+    "custom_f1_valid_percent": 41.71149691279542,
+    "judge_valid_percent": 62.96296296296296,
+    "official_f1_full_cohort_percent": null,
+    "judge_full_cohort_percent": null,
+    "missing_imputed": false
+  },
+  "effective": {
+    "slots": 1540,
+    "reader_valid": 1540,
+    "judge_valid": 1540,
+    "missing_reader": 0,
+    "missing_judge": 0,
+    "official_f1_valid_percent": 43.17612230130708,
+    "custom_f1_valid_percent": 41.68441152518971,
+    "judge_valid_percent": 62.922077922077925,
+    "official_f1_full_cohort_percent": 43.17612230130708,
+    "judge_full_cohort_percent": 62.922077922077925,
+    "missing_imputed": false
+  },
+  "proof": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\amem_retrieval_continuation_v1\\terminal_admission.json",
+    "sha256": "cecfc0cf0912e8c93056840c3b79efbafdf6bf7921bc9a72644c732bd3f750cb"
+  },
+  "parent_manifest": {
+    "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\run_manifest.json",
+    "sha256": "64d47e7b77a57b6a81f3c1bf181cbaefb4e67b37984d61172a11ac1bb32f0248"
+  },
+  "usage": {
+    "physical_attempts": 16367,
+    "exact_cache_hits": 5840,
+    "status_counts": {
+      "200": 16352,
+      "transport_error": 14,
+      "503": 1
+    },
+    "ledger_sha256": {
+      "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem\\work\\api_method\\api_calls.jsonl": "26bdc417d9df47bcec038060414c8dd3f7c70c6f016c2cabe10f458d2959abf9",
+      "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_firstpass\\api_calls.jsonl": "9b49a779af82dda1bc6a75463cae0b098e70ffc0f12ce2e848f3949d462598ef",
+      "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl": "9c9a06ddd01d6e12a8645b10b0e0e0896f6382d75f3e85d763c36bb40504e22f",
+      "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v3\\work\\api_firstpass\\api_calls.jsonl": "e45278a249fa39aea6a3454185fc028b28fee523500b18eb2f52d709b0531863",
+      "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v3\\work\\api_method\\api_calls.jsonl": "b51f9febcd59028e231f8791f7bd9c69c3cc033c3f3899859813b77cbebfd5d3",
+      "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\api_firstpass\\api_calls.jsonl": "d4a2b24b3b12e8369cde46a884d1d8792bfa4ca6f40358ca4ac5ab7cedbfe48c",
+      "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\api_method\\api_calls.jsonl": "f5385f4561a9cb894e744a1a3c3f4ef10fb9edbf6e316b3423a62f5a2afc9540",
+      "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1\\work\\api_firstpass\\api_calls.jsonl": "7f1706fc4fd179e350ee720d11efffb6c6cdb5ae6bb2f8529f801996365a41d2",
+      "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1\\work\\api_method\\api_calls.jsonl": "d6328d40680bcba139975e8d2e7773a4679a38e32f0fbe5314fa908804878881"
+    },
+    "tokens": {
+      "promptTokenCount": {
+        "reported_sum": 36671114,
+        "reported_attempts": 16352
+      },
+      "candidatesTokenCount": {
+        "reported_sum": 7674050,
+        "reported_attempts": 16352
+      },
+      "thoughtsTokenCount": {
+        "reported_sum": null,
+        "reported_attempts": 0
+      },
+      "totalTokenCount": {
+        "reported_sum": 44345164,
+        "reported_attempts": 16352
+      }
+    },
+    "cost_usd": null,
+    "note": "Each physical owner ledger counted once; original failed attempts retained. Missing token telemetry is unknown."
+  },
+  "audit_content_sha256": {
+    "raw_request_audit.json": "096a5c0852f9e7914af669f811b9652046b0f073dc86a4ae9828210bce08b978",
+    "method_request_audit.json": "8b3f25c9801c17f725f237317a42780289c00bfde2b56691b5cec2fa97fbcf32"
+  },
+  "scientific_configuration": "original fixed Gemini 2.5 Reader/Judge and native A-Mem retrieval; one exact admitted query replacement",
+  "firstpass_policy": "original q42 retrieval failure remains not_run/null; technical first QA is used only in effective view"
+}

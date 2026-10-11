@@ -1,0 +1,256 @@
+{
+  "schema": "gemini25-ablation-canonical-independent-usage-comparison-v1",
+  "created_utc": "2026-10-07T23:18:55.591698+00:00",
+  "status": "passed_counts_tokens_and_attribution_with_explicit_semantic_differences",
+  "canonical_summary": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\heartbeat_20261007T1814\\billing_resume_v1\\live_v1\\final_summary_v1.json",
+    "sha256": "a73ac20650ac3f135ae07404ca4042a1ccb42fe1574ca9109c5edd63fb2d15d3",
+    "content_sha256": "3eada56d380b707de262aa09ce54f4a45532a0cbd44aca6bb03ec539bd88b17d"
+  },
+  "independent_usage": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\result_review_v1\\independent_usage_v1.json",
+    "sha256": "dbca0c9220a2e56fb8989e8e1de98f5dcc6251da06fef2e0f79bc99cf1ac7806",
+    "content_sha256": "196ad0645699b01f84e7442c464bed5f3f361d83f7253948973c9c1e8f504d05"
+  },
+  "measurement_implementation_read_only_reference": {
+    "path": "D:\\jev mem\\tools\\summarize_gemini38_seven_arm_v1.py",
+    "sha256": "ddc18b9d143a6d4a443456e5475c4c6bd377d90a3f97ae8f44ea5efab036b531",
+    "function": "measured_usage",
+    "definition": "usage_unknown_attempts is sum(not bool(usage) or usage_unknown is True); each token missing count covers every physical attempt regardless of model; empty numeric sums initialize to zero."
+  },
+  "scope": "Only canonical usage projections, prior sealed independent report and measured_usage function were read for comparison; no ledger/raw/source replay, provider, credential or pricing calls. All 36 canonical ledger pointers equal the prior independently stable-byte-checked ledger pointers.",
+  "groups_compared": 17,
+  "scalar_or_dictionary_checks": 357,
+  "ledger_pointer_matches": 36,
+  "groups": [
+    {
+      "group": "phase_usage/firstpass",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 7750,
+      "cache_events": 1500,
+      "canonical_usage_unknown": 10,
+      "independent_explicit_usage_unknown_flag": 10,
+      "independent_empty_or_absent_usage": 10
+    },
+    {
+      "group": "phase_usage/recovery",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 0,
+      "cache_events": 0,
+      "canonical_usage_unknown": 0,
+      "independent_explicit_usage_unknown_flag": 0,
+      "independent_empty_or_absent_usage": 0
+    },
+    {
+      "group": "qa_physical_usage",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 7750,
+      "cache_events": 1500,
+      "canonical_usage_unknown": 10,
+      "independent_explicit_usage_unknown_flag": 10,
+      "independent_empty_or_absent_usage": 10
+    },
+    {
+      "group": "qa_usage_by_stage/judge",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 3160,
+      "cache_events": 1462,
+      "canonical_usage_unknown": 2,
+      "independent_explicit_usage_unknown_flag": 2,
+      "independent_empty_or_absent_usage": 2
+    },
+    {
+      "group": "qa_usage_by_stage/reader",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 4590,
+      "cache_events": 38,
+      "canonical_usage_unknown": 8,
+      "independent_explicit_usage_unknown_flag": 8,
+      "independent_empty_or_absent_usage": 8
+    },
+    {
+      "group": "qa_usage_by_producer_method/baseline",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 2997,
+      "cache_events": 85,
+      "canonical_usage_unknown": 2,
+      "independent_explicit_usage_unknown_flag": 2,
+      "independent_empty_or_absent_usage": 2
+    },
+    {
+      "group": "qa_usage_by_producer_method/original_multi_source_closure",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 2356,
+      "cache_events": 730,
+      "canonical_usage_unknown": 6,
+      "independent_explicit_usage_unknown_flag": 6,
+      "independent_empty_or_absent_usage": 6
+    },
+    {
+      "group": "qa_usage_by_producer_method/r03_original",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 2397,
+      "cache_events": 685,
+      "canonical_usage_unknown": 2,
+      "independent_explicit_usage_unknown_flag": 2,
+      "independent_empty_or_absent_usage": 2
+    },
+    {
+      "group": "precomputation_usage/total",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 20646,
+      "cache_events": 852,
+      "canonical_usage_unknown": 5072,
+      "independent_explicit_usage_unknown_flag": 145,
+      "independent_empty_or_absent_usage": 5072
+    },
+    {
+      "group": "precomputation_usage/by_stage/writer",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 1359,
+      "cache_events": 0,
+      "canonical_usage_unknown": 1087,
+      "independent_explicit_usage_unknown_flag": 0,
+      "independent_empty_or_absent_usage": 1087
+    },
+    {
+      "group": "precomputation_usage/by_stage/retrieval",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 2307,
+      "cache_events": 775,
+      "canonical_usage_unknown": 2307,
+      "independent_explicit_usage_unknown_flag": 4,
+      "independent_empty_or_absent_usage": 2307
+    },
+    {
+      "group": "precomputation_usage/by_stage/r03/firstpass",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 1535,
+      "cache_events": 0,
+      "canonical_usage_unknown": 1535,
+      "independent_explicit_usage_unknown_flag": 6,
+      "independent_empty_or_absent_usage": 1535
+    },
+    {
+      "group": "precomputation_usage/by_stage/r03/recovery_v1",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 1535,
+      "cache_events": 11,
+      "canonical_usage_unknown": 6,
+      "independent_explicit_usage_unknown_flag": 1,
+      "independent_empty_or_absent_usage": 6
+    },
+    {
+      "group": "precomputation_usage/by_stage/support/firstpass",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 4731,
+      "cache_events": 0,
+      "canonical_usage_unknown": 129,
+      "independent_explicit_usage_unknown_flag": 126,
+      "independent_empty_or_absent_usage": 129
+    },
+    {
+      "group": "precomputation_usage/by_stage/multi_compare/firstpass",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 1530,
+      "cache_events": 11,
+      "canonical_usage_unknown": 1,
+      "independent_explicit_usage_unknown_flag": 1,
+      "independent_empty_or_absent_usage": 1
+    },
+    {
+      "group": "precomputation_usage/by_stage/closure/firstpass",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 6118,
+      "cache_events": 44,
+      "canonical_usage_unknown": 5,
+      "independent_explicit_usage_unknown_flag": 5,
+      "independent_empty_or_absent_usage": 5
+    },
+    {
+      "group": "precomputation_usage/by_stage/rank/firstpass",
+      "status": "matched",
+      "checks": 21,
+      "physical_attempts": 1531,
+      "cache_events": 11,
+      "canonical_usage_unknown": 2,
+      "independent_explicit_usage_unknown_flag": 2,
+      "independent_empty_or_absent_usage": 2
+    }
+  ],
+  "numerical_or_attribution_mismatches": [],
+  "semantic_differences": [
+    {
+      "kind": "unknown_usage_definition",
+      "severity": "interpretation_only",
+      "canonical_precomputation_unknown": 5072,
+      "independent_precomputation_explicit_flag": 145,
+      "independent_precomputation_empty_or_absent": 5072,
+      "additional_empty_or_absent_without_explicit_flag": 4927,
+      "canonical_qa_unknown": 10,
+      "independent_qa_explicit_flag": 10,
+      "all_run_canonical_broad_unknown": 5082,
+      "all_run_explicit_flags": 155,
+      "meaning": "Canonical counts empty/missing usage as well as explicit flags. It is not the explicit flag count and is not a count of any single missing token field. In this run the broader total agrees exactly with the independent empty-or-absent usage count."
+    },
+    {
+      "kind": "empty_thinking_sum",
+      "severity": "interpretation_only",
+      "canonical_recorded_sum": 0,
+      "independent_sum_reported": null,
+      "recorded_thinking_attempts": 0,
+      "canonical_missing_thinking_is_not_zero": true,
+      "meaning": "Canonical zero is the empty arithmetic sum with zero observations and all relevant fields missing. It does not establish actual thinking consumption was zero. Independent null is the direct unavailable representation; thinkingBudget=0 is configuration, not observed usage."
+    },
+    {
+      "kind": "generic_missing_vs_not_exposed",
+      "severity": "classification_only",
+      "meaning": "Canonical counts absent fields for every physical model operation as missing; independent separates fields not exposed for JEV/embedding from applicable fields that are absent. Canonical missing equals independent applicable_missing plus not_exposed in every compared group."
+    },
+    {
+      "kind": "provider_cached_input_token_coverage",
+      "severity": "coverage_only",
+      "canonical_field_present": false,
+      "independent_reported_cached_token_sum": 513692,
+      "writer_recorded_cached_tokens": 511667,
+      "qa_recorded_cached_tokens": 2025,
+      "meaning": "Canonical usage does not separately expose cachedContentTokenCount. Independent recorded sums are a subset of prompt tokens on 65 physical calls; these must not be added to prompt tokens or interpreted as local cache events. Missing cached fields remain unknown."
+    },
+    {
+      "kind": "producer_arm_attribution",
+      "severity": "matched_limitation",
+      "meaning": "All three producer-arm groups match. Shared requests are charged to the physical producer arm and cache consumers are counted separately; this is not independent marginal cost per arm."
+    }
+  ],
+  "overall_reconciliation": {
+    "physical_attempts": 28396,
+    "local_cache_events": 2352,
+    "recorded_gemini_prompt_tokens": 10632973,
+    "recorded_gemini_candidates_tokens": 201432,
+    "recorded_jev_input_tokens": 59664139,
+    "recorded_jev_output_tokens": 3112280,
+    "thinking_reported": null,
+    "embedding_recorded_token_total": null,
+    "total_cost_usd": null
+  },
+  "model_calls": 0,
+  "production_writes": 0,
+  "seal_algorithm": "SHA256 of UTF8 JSON ensure_ascii=False sort_keys=True separators=(comma,colon), excluding content_sha256",
+  "content_sha256": "151787c99f3420ecf7ddbffd07783033bd7dc89ea28b1296ed19e030a4bec1dc"
+}

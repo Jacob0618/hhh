@@ -1,0 +1,179 @@
+{
+  "schema": "jev-mem-session-top20-v2",
+  "status": "live_authorized_initial_mem0_ingestion_running",
+  "execution_enabled": true,
+  "live_calls_authorized_in_this_turn": true,
+  "workspace": "D:/jev mem",
+  "upstream": {
+    "mem0_commit": "94c3fe9f238f3dbf29c9ce98643bd71eb13077cd",
+    "mem0_python_version": "2.2.1",
+    "benchmark_commit": "4b61c5d31b9c668a12b4f5e78064248a02c82d2b",
+    "use_graph": false,
+    "use_docker": false,
+    "source_modified": false
+  },
+  "dataset": {
+    "path": "D:/jev mem/data/locomo10.json",
+    "sha256": "79fa87e90f04081343b8c8debecb80a9a6842b76a7aa537dc9fdf651ea698ff4",
+    "question_manifest": "D:/jev mem/research/locomo_1540_manifest.json",
+    "categories": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "questions": 1540,
+    "additional_filters": [],
+    "deduplicate_questions": false
+  },
+  "ingestion": {
+    "unit": "complete_session",
+    "sessions_per_add": 1,
+    "planned_add_submissions": 272,
+    "split_session_into_turn_calls": false,
+    "write_fact_cap": null,
+    "past_messages": 10,
+    "past_message_truncation_characters": 300,
+    "order": "chronological_sessions_then_source_turn_order",
+    "isolation": "conversation_and_arm",
+    "query_or_gold_visible_at_write": false,
+    "source_archive_required": true,
+    "temporal_protocol": "explicit_observation_date_adapter_primary_no_native_date_result_claimed",
+    "temporal_adapter_implemented": true,
+    "history_order_policy": "sidecar_source_order_last_10_successfully_committed_messages",
+    "history_adapter_implemented": true,
+    "static_manifest": "D:/jev mem/research/session_ingestion_manifest.json"
+  },
+  "models": {
+    "extractor": "gemini-2.5-flash",
+    "embedder": "gemini-embedding-001",
+    "embedding_dimensions": 768,
+    "embedding_dimensions_status": "recommended_initial_setting_not_yet_compared",
+    "embedding_normalization": "explicit_l2_for_nonzero_document_and_query_vectors",
+    "embedding_input_token_limit": 2048,
+    "reader": "gemini-2.5-flash",
+    "planner": "gemini-2.5-flash",
+    "other_generative_components": "gemini-2.5-flash",
+    "strict_judge": "gemini-3.5-flash-lite",
+    "jev_version": "jev-1.13.0",
+    "jev_alias_at_verification": "jev-latest",
+    "jev_version_policy": "pin_current_standard_model_no_automatic_alias_upgrade",
+    "note": "All four specified APIs passed actual requests. No automatic model substitutions. Gemini uses Developer API, not Vertex service-account credentials."
+  },
+  "planned_arms": [
+    "A-native",
+    "A-date",
+    "B-read",
+    "B-full",
+    "C-off",
+    "C-jev"
+  ],
+  "primary_readout": {
+    "final_top_k": 20,
+    "fill_to_20_when_unique_candidates_suffice": true,
+    "fallback": "remaining_independent_score_order_recorded_explicitly",
+    "insufficient_candidates": "return_actual_unique_count_no_fabrication",
+    "top20_interpretation": "user_confirmed_20_facts_enter_QA_no_session_write_fact_cap",
+    "shared_token_safety_cap": null,
+    "matched_token_ablation_budgets": [
+      1024,
+      2048,
+      4096
+    ]
+  },
+  "expanded_pool": {
+    "bm25": 20,
+    "dense": 20,
+    "typed_entity_time": 20,
+    "deduplicate": true,
+    "retain_multiple_channel_labels": true,
+    "enabled_only_after_same_pool_comparison": true,
+    "additional_retrieval_rounds_max": 1,
+    "additional_unique_facts_max": 20,
+    "overall_candidate_cap": 80
+  },
+  "write_type_policy": "multi_label_soft_routing_unknown_allowed_no_irreversible_deletion",
+  "typing": {
+    "unit": "each_extracted_fact_with_its_source_context",
+    "not_session_level_classification": true,
+    "semantic_types_are_distinct_from_entity_time_provenance_fields": true,
+    "semantic_types_drive_gap_conditioned_routing": true,
+    "query_specific_roles_are_not_permanent_write_labels": true
+  },
+  "selection": {
+    "relevance_baseline": "independent_jev_criterion_probability",
+    "experimental": "8_seed_plus_6_plus_6_conditional_additions_fixed_20_facts_no_replacement_in_v1",
+    "raw_model_confidence_is_not_relevance": true,
+    "same_pool_candidates": 60,
+    "seed_facts": 8,
+    "conditional_rounds": 2,
+    "conditional_shortlist_per_round": 32,
+    "added_facts_per_round": 6,
+    "maximum_independent_criterion_evaluations": 80,
+    "maximum_conditional_criterion_evaluations": 64,
+    "maximum_gap_slots": 4,
+    "note": "Design defaults, not measured efficiency. Criterion evaluations are not HTTP call counts."
+  },
+  "evaluation": {
+    "all_1540_qa_required": true,
+    "report_upstream_and_strict_judges_separately": false,
+    "strict_f1_required": true,
+    "source_evidence_metrics_require_validated_provenance": true,
+    "split_status": "conv0_and_conv1_development; conv2_to_conv9_frozen_evaluation; prior_history_not_claimed_blind",
+    "frozen_results_used_as_new_results": false,
+    "judge_protocol": "strict_research_judge; upstream_lenient_score_not_yet_implemented",
+    "f1_protocol": "normalized_token_overlap_initial; not_claimed_identical_to_official_category_specific_LoCoMo_metric"
+  },
+  "launchers_created": true,
+  "background_tasks_created": false,
+  "local_environment": {
+    "python": "D:/jev mem/.venv/Scripts/python.exe",
+    "python_base": "standalone_cpython_3.11.14",
+    "manager": "hatch",
+    "offline_sdk_startup_passed": true,
+    "startup_report": "D:/jev mem/research/local_startup_report.json",
+    "live_provider_auth_verified": true,
+    "bm25_inference_verified": true
+  },
+  "authorization": {
+    "recorded_at_utc": "2026-09-27T14:30:39.494668+00:00",
+    "user_instruction": "可以先按这个测；这些测完后增加JEV话题重组写入实验",
+    "scope": "local Mem0 and independent LoCoMo experiments with specified models; later separate topic regrouping",
+    "credential_storage": "existing current-user Windows DPAPI vault; never copied into project artifacts",
+    "api_probe_report": "runs/20260927_api_probe/summary.json"
+  },
+  "current_first_stage_methods": [
+    "sdk20",
+    "rank",
+    "mmr",
+    "jev_single",
+    "conditional"
+  ],
+  "concurrency": {
+    "query_workers": 4,
+    "selector_workers": 8,
+    "jev_http_attempts_per_second_workspace": 15,
+    "rate_limit_source": "https://docs.typesafe.ai/models",
+    "retry_after_honored": true
+  },
+  "after_current_experiments": {
+    "topic_regrouping": true,
+    "schedule": "separate_followup_arm",
+    "input": "raw conversation turns or context-preserving units before extraction, without questions/gold",
+    "groups": "JEV judges same-topic membership; deterministic code groups and concatenates",
+    "preserve": [
+      "original_turn_id",
+      "speaker",
+      "observation_date",
+      "within_group_source_order"
+    ],
+    "controls": [
+      "original_sessions",
+      "matched_length_contiguous",
+      "embedding_topics",
+      "JEV_topics"
+    ],
+    "causality": "whole_conversation_offline_preprocessing; not an online memory claim"
+  },
+  "call_count_source": "runs/**/api_calls.jsonl; live counts are not hard-coded into config"
+}

@@ -1,0 +1,973 @@
+{
+  "status": "passed",
+  "owners": {
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem\\work\\api_method": {
+      "owner_name": "v1",
+      "ledger_sha256": "26bdc417d9df47bcec038060414c8dd3f7c70c6f016c2cabe10f458d2959abf9",
+      "ledger_rows": 40,
+      "physical_attempts": 40,
+      "exact_cache_hits": 0,
+      "logical_consumers": 40,
+      "request_intents": 40,
+      "raw_files": 40,
+      "physical_statuses": {
+        "200": 40
+      },
+      "physical_usage_unknown": 0,
+      "explicit_usage_unknown_flags": 0
+    },
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_firstpass": {
+      "owner_name": "v2",
+      "ledger_sha256": "9b49a779af82dda1bc6a75463cae0b098e70ffc0f12ce2e848f3949d462598ef",
+      "ledger_rows": 1315,
+      "physical_attempts": 1315,
+      "exact_cache_hits": 0,
+      "logical_consumers": 1314,
+      "request_intents": 1314,
+      "raw_files": 1314,
+      "physical_statuses": {
+        "200": 1314,
+        "transport_error": 1
+      },
+      "physical_usage_unknown": 1,
+      "explicit_usage_unknown_flags": 1
+    },
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method": {
+      "owner_name": "v2",
+      "ledger_sha256": "9c9a06ddd01d6e12a8645b10b0e0e0896f6382d75f3e85d763c36bb40504e22f",
+      "ledger_rows": 10032,
+      "physical_attempts": 9990,
+      "exact_cache_hits": 42,
+      "logical_consumers": 10019,
+      "request_intents": 9977,
+      "raw_files": 10017,
+      "physical_statuses": {
+        "200": 9977,
+        "transport_error": 12,
+        "503": 1
+      },
+      "physical_usage_unknown": 13,
+      "explicit_usage_unknown_flags": 12
+    },
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v3\\work\\api_firstpass": {
+      "owner_name": "v3",
+      "ledger_sha256": "e45278a249fa39aea6a3454185fc028b28fee523500b18eb2f52d709b0531863",
+      "ledger_rows": 1462,
+      "physical_attempts": 1440,
+      "exact_cache_hits": 22,
+      "logical_consumers": 1462,
+      "request_intents": 1440,
+      "raw_files": 1440,
+      "physical_statuses": {
+        "200": 1440
+      },
+      "physical_usage_unknown": 0,
+      "explicit_usage_unknown_flags": 0
+    },
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v3\\work\\api_method": {
+      "owner_name": "v3",
+      "ledger_sha256": "b51f9febcd59028e231f8791f7bd9c69c3cc033c3f3899859813b77cbebfd5d3",
+      "ledger_rows": 7574,
+      "physical_attempts": 2706,
+      "exact_cache_hits": 4868,
+      "logical_consumers": 7574,
+      "request_intents": 2706,
+      "raw_files": 7573,
+      "physical_statuses": {
+        "200": 2706
+      },
+      "physical_usage_unknown": 0,
+      "explicit_usage_unknown_flags": 0
+    },
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\api_firstpass": {
+      "owner_name": "v4",
+      "ledger_sha256": "d4a2b24b3b12e8369cde46a884d1d8792bfa4ca6f40358ca4ac5ab7cedbfe48c",
+      "ledger_rows": 302,
+      "physical_attempts": 302,
+      "exact_cache_hits": 0,
+      "logical_consumers": 302,
+      "request_intents": 302,
+      "raw_files": 302,
+      "physical_statuses": {
+        "200": 302
+      },
+      "physical_usage_unknown": 0,
+      "explicit_usage_unknown_flags": 0
+    },
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\api_method": {
+      "owner_name": "v4",
+      "ledger_sha256": "f5385f4561a9cb894e744a1a3c3f4ef10fb9edbf6e316b3423a62f5a2afc9540",
+      "ledger_rows": 1479,
+      "physical_attempts": 571,
+      "exact_cache_hits": 908,
+      "logical_consumers": 1478,
+      "request_intents": 570,
+      "raw_files": 1478,
+      "physical_statuses": {
+        "200": 570,
+        "transport_error": 1
+      },
+      "physical_usage_unknown": 1,
+      "explicit_usage_unknown_flags": 1
+    },
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1\\work\\api_firstpass": {
+      "owner_name": "retrieval_continuation",
+      "ledger_sha256": "7f1706fc4fd179e350ee720d11efffb6c6cdb5ae6bb2f8529f801996365a41d2",
+      "ledger_rows": 2,
+      "physical_attempts": 2,
+      "exact_cache_hits": 0,
+      "logical_consumers": 2,
+      "request_intents": 2,
+      "raw_files": 2,
+      "physical_statuses": {
+        "200": 2
+      },
+      "physical_usage_unknown": 0,
+      "explicit_usage_unknown_flags": 0
+    },
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\retrieval_continuation_v1\\work\\api_method": {
+      "owner_name": "retrieval_continuation",
+      "ledger_sha256": "d6328d40680bcba139975e8d2e7773a4679a38e32f0fbe5314fa908804878881",
+      "ledger_rows": 1,
+      "physical_attempts": 1,
+      "exact_cache_hits": 0,
+      "logical_consumers": 1,
+      "request_intents": 1,
+      "raw_files": 1,
+      "physical_statuses": {
+        "200": 1
+      },
+      "physical_usage_unknown": 0,
+      "explicit_usage_unknown_flags": 0
+    }
+  },
+  "physical_attempts": 16367,
+  "cache_hits": 5840,
+  "physical_statuses": {
+    "200": 16352,
+    "transport_error": 14,
+    "503": 1
+  },
+  "physical_usage_unknown_attempts": 15,
+  "terminal_logical_unknown": 0,
+  "unresolved_request_intents": 0,
+  "failed_physical_chains": [
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_firstpass",
+      "request_hash": "5f0d41d9e14d2f11a29fb76206b53d8e276125831fb0cbbc7671bb9c1209ef62",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:32:59.011987+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 0,
+            "query_id": "c0_q76",
+            "phase": "firstpass"
+          },
+          "stage": "qa_reader_gemini25_ablation_plain_v1",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "5f0d41d9e14d2f11a29fb76206b53d8e276125831fb0cbbc7671bb9c1209ef62",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 5023.504700046033,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_firstpass\\api_cache\\5f0d41d9e14d2f11a29fb76206b53d8e276125831fb0cbbc7671bb9c1209ef62.json",
+        "sha256": "d32df6026d58f933876b74754ae90ac8c112c4fe92c3baf33df6213885807ba9"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "43c96bebc807bd86b8fe9d87b9a39911fbe1da73231feae69827caed9c41ea90",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:00:05.954673+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 2,
+            "phase": "build"
+          },
+          "stage": "amem_analysis",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "43c96bebc807bd86b8fe9d87b9a39911fbe1da73231feae69827caed9c41ea90",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 3941.0725999623537,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\43c96bebc807bd86b8fe9d87b9a39911fbe1da73231feae69827caed9c41ea90.json",
+        "sha256": "6fab356ccf8b8d485692077a9e2bd201c1b660255dd6f4b04a706222d589392d"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "02a48d9001d0a13b67a000b7870603b436875946acb998e6e1b81fe38e992bce",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:01:34.842825+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 2,
+            "phase": "build"
+          },
+          "stage": "amem_analysis",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "02a48d9001d0a13b67a000b7870603b436875946acb998e6e1b81fe38e992bce",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 3934.0831998270005,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\02a48d9001d0a13b67a000b7870603b436875946acb998e6e1b81fe38e992bce.json",
+        "sha256": "79fbc6ecca4c79c7c729dd9c58cae2664a4e433398188cf74171e3f82cb82370"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "f09c1a08a959087fbb0eee6dee86d6572108e6d7d777d3d2cf0d38d76f5caeeb",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:16:43.558084+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 8,
+            "phase": "build"
+          },
+          "stage": "amem_analysis",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "f09c1a08a959087fbb0eee6dee86d6572108e6d7d777d3d2cf0d38d76f5caeeb",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 3910.7113000936806,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\f09c1a08a959087fbb0eee6dee86d6572108e6d7d777d3d2cf0d38d76f5caeeb.json",
+        "sha256": "78741a9a8c892e00aca8b78620f8701eada4a76e7eb0d4f5f697c74ff15e2bb2"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "5e024ebe41b038df265b6ab6b4d53399818f0bed7f9b6c82c42979f249ff6fdf",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:18:48.261576+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 6,
+            "phase": "build"
+          },
+          "stage": "amem_analysis",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "5e024ebe41b038df265b6ab6b4d53399818f0bed7f9b6c82c42979f249ff6fdf",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 3935.0304999388754,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\5e024ebe41b038df265b6ab6b4d53399818f0bed7f9b6c82c42979f249ff6fdf.json",
+        "sha256": "2c21631fa24bf483479c814c3126c1cf77024f75756afb6ff0cd1a6cad8f538e"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "d3b5d87b78ba6f05991bd897b9d41cababb01eead6a070152ad485e2576c0ef9",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:28:48.262752+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 5,
+            "phase": "build"
+          },
+          "stage": "amem_analysis",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "d3b5d87b78ba6f05991bd897b9d41cababb01eead6a070152ad485e2576c0ef9",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 3896.3778000324965,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\d3b5d87b78ba6f05991bd897b9d41cababb01eead6a070152ad485e2576c0ef9.json",
+        "sha256": "09024e4b306c07e55e1c1feba9b5f50fc70da3410931d72f40a052cc5d395ecb"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "e7676acf0d6534c7b709255f1ca4792fb05194d6fabb7890111d33c1d206bdb4",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:29:29.604277+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 8,
+            "phase": "build"
+          },
+          "stage": "amem_analysis",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "e7676acf0d6534c7b709255f1ca4792fb05194d6fabb7890111d33c1d206bdb4",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 3937.5108999665827,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\e7676acf0d6534c7b709255f1ca4792fb05194d6fabb7890111d33c1d206bdb4.json",
+        "sha256": "a9c601f7bb56227a44acab1fc8f3f05760ecb3e04e42234878e71451253816e8"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "41f99e7a01ad9878ecd1776d5c4f3a8106a0237bf8b6810e46a698f48262b9e3",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:30:33.361954+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 3,
+            "phase": "build"
+          },
+          "stage": "amem_analysis",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "41f99e7a01ad9878ecd1776d5c4f3a8106a0237bf8b6810e46a698f48262b9e3",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 3909.2755999881774,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\41f99e7a01ad9878ecd1776d5c4f3a8106a0237bf8b6810e46a698f48262b9e3.json",
+        "sha256": "1950a51fc37dcd3642602db84e0dc2433583e11afacc7372a3f72b2bdebba754"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "251d9b56d1080c6e7094e1613c86bc25aa7d18c412161b524a3c2b1d8ee2fe4f",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:30:33.421915+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 7,
+            "phase": "build"
+          },
+          "stage": "amem_analysis",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "251d9b56d1080c6e7094e1613c86bc25aa7d18c412161b524a3c2b1d8ee2fe4f",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 3875.008200062439,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\251d9b56d1080c6e7094e1613c86bc25aa7d18c412161b524a3c2b1d8ee2fe4f.json",
+        "sha256": "76fcbd26fb34497cef87c1f2eb7d3392eba619786b1a1229124d9562bf8d0eef"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "34ac4a4e435af4f36f2111e2ab523a5d2529ef1673cbbdc37f6a6a57876c3053",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:31:15.912158+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 4,
+            "phase": "build"
+          },
+          "stage": "amem_analysis",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "34ac4a4e435af4f36f2111e2ab523a5d2529ef1673cbbdc37f6a6a57876c3053",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 3920.754399849102,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\34ac4a4e435af4f36f2111e2ab523a5d2529ef1673cbbdc37f6a6a57876c3053.json",
+        "sha256": "f38ed8bd9c89e41bf43f87f4d73d8cdfa5842b244f6ee57870c3eacd29153d46"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "31d023369fb38436586b166fbd79308ec76c6180fe9c202746625090d6acddb4",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:33:24.880832+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 0,
+            "phase": "retrieval",
+            "query_id": "c0_q101"
+          },
+          "stage": "amem_query_keywords",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "31d023369fb38436586b166fbd79308ec76c6180fe9c202746625090d6acddb4",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 5031.177199911326,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\31d023369fb38436586b166fbd79308ec76c6180fe9c202746625090d6acddb4.json",
+        "sha256": "e9803c64b8c7e5ead39065a4040882f1e81bd0a80aa7d356d02c6e13d337e226"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "a5da47718aeabb6c924289b09fbe521527b3959149beaea1c04db4da69f575af",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:47:58.529388+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 6,
+            "phase": "build"
+          },
+          "stage": "amem_evolution",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "a5da47718aeabb6c924289b09fbe521527b3959149beaea1c04db4da69f575af",
+          "attempt": 1,
+          "status": 503,
+          "latency_ms": 35645.94849990681,
+          "usage": {},
+          "resolved_model": null,
+          "request_id": null,
+          "cache_hit": false,
+          "error": "{'code': 503, 'message': 'The request timed out. Please try again.', 'status': 'UNAVAILABLE'}"
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\a5da47718aeabb6c924289b09fbe521527b3959149beaea1c04db4da69f575af.json",
+        "sha256": "2187a3ce96c101140ac3242e2d5641b35b658a10d9ea6cdab73415de6d830f1e"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "aafbeb291c8408ca6cf55474521b67a17306ae2840dec75a38cc975364e8be19",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:52:33.706276+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 3,
+            "phase": "retrieval",
+            "query_id": "c3_q86"
+          },
+          "stage": "amem_query_keywords",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "aafbeb291c8408ca6cf55474521b67a17306ae2840dec75a38cc975364e8be19",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 5033.38750009425,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\aafbeb291c8408ca6cf55474521b67a17306ae2840dec75a38cc975364e8be19.json",
+        "sha256": "8491ba183ddcbf24432433ecfaaf48fec0054c891a1e1d8aaa78e2ae97debb65"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method",
+      "request_hash": "dffee0519f86de3ef31dfa9740b0e175d58c2e0fd252eca52c441e1bad72e513",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T17:54:05.793613+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 6,
+            "phase": "retrieval",
+            "query_id": "c6_q139"
+          },
+          "stage": "amem_query_keywords",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "dffee0519f86de3ef31dfa9740b0e175d58c2e0fd252eca52c441e1bad72e513",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 5038.4374998975545,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_cache\\dffee0519f86de3ef31dfa9740b0e175d58c2e0fd252eca52c441e1bad72e513.json",
+        "sha256": "83b1ce0e3f51e54bcb289823d7730a6a8799a22c4c8fb81829b91a12db2cd43f"
+      },
+      "terminal_logical_known": true
+    },
+    {
+      "owner": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\api_method",
+      "request_hash": "8ee04901ecd04281399f5db5e682914b6d2f7032059d52a983a2c72caff2f834",
+      "failed_attempts": [
+        {
+          "timestamp_utc": "2026-10-08T21:02:28.192289+00:00",
+          "context": {
+            "method": "amem",
+            "conversation": 2,
+            "phase": "retrieval",
+            "query_id": "c2_q6"
+          },
+          "stage": "amem_query_keywords",
+          "provider": "gemini",
+          "model": "gemini-2.5-flash",
+          "operation": "generateContent",
+          "request_hash": "8ee04901ecd04281399f5db5e682914b6d2f7032059d52a983a2c72caff2f834",
+          "attempt": 1,
+          "status": "transport_error",
+          "latency_ms": 5033.209300134331,
+          "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+          "usage_unknown": true
+        }
+      ],
+      "terminal_status": 200,
+      "raw": {
+        "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\api_method\\api_cache\\8ee04901ecd04281399f5db5e682914b6d2f7032059d52a983a2c72caff2f834.json",
+        "sha256": "54969e6be11a5b2b0ed4eb80b22c95912b489912857320e29f042fa8b6c1c571"
+      },
+      "terminal_logical_known": true
+    }
+  ],
+  "reported_tokens": {
+    "promptTokenCount": {
+      "sum": 36671114,
+      "attempts_reporting_field": 16352
+    },
+    "candidatesTokenCount": {
+      "sum": 7674050,
+      "attempts_reporting_field": 16352
+    },
+    "thoughtsTokenCount": {
+      "sum": 0,
+      "attempts_reporting_field": 0
+    },
+    "totalTokenCount": {
+      "sum": 44345164,
+      "attempts_reporting_field": 16352
+    }
+  },
+  "cost_usd": null,
+  "accounting": "Each exact root/API owner counted once, including nested sidecar once. Physical failures remain charged/usage-unknown where telemetry is absent; no cache hit counted as a new model call.",
+  "schema": "amem-independent-usage-chain-v2",
+  "revision": 2,
+  "explicit_usage_unknown_flags": 14,
+  "physical_with_complete_token_telemetry": 16352,
+  "missing_token_telemetry_by_status": {
+    "transport_error": 14,
+    "503": 1
+  },
+  "missing_token_telemetry_attempts": [
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_firstpass\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:32:59.011987+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 0,
+          "query_id": "c0_q76",
+          "phase": "firstpass"
+        },
+        "stage": "qa_reader_gemini25_ablation_plain_v1",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "5f0d41d9e14d2f11a29fb76206b53d8e276125831fb0cbbc7671bb9c1209ef62",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 5023.504700046033,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:00:05.954673+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 2,
+          "phase": "build"
+        },
+        "stage": "amem_analysis",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "43c96bebc807bd86b8fe9d87b9a39911fbe1da73231feae69827caed9c41ea90",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 3941.0725999623537,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:01:34.842825+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 2,
+          "phase": "build"
+        },
+        "stage": "amem_analysis",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "02a48d9001d0a13b67a000b7870603b436875946acb998e6e1b81fe38e992bce",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 3934.0831998270005,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:16:43.558084+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 8,
+          "phase": "build"
+        },
+        "stage": "amem_analysis",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "f09c1a08a959087fbb0eee6dee86d6572108e6d7d777d3d2cf0d38d76f5caeeb",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 3910.7113000936806,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:18:48.261576+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 6,
+          "phase": "build"
+        },
+        "stage": "amem_analysis",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "5e024ebe41b038df265b6ab6b4d53399818f0bed7f9b6c82c42979f249ff6fdf",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 3935.0304999388754,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:28:48.262752+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 5,
+          "phase": "build"
+        },
+        "stage": "amem_analysis",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "d3b5d87b78ba6f05991bd897b9d41cababb01eead6a070152ad485e2576c0ef9",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 3896.3778000324965,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:29:29.604277+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 8,
+          "phase": "build"
+        },
+        "stage": "amem_analysis",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "e7676acf0d6534c7b709255f1ca4792fb05194d6fabb7890111d33c1d206bdb4",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 3937.5108999665827,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:30:33.361954+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 3,
+          "phase": "build"
+        },
+        "stage": "amem_analysis",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "41f99e7a01ad9878ecd1776d5c4f3a8106a0237bf8b6810e46a698f48262b9e3",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 3909.2755999881774,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:30:33.421915+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 7,
+          "phase": "build"
+        },
+        "stage": "amem_analysis",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "251d9b56d1080c6e7094e1613c86bc25aa7d18c412161b524a3c2b1d8ee2fe4f",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 3875.008200062439,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:31:15.912158+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 4,
+          "phase": "build"
+        },
+        "stage": "amem_analysis",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "34ac4a4e435af4f36f2111e2ab523a5d2529ef1673cbbdc37f6a6a57876c3053",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 3920.754399849102,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:33:24.880832+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 0,
+          "phase": "retrieval",
+          "query_id": "c0_q101"
+        },
+        "stage": "amem_query_keywords",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "31d023369fb38436586b166fbd79308ec76c6180fe9c202746625090d6acddb4",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 5031.177199911326,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:47:58.529388+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 6,
+          "phase": "build"
+        },
+        "stage": "amem_evolution",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "a5da47718aeabb6c924289b09fbe521527b3959149beaea1c04db4da69f575af",
+        "attempt": 1,
+        "status": 503,
+        "latency_ms": 35645.94849990681,
+        "usage": {},
+        "resolved_model": null,
+        "request_id": null,
+        "cache_hit": false,
+        "error": "{'code': 503, 'message': 'The request timed out. Please try again.', 'status': 'UNAVAILABLE'}"
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:52:33.706276+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 3,
+          "phase": "retrieval",
+          "query_id": "c3_q86"
+        },
+        "stage": "amem_query_keywords",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "aafbeb291c8408ca6cf55474521b67a17306ae2840dec75a38cc975364e8be19",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 5033.38750009425,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_format_v2\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T17:54:05.793613+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 6,
+          "phase": "retrieval",
+          "query_id": "c6_q139"
+        },
+        "stage": "amem_query_keywords",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "dffee0519f86de3ef31dfa9740b0e175d58c2e0fd252eca52c441e1bad72e513",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 5038.4374998975545,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+        "usage_unknown": true
+      }
+    },
+    {
+      "ledger": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\amem_native_v4\\work\\api_method\\api_calls.jsonl",
+      "row": {
+        "timestamp_utc": "2026-10-08T21:02:28.192289+00:00",
+        "context": {
+          "method": "amem",
+          "conversation": 2,
+          "phase": "retrieval",
+          "query_id": "c2_q6"
+        },
+        "stage": "amem_query_keywords",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "8ee04901ecd04281399f5db5e682914b6d2f7032059d52a983a2c72caff2f834",
+        "attempt": 1,
+        "status": "transport_error",
+        "latency_ms": 5033.209300134331,
+        "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.5-flash:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))",
+        "usage_unknown": true
+      }
+    }
+  ],
+  "usage_unknown_definition": "Any physical attempt missing promptTokenCount, candidatesTokenCount or totalTokenCount. Optional thoughtsTokenCount is reported separately.",
+  "correction": "v1 counted only explicit usage_unknown flags (14 transport errors). One HTTP503 has usage={} and no flag, so total missing token telemetry is15. HTTP503 cost is unknown, never assumed zero.",
+  "original_usage_review": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\amem_retrieval_continuation_v1\\result_review_v1\\independent_usage_chain_v1.json",
+    "sha256": "f599528b5f300de8e8bdda3c1378bce099b29314657d11b9d40762c309270e05"
+  }
+}

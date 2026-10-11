@@ -1,0 +1,1116 @@
+{
+  "schema": "gemini25-ablation-canonical-comparison-v1",
+  "status": "passed_final_canonical_comparison_ready_for_qualified_delivery",
+  "started_utc": "2026-10-07T23:22:55.067512+00:00",
+  "finished_utc": "2026-10-07T23:22:59.089303+00:00",
+  "elapsed_seconds": 4.015999999828637,
+  "observer_cpu_seconds": 3.984375,
+  "canonical_summary": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\heartbeat_20261007T1814\\billing_resume_v1\\live_v1\\final_summary_v1.json",
+    "sha256": "a73ac20650ac3f135ae07404ca4042a1ccb42fe1574ca9109c5edd63fb2d15d3"
+  },
+  "independent_aggregation": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\result_review_v1\\independent_aggregation_v1.json",
+    "sha256": "4390d9a836046a53baae990dd1473aa0fcbb0354f45b6f3f7a0a2a390c371389"
+  },
+  "independent_usage": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\result_review_v1\\independent_usage_v1.json",
+    "sha256": "dbca0c9220a2e56fb8989e8e1de98f5dcc6251da06fef2e0f79bc99cf1ac7806"
+  },
+  "usage_binding": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\result_review_v1\\usage_binding_v1.json",
+    "sha256": "e48a6e6e4e9c671feaf108e740cfc3513f75f62e38c9ffa957f4796c0386d910"
+  },
+  "canonical_usage_comparison": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\result_review_v1\\canonical_usage_comparison_v1.json",
+    "sha256": "fb42ae704c8a5b19714902f0641823bb90f34a3a423174cf7d30a792a7d75ca0"
+  },
+  "mandatory_qa_raw_seal": {
+    "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007_recovery_v1\\qa_raw_audit_seal.json",
+    "sha256": "47add7457042dc06e1ebbc249d400290735b94d54fe3a262b26465b04c88260f"
+  },
+  "root_delivery_report_review": {
+    "pointer": {
+      "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\final_results_2026-10-08.md",
+      "sha256": "36f271f06d2b1e5effde8c85f4545ffa7a5771902114469ce40109ca8c0612f8"
+    },
+    "main_tables_categories_usage_and_cumulative_limits_checked": true,
+    "blocking_findings": [],
+    "nonblocking_note": "The narrative says both cumulative Judge point increments exceed3pp; this is numerically true for this run, but not a claim that independent components or confidence bounds each exceed3pp. The report already disclaims independent isolation and statistical significance; this comparison adds explicit exploratory intervals.",
+    "scope_limit": "Writer semantic-review coverage and historical-source immutability narrative were not reaudited from original banks in this final table review."
+  },
+  "delivery_readiness": {
+    "ready_for_qualified_result_delivery": true,
+    "blocking_mismatches": [],
+    "canonical_no_invalid_artifacts": true,
+    "scientific_limitations_required": true
+  },
+  "coverage": {
+    "unique_slots": 4620,
+    "identical_views": 2,
+    "reader_judge_leaves_rechecked": 9240,
+    "canonical_input_SHA_entries_match_mandatory_seal": 43215,
+    "paired_transition_sets": 75,
+    "bootstrap_cells": 45,
+    "bootstrap_samples_per_eligible_cell": 2000,
+    "bootstrap_seed": 0,
+    "clusters": 10,
+    "fixed_per_arm": 1540,
+    "firstpass_total": 4620,
+    "recovery_total": 0,
+    "preserved_valid_NO": 948,
+    "full_source_raw_API_replay_repeated": false
+  },
+  "checks": {
+    "all_per_query_metrics_and_labels_exact_match": true,
+    "all_reader_answer_judge_text_events_match_bound_leaves": true,
+    "all_three_arm_category_conversation_tables_match": true,
+    "all_pairs_and_category_gain_loss_identities_match": true,
+    "all45_bootstrap_cells_independently_reproduced": true,
+    "same_complete_firstpass_and_recovery_views": true,
+    "all_summary_and_technical_code_hashes_match": true,
+    "zero_unknown_intent_or_success_missing_raw": true,
+    "no_usage_count_token_or_attribution_mismatch": true
+  },
+  "arms": {
+    "baseline": {
+      "fixed_denominator": 1540,
+      "reader_valid": 1540,
+      "judge_valid": 1540,
+      "official_locomo_f1_mean": 0.5322163572573786,
+      "custom_token_f1_mean": 0.5113850159675131,
+      "judge_correct_count": 1164,
+      "judge_incorrect_count": 376,
+      "judge_accuracy_valid": 0.7558441558441559,
+      "judge_accuracy_fixed": 0.7558441558441559
+    },
+    "r03_original": {
+      "fixed_denominator": 1540,
+      "reader_valid": 1540,
+      "judge_valid": 1540,
+      "official_locomo_f1_mean": 0.5488688463227869,
+      "custom_token_f1_mean": 0.5249913245413594,
+      "judge_correct_count": 1213,
+      "judge_incorrect_count": 327,
+      "judge_accuracy_valid": 0.7876623376623376,
+      "judge_accuracy_fixed": 0.7876623376623376
+    },
+    "original_multi_source_closure": {
+      "fixed_denominator": 1540,
+      "reader_valid": 1540,
+      "judge_valid": 1540,
+      "official_locomo_f1_mean": 0.5988439695410345,
+      "custom_token_f1_mean": 0.5740820476108655,
+      "judge_correct_count": 1295,
+      "judge_incorrect_count": 245,
+      "judge_accuracy_valid": 0.8409090909090909,
+      "judge_accuracy_fixed": 0.8409090909090909
+    }
+  },
+  "paired_bootstrap_and_transitions": {
+    "r03_original_minus_baseline": {
+      "overall": {
+        "n": 1540,
+        "gains": 92,
+        "losses": 43,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.01665248906540825,
+            "delta_pp": 1.6652489065408251,
+            "interval": [
+              0.011326066311004596,
+              0.022557822048759144
+            ],
+            "interval_pp": [
+              1.1326066311004597,
+              2.2557822048759144
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.01360630857384644,
+            "delta_pp": 1.360630857384644,
+            "interval": [
+              0.006499400795314052,
+              0.020741514350152923
+            ],
+            "interval_pp": [
+              0.6499400795314052,
+              2.0741514350152923
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.031818181818181815,
+            "delta_pp": 3.1818181818181817,
+            "interval": [
+              0.019173061866741198,
+              0.04322393822393822
+            ],
+            "interval_pp": [
+              1.9173061866741197,
+              4.322393822393822
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_1": {
+        "n": 282,
+        "gains": 28,
+        "losses": 16,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.05058280449282306,
+            "delta_pp": 5.058280449282306,
+            "interval": [
+              0.017580173005417463,
+              0.08763774252923359
+            ],
+            "interval_pp": [
+              1.7580173005417463,
+              8.763774252923358
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.031565221192213326,
+            "delta_pp": 3.1565221192213326,
+            "interval": [
+              0.005755983666270936,
+              0.057903047801862756
+            ],
+            "interval_pp": [
+              0.5755983666270936,
+              5.7903047801862755
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.0425531914893617,
+            "delta_pp": 4.25531914893617,
+            "interval": [
+              -0.006781990797367347,
+              0.10434957220185086
+            ],
+            "interval_pp": [
+              -0.6781990797367348,
+              10.434957220185085
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_2": {
+        "n": 321,
+        "gains": 12,
+        "losses": 9,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.024624305292732757,
+            "delta_pp": 2.4624305292732758,
+            "interval": [
+              0.0011138999016159464,
+              0.05272624807236375
+            ],
+            "interval_pp": [
+              0.11138999016159463,
+              5.272624807236375
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.02399309458431766,
+            "delta_pp": 2.399309458431766,
+            "interval": [
+              0.00012017508495809153,
+              0.052357470677379746
+            ],
+            "interval_pp": [
+              0.012017508495809152,
+              5.235747067737974
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.009345794392523364,
+            "delta_pp": 0.9345794392523363,
+            "interval": [
+              -0.009317495791490103,
+              0.029128577732946654
+            ],
+            "interval_pp": [
+              -0.9317495791490102,
+              2.9128577732946654
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_3": {
+        "n": 96,
+        "gains": 7,
+        "losses": 3,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.02690405115169595,
+            "delta_pp": 2.690405115169595,
+            "interval": null,
+            "interval_pp": null,
+            "eligible": false,
+            "samples": 0,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.02890367541456157,
+            "delta_pp": 2.8903675414561567,
+            "interval": null,
+            "interval_pp": null,
+            "eligible": false,
+            "samples": 0,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.041666666666666664,
+            "delta_pp": 4.166666666666666,
+            "interval": null,
+            "interval_pp": null,
+            "eligible": false,
+            "samples": 0,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_4": {
+        "n": 841,
+        "gains": 45,
+        "losses": 15,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.0010621776268996154,
+            "delta_pp": 0.10621776268996154,
+            "interval": [
+              -0.01190442862511954,
+              0.012037701817909799
+            ],
+            "interval_pp": [
+              -1.1904428625119539,
+              1.2037701817909798
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.0018737058574976049,
+            "delta_pp": 0.18737058574976048,
+            "interval": [
+              -0.012261452467151436,
+              0.013302930520913744
+            ],
+            "interval_pp": [
+              -1.2261452467151437,
+              1.3302930520913743
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.0356718192627824,
+            "delta_pp": 3.56718192627824,
+            "interval": [
+              0.018038482047635973,
+              0.05424534336918947
+            ],
+            "interval_pp": [
+              1.8038482047635973,
+              5.424534336918947
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      }
+    },
+    "original_multi_source_closure_minus_baseline": {
+      "overall": {
+        "n": 1540,
+        "gains": 163,
+        "losses": 32,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.06662761228365588,
+            "delta_pp": 6.6627612283655875,
+            "interval": [
+              0.055197956998758756,
+              0.08010802369553004
+            ],
+            "interval_pp": [
+              5.519795699875876,
+              8.010802369553003
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.0626970316433525,
+            "delta_pp": 6.269703164335249,
+            "interval": [
+              0.0511109596695939,
+              0.07502726902030421
+            ],
+            "interval_pp": [
+              5.11109596695939,
+              7.502726902030421
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.08506493506493507,
+            "delta_pp": 8.506493506493506,
+            "interval": [
+              0.07289211020816556,
+              0.09702598475886351
+            ],
+            "interval_pp": [
+              7.289211020816556,
+              9.70259847588635
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_1": {
+        "n": 282,
+        "gains": 33,
+        "losses": 10,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.062252316509717555,
+            "delta_pp": 6.225231650971756,
+            "interval": [
+              0.026240339223714094,
+              0.10846417315644562
+            ],
+            "interval_pp": [
+              2.6240339223714093,
+              10.846417315644562
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.04283909357430533,
+            "delta_pp": 4.283909357430533,
+            "interval": [
+              0.022845938532576316,
+              0.06854370351653613
+            ],
+            "interval_pp": [
+              2.2845938532576318,
+              6.854370351653613
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.08156028368794327,
+            "delta_pp": 8.156028368794328,
+            "interval": [
+              0.043333333333333335,
+              0.12245099620876017
+            ],
+            "interval_pp": [
+              4.333333333333334,
+              12.245099620876017
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_2": {
+        "n": 321,
+        "gains": 21,
+        "losses": 8,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.046914369811566076,
+            "delta_pp": 4.691436981156608,
+            "interval": [
+              0.033399230407142634,
+              0.06071462560190613
+            ],
+            "interval_pp": [
+              3.3399230407142633,
+              6.071462560190613
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.0463604244742896,
+            "delta_pp": 4.636042447428959,
+            "interval": [
+              0.032229277250376734,
+              0.060179453405494215
+            ],
+            "interval_pp": [
+              3.2229277250376733,
+              6.017945340549422
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.040498442367601244,
+            "delta_pp": 4.049844236760125,
+            "interval": [
+              0.022220464135021097,
+              0.05698005698005698
+            ],
+            "interval_pp": [
+              2.2220464135021096,
+              5.698005698005698
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_3": {
+        "n": 96,
+        "gains": 9,
+        "losses": 4,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": -0.009374250651712724,
+            "delta_pp": -0.9374250651712724,
+            "interval": null,
+            "interval_pp": null,
+            "eligible": false,
+            "samples": 0,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": -0.006997931314713557,
+            "delta_pp": -0.6997931314713557,
+            "interval": null,
+            "interval_pp": null,
+            "eligible": false,
+            "samples": 0,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.052083333333333336,
+            "delta_pp": 5.208333333333334,
+            "interval": null,
+            "interval_pp": null,
+            "eligible": false,
+            "samples": 0,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_4": {
+        "n": 841,
+        "gains": 100,
+        "losses": 10,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.08429463140801596,
+            "delta_pp": 8.429463140801596,
+            "interval": [
+              0.06293970672173803,
+              0.10320023533602976
+            ],
+            "interval_pp": [
+              6.293970672173803,
+              10.320023533602976
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.08354686027678272,
+            "delta_pp": 8.354686027678273,
+            "interval": [
+              0.062181085252791736,
+              0.10214125758434642
+            ],
+            "interval_pp": [
+              6.218108525279174,
+              10.214125758434642
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.1070154577883472,
+            "delta_pp": 10.70154577883472,
+            "interval": [
+              0.09147496631752791,
+              0.12060954983086129
+            ],
+            "interval_pp": [
+              9.14749663175279,
+              12.060954983086129
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      }
+    },
+    "original_multi_source_closure_minus_r03_original": {
+      "overall": {
+        "n": 1540,
+        "gains": 117,
+        "losses": 35,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.04997512321824763,
+            "delta_pp": 4.997512321824763,
+            "interval": [
+              0.035935529281656144,
+              0.06556544266842439
+            ],
+            "interval_pp": [
+              3.5935529281656144,
+              6.5565442668424385
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.04909072306950605,
+            "delta_pp": 4.909072306950605,
+            "interval": [
+              0.03500384909252883,
+              0.0652738346486165
+            ],
+            "interval_pp": [
+              3.5003849092528827,
+              6.52738346486165
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.053246753246753244,
+            "delta_pp": 5.324675324675324,
+            "interval": [
+              0.03592888637191052,
+              0.06982157415458093
+            ],
+            "interval_pp": [
+              3.5928886371910522,
+              6.982157415458093
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_1": {
+        "n": 282,
+        "gains": 22,
+        "losses": 11,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.011669512016894498,
+            "delta_pp": 1.1669512016894499,
+            "interval": [
+              -0.0146944974545344,
+              0.040417074098013525
+            ],
+            "interval_pp": [
+              -1.46944974545344,
+              4.041707409801353
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.011273872382091996,
+            "delta_pp": 1.1273872382091996,
+            "interval": [
+              -0.01269261726724031,
+              0.03423214886420182
+            ],
+            "interval_pp": [
+              -1.269261726724031,
+              3.423214886420182
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.03900709219858156,
+            "delta_pp": 3.900709219858156,
+            "interval": [
+              -0.004220307029356315,
+              0.08012881679389314
+            ],
+            "interval_pp": [
+              -0.42203070293563144,
+              8.012881679389313
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_2": {
+        "n": 321,
+        "gains": 17,
+        "losses": 7,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.02229006451883332,
+            "delta_pp": 2.2290064518833317,
+            "interval": [
+              0.0014843548870494229,
+              0.04220929750360466
+            ],
+            "interval_pp": [
+              0.14843548870494228,
+              4.220929750360466
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.022367329889971945,
+            "delta_pp": 2.2367329889971943,
+            "interval": [
+              3.250405120825012e-05,
+              0.044127411742309365
+            ],
+            "interval_pp": [
+              0.0032504051208250124,
+              4.412741174230937
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.03115264797507788,
+            "delta_pp": 3.115264797507788,
+            "interval": [
+              0.010167779489813388,
+              0.04985337243401759
+            ],
+            "interval_pp": [
+              1.0167779489813389,
+              4.9853372434017595
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_3": {
+        "n": 96,
+        "gains": 4,
+        "losses": 3,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": -0.03627830180340868,
+            "delta_pp": -3.627830180340868,
+            "interval": null,
+            "interval_pp": null,
+            "eligible": false,
+            "samples": 0,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": -0.03590160672927512,
+            "delta_pp": -3.5901606729275124,
+            "interval": null,
+            "interval_pp": null,
+            "eligible": false,
+            "samples": 0,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.010416666666666666,
+            "delta_pp": 1.0416666666666665,
+            "interval": null,
+            "interval_pp": null,
+            "eligible": false,
+            "samples": 0,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      },
+      "category_4": {
+        "n": 841,
+        "gains": 74,
+        "losses": 14,
+        "metrics": {
+          "official_locomo_f1": {
+            "delta": 0.08323245378111634,
+            "delta_pp": 8.323245378111634,
+            "interval": [
+              0.06681926103716802,
+              0.10018220397733574
+            ],
+            "interval_pp": [
+              6.681926103716802,
+              10.018220397733574
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "custom_token_f1": {
+            "delta": 0.08167315441928513,
+            "delta_pp": 8.167315441928514,
+            "interval": [
+              0.0663863878582674,
+              0.09826729011230766
+            ],
+            "interval_pp": [
+              6.638638785826741,
+              9.826729011230766
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          },
+          "judge_correct": {
+            "delta": 0.0713436385255648,
+            "delta_pp": 7.13436385255648,
+            "interval": [
+              0.04842422278313308,
+              0.09472519241464683
+            ],
+            "interval_pp": [
+              4.842422278313308,
+              9.472519241464683
+            ],
+            "eligible": true,
+            "samples": 2000,
+            "seed": 0,
+            "clusters": 10,
+            "independently_reproduced": true
+          }
+        }
+      }
+    }
+  },
+  "numerical_precision": {
+    "absolute_tolerance": 1e-12,
+    "comparisons": 315,
+    "nonzero_rounding_difference_count": 90,
+    "maximum_absolute_difference": 1.3322676295501878e-15,
+    "examples": [
+      {
+        "path": "baseline/official_locomo_f1/complete",
+        "canonical": 0.5322163572573775,
+        "independent": 0.5322163572573786,
+        "absolute_difference": 1.1102230246251565e-15
+      },
+      {
+        "path": "baseline/official_locomo_f1/fixed",
+        "canonical": 0.5322163572573775,
+        "independent": 0.5322163572573786,
+        "absolute_difference": 1.1102230246251565e-15
+      },
+      {
+        "path": "baseline/official_locomo_f1/sensitivity",
+        "canonical": 0.5322163572573775,
+        "independent": 0.5322163572573786,
+        "absolute_difference": 1.1102230246251565e-15
+      },
+      {
+        "path": "baseline/custom_token_f1/complete",
+        "canonical": 0.5113850159675121,
+        "independent": 0.5113850159675131,
+        "absolute_difference": 9.992007221626409e-16
+      },
+      {
+        "path": "baseline/custom_token_f1/fixed",
+        "canonical": 0.5113850159675121,
+        "independent": 0.5113850159675131,
+        "absolute_difference": 9.992007221626409e-16
+      },
+      {
+        "path": "baseline/custom_token_f1/sensitivity",
+        "canonical": 0.5113850159675121,
+        "independent": 0.5113850159675131,
+        "absolute_difference": 9.992007221626409e-16
+      },
+      {
+        "path": "baseline/by_category/1/official_locomo_f1",
+        "canonical": 0.48045669374753414,
+        "independent": 0.48045669374753386,
+        "absolute_difference": 2.7755575615628914e-16
+      },
+      {
+        "path": "baseline/by_category/1/custom_token_f1",
+        "canonical": 0.4279063538865085,
+        "independent": 0.4279063538865083,
+        "absolute_difference": 2.220446049250313e-16
+      },
+      {
+        "path": "baseline/by_category/2/official_locomo_f1",
+        "canonical": 0.570609167571785,
+        "independent": 0.5706091675717844,
+        "absolute_difference": 6.661338147750939e-16
+      },
+      {
+        "path": "baseline/by_category/2/custom_token_f1",
+        "canonical": 0.5673166387295036,
+        "independent": 0.567316638729503,
+        "absolute_difference": 5.551115123125783e-16
+      },
+      {
+        "path": "baseline/by_category/3/custom_token_f1",
+        "canonical": 0.2711414817220845,
+        "independent": 0.2711414817220846,
+        "absolute_difference": 5.551115123125783e-17
+      },
+      {
+        "path": "baseline/by_category/4/official_locomo_f1",
+        "canonical": 0.5613324901369254,
+        "independent": 0.5613324901369251,
+        "absolute_difference": 3.3306690738754696e-16
+      }
+    ],
+    "explanation": "Per-query scores/labels match exactly. Tiny aggregate differences are sequential sum versus independent math.fsum or cluster summation order; no scores were replaced."
+  },
+  "usage_comparison": {
+    "groups_compared": 17,
+    "scalar_or_dictionary_checks": 357,
+    "ledger_pointer_matches": 36,
+    "numerical_or_attribution_mismatches": [],
+    "semantic_differences": [
+      {
+        "kind": "unknown_usage_definition",
+        "severity": "interpretation_only",
+        "canonical_precomputation_unknown": 5072,
+        "independent_precomputation_explicit_flag": 145,
+        "independent_precomputation_empty_or_absent": 5072,
+        "additional_empty_or_absent_without_explicit_flag": 4927,
+        "canonical_qa_unknown": 10,
+        "independent_qa_explicit_flag": 10,
+        "all_run_canonical_broad_unknown": 5082,
+        "all_run_explicit_flags": 155,
+        "meaning": "Canonical counts empty/missing usage as well as explicit flags. It is not the explicit flag count and is not a count of any single missing token field. In this run the broader total agrees exactly with the independent empty-or-absent usage count."
+      },
+      {
+        "kind": "empty_thinking_sum",
+        "severity": "interpretation_only",
+        "canonical_recorded_sum": 0,
+        "independent_sum_reported": null,
+        "recorded_thinking_attempts": 0,
+        "canonical_missing_thinking_is_not_zero": true,
+        "meaning": "Canonical zero is the empty arithmetic sum with zero observations and all relevant fields missing. It does not establish actual thinking consumption was zero. Independent null is the direct unavailable representation; thinkingBudget=0 is configuration, not observed usage."
+      },
+      {
+        "kind": "generic_missing_vs_not_exposed",
+        "severity": "classification_only",
+        "meaning": "Canonical counts absent fields for every physical model operation as missing; independent separates fields not exposed for JEV/embedding from applicable fields that are absent. Canonical missing equals independent applicable_missing plus not_exposed in every compared group."
+      },
+      {
+        "kind": "provider_cached_input_token_coverage",
+        "severity": "coverage_only",
+        "canonical_field_present": false,
+        "independent_reported_cached_token_sum": 513692,
+        "writer_recorded_cached_tokens": 511667,
+        "qa_recorded_cached_tokens": 2025,
+        "meaning": "Canonical usage does not separately expose cachedContentTokenCount. Independent recorded sums are a subset of prompt tokens on 65 physical calls; these must not be added to prompt tokens or interpreted as local cache events. Missing cached fields remain unknown."
+      },
+      {
+        "kind": "producer_arm_attribution",
+        "severity": "matched_limitation",
+        "meaning": "All three producer-arm groups match. Shared requests are charged to the physical producer arm and cache consumers are counted separately; this is not independent marginal cost per arm."
+      }
+    ],
+    "overall_reconciliation": {
+      "physical_attempts": 28396,
+      "local_cache_events": 2352,
+      "recorded_gemini_prompt_tokens": 10632973,
+      "recorded_gemini_candidates_tokens": 201432,
+      "recorded_jev_input_tokens": 59664139,
+      "recorded_jev_output_tokens": 3112280,
+      "thinking_reported": null,
+      "embedding_recorded_token_total": null,
+      "total_cost_usd": null
+    }
+  },
+  "phase_intent_counts": {
+    "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007": {
+      "unknown_intent_count": 0,
+      "ended_success_missing_raw_count": 0
+    },
+    "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007_recovery_v1": {
+      "unknown_intent_count": 0,
+      "ended_success_missing_raw_count": 0
+    }
+  },
+  "live_completed_status": {
+    "pointer": {
+      "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\heartbeat_20261007T1814\\billing_resume_v1\\live_v1\\status.json",
+      "sha256": "ee35bfb01cf374e591c60f673536fb9e7945441f972bc0eadc0c5eb28b4f5ee2"
+    },
+    "status": "completed_awaiting_research_discussion",
+    "stage": "final_summary_v1"
+  },
+  "scientific_limits": [
+    "One all-stage Gemini2.5 rebuild/run on the previously exposed ten-conversation cohort; no repeated-run variance or blind held-out validation.",
+    "Cumulative baseline -> original R03 QFS -> original R03+new R05+C. The final increment is the added bundle conditional on R03, not an independent source-only effect or factorial separation of source recovery and closure.",
+    "Observed Judge point increments are+3.181818pp and+5.324675pp; these do not establish two independent components each reliably exceeding3pp. The first exploratory interval crosses3pp.",
+    "Gemini2.5 thinkingBudget=0 with changed Writer/Reader/Judge and rebuilt bank is not equivalent to Gemini3.8 low thinking or an isolated model-component substitution.",
+    "Bootstrap uses10 conversation clusters,2000 resampled draws,seed0 and micro-average paired question differences. Intervals are exploratory/descriptive, not a confirmatory causal or blind-validation significance claim.",
+    "Official category1 F1 is best-match reference-piece averaging, not complete-set exactness; custom F1 and Judge accuracy remain distinct.",
+    "Shared exact request cache consumers are correlated. Producer-arm usage is not marginal arm cost. Missing thinking/token telemetry and invoice cost remain unknown."
+  ],
+  "scope": "Canonical/independent artifact comparison, exact persisted Reader/Judge leaf checks, statistics-only bootstrap reconstruction, usage reconciliation and root-report table review. No source/manifest/summary entrypoint, full raw replay or provider instantiated.",
+  "side_effects": {
+    "api_calls": 0,
+    "credential_reads": 0,
+    "production_writes": 0,
+    "source_changes": 0,
+    "prior_sealed_report_changes": 0,
+    "process_controls": 0
+  },
+  "markdown": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\result_review_v1\\canonical_comparison_v1.md",
+    "sha256": "c3861a9515a1364a0ab452c1b63cb11be835c57a08b567e50101de8e9d6116c3"
+  },
+  "content_sha256": "06fe7db449dff837434d7f42449aa0aeab0219614b82b270286044a8b06be81d"
+}

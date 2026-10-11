@@ -1,0 +1,4 @@
+# Preserve the exact bytes of frozen scientific evidence and source hashes.
+* -text
+*.pdf binary
+*.zip binary

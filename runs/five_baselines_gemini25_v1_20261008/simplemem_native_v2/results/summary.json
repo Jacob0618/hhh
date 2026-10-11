@@ -1,0 +1,247 @@
+{
+  "schema": "simplemem-native-continuation-union-v2",
+  "method": "simplemem",
+  "self_root": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem_native_v2",
+  "parent_root": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem",
+  "audit_status": "no_invalid_artifacts",
+  "created_utc": "2026-10-09T06:59:52.113241+00:00",
+  "firstpass": {
+    "slots": 1540,
+    "reader_valid": 1470,
+    "judge_valid": 1469,
+    "missing_reader": 70,
+    "missing_judge": 71,
+    "missing_imputed": false,
+    "official_f1_valid_percent": 56.92573223731486,
+    "custom_f1_valid_percent": 53.81429998674778,
+    "judge_valid_percent": 82.09666439754935,
+    "official_f1_full_cohort_percent": null,
+    "judge_full_cohort_percent": null,
+    "official_f1_missing_bounds_percent": [
+      54.33819895380055,
+      58.8836534992551
+    ],
+    "judge_missing_bounds_percent": [
+      78.31168831168831,
+      82.92207792207792
+    ]
+  },
+  "completed_firstpass": {
+    "slots": 1540,
+    "reader_valid": 1540,
+    "judge_valid": 1539,
+    "missing_reader": 0,
+    "missing_judge": 1,
+    "missing_imputed": false,
+    "official_f1_valid_percent": 56.696199141570254,
+    "custom_f1_valid_percent": 53.728360866850224,
+    "judge_valid_percent": 82.06627680311891,
+    "official_f1_full_cohort_percent": 56.696199141570254,
+    "judge_full_cohort_percent": null,
+    "official_f1_missing_bounds_percent": [
+      56.696199141570254,
+      56.696199141570254
+    ],
+    "judge_missing_bounds_percent": [
+      82.01298701298701,
+      82.07792207792208
+    ]
+  },
+  "effective": {
+    "slots": 1540,
+    "reader_valid": 1540,
+    "judge_valid": 1540,
+    "missing_reader": 0,
+    "missing_judge": 0,
+    "missing_imputed": false,
+    "official_f1_valid_percent": 56.696199141570254,
+    "custom_f1_valid_percent": 53.728360866850224,
+    "judge_valid_percent": 82.01298701298701,
+    "official_f1_full_cohort_percent": 56.696199141570254,
+    "judge_full_cohort_percent": 82.01298701298701,
+    "official_f1_missing_bounds_percent": [
+      56.696199141570254,
+      56.696199141570254
+    ],
+    "judge_missing_bounds_percent": [
+      82.01298701298701,
+      82.01298701298701
+    ]
+  },
+  "qa_recovery_jobs": 1,
+  "retrieval_continued": 70,
+  "inherited_original_qa": 1470,
+  "by_category": {
+    "1": {
+      "slots": 282,
+      "reader_valid": 282,
+      "judge_valid": 282,
+      "missing_reader": 0,
+      "missing_judge": 0,
+      "missing_imputed": false,
+      "official_f1_valid_percent": 52.241218724654956,
+      "custom_f1_valid_percent": 43.02282269278064,
+      "judge_valid_percent": 75.177304964539,
+      "official_f1_full_cohort_percent": 52.241218724654956,
+      "judge_full_cohort_percent": 75.177304964539,
+      "official_f1_missing_bounds_percent": [
+        52.241218724654956,
+        52.24121872465496
+      ],
+      "judge_missing_bounds_percent": [
+        75.177304964539,
+        75.177304964539
+      ]
+    },
+    "2": {
+      "slots": 321,
+      "reader_valid": 321,
+      "judge_valid": 321,
+      "missing_reader": 0,
+      "missing_judge": 0,
+      "missing_imputed": false,
+      "official_f1_valid_percent": 49.28653455514595,
+      "custom_f1_valid_percent": 48.83427060997155,
+      "judge_valid_percent": 79.4392523364486,
+      "official_f1_full_cohort_percent": 49.28653455514595,
+      "judge_full_cohort_percent": 79.4392523364486,
+      "official_f1_missing_bounds_percent": [
+        49.28653455514595,
+        49.28653455514595
+      ],
+      "judge_missing_bounds_percent": [
+        79.4392523364486,
+        79.4392523364486
+      ]
+    },
+    "3": {
+      "slots": 96,
+      "reader_valid": 96,
+      "judge_valid": 96,
+      "missing_reader": 0,
+      "missing_judge": 0,
+      "missing_imputed": false,
+      "official_f1_valid_percent": 33.2966469950125,
+      "custom_f1_valid_percent": 28.97503719516006,
+      "judge_valid_percent": 47.916666666666664,
+      "official_f1_full_cohort_percent": 33.2966469950125,
+      "judge_full_cohort_percent": 47.916666666666664,
+      "official_f1_missing_bounds_percent": [
+        33.2966469950125,
+        33.2966469950125
+      ],
+      "judge_missing_bounds_percent": [
+        47.916666666666664,
+        47.916666666666664
+      ]
+    },
+    "4": {
+      "slots": 841,
+      "reader_valid": 841,
+      "judge_valid": 841,
+      "missing_reader": 0,
+      "missing_judge": 0,
+      "missing_imputed": false,
+      "official_f1_valid_percent": 63.68925956473537,
+      "custom_f1_valid_percent": 62.01169476700234,
+      "judge_valid_percent": 89.179548156956,
+      "official_f1_full_cohort_percent": 63.68925956473537,
+      "judge_full_cohort_percent": 89.179548156956,
+      "official_f1_missing_bounds_percent": [
+        63.68925956473537,
+        63.68925956473537
+      ],
+      "judge_missing_bounds_percent": [
+        89.179548156956,
+        89.179548156956
+      ]
+    }
+  },
+  "usage": {
+    "owners": {
+      "original": {
+        "physical_attempts": 14845,
+        "exact_cache_hits": 198,
+        "status_counts": {
+          "200": 14817,
+          "transport_error": 27,
+          "429": 1
+        },
+        "ledger_sha256": {
+          "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem\\work\\api_firstpass\\api_calls.jsonl": "287ca21048198d46474b4dc1482b56bae8102c4cad75c1c5574199a276c8541c",
+          "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem\\work\\api_method\\api_calls.jsonl": "4ab679c6c602b04f7f8015ae7b18c688a298bcd7beb3e1999e07c66b87f4619a"
+        },
+        "usage_unknown_or_missing": 4719,
+        "tokens": {
+          "promptTokenCount": {
+            "reported_sum": 16949474,
+            "reported_attempts": 10126
+          },
+          "candidatesTokenCount": {
+            "reported_sum": 1973091,
+            "reported_attempts": 10126
+          },
+          "thoughtsTokenCount": {
+            "reported_sum": null,
+            "reported_attempts": 0
+          },
+          "totalTokenCount": {
+            "reported_sum": 18922565,
+            "reported_attempts": 10126
+          }
+        },
+        "cost_usd": null
+      },
+      "continuation": {
+        "physical_attempts": 460,
+        "exact_cache_hits": 352,
+        "status_counts": {
+          "200": 459,
+          "503": 1
+        },
+        "ledger_sha256": {
+          "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem_native_v2\\work\\api_firstpass\\api_calls.jsonl": "0eb872cf679f745dbc191985ad7c66f0b59849c19505416e6d7e7b8fb955881a",
+          "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem_native_v2\\work\\api_method\\api_calls.jsonl": "704dae7bad9629ecac2dd83dcdfe41acda95cc38d7e84029baad573b8c063e17",
+          "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem_native_v2\\work\\api_recovery\\api_calls.jsonl": "af7d38de457320b9f363d498a4c1a11a2317fab240501c5030e286f0f2285898"
+        },
+        "usage_unknown_or_missing": 164,
+        "tokens": {
+          "promptTokenCount": {
+            "reported_sum": 899359,
+            "reported_attempts": 296
+          },
+          "candidatesTokenCount": {
+            "reported_sum": 27451,
+            "reported_attempts": 296
+          },
+          "thoughtsTokenCount": {
+            "reported_sum": null,
+            "reported_attempts": 0
+          },
+          "totalTokenCount": {
+            "reported_sum": 926810,
+            "reported_attempts": 296
+          }
+        },
+        "cost_usd": null
+      }
+    },
+    "physical_attempts": 15305,
+    "exact_cache_hits": 550,
+    "cost_usd": null,
+    "note": "Original and continuation physical calls counted once. Prefix reuse and inherited QA are not independent repeats. Unreported usage/cost is unknown."
+  },
+  "parent_manifest": {
+    "path": "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem\\run_manifest.json",
+    "sha256": "cc8abbb44ed6e08f75825615ffa92c96250beffce08c48b8832171ec561db819"
+  },
+  "proof": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\heartbeat_20261009T0603\\simplemem_terminal_proof_v3.json",
+    "sha256": "3017a95473788ea72d00a4061b523028a84ac4764d1f1f80d5a16b60eaa7b6a2"
+  },
+  "limitations": "Gemini embedding replacement; native turn/window/planning/reflection and full context retained. Original 70 retrieval failures retained; independently qualified native compatibility continuation. No equal token budget claim.",
+  "audit_content_sha256": {
+    "raw_request_audit.json": "f292f324ec0bb0f57096d9d29e403c7dbadcb9983f45d618921a0d40b6951f8c",
+    "method_request_audit.json": "c3936b8371cf866add906b0444a6215bc84d8bc9ac01ae2241189097a2579504"
+  }
+}

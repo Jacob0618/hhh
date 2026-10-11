@@ -1,0 +1,232 @@
+{
+  "schema": "acl-paper-document-validation-v2",
+  "created_utc": "2026-10-08T12:18:35.185646+00:00",
+  "status": "passed_with_intentional_draft_gaps",
+  "artifact_hashes": {
+    "main.tex": "ebdeb4f04e8d2170f94e87606ea5c7e0031326b8ee1413b1e10e7633b8730f18",
+    "main.pdf": "1e8369dbc4c1540ee6bfbc465f3328f1631da31f836ae9845df2ad8d46f63408",
+    "references.bib": "fb688eee85082bde8e79932a64eb1d0e12f31e0720eb8d6a111fa271ca3f60bb",
+    "acl.sty": "19dfeddc2c0e448f3926a0bef048a9db3f3611b46265b760caabd7ada4f361de",
+    "acl_natbib.bst": "6fbb306202290f4b68e74ac1460a8b27398500cb6dfeb4492e74c457eae7cd1e",
+    "README.md": "055a36386f756c6354f16cdbf08787d91e868ac34a13273905bfb242dd095f78",
+    "validate_document_v2.py": "8af9e5776c6435896a2a286feef943d27adb822175755bda2682eba6300fb7a3",
+    "main.log": "439cc98d2ee3fe53e532701bdcdec9cc2f96bb5247e7c1c8b048d739283c9960",
+    "main.blg": "a61727fc1f6b424b6737996b55b09fd43313d87d654124338d7901e780d89a3b"
+  },
+  "preserved_v1_artifact_hashes": {
+    "validate_document.py": "b0b36c5df6482243343bb6535cb461d762ca70d5fe9ba7407d1430e2fe75369b",
+    "document_validation.json": "4d38f2614efe482506da9034335e0fa27ef6c9714b35f49be5e0181bc5d5f3fc",
+    "JEV_Mem_ACL2027_source_v1.zip": "0e1d3f5ef59d89637ff81a5b2fc8ecd28fefc82390605eff25753f1942596366"
+  },
+  "template": {
+    "commit": "d5adc823ff0f80f98c80405ca0ab66c68e684409",
+    "downloaded_utc": "2026-10-07T10:09:46.1324151Z",
+    "repository": "https://github.com/acl-org/acl-style-files",
+    "conference": "https://2027.aclweb.org/calls/main/"
+  },
+  "result_sources": {
+    "gemini38": {
+      "summary_path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\heartbeat_20261006T1052\\live_qa_v2\\final_summary_v1.json",
+      "sha256": "01aa05237a252832135f9c03122d16ee8d6f1aab0b0b2e97d16f2836533567e5",
+      "source_audit_status": "no_invalid_artifacts",
+      "reported_rows": {
+        "original_multi_source_closure": {
+          "official_f1_percent": "60.238",
+          "judge_percent": "84.545",
+          "n": 1540,
+          "judge_yes": 1302
+        },
+        "r03_original": {
+          "official_f1_percent": "52.547",
+          "judge_percent": "76.818",
+          "n": 1540,
+          "judge_yes": 1183
+        },
+        "baseline": {
+          "official_f1_percent": "51.044",
+          "judge_percent": "74.870",
+          "n": 1540,
+          "judge_yes": 1153
+        }
+      }
+    },
+    "gemini25": {
+      "summary_path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\heartbeat_20261007T1814\\billing_resume_v1\\live_v1\\final_summary_v1.json",
+      "sha256": "a73ac20650ac3f135ae07404ca4042a1ccb42fe1574ca9109c5edd63fb2d15d3",
+      "canonical_comparison_path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\result_review_v1\\canonical_comparison_v1.json",
+      "canonical_comparison_sha256": "a8929d04989181866ee5af2bf3715992174130922e869f22423a8710b34fdc1a",
+      "canonical_comparison_status": "passed_final_canonical_comparison_ready_for_qualified_delivery",
+      "source_audit_status": "no_invalid_artifacts",
+      "reported_rows": {
+        "baseline": {
+          "official_f1_percent": "53.222",
+          "custom_f1_percent": "51.139",
+          "judge_percent": "75.584",
+          "full_precision_means": {
+            "official_locomo_f1": 0.5322163572573775,
+            "custom_token_f1": 0.5113850159675121,
+            "judge_correct": 0.7558441558441559
+          },
+          "n": 1540,
+          "judge_yes": 1164
+        },
+        "r03_original": {
+          "official_f1_percent": "54.887",
+          "custom_f1_percent": "52.499",
+          "judge_percent": "78.766",
+          "full_precision_means": {
+            "official_locomo_f1": 0.5488688463227859,
+            "custom_token_f1": 0.5249913245413581,
+            "judge_correct": 0.7876623376623376
+          },
+          "n": 1540,
+          "judge_yes": 1213
+        },
+        "original_multi_source_closure": {
+          "official_f1_percent": "59.884",
+          "custom_f1_percent": "57.408",
+          "judge_percent": "84.091",
+          "full_precision_means": {
+            "official_locomo_f1": 0.5988439695410334,
+            "custom_token_f1": 0.5740820476108647,
+            "judge_correct": 0.8409090909090909
+          },
+          "n": 1540,
+          "judge_yes": 1295
+        }
+      },
+      "firstpass_slots": 4620,
+      "qa_recovery_slots": 0,
+      "comparison_mean_tolerance": 1e-12,
+      "repetitions": 1
+    }
+  },
+  "cumulative_design": {
+    "gemini38": "(+,+) -> (+,-) -> (-,-)",
+    "gemini25": "(-,-) -> (+,-) -> (+,+)",
+    "SER_includes_C": true,
+    "source_only_arm": false,
+    "isolated_SER_C_effect": false,
+    "judge_only_cross_model_effect": false,
+    "repeated_run_stability_claim": false
+  },
+  "methodology_unchanged_from_v1_source": true,
+  "tables": 3,
+  "figures": 0,
+  "blank_main_baselines": [
+    "Mem0",
+    "MemGPT",
+    "A-MEM",
+    "MemGAS"
+  ],
+  "empty_experiment_sections": {
+    "Selector Controls": true,
+    "Module Decomposition": true,
+    "Matched-Token Comparison": true,
+    "Generalization": true,
+    "Evidence Analysis": true,
+    "Hyperparameter Analysis": true
+  },
+  "citations": {
+    "count": 9,
+    "missing": [],
+    "unused": [],
+    "new_citations": 0,
+    "primary_source_review": "discussion/draft_story_review.md"
+  },
+  "exemplar_overlap": {
+    "exact_8_word_matches": [],
+    "limitation": "Heuristic only: reference extraction contains joined words; manual pattern/content reviews are also saved."
+  },
+  "compile": {
+    "engine": "Tectonic 0.17.0",
+    "exit_code": 0,
+    "execution_reported_by": "coordinating agent",
+    "log": "main.log",
+    "bibtex_log": "main.blg",
+    "pages": 8,
+    "page_text_lengths": [
+      4263,
+      4879,
+      4654,
+      4851,
+      4200,
+      4718,
+      4942,
+      3704
+    ],
+    "gemini25_pdf_values_present": true,
+    "overfull_or_undefined_or_error_lines": [],
+    "bibtex_errors": 0,
+    "benign_warnings": [
+      "fontconfig default configuration",
+      "lineno comment encoding",
+      "underfull boxes"
+    ],
+    "built_in_compiler": "unavailable: Unable to find standard directories for platform",
+    "new_latex_installation": false
+  },
+  "visual_review": {
+    "render_directory": "render_gemini25_v2",
+    "reviewed_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "reviewer": "coordinating agent",
+    "review_date": "2026-10-08",
+    "render_hashes": {
+      "render_gemini25_v2/page-1.png": "f595a06247d124bac379a5b861f12ae0a1422ff6e2a4548c0322a9334ebf2460",
+      "render_gemini25_v2/page-2.png": "b6df002d7d8d3e5800f91687933a70181ee383f414684c672ea3e2070a605abd",
+      "render_gemini25_v2/page-3.png": "9c09c16d4db1da0fce569a6bb2ceb4a661c07a95e2f3559a875307d88033d0fd",
+      "render_gemini25_v2/page-4.png": "67f088f524ebcaca6c7ef641ac531e8f075bcf8876a7ebad5d980a76a91c2b47",
+      "render_gemini25_v2/page-5.png": "76ea6f34acd3144fc44985fb88100f19e87a43bba61f0edf32801fa87afaca97",
+      "render_gemini25_v2/page-6.png": "4e5f6f3af674d53cc1077fdfdb36e3bbbbf5968ed987d8549e51584f3d791e1e",
+      "render_gemini25_v2/page-7.png": "344059495804774f035cdf08a8cc9f598f3bfcbcc9fcaf66b49db91b40b78c0c",
+      "render_gemini25_v2/page-8.png": "4c6f6247eed294bb13d6baeb8bd49cbb3eed97aa14c0c21cd19bb31f2ac64e2d"
+    },
+    "result": "No clipping, overlapping text, broken tables, missing citations, or visible glyph errors identified.",
+    "limitation": "Records the coordinating agent's completed visual inspection; the validator checks render existence and hashes, not appearance."
+  },
+  "scope": {
+    "new_experiments": false,
+    "external_API_calls": false,
+    "scientific_source_changes": false,
+    "automation_reactivated": false,
+    "v1_artifacts_modified": false
+  },
+  "source_package": {
+    "archive": "JEV_Mem_ACL2027_source_v2.zip",
+    "explicit_allowlist": [
+      "main.tex",
+      "references.bib",
+      "acl.sty",
+      "acl_natbib.bst",
+      "main.bbl",
+      "README.md",
+      "writing_plan_zh.md",
+      "revision_gemini25_2026-10-08.md",
+      "validate_document_v2.py",
+      "document_validation_v2.json",
+      "template/provenance.json",
+      "template/README.md",
+      "discussion/consensus_story_a.md",
+      "discussion/draft_method_review.md",
+      "discussion/draft_story_review.md",
+      "discussion/pattern_a.md",
+      "discussion/pattern_b.md",
+      "discussion/story_a.md",
+      "discussion/story_b.md"
+    ]
+  },
+  "remaining_author_work": [
+    "author information and title approval",
+    "matched-protocol baseline results",
+    "six titled validation experiments"
+  ]
+}

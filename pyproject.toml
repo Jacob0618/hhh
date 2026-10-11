@@ -1,0 +1,32 @@
+[project]
+name = "jev-mem-local"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+description = "Local preparation for session-level Mem0 and JEV research"
+
+[tool.hatch.envs.local]
+detached = true
+python = "D:/jev mem/.tools/python/cpython-3.11.14-windows-x86_64-none/python.exe"
+path = ".venv"
+installer = "uv"
+dependencies = [
+  "mem0ai @ file:///D:/jev%20mem/upstream/mem0",
+  "qdrant-client==1.18.0",
+  "openai==2.29.0",
+  "google-genai==1.68.0",
+  "fastembed>=0.3.1,<1",
+  "onnxruntime==1.30.0",
+  "spacy>=3.8,<3.9",
+  "nltk==3.9.2",
+  "en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl",
+]
+
+[tool.hatch.envs.local.env-vars]
+MEM0_TELEMETRY = "false"
+MEM0_DIR = "D:/jev mem/runtime/mem0"
+HF_HOME = "D:/jev mem/cache/huggingface"
+FASTEMBED_CACHE_PATH = "D:/jev mem/cache/fastembed"
+TOKENIZERS_PARALLELISM = "false"
+
+[tool.hatch.envs.local.scripts]
+check-startup = "python tools/check_mem0_startup.py"

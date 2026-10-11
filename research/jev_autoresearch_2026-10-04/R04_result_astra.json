@@ -1,0 +1,47 @@
+{
+  "schema": "r04-result-astra-v1",
+  "status": "ACCEPT_AUDITED_R04_RESULT_NO_THRESHOLD_SUCCESS",
+  "formal_summary": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r04_final_summary.json",
+    "sha256": "76d240762571fa20e4ff6d063b52f6e6bb126d1da9866558e88851c9aca4d504"
+  },
+  "case_review": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\R04_case_review_astra.json",
+    "sha256": "724528fcc46d3ba00684a3b398a3d009c7d9adb4344830ed8fcee73a82053ef2"
+  },
+  "correct": {
+    "baseline": 1153,
+    "cheap": 1185,
+    "jev": 1185
+  },
+  "jev_vs_baseline": {
+    "gain": 38,
+    "loss": 6,
+    "net_pp": 2.0779220779220777
+  },
+  "cheap_vs_baseline": {
+    "gain": 32,
+    "loss": 0
+  },
+  "jev_vs_cheap": {
+    "gain": 8,
+    "loss": 8
+  },
+  "jev_vs_r03": {
+    "gain": 18,
+    "loss": 9,
+    "official_f1_delta_pp": -0.14319417034493218
+  },
+  "interpretation": [
+    "No JEV-specific aggregate Judge advantage over cheap abstention fallback; JEV has different gains and losses.",
+    "Choice never generates new Reader/Judge answers; all4620 slots inherit exact already-audited routes.",
+    "Oracle1200 requires perfect routing of71 differing-label pairs;340 both-wrong and228 both-exact-abstention cannot be solved by this fixed answer menu.",
+    "JEV Choice adds590 physical attempts and2014040 known input tokens plus unknown transport usage; coldR03selector+twoReaders remains required.",
+    "Nine malformed responses follow frozenN0fallback; no eligible recovery, no retrospective sum normalization.",
+    "Source fidelity and benchmark Judge targets sometimes disagree on date bounds, implied relations or lexical near-equivalence.",
+    "R04 is composite withR03 and counts zero independent successful components."
+  ],
+  "next_direction_preference_NOT_VOTE": "Preserve N0 ordered20 original fact text and append bounded copy-only source context to at most2fact slots under common source locator/proposal budget; cheap/JEV equal source access. No donor deletion, no source-truth guarantee. Exact protocol still needs three votes.",
+  "stop_threshold_met": false,
+  "new_model_calls_by_reviewer": 0
+}

@@ -1,0 +1,139 @@
+{
+  "schema": "r03-r05-refinement-final-review-v1",
+  "status": "ready",
+  "created_utc": "2026-10-05T22:54:19.851656+00:00",
+  "code_sha256": {
+    "jev_mem/evidence_ordering_r02.py": "aa6007b284d0ee5f1c2ec1f019feefc0d983997991e2ddb467ad2d583961a03e",
+    "tools/prepare_evidence_ordering_r02.py": "7628e41a2c78acf69cb8a69a530f91740fb9fc2338479e41966c38f03367a365",
+    "jev_mem/evidence_exchange_r01.py": "d0ece7e2bcdc2f919d87fb903382649c0e7ce348f746d6838b9184ddb86eb371",
+    "tools/prepare_evidence_exchange_r01.py": "0415bb8e872ef416f7742f2c5784e79e62dc0bd1db73e839da9e9161b3433379",
+    "tools/pilot400_recovery_rank_v1.py": "564033fcc6b02451ced23ebf3f7d778bafd25f4b95fae37ec3bf2dd3fcc40858",
+    "jev_mem/routing.py": "6b8d99095064cd67132040c8a4774e0c2c30b62906f97c14d36c75ddf82d63db",
+    "jev_mem/pilot400.py": "f9fd4d10e74ddff328b96598fed5be2c2b24dce09a7097f030312367becadc25",
+    "jev_mem/selection.py": "e6190813f1492a63a06813e51b9fac0446cc8b220295f3cd121a967d8190e49a",
+    "tools/score_evidence_ordering_r02.py": "24167126ed84f40c3dc468cf23024a8959565984bb378af5973c7d5c409ca715",
+    "tools/snapshot_evidence_ordering_r02.py": "3e5240b0622c2563da766970fde23c0930a6ef0f38034945bde908d48796e074",
+    "tools/run_evidence_ordering_qa_r02.py": "9462b69fdd5c72834367e44b1f82cbca5e7166d4d58dad2a84de25090b7a21fb",
+    "tools/summarize_evidence_ordering_r02.py": "adc214a57195519a6a5b1c2607f75cb9703afecc9f3cdad50b84642d0e92db82",
+    "tools/run_evidence_exchange_qa_r01.py": "d93cf7ddaa981aac80c959d69edce0df48e5c4288d97d239cff7987e2f67238f",
+    "tools/summarize_evidence_exchange_r01.py": "91dc7456fc5490d466a813e0b5c455e38df1d67e1b224135bc60e3e5fb0856bc",
+    "tools/score_evidence_exchange_r01.py": "f2e8021b5cb13c64d796d26d618143e93a8985c40c2878858c984c7d6b508648",
+    "jev_mem/gemini38_provider_v1.py": "d27799022569c526c4237009b21335642048f9fd1a9161dcbaed4ba5181aaffe",
+    "jev_mem/providers.py": "34d0f9cc3c3607e41c8b69b854d65d012e3de78078f6a9d38605f2b760be1dd6",
+    "jev_mem/paced_embedding_api.py": "148f19fd8018c4ea6d3b855bae88cec64fba30550b2b3362683da1d1330e1582",
+    "jev_mem/sdk20_cached_api.py": "be4684c0cf035c6dca74bbf418eba166830201001d6872f103d24c0bc4c09b16",
+    "tools/check_experiment_health.py": "e1533a73fbb3f914c19256feed21eef6c38739a5f878b7a84ac87a558ebfe68b",
+    "jev_mem/evidence_selection_r03.py": "63e0a566f7560d547ef64c7d95035afeadc513b764c44ea5e2bf6a27d1a10411",
+    "tools/prepare_evidence_selection_r03.py": "db1c0bfcdfc538ecd4b741f8fb3679c37c8b94396b663720f5c3229c2b9ec1e9",
+    "tools/score_evidence_selection_r03.py": "7b5175d90e5615a8b2416ff2724c5aa88209ba1617d7a6e68297570b2bd23a53",
+    "tools/snapshot_evidence_selection_r03.py": "be4d1fbce3b1039d2734d1dd35dfcb1d55481b9d34e70451f628117e9e6b5c01",
+    "tools/run_evidence_selection_qa_r03.py": "0000faad4bcfd79cfdc0ad3cc15ad39fd0aca8692fdc57c714bf56f3bee86911",
+    "tools/summarize_evidence_selection_r03.py": "dd8f7df273c43ec5a5a93a0475a9d262e0a78be4eccced084254f03695619925",
+    "jev_mem/source_append_r05.py": "7d7bdd7480339500c3e7af3b5e499d8bb31bf7ced15c820e7ff237ec4923bd84",
+    "tools/prepare_source_append_r05.py": "ea2a578f37f77e3fd11e552e5159155e35457db87ace35a02bfc4a879449eaba",
+    "tools/score_source_append_r05.py": "8c4310d520a92a804418865a4338f5fafa0c782197562a173078fd67cd98555a",
+    "tools/snapshot_source_append_r05.py": "e2d43d848900977eab3354a65d72a37db02d65c7f9d1f3a94dc75c0aa38ca053",
+    "tools/run_source_append_qa_r05.py": "7c6a1935f9573ed7e2697e8ddf8ffd0c3b18d761d6847edd68d352af0436246f",
+    "tools/summarize_source_append_r05.py": "7cedd1e3bc9c89214d5bd133fe6ae766735e0b464ec312225592a4711a6f95db",
+    "jev_mem/data.py": "7b7ad57e6de336c91c8005f1d24d2638a1dd73e16044a5b2a0561222e7e187bd",
+    "jev_mem/source_support_stack_v1.py": "0b6c0f90f253a6bb38e73df13551d9fea9599e525971f84054f7b7c0e99da6f5",
+    "tools/module_stack_archive_v1.py": "34ef9571568643ee51f7766c29fb5dee1ec2771ac82b56428016bb38ee144986",
+    "tools/prepare_module_stack_v1.py": "fa8adeee38d9f3cde7a81435321b17c650154f4c916db94945924416c95c92d3",
+    "tools/score_module_stack_v1.py": "c9e30a5a580b0c94fe434a4e2ac1ba15df88d0be579311bf8642c8238b656afe",
+    "tools/run_module_stack_qa_v1.py": "da9ddd9893fb5d218e56665ebb427b5b3f9898706603b2c84f150ab3673231b4",
+    "tools/summarize_module_stack_v1.py": "3d7e93b196cbfc17fa9448ddc26ea3687548ac656d54cfd482410dacbbe87e93",
+    "jev_mem/r03_refinement_v1.py": "3ea10a848beda221079b76f2b5ed3512c83562f97019ec7015c5f8bba68b7f4a",
+    "jev_mem/r05_refinement_v1.py": "1fb73cb248bc2fb935e933b38f3024bb2b4dea0a165956316b39e88a992e3b38",
+    "jev_mem/r03_r05_request_envelope_v1.py": "849237fb071f1878426d36f1284915bb937114e5b6f989b02ff2ea928bb6a7d2",
+    "tools/prepare_r03_r05_refinement_v1.py": "0305c8b253e8994b5f3425e5bc9cf6b4b0325c9bcf321131175dc18e8cd8889a",
+    "tools/score_r03_r05_refinement_v1.py": "966742674e162b980a68f92a844a4cc4c1fe96717115459c81d34bbfa96e422f",
+    "tools/r03_r05_reuse_proofs_v1.py": "1226eeabc767651f964adcdee4ed742723d960bbb378c0246d428bb89610bf78",
+    "tools/run_r03_r05_refinement_qa_v1.py": "421cf0830c827800f7b45f20bf7269b4c4cc8d3a78bbec0075df44ce6f5b09ac",
+    "tools/summarize_r03_r05_refinement_v1.py": "e0f5b707bd9ab2baaaf6713ab54d76a69890101d51bdba83329297ae0f4faf00",
+    "tools/run_r03_r05_refinement_pipeline_v1.py": "887eb93f6cf4e768ed911f5bcc1989e672039ef7d3a0f568c72f00bd1614cd23"
+  },
+  "protocol_sha256": "27fd1e3ac8db76c471704d72f3d93621c92f1470e3d43bfa9e64a848b363a457",
+  "models_dispatched_before_review": 0,
+  "reviewing_agents": [
+    "GPT6 Astra",
+    "GPT6.1 Sol"
+  ],
+  "consensus": "one finite five-new-arm plus two-reference fixed1540 comparison",
+  "evidence": [
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\astra_design_v1.md",
+      "sha256": "2ead44ddd1931d9a368f784b624f9c5f31f22a00c623cee9eb4d2e619ed163e0"
+    },
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\sol_design_v1.md",
+      "sha256": "a1c2f6476d7ce0b553a1d1d8094908269fd8cf8d8eaf8520b6fda7d70e176b4c"
+    },
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\astra_integration_review_v1.json",
+      "sha256": "382edf870dc7861b4804cdbacbc4e8921979b473ae9e1142c9ca27abb01eb5d2"
+    },
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\sol_integration_review_v1.json",
+      "sha256": "3adcddb8720e875eb1fb73a9e4b9637aab144080c9038912918ae9d138f825dc"
+    },
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\astra_cache_guard_mock_v1.json",
+      "sha256": "655b04fc97f5989dfc8bc10579b121ceacac23b048cb3f81bc92ce557fb9eefa"
+    },
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\astra_manifest_interface_check_v1.json",
+      "sha256": "ee4d4bc1dd7289d61196676005909d6aa645c136e5c141eb17436ca51a498389"
+    },
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\preflight_r03_actual1540_v1.json",
+      "sha256": "a662d3f1776dd4e9a0d008341236c3ecab913efb161a000cfe0f3f094e0e3d1f"
+    },
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\preflight_source_build_sol_v1.json",
+      "sha256": "fdc1634816559f7ffcd912ae34cacd0cacce091b1c26e5ef67387d2759f37e70"
+    },
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\real_prepare_preflight_v1.json",
+      "sha256": "74de744a3ffb453ed48ad7d02c4b7ec010b3f5f78fa6321c86f29bc9c5cf898c"
+    },
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\real_qa_proof_preflight_v1.json",
+      "sha256": "90b4bb2aef62aee5b6b5314ed2531c0c848567669b569ff5e9195fd9536a17cc"
+    },
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\execution_plan.md",
+      "sha256": "3302f8eb45ee27bb6f7575711582ed3aa1fb70570e9401d30531f8fa0b29cf05"
+    },
+    {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\preflight_failure_note_v1.md",
+      "sha256": "539ba8a2b2bd15da88729cc9079c771899eb0a61d3acd3b52871656edfcefb08"
+    }
+  ],
+  "offline_tests": {
+    "joint_tests_passed": 62,
+    "cache_guards_passed": 9,
+    "manifest_interface_passed": 4
+  },
+  "actual_data_checks": {
+    "r03_synthetic_score_planner_questions": 1540,
+    "r05_OJ_source_questions": 1540,
+    "persisted_precision_requests_replayed": 4620,
+    "historical_qa_raw_replayed": 13860,
+    "reference_reader_judge_lookups": 6160
+  },
+  "independent_review_pending_resolved": [
+    "actual source preparation/replay now passed",
+    "actual prior QA full raw proof now passed"
+  ],
+  "remaining_after_dispatch": [
+    "new full raw audit and effect analysis"
+  ],
+  "limits": [
+    "Offline checks are not model effectiveness results.",
+    "Real refined T20 does not exist yet; every downstream plan must replay after actual scoring.",
+    "Old reference inheritance is correlated reuse, not a new independent run.",
+    "Source alternatives remain within original top4 anchors; no claim of complete recall.",
+    "R03 and R05 refinements are composite strategies; fixed operational probabilities are uncalibrated."
+  ],
+  "content_sha256": "5287d5ab2de55c29fc726201570d8c3c14773bb1cf99b60cc3c6db2f80ca99bc"
+}

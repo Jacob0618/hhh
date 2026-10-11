@@ -1,0 +1,39 @@
+{
+  "schema": "amem-result-usage-telemetry-correction-v2",
+  "status": "passed",
+  "created_utc": "2026-10-08T22:41:42.707587+00:00",
+  "original_result_review": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\amem_retrieval_continuation_v1\\result_review_v1\\independent_result_review_v1.json",
+    "sha256": "6aab3f6344861339f539029060204976f6ad656b379d28109e8397df24046a87"
+  },
+  "original_usage_review": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\amem_retrieval_continuation_v1\\result_review_v1\\independent_usage_chain_v1.json",
+    "sha256": "f599528b5f300de8e8bdda3c1378bce099b29314657d11b9d40762c309270e05"
+  },
+  "corrected_usage_review": {
+    "path": "D:\\jev mem\\research\\baseline_execution_2026-10-08\\amem_retrieval_continuation_v1\\result_review_v1\\independent_usage_chain_v2.json",
+    "sha256": "ef4cbb16f9680f4d83b22979dc6152c9059c1c36172c77b67f6e2c1c4afe6b1a"
+  },
+  "physical_attempts": 16367,
+  "physical_reported_complete_token_telemetry": 16352,
+  "physical_token_telemetry_unknown": 15,
+  "missing_telemetry_by_status": {
+    "transport_error": 14,
+    "503": 1
+  },
+  "explicit_usage_unknown_flags": 14,
+  "terminal_logical_unknown": 0,
+  "unresolved_terminal_request_intents": 0,
+  "cache_hits_unchanged": 5840,
+  "numeric_scores_and_comparison_unchanged": true,
+  "old_reviews_preserved": true,
+  "new_model_api_requests": 0,
+  "credential_reads": 0,
+  "production_files_modified": 0,
+  "evidence_sha256": {
+    "D:\\jev mem\\research\\baseline_execution_2026-10-08\\heartbeat_20261008T2147\\correct_actual_result_usage_telemetry_v2.py": "27c7f3fd97340139276fe02fb4411a4e1a7332397eeeb45f91637d4e563eece7",
+    "D:\\jev mem\\research\\baseline_execution_2026-10-08\\amem_retrieval_continuation_v1\\result_review_v1\\independent_usage_chain_v2.json": "ef4cbb16f9680f4d83b22979dc6152c9059c1c36172c77b67f6e2c1c4afe6b1a",
+    "D:\\jev mem\\research\\baseline_execution_2026-10-08\\amem_retrieval_continuation_v1\\result_review_v1\\independent_result_review_v1.json": "6aab3f6344861339f539029060204976f6ad656b379d28109e8397df24046a87",
+    "D:\\jev mem\\research\\baseline_execution_2026-10-08\\amem_retrieval_continuation_v1\\result_review_v1\\independent_usage_chain_v1.json": "f599528b5f300de8e8bdda3c1378bce099b29314657d11b9d40762c309270e05"
+  }
+}

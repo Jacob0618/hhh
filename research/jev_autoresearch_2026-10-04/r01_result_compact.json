@@ -1,0 +1,190 @@
+{
+  "schema": "r01-result-readout-v1",
+  "created_utc": "2026-10-03T22:38:34.813806+00:00",
+  "summary": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r01_final_summary.json",
+    "sha256": "9c4a09ab62cda15f4669fece096ff22e6eea024e8d21e2ceb6b4a40b36e78ba0"
+  },
+  "audit_status": "no_invalid_artifacts",
+  "arms": {
+    "baseline": {
+      "official_f1_percent": 51.04400011392458,
+      "judge_percent": 74.87012987012987,
+      "correct": 1153,
+      "valid": 1540,
+      "gains": 0,
+      "losses": 0,
+      "gains_by_category": {},
+      "losses_by_category": {},
+      "answer_text_changed": 0
+    },
+    "cheap": {
+      "official_f1_percent": 51.33533280184206,
+      "judge_percent": 74.93506493506493,
+      "correct": 1154,
+      "valid": 1540,
+      "gains": 24,
+      "losses": 23,
+      "gains_by_category": {
+        "1": 6,
+        "2": 4,
+        "4": 10,
+        "3": 4
+      },
+      "losses_by_category": {
+        "1": 8,
+        "4": 11,
+        "3": 1,
+        "2": 3
+      },
+      "answer_text_changed": 533
+    },
+    "jev": {
+      "official_f1_percent": 51.04400011392458,
+      "judge_percent": 74.87012987012987,
+      "correct": 1153,
+      "valid": 1540,
+      "gains": 0,
+      "losses": 0,
+      "gains_by_category": {},
+      "losses_by_category": {},
+      "answer_text_changed": 0
+    }
+  },
+  "technical_recovery": {
+    "eligible_final_failures": 0,
+    "decision": "not_run_no_eligible_failures"
+  },
+  "completed_round_pending_three_agent_result_review": true,
+  "successful_components": 0,
+  "qa_physical_usage": {
+    "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+    "available": true,
+    "physical_attempts": 2061,
+    "cache_events": 16,
+    "physical_status_counts": {
+      "http_success": 2056,
+      "transport_or_unknown": 5
+    },
+    "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+    "physical_attempts_by_model": {
+      "gemini-3.8-flash": 2061
+    },
+    "usage_unknown_attempts": 5,
+    "token_fields": {
+      "prompt": {
+        "recorded_attempts": 2056,
+        "missing_attempts": 5,
+        "recorded_token_sum": 2257005
+      },
+      "output": {
+        "recorded_attempts": 2051,
+        "missing_attempts": 10,
+        "recorded_token_sum": 13668
+      },
+      "thinking": {
+        "recorded_attempts": 1357,
+        "missing_attempts": 704,
+        "recorded_token_sum": 260219
+      },
+      "total": {
+        "recorded_attempts": 2056,
+        "missing_attempts": 5,
+        "recorded_token_sum": 2530892
+      }
+    },
+    "missing_ledgers": [],
+    "total_cost_usd": null,
+    "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+    "missing_thinking_is_not_zero": true
+  },
+  "qa_usage_by_stage": {
+    "reader": {
+      "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+      "available": true,
+      "physical_attempts": 1533,
+      "cache_events": 11,
+      "physical_status_counts": {
+        "http_success": 1528,
+        "transport_or_unknown": 5
+      },
+      "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+      "physical_attempts_by_model": {
+        "gemini-3.8-flash": 1533
+      },
+      "usage_unknown_attempts": 5,
+      "token_fields": {
+        "prompt": {
+          "recorded_attempts": 1528,
+          "missing_attempts": 5,
+          "recorded_token_sum": 2056217
+        },
+        "output": {
+          "recorded_attempts": 1523,
+          "missing_attempts": 10,
+          "recorded_token_sum": 12097
+        },
+        "thinking": {
+          "recorded_attempts": 993,
+          "missing_attempts": 540,
+          "recorded_token_sum": 231481
+        },
+        "total": {
+          "recorded_attempts": 1528,
+          "missing_attempts": 5,
+          "recorded_token_sum": 2299795
+        }
+      },
+      "missing_ledgers": [],
+      "total_cost_usd": null,
+      "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+      "missing_thinking_is_not_zero": true
+    },
+    "judge": {
+      "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+      "available": true,
+      "physical_attempts": 528,
+      "cache_events": 5,
+      "physical_status_counts": {
+        "http_success": 528
+      },
+      "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+      "physical_attempts_by_model": {
+        "gemini-3.8-flash": 528
+      },
+      "usage_unknown_attempts": 0,
+      "token_fields": {
+        "prompt": {
+          "recorded_attempts": 528,
+          "missing_attempts": 0,
+          "recorded_token_sum": 200788
+        },
+        "output": {
+          "recorded_attempts": 528,
+          "missing_attempts": 0,
+          "recorded_token_sum": 1571
+        },
+        "thinking": {
+          "recorded_attempts": 364,
+          "missing_attempts": 164,
+          "recorded_token_sum": 28738
+        },
+        "total": {
+          "recorded_attempts": 528,
+          "missing_attempts": 0,
+          "recorded_token_sum": 231097
+        }
+      },
+      "missing_ledgers": [],
+      "total_cost_usd": null,
+      "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+      "missing_thinking_is_not_zero": true
+    }
+  },
+  "selection_counts": {
+    "baseline_changed_queries": 0,
+    "cheap_changed_queries": 1539,
+    "jev_changed_queries": 0,
+    "jev_score_status_complete": 1540
+  }
+}

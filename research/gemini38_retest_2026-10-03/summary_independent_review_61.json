@@ -1,0 +1,115 @@
+{
+  "schema": "gemini38-summary-independent-review-61-v1",
+  "created_utc": "2026-10-03T12:44:33.633800+00:00",
+  "status": "passed_offline_pending_real_source_and_QA",
+  "model_calls": 0,
+  "credentials_loaded": false,
+  "native_SQLite_opened": false,
+  "summary_QA_Writer_modified": false,
+  "blocking_findings": [],
+  "file_pins": [
+    {
+      "path": "D:\\jev mem\\tools\\summarize_gemini38_seven_arm_v1.py",
+      "sha256": "ddc18b9d143a6d4a443456e5475c4c6bd377d90a3f97ae8f44ea5efab036b531"
+    },
+    {
+      "path": "D:\\jev mem\\tests\\test_gemini38_summary_v1.py",
+      "sha256": "bf943b7038a0aa78c37be20f0a80a448965a4768dc9977b7aa72121a2068665e"
+    },
+    {
+      "path": "D:\\jev mem\\research\\gemini38_retest_2026-10-03\\test_summary_independent_61.py",
+      "sha256": "b068a9c78d8f6bee18c3d1561af986d62a519a157b214d6a8abdaf3a7ae88918"
+    },
+    {
+      "path": "D:\\jev mem\\research\\gemini38_retest_2026-10-03\\test_summary_independent_61.json",
+      "sha256": "c33bbc4f891bf599d7e8e05358c23bd5a2953f3f7941c07d02b8fff63080c48c"
+    }
+  ],
+  "author_tests_passed": 7,
+  "independent_mutation_checks": [
+    {
+      "name": "reader_official_f1",
+      "rejected": true
+    },
+    {
+      "name": "reader_answer",
+      "rejected": true
+    },
+    {
+      "name": "judge_correct",
+      "rejected": true
+    },
+    {
+      "name": "judge_parse_mode",
+      "rejected": true
+    },
+    {
+      "name": "compat_parser_metadata",
+      "rejected": true
+    },
+    {
+      "name": "qa_metric_forgery",
+      "rejected": true
+    },
+    {
+      "name": "valid_firstpass_priority_not_best_score",
+      "passed": true
+    },
+    {
+      "name": "missing_slot",
+      "rejected": true
+    },
+    {
+      "name": "duplicate_identity",
+      "rejected": true
+    },
+    {
+      "name": "usage_negative",
+      "rejected": true
+    },
+    {
+      "name": "usage_nan",
+      "rejected": true
+    },
+    {
+      "name": "usage_bool",
+      "rejected": true
+    },
+    {
+      "name": "absent_real_source_no_score",
+      "rejected": true
+    },
+    {
+      "name": "unlogged_intent_even_raw_present",
+      "passed": true
+    },
+    {
+      "name": "missing_timestamp_not_ended",
+      "passed": true
+    },
+    {
+      "name": "ended_success_raw_absent",
+      "passed": true
+    }
+  ],
+  "source_and_QA_readiness": {
+    "ready_for_summary": false,
+    "results_computed": false,
+    "real_scores_generated": false
+  },
+  "checks": {
+    "10780_slots_seven_times1540": true,
+    "new_baseline_pairing": true,
+    "Reader_F1_raw_replay": true,
+    "Judge_first_accepted_raw_label": true,
+    "immutable_successful_Reader_recovery": true,
+    "missing_duplicate_slots_rejected": true,
+    "missing_invalid_not_NO": true,
+    "candidates_thoughts_separate_missing_not_zero": true,
+    "cache_consumers_excluded_physical_sums": true,
+    "no_old_Judge_protocol_causal_comparison": true,
+    "new_Writer_recovery_source_schema_requires_review": true
+  },
+  "updated_utc": "2026-10-03T12:45:24.562074+00:00",
+  "resolved_cost_scope_review": "Author added intent_inventory for QA and Writer/tag/query, counting no ended physical ledger proof and successful ended requests missing raw. available explicitly means ledger file presence, not complete invoice. Independent three intent cases passed."
+}

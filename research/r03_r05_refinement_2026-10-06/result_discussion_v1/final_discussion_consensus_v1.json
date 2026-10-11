@@ -1,0 +1,75 @@
+{
+  "schema": "final-discussion-consensus-v1",
+  "created_utc": "2026-10-06T14:58:15.176825+00:00",
+  "status": "final_agreed_after_formal_summary_alignment",
+  "participants": [
+    "GPT6.1Sol",
+    "Astra"
+  ],
+  "summary": {
+    "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\heartbeat_20261006T1052\\live_qa_v2\\final_summary_v1.json",
+    "sha256": "01aa05237a252832135f9c03122d16ee8d6f1aab0b0b2e97d16f2836533567e5",
+    "audit_status": "no_invalid_artifacts"
+  },
+  "review_artifacts": {
+    "final_acceptance_sol_v1.json": {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\result_discussion_v1\\final_acceptance_sol_v1.json",
+      "sha256": "9a1a8b7087427a297ce9078ed56ff1de546173dac16f859491e0ddd6efd1e803"
+    },
+    "final_acceptance_astra_v1.json": {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\result_discussion_v1\\final_acceptance_astra_v1.json",
+      "sha256": "4d718942a5b4144e1f0b60b1eee281bb08a5d5398788ac02f979ae248f7f8b8d"
+    },
+    "adoption_mechanisms_sol_v1.json": {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\result_discussion_v1\\adoption_mechanisms_sol_v1.json",
+      "sha256": "7a2731ac9b5efecdf243eb6160aff2dc20bd8f9dbb68d6695561e1ad282241a1"
+    },
+    "case_review_astra_v1.json": {
+      "path": "D:\\jev mem\\research\\r03_r05_refinement_2026-10-06\\result_discussion_v1\\case_review_astra_v1.json",
+      "sha256": "6228eaab717a8c90021bfaf0cc67c8becb27dad72afd133b4da9b2e2df94a0c8"
+    }
+  },
+  "disagreements": [],
+  "conclusions": {
+    "best_measured_arm": "original_multi_source_closure",
+    "best_judge_correct": 1302,
+    "denominator": 1540,
+    "best_judge_percent": 84.54545454545455,
+    "r03_refinement_net_correct": 0,
+    "r03_refinement_flip_counts": [
+      1,
+      1
+    ],
+    "r03_realized_set_changes": 41,
+    "r03_unchanged_input_answer_judge_queries": 1499,
+    "r03_realized_scope_max_pp": 2.662337662337662,
+    "original_source_closure_net_over_original_r03": 111,
+    "original_source_closure_gain_pp": 7.207792207792208,
+    "new_r05_net_over_old_policy_each_base": 8,
+    "new_r05_gain_pp": 0.5194805194805194,
+    "new_r05_flip_counts_each_base": [
+      13,
+      5
+    ],
+    "new_r05_final_attachment_changes_each_base": [
+      429,
+      428
+    ],
+    "r03_source_simple_effect_net_each_r05": -1,
+    "judge_factorial_interaction": 0,
+    "individual_refinement_over_three_pp_success": false
+  },
+  "limitations": [
+    "Formal raw audit passed; no missing scientific score/artifact, but unknown tokens/charges are not zero",
+    "Main source gain is original R05 plus C jointly, not the new policy contribution",
+    "Warm inherited exact requests are not independent replications",
+    "No cheap selector control: new R05 is composite policy, not isolated JEV causal effect",
+    "Only ten conversation clusters and same explored cohort; no unseen holdout claim",
+    "41-adoption upper bound is this realized intervention scope, not future algorithm bound",
+    "Judge sensitivity and retained target evidence in selected case windows limit mechanistic attribution",
+    "USD cost remains null; historical usage excluded from new cost; bytes are not tokens"
+  ],
+  "next_action": "Report this completed finite round and await user direction; no new experiment/model call authorized by consensus",
+  "new_model_calls_by_discussion": 0,
+  "original_artifact_mutations": 0
+}

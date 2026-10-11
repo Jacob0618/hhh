@@ -1,0 +1,12 @@
+[submodule "upstream/mem0"]
+	path = upstream/mem0
+	url = https://github.com/mem0ai/mem0.git
+[submodule "upstream/baselines_v1/amem"]
+	path = upstream/baselines_v1/amem
+	url = https://github.com/WujiangXu/A-mem.git
+[submodule "upstream/baselines_v1/vmem"]
+	path = upstream/baselines_v1/vmem
+	url = https://github.com/Dingyi-Kang/V-Mem.git
+[submodule "upstream/baselines_v1/prism"]
+	path = upstream/baselines_v1/prism
+	url = https://github.com/jingyip-cat/PRISM.git

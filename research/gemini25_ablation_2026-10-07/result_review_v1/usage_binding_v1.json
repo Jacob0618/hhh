@@ -1,0 +1,128 @@
+{
+  "schema": "gemini25-ablation-independent-aggregation-usage-binding-v1",
+  "status": "passed_usage_binding_pending_canonical_summary_comparison",
+  "created_utc": "2026-10-07T22:23:08.932551+00:00",
+  "aggregation_v1": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\result_review_v1\\independent_aggregation_v1.json",
+    "sha256": "4390d9a836046a53baae990dd1473aa0fcbb0354f45b6f3f7a0a2a390c371389"
+  },
+  "usage_v1": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\result_review_v1\\independent_usage_v1.json",
+    "sha256": "dbca0c9220a2e56fb8989e8e1de98f5dcc6251da06fef2e0f79bc99cf1ac7806"
+  },
+  "mandatory_qa_raw_seal": {
+    "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007_recovery_v1\\qa_raw_audit_seal.json",
+    "sha256": "47add7457042dc06e1ebbc249d400290735b94d54fe3a262b26465b04c88260f"
+  },
+  "checks": {
+    "all36_ledger_byte_hashes_rechecked": true,
+    "all10_QA_ledgers_match_completed_raw_seal": true,
+    "physical_cache_and_status_counts_independently_recounted": true,
+    "Gemini_and_JEV_reported_numeric_fields_independently_resummed": true,
+    "aggregation_v1_bytes_preserved": true
+  },
+  "overall": {
+    "ledger_rows": 30748,
+    "physical_attempts": 28396,
+    "local_cache_events": 2352,
+    "physical_status_counts": {
+      "200": 26702,
+      "402": 1529,
+      "429": 1,
+      "503": 1,
+      "529": 8,
+      "transport_error": 155
+    },
+    "physical_usage_unknown_flag_true": 155,
+    "physical_usage_empty_or_absent": 5082,
+    "unique_physical_ledger_request_hashes": 28231,
+    "extra_physical_attempts_same_ledger_hash": 165,
+    "physical_tokens": {
+      "prompt_tokens": {
+        "sum_reported": 70297112,
+        "attempts_reporting_numeric": 23314,
+        "applicable_attempts_without_numeric_field": 5082,
+        "not_exposed_for_model_operation_attempts": 0,
+        "complete_total": null
+      },
+      "output_tokens": {
+        "sum_reported": 3313712,
+        "attempts_reporting_numeric": 23314,
+        "applicable_attempts_without_numeric_field": 1689,
+        "not_exposed_for_model_operation_attempts": 3393,
+        "complete_total": null
+      },
+      "thinking_tokens": {
+        "sum_reported": null,
+        "attempts_reporting_numeric": 0,
+        "applicable_attempts_without_numeric_field": 8023,
+        "not_exposed_for_model_operation_attempts": 20373,
+        "complete_total": null
+      },
+      "total_tokens": {
+        "sum_reported": 10834405,
+        "attempts_reporting_numeric": 8012,
+        "applicable_attempts_without_numeric_field": 11,
+        "not_exposed_for_model_operation_attempts": 20373,
+        "complete_total": null
+      },
+      "provider_cached_input_tokens": {
+        "sum_reported": 513692,
+        "attempts_reporting_numeric": 65,
+        "applicable_attempts_without_numeric_field": 7958,
+        "not_exposed_for_model_operation_attempts": 20373,
+        "complete_total": null
+      }
+    },
+    "gemini_total_minus_prompt_minus_candidates": {
+      "attempts_observed": 8012,
+      "sum_reported": 0,
+      "nonzero_attempts": 0
+    },
+    "recorded_cost_usd": null,
+    "total_paid_cost_usd": null,
+    "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+  },
+  "compact_usage": {
+    "writer_Gemini": {
+      "reported_prompt_tokens": 2644537,
+      "reported_output_tokens": 138505
+    },
+    "QA_Gemini": {
+      "reported_prompt_tokens": 7988436,
+      "reported_output_tokens": 62927,
+      "Reader_prompt": 6782078,
+      "Reader_output": 53453,
+      "Judge_prompt": 1206358,
+      "Judge_output": 9474
+    },
+    "JEV": {
+      "reported_input_tokens": 59664139,
+      "reported_output_tokens": 3112280
+    },
+    "measured_thought_tokens": null,
+    "embedding_tokens": null,
+    "paid_cost_usd": null
+  },
+  "attribution_limits": [
+    "All token quantities are sums of numeric reported physical-attempt fields; they exclude local-cache copies and are partial, not complete invoice totals.",
+    "Gemini thoughtsTokenCount is absent on every row; thinkingBudget=0 is configuration, not a measured zero. Known Gemini total equals prompt+candidates on all8012 reporting responses.",
+    "Provider cachedContentTokenCount is a subset of promptTokenCount, separate from local cache events and not added to prompt tokens.",
+    "155 physical attempts explicitly mark usage_unknown;5082 physical usage objects are absent/empty, including all embedding/countTokens rows. Missing costs stay null.",
+    "Original R03 firstpass1529 HTTP402 and6 earlier transport errors remain included in whole-run physical attempt counts and separately grouped in usage_v1. Its11 failed logical consumers are not ledger cache_hit events.",
+    "Per-arm physical use is charged to the first producer of shared exact requests and cannot be interpreted as isolated marginal arm cost."
+  ],
+  "canonical_next_steps": [
+    "Read the newly completed canonical final_summary_v1.json and any nested summary artifact through its signed pointers; verify no_invalid_artifacts and run/phase/review bindings without rerunning source/manifest/summary.",
+    "Compare all4620 per-query canonical official/custom F1 and Judge labels to aggregation_v1 rows; then compare three1540-denominator arm tables, all pair gain/loss identities and category aggregates.",
+    "Compare canonical QA/precomputation physical/cache/status/usage tables to usage_v1 by namespace/phase; preserve retained402 and unknown usage and do not infer a tariff.",
+    "Record canonical bootstrap intervals separately, binding canonical file SHA, this report, aggregation_v1 and usage_v1 in a new comparison version. Only after independent agreement should final delivery/readiness be assessed."
+  ],
+  "canonical_summary_compared": false,
+  "scope": "No scientific source replay, full raw replay, API, vault, production mutation or scientific-method change; aggregation v1 is immutable.",
+  "markdown": {
+    "path": "D:\\jev mem\\research\\gemini25_ablation_2026-10-07\\result_review_v1\\usage_binding_v1.md",
+    "sha256": "f14b0daf044150c48f43511143d5ef13e4642b0555d7fba10751e0642e1e562d"
+  },
+  "content_sha256": "d4ae3553639d11174524272aeb9b12a89c33cbd6de8df10cec3855e59c295e7d"
+}

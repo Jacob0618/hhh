@@ -1,0 +1,849 @@
+{
+  "schema": "r09-result-review-astra-v1",
+  "reviewer": "astra",
+  "input_refs": {
+    "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r09_final_summary.json": "f4e9c9657a1fbda59714f73ef1649dd02a32ca896efe177c7ac4b2dce3aa9cdc",
+    "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r09_postterminal_downstream_v1\\case_packets.json": "b51495a61975c88836a162e59b6e71b7d9a72dc109a1baab5def7a72c3b0c6e5",
+    "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r09_postterminal_downstream_v1\\statistics.json": "b7d1a2f308cfd057253d5a25e1822d61030022a1080fc925cd7eb69b5867321c",
+    "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r09_cost_accounting_v1.json": "b5a1415f3021ba5a8f2129a743fb61de662bed9ac0f303a2f6e801cfddf5e106",
+    "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\R09_accepted13_source_review_write61.json": "bf1fd012199d18f0da2137a16693868308ec97b84e054f50367cbe0c8edc0bfd",
+    "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\R09_proposer_failure_census_astra_v1.json": "4fc12ef87c2cacd7cc842bba6d7bfdfd3afb7815b5ca5777560b08bec447a8af",
+    "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r09_postterminal_downstream_v1\\source_contexts\\conv_2.json": "95020a8fa99ee3111559e6f58037fc9366d17ba97a0a11705ca23a2e3ff50782",
+    "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r09_postterminal_downstream_v1\\source_contexts\\conv_4.json": "2c5c69c4ebb98936d38f27221e11e22e57b2fdb012dadabb43d9d0ddb548322b",
+    "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r09_postterminal_downstream_v1\\source_contexts\\conv_7.json": "e66c6b0e0a0a8b116bfac83978e3a6145382589f8b1233c04a17a562f95e96c9",
+    "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r09_postterminal_downstream_v1\\source_contexts\\conv_9.json": "59f19035dfa29b1ebd7259a107b688caf8b1d80e6716b98a4624b30e16ded635"
+  },
+  "formal_audit": "no_invalid_artifacts",
+  "cohort": 1540,
+  "all_valid_slots": 4620,
+  "correct": {
+    "baseline": 1153,
+    "cheap": 1155,
+    "jev": 1156
+  },
+  "official_f1_percent": {
+    "baseline": 51.04400011392458,
+    "cheap": 51.09366380542739,
+    "jev": 51.15354485545136
+  },
+  "paired": {
+    "baseline__cheap": {
+      "fixed_denominator": 1540,
+      "judge_transitions": {
+        "1_to_1": 1141,
+        "0_to_0": 373,
+        "1_to_0": 12,
+        "0_to_1": 14
+      },
+      "net_correct": 2,
+      "net_judge_pp": 0.12987012987012986,
+      "answer_text_changed": 316
+    },
+    "baseline__jev": {
+      "fixed_denominator": 1540,
+      "judge_transitions": {
+        "1_to_1": 1149,
+        "0_to_0": 380,
+        "0_to_1": 7,
+        "1_to_0": 4
+      },
+      "net_correct": 3,
+      "net_judge_pp": 0.19480519480519481,
+      "answer_text_changed": 136
+    },
+    "cheap__jev": {
+      "fixed_denominator": 1540,
+      "judge_transitions": {
+        "1_to_1": 1145,
+        "0_to_0": 374,
+        "0_to_1": 11,
+        "1_to_0": 10
+      },
+      "net_correct": 1,
+      "net_judge_pp": 0.06493506493506493,
+      "answer_text_changed": 243
+    }
+  },
+  "exposure": {
+    "baseline": {
+      "questions_selecting_revised": 0,
+      "revised_selected_occurrences": 0,
+      "questions_selecting_new_unrevised": 0,
+      "changed_ordered_reader_without_selected_revision": 0,
+      "exact_full_Reader_signature_equal_N0": 1540
+    },
+    "cheap": {
+      "questions_selecting_revised": 648,
+      "revised_selected_occurrences": 847,
+      "questions_selecting_new_unrevised": 287,
+      "changed_ordered_reader_without_selected_revision": 224,
+      "exact_full_Reader_signature_equal_N0": 668
+    },
+    "jev": {
+      "questions_selecting_revised": 259,
+      "revised_selected_occurrences": 281,
+      "questions_selecting_new_unrevised": 98,
+      "changed_ordered_reader_without_selected_revision": 95,
+      "exact_full_Reader_signature_equal_N0": 1186
+    }
+  },
+  "nomination": {
+    "proposer_complete": 54,
+    "valid_empty": 16,
+    "noops": 0,
+    "valid_revisions": 49,
+    "score_complete": 38,
+    "proposer_failed": 218,
+    "zero_current_facts": 0
+  },
+  "accepted": {
+    "cheap": 49,
+    "jev": 13
+  },
+  "case_reviews": [
+    {
+      "qid": "c2_q48",
+      "role": "peer",
+      "full_selected20_all3_read": true,
+      "all_distinct_selected_text_variants_read": true,
+      "answers": {
+        "baseline": {
+          "text": "July 30, 2023",
+          "label": "[[no]]"
+        },
+        "cheap": {
+          "text": "Sunday, July 30, 2023",
+          "label": "[[yes]]"
+        },
+        "jev": {
+          "text": "Sunday, July 30, 2023",
+          "label": "[[yes]]"
+        }
+      },
+      "source_anchors": [
+        "c2:D26:2-6"
+      ],
+      "finding": "Target rank1 already Sunday July30. New answer adds Sunday to otherwise identical date and label flips NO to YES. Revision perspective to view is synonymous and unrelated to calendar resolution; cannot attribute gain to recovered date.",
+      "mechanism_causality": "not_established_by_one_observed_flip",
+      "diagnostics": {
+        "arms": {
+          "baseline": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 2781
+          },
+          "cheap": {
+            "selected_revised_ids": [
+              "5e57bf51-f089-4702-a569-445e05c8fd21"
+            ],
+            "newly_selected_unrevised_ids": [
+              "b0ffb5ee-61ed-4a0b-9dc8-937fb31b059b"
+            ],
+            "added_selected_ids": [
+              "b0ffb5ee-61ed-4a0b-9dc8-937fb31b059b"
+            ],
+            "displaced_N0_ids": [
+              "43775aab-4aff-4160-afca-4048519c79c6"
+            ],
+            "same_members_as_N0": false,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2819
+          },
+          "jev": {
+            "selected_revised_ids": [
+              "5e57bf51-f089-4702-a569-445e05c8fd21"
+            ],
+            "newly_selected_unrevised_ids": [
+              "b0ffb5ee-61ed-4a0b-9dc8-937fb31b059b"
+            ],
+            "added_selected_ids": [
+              "b0ffb5ee-61ed-4a0b-9dc8-937fb31b059b"
+            ],
+            "displaced_N0_ids": [
+              "43775aab-4aff-4160-afca-4048519c79c6"
+            ],
+            "same_members_as_N0": false,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2819
+          }
+        }
+      }
+    },
+    {
+      "qid": "c4_q1",
+      "role": "primary",
+      "full_selected20_all3_read": true,
+      "all_distinct_selected_text_variants_read": true,
+      "answers": {
+        "baseline": {
+          "text": "Winning a championship and giving back through charity and community work",
+          "label": "[[yes]]"
+        },
+        "cheap": {
+          "text": "Winning a championship, giving back through charity, and community work",
+          "label": "[[no]]"
+        },
+        "jev": {
+          "text": "Winning a championship and giving back through charity and community work",
+          "label": "[[yes]]"
+        }
+      },
+      "source_anchors": [
+        "c4:D6:15",
+        "c4:D11:17",
+        "c4:D6:11"
+      ],
+      "finding": "Cheap near-equivalent answer flips YES to NO; both answers omit endorsement/build-brand and include championship. JEV exact N0. Cheap shoe rewrite and positions17/18 differ, not evidence that goal support was removed. Full source explicitly supports achievements in old shoe clause.",
+      "mechanism_causality": "not_established_by_one_observed_flip",
+      "diagnostics": {
+        "arms": {
+          "baseline": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 3155
+          },
+          "cheap": {
+            "selected_revised_ids": [
+              "08f915ff-5b64-4c8b-9297-8bdbb0af5b79"
+            ],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 3158
+          },
+          "jev": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 3155
+          }
+        }
+      }
+    },
+    {
+      "qid": "c4_q146",
+      "role": "peer",
+      "full_selected20_all3_read": true,
+      "all_distinct_selected_text_variants_read": true,
+      "answers": {
+        "baseline": {
+          "text": "German and the violin",
+          "label": "[[yes]]"
+        },
+        "cheap": {
+          "text": "The violin",
+          "label": "[[yes]]"
+        },
+        "jev": {
+          "text": "German",
+          "label": "[[no]]"
+        }
+      },
+      "source_anchors": [
+        "c4:D21:9-13"
+      ],
+      "finding": "Violin stays rank6, travelclub rank1, German rank5. JEV answers German, cheap violin. Source links travelclub/studies to instrument explicitly, then names violin, while later turn says piano. No violin deletion; original selected memories lack exact discourse linkage. Do not infer that unrelated favorite-novels rewrite caused failure.",
+      "mechanism_causality": "not_established_by_one_observed_flip",
+      "diagnostics": {
+        "arms": {
+          "baseline": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 2797
+          },
+          "cheap": {
+            "selected_revised_ids": [
+              "38253406-509a-4fb4-9317-7efb9b4adcb5",
+              "01cb7d49-b33a-4105-b0b7-3f87d61e9372"
+            ],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2842
+          },
+          "jev": {
+            "selected_revised_ids": [
+              "01cb7d49-b33a-4105-b0b7-3f87d61e9372"
+            ],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2806
+          }
+        }
+      }
+    },
+    {
+      "qid": "c4_q151",
+      "role": "primary",
+      "full_selected20_all3_read": true,
+      "all_distinct_selected_text_variants_read": true,
+      "answers": {
+        "baseline": {
+          "text": "Insufficient evidence",
+          "label": "[[no]]"
+        },
+        "cheap": {
+          "text": "John's basketball game and career-high in assists",
+          "label": "[[yes]]"
+        },
+        "jev": {
+          "text": "John's career-high in assists during a rivalry basketball game",
+          "label": "[[yes]]"
+        }
+      },
+      "source_anchors": [
+        "c4:D23:2",
+        "c4:D23:3"
+      ],
+      "finding": "Sports anchor stays rank19. JEV changes only unrelated conference favorite-novels clause. New YES answer omits academic topic present in source but absent from selected20; no demonstrated complete-topic recovery or causal repair benefit.",
+      "mechanism_causality": "not_established_by_one_observed_flip",
+      "diagnostics": {
+        "arms": {
+          "baseline": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 3073
+          },
+          "cheap": {
+            "selected_revised_ids": [
+              "232a3f37-4b65-43e2-b4d0-80af29e52755",
+              "01cb7d49-b33a-4105-b0b7-3f87d61e9372",
+              "32a19728-718f-44f2-85cc-ca6bf1c56840",
+              "e39f8f94-892f-439e-9017-8442c342395b"
+            ],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 3164
+          },
+          "jev": {
+            "selected_revised_ids": [
+              "01cb7d49-b33a-4105-b0b7-3f87d61e9372"
+            ],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 3082
+          }
+        }
+      }
+    },
+    {
+      "qid": "c4_q55",
+      "role": "peer",
+      "full_selected20_all3_read": true,
+      "all_distinct_selected_text_variants_read": true,
+      "answers": {
+        "baseline": {
+          "text": "Around early 2023 (just under a year prior to December 2023)",
+          "label": "[[yes]]"
+        },
+        "cheap": {
+          "text": "Around late 2022 or early 2023 (just under a year before December 2023)",
+          "label": "[[no]]"
+        },
+        "jev": {
+          "text": "Around early 2023 (just under a year prior to December 2023)",
+          "label": "[[yes]]"
+        }
+      },
+      "source_anchors": [
+        "c4:D1:3-13",
+        "c4:D21:3-4"
+      ],
+      "finding": "Cheap late2022-or-early2023 NO versus N0 early2023 YES; JEV inherited exactN0. All20 IDs/order unchanged, only shoes wording cheap. New-team May21 is not explicit first-professional start, just-under-year December is approximate; retain gold/date ambiguity and no causal shoe explanation.",
+      "mechanism_causality": "not_established_by_one_observed_flip",
+      "diagnostics": {
+        "arms": {
+          "baseline": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 3150
+          },
+          "cheap": {
+            "selected_revised_ids": [
+              "08f915ff-5b64-4c8b-9297-8bdbb0af5b79"
+            ],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 3153
+          },
+          "jev": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 3150
+          }
+        }
+      }
+    },
+    {
+      "qid": "c4_q9",
+      "role": "primary",
+      "full_selected20_all3_read": true,
+      "all_distinct_selected_text_variants_read": true,
+      "answers": {
+        "baseline": {
+          "text": "Insufficient evidence",
+          "label": "[[no]]"
+        },
+        "cheap": {
+          "text": "Nike (for basketball shoes and gear), a renowned outdoor gear company, and a popular beverage company",
+          "label": "[[yes]]"
+        },
+        "jev": {
+          "text": "Nike, a renowned outdoor gear company, and a popular beverage company",
+          "label": "[[yes]]"
+        }
+      },
+      "source_anchors": [
+        "c4:D3:13",
+        "c4:D25:2-8",
+        "c4:D29:4"
+      ],
+      "finding": "N0 already has Nike/Gatorade potential, beverage and outdoor deal at ranks2-4. New answers omit Gatorade; Moxie name not certified by source text/caption. JEV brings revised photoshoot and sports-opportunity facts, displaces seminar, but no new named endorsement answer. Gain is compatible with utilization/label tolerance, not full-list repair.",
+      "mechanism_causality": "not_established_by_one_observed_flip",
+      "diagnostics": {
+        "arms": {
+          "baseline": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 2787
+          },
+          "cheap": {
+            "selected_revised_ids": [
+              "e39f8f94-892f-439e-9017-8442c342395b",
+              "3e775d5f-0f62-4533-bdb3-2002033bd905",
+              "e3488d39-2413-468e-b6a1-4e223a41a498"
+            ],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [
+              "3e775d5f-0f62-4533-bdb3-2002033bd905"
+            ],
+            "displaced_N0_ids": [
+              "c4f8b619-109f-4efc-a277-a42233e27e9a"
+            ],
+            "same_members_as_N0": false,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2890
+          },
+          "jev": {
+            "selected_revised_ids": [
+              "3e775d5f-0f62-4533-bdb3-2002033bd905",
+              "e3488d39-2413-468e-b6a1-4e223a41a498"
+            ],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [
+              "3e775d5f-0f62-4533-bdb3-2002033bd905"
+            ],
+            "displaced_N0_ids": [
+              "c4f8b619-109f-4efc-a277-a42233e27e9a"
+            ],
+            "same_members_as_N0": false,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2888
+          }
+        }
+      }
+    },
+    {
+      "qid": "c7_q162",
+      "role": "peer",
+      "full_selected20_all3_read": true,
+      "all_distinct_selected_text_variants_read": true,
+      "answers": {
+        "baseline": {
+          "text": "Green tech projects benefiting disadvantaged areas",
+          "label": "[[yes]]"
+        },
+        "cheap": {
+          "text": "Green tech projects benefiting disadvantaged areas",
+          "label": "[[yes]]"
+        },
+        "jev": {
+          "text": "Insufficient evidence",
+          "label": "[[no]]"
+        }
+      },
+      "source_anchors": [
+        "c7:D22:6-12"
+      ],
+      "finding": "Green-tech/disadvantaged-areas rank3 preserved; JEV replaces tail yoga with old career goal, no selected UPDATE. Full source future sustainable/solar/clean-water detail is richer than selected memories. Partial topic support retained but complete future intent not certified. Abstention is not simply deleted green-tech evidence.",
+      "mechanism_causality": "not_established_by_one_observed_flip",
+      "diagnostics": {
+        "arms": {
+          "baseline": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 2791
+          },
+          "cheap": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2791
+          },
+          "jev": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [
+              "b677f69b-acdb-4205-af53-b02896836506"
+            ],
+            "added_selected_ids": [
+              "b677f69b-acdb-4205-af53-b02896836506"
+            ],
+            "displaced_N0_ids": [
+              "b5d192d1-e00c-4861-ba73-eb9a6c9697af"
+            ],
+            "same_members_as_N0": false,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2791
+          }
+        }
+      }
+    },
+    {
+      "qid": "c7_q172",
+      "role": "primary",
+      "full_selected20_all3_read": true,
+      "all_distinct_selected_text_variants_read": true,
+      "answers": {
+        "baseline": {
+          "text": "Monster Hunter: World",
+          "label": "[[yes]]"
+        },
+        "cheap": {
+          "text": "Insufficient evidence.",
+          "label": "[[no]]"
+        },
+        "jev": {
+          "text": "Insufficient evidence.",
+          "label": "[[no]]"
+        }
+      },
+      "source_anchors": [
+        "c7:D24:6-10",
+        "c7:D27:12-13"
+      ],
+      "finding": "Monster Hunter/mom target remains rank4, all memberships/order fixed. Only rank8 other-speaker card game gains cannot-remember-name qualifier. New abstention could involve distraction but causal cross-entity transfer not proven. Wii supplied by source caption D24:8, absent from original memory; do not certify every question condition available.",
+      "mechanism_causality": "not_established_by_one_observed_flip",
+      "diagnostics": {
+        "arms": {
+          "baseline": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 2600
+          },
+          "cheap": {
+            "selected_revised_ids": [
+              "302c4e26-f3d0-4ecd-940c-840da6ef2824"
+            ],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2661
+          },
+          "jev": {
+            "selected_revised_ids": [
+              "302c4e26-f3d0-4ecd-940c-840da6ef2824"
+            ],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2661
+          }
+        }
+      }
+    },
+    {
+      "qid": "c9_q39",
+      "role": "peer",
+      "full_selected20_all3_read": true,
+      "all_distinct_selected_text_variants_read": true,
+      "answers": {
+        "baseline": {
+          "text": "Dodge Charger",
+          "label": "[[yes]]"
+        },
+        "cheap": {
+          "text": "Insufficient evidence.",
+          "label": "[[no]]"
+        },
+        "jev": {
+          "text": "Dodge Charger",
+          "label": "[[yes]]"
+        }
+      },
+      "source_anchors": [
+        "c9:D13:7-9",
+        "c9:D21:4-6"
+      ],
+      "finding": "Cheap Mustang fact loses classic-muscle qualifier, but rank2 explicitly classic-muscle project remains. No direct source Dodge-versus-Subaru statement; preference requires automobile knowledge and inference. JEV exactN0. Do not call all support removed or abstention a proven semantic error.",
+      "mechanism_causality": "not_established_by_one_observed_flip",
+      "diagnostics": {
+        "arms": {
+          "baseline": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 2820
+          },
+          "cheap": {
+            "selected_revised_ids": [
+              "e5197ce7-f841-4a86-b36e-69945c110ea6"
+            ],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2797
+          },
+          "jev": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 2820
+          }
+        }
+      }
+    },
+    {
+      "qid": "c9_q48",
+      "role": "primary",
+      "full_selected20_all3_read": true,
+      "all_distinct_selected_text_variants_read": true,
+      "answers": {
+        "baseline": {
+          "text": "Attending a car show",
+          "label": "[[yes]]"
+        },
+        "cheap": {
+          "text": "Insufficient evidence",
+          "label": "[[no]]"
+        },
+        "jev": {
+          "text": "Attending a car show",
+          "label": "[[yes]]"
+        }
+      },
+      "source_anchors": [
+        "c9:D22:1"
+      ],
+      "finding": "Car-show October6 anchor stays rank5; cheap no selected revised fact, only tail membership change. JEV exact N0. Source last-Friday observed October8 supports October6; first-weekend wording has calendar interpretation ambiguity. No answer-evidence deletion demonstrated.",
+      "mechanism_causality": "not_established_by_one_observed_flip",
+      "diagnostics": {
+        "arms": {
+          "baseline": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 2616
+          },
+          "cheap": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [
+              "8f94b849-6f23-48ad-aaaf-7b12b5e163f2"
+            ],
+            "added_selected_ids": [
+              "8f94b849-6f23-48ad-aaaf-7b12b5e163f2"
+            ],
+            "displaced_N0_ids": [
+              "1f7f7df5-9f6a-4589-8a1f-0b9d3b895ac5"
+            ],
+            "same_members_as_N0": false,
+            "same_ordered_selected_facts_as_N0": false,
+            "same_full_Reader_signature_as_N0": false,
+            "zero_revision_conversation_arm": false,
+            "selected_text_characters": 2631
+          },
+          "jev": {
+            "selected_revised_ids": [],
+            "newly_selected_unrevised_ids": [],
+            "added_selected_ids": [],
+            "displaced_N0_ids": [],
+            "same_members_as_N0": true,
+            "same_ordered_selected_facts_as_N0": true,
+            "same_full_Reader_signature_as_N0": true,
+            "zero_revision_conversation_arm": true,
+            "selected_text_characters": 2616
+          }
+        }
+      }
+    }
+  ],
+  "complete_original_sessions_read": {
+    "2": [
+      26
+    ],
+    "4": [
+      1,
+      3,
+      6,
+      11,
+      21,
+      23,
+      25,
+      29
+    ],
+    "7": [
+      22,
+      24,
+      27
+    ],
+    "9": [
+      13,
+      21,
+      22
+    ]
+  },
+  "accepted13_review_scope": "Read all13 peer assessments and their quoted limitations; not independently claiming all13 full-source sessions read. Independent relevant full sessions above.",
+  "format_censoring": "218 failed remain failed; prior sole census found193 fence-only hypothetically valid, never admitted. This trial estimates strict-parser deployment, not uncensored repair opportunity.",
+  "technical_limits": {
+    "original_strict_parity": "FAILED604exact1296different",
+    "posthoc_downstream_admission": true,
+    "reader1900_exact": true,
+    "independent_historical_boost_regeneration": false,
+    "outcome_selected_parity": false
+  },
+  "cost_limits": {
+    "shared_proposer_physical": 273,
+    "JEV_physical": 38,
+    "original_embedding_physical": 204,
+    "new_JEV_embedding_physical": 0,
+    "new_QA_physical": 1412,
+    "new_QA_transport_usage_unknown": 4,
+    "monetary_cost_not_estimated": true,
+    "cold_original_index_not_zero": true
+  },
+  "closure_vote": "AGREE_COMPLETE_R09_NOT_THRESHOLD_SUCCESS",
+  "successful_family_increment": 0,
+  "next_direction_status": "DISCUSSION_NOT_PROTOCOL_VOTE",
+  "next_preference": "Prospective exact JSON-envelope compatibility replication of R09 addresses observed format censoring more directly than untested full20 relationship index; same source/write-repair family, no promise of gain or second independent component. Await peer objections and exact protocol.",
+  "alternative": "Same-N020 full-fact-preserving reference organization can test utilization, but existing short facts, unsupported relationship generation, added prompt information/cost and overlap with ordering limit rationale. No compression or generated answers silently passed as evidence.",
+  "new_model_calls": 0,
+  "production_changes": false
+}

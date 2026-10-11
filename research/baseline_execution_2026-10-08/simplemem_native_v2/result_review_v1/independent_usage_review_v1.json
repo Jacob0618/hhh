@@ -1,0 +1,197 @@
+{
+  "schema": "simplemem-independent-physical-usage-review-v1",
+  "status": "passed",
+  "owners": {
+    "original": {
+      "physical_attempts": 14845,
+      "exact_cache_hits": 198,
+      "status_counts": {
+        "200": 14817,
+        "transport_error": 27,
+        "429": 1
+      },
+      "ledger_sha256": {
+        "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem\\work\\api_firstpass\\api_calls.jsonl": "287ca21048198d46474b4dc1482b56bae8102c4cad75c1c5574199a276c8541c",
+        "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem\\work\\api_method\\api_calls.jsonl": "4ab679c6c602b04f7f8015ae7b18c688a298bcd7beb3e1999e07c66b87f4619a"
+      },
+      "usage_unknown_or_missing": 4719,
+      "tokens": {
+        "promptTokenCount": {
+          "reported_sum": 16949474,
+          "reported_attempts": 10126
+        },
+        "candidatesTokenCount": {
+          "reported_sum": 1973091,
+          "reported_attempts": 10126
+        },
+        "thoughtsTokenCount": {
+          "reported_sum": null,
+          "reported_attempts": 0
+        },
+        "totalTokenCount": {
+          "reported_sum": 18922565,
+          "reported_attempts": 10126
+        }
+      },
+      "cost_usd": null
+    },
+    "continuation": {
+      "physical_attempts": 460,
+      "exact_cache_hits": 352,
+      "status_counts": {
+        "200": 459,
+        "503": 1
+      },
+      "ledger_sha256": {
+        "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem_native_v2\\work\\api_firstpass\\api_calls.jsonl": "0eb872cf679f745dbc191985ad7c66f0b59849c19505416e6d7e7b8fb955881a",
+        "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem_native_v2\\work\\api_method\\api_calls.jsonl": "704dae7bad9629ecac2dd83dcdfe41acda95cc38d7e84029baad573b8c063e17",
+        "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem_native_v2\\work\\api_recovery\\api_calls.jsonl": "af7d38de457320b9f363d498a4c1a11a2317fab240501c5030e286f0f2285898"
+      },
+      "usage_unknown_or_missing": 164,
+      "tokens": {
+        "promptTokenCount": {
+          "reported_sum": 899359,
+          "reported_attempts": 296
+        },
+        "candidatesTokenCount": {
+          "reported_sum": 27451,
+          "reported_attempts": 296
+        },
+        "thoughtsTokenCount": {
+          "reported_sum": null,
+          "reported_attempts": 0
+        },
+        "totalTokenCount": {
+          "reported_sum": 926810,
+          "reported_attempts": 296
+        }
+      },
+      "cost_usd": null
+    }
+  },
+  "by_namespace": {
+    "original/api_firstpass": {
+      "physical_attempts": 2925,
+      "cache_hits": 22,
+      "status_counts": {
+        "200": 2918,
+        "transport_error": 7
+      },
+      "unknown_usage_by_operation": {
+        "generateContent": 7
+      }
+    },
+    "original/api_method": {
+      "physical_attempts": 11920,
+      "cache_hits": 176,
+      "status_counts": {
+        "transport_error": 20,
+        "200": 11899,
+        "429": 1
+      },
+      "unknown_usage_by_operation": {
+        "generateContent": 12,
+        "batchEmbedContents": 4700
+      }
+    },
+    "continuation/api_firstpass": {
+      "physical_attempts": 140,
+      "cache_hits": 0,
+      "status_counts": {
+        "200": 140
+      },
+      "unknown_usage_by_operation": {}
+    },
+    "continuation/api_method": {
+      "physical_attempts": 319,
+      "cache_hits": 352,
+      "status_counts": {
+        "200": 318,
+        "503": 1
+      },
+      "unknown_usage_by_operation": {
+        "batchEmbedContents": 163,
+        "generateContent": 1
+      }
+    },
+    "continuation/api_recovery": {
+      "physical_attempts": 1,
+      "cache_hits": 0,
+      "status_counts": {
+        "200": 1
+      },
+      "unknown_usage_by_operation": {}
+    }
+  },
+  "physical_attempts": 15305,
+  "exact_cache_hits": 550,
+  "continuation_retry_chains": [
+    [
+      {
+        "timestamp_utc": "2026-10-09T06:50:48.192105+00:00",
+        "context": {
+          "method": "simplemem",
+          "conversation": 8,
+          "query_id": "c8_q123",
+          "phase": "retrieval"
+        },
+        "stage": "simplemem_completeness",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "e6c21641cd2a17597158a1ee7290a28e4613827778b58782f97ec0e691810a57",
+        "attempt": 1,
+        "status": 503,
+        "latency_ms": 3725.80899996683,
+        "usage": {},
+        "resolved_model": null,
+        "request_id": null,
+        "cache_hit": false,
+        "error": "{'code': 503, 'message': 'The service is currently unavailable.', 'status': 'UNAVAILABLE'}"
+      },
+      {
+        "timestamp_utc": "2026-10-09T06:50:52.108104+00:00",
+        "context": {
+          "method": "simplemem",
+          "conversation": 8,
+          "query_id": "c8_q123",
+          "phase": "retrieval"
+        },
+        "stage": "simplemem_completeness",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash",
+        "operation": "generateContent",
+        "request_hash": "e6c21641cd2a17597158a1ee7290a28e4613827778b58782f97ec0e691810a57",
+        "attempt": 2,
+        "status": 200,
+        "latency_ms": 1861.9951999280602,
+        "usage": {
+          "promptTokenCount": 1940,
+          "candidatesTokenCount": 167,
+          "totalTokenCount": 2107,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 1940
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "resolved_model": "gemini-2.5-flash",
+        "request_id": null,
+        "cache_hit": false
+      }
+    ]
+  ],
+  "matches_saved_summary": true,
+  "cost_usd": null,
+  "unknown_usage_total": 4883,
+  "limits": "Exact cache reuses original response usage and adds no new physical generation usage. Missing provider usage, missing thinking fields and dollar prices remain unknown/null, not zero. Corpus embeddings included in physical counts; no vector DB opened.",
+  "evidence_sha256": {
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem\\work\\api_firstpass\\api_calls.jsonl": "287ca21048198d46474b4dc1482b56bae8102c4cad75c1c5574199a276c8541c",
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem\\work\\api_method\\api_calls.jsonl": "4ab679c6c602b04f7f8015ae7b18c688a298bcd7beb3e1999e07c66b87f4619a",
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem_native_v2\\work\\api_firstpass\\api_calls.jsonl": "0eb872cf679f745dbc191985ad7c66f0b59849c19505416e6d7e7b8fb955881a",
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem_native_v2\\work\\api_method\\api_calls.jsonl": "704dae7bad9629ecac2dd83dcdfe41acda95cc38d7e84029baad573b8c063e17",
+    "D:\\jev mem\\runs\\five_baselines_gemini25_v1_20261008\\simplemem_native_v2\\work\\api_recovery\\api_calls.jsonl": "af7d38de457320b9f363d498a4c1a11a2317fab240501c5030e286f0f2285898"
+  }
+}

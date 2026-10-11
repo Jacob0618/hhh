@@ -1,0 +1,2105 @@
+{
+  "schema": "gemini25-ablation-independent-physical-usage-v1",
+  "created_utc": "2026-10-07T22:21:33.709023+00:00",
+  "status": "passed_read_only_ledger_aggregation",
+  "workspace": "D:\\jev mem",
+  "scope": {
+    "writer": "Only conv_0..conv_9/session/native of fresh original session Writer.",
+    "source": "Fresh retrieval plus all JEV phase ledgers, retaining original R03 402 firstpass separately from recovery.",
+    "qa": "Fresh firstpass plus terminal zero-job technical recovery.",
+    "limits": "Ledger-only accounting. No raw response/cache-body verification, full scientific replay, metrics, old Gemini 3.8 artifacts, credentials, API or pricing lookups. QA large manifests and raw seal are not required or rebound in this narrow report."
+  },
+  "definitions": {
+    "physical_attempt": "Each non-cache ledger row, including all failed HTTP and transport attempts, counted once without deduplication across namespaces.",
+    "local_cache_event": "Only ledger-recorded cache_hit=true events; copied usage is excluded from physical sums. Failed logical same-hash reuse is not inferred as a ledger cache event: retained original R03 firstpass has zero cache_hit=true rows.",
+    "provider_cached_input_tokens": "Explicit cachedContentTokenCount on physical Gemini responses; subset of prompt tokens and never added to them. Absent fields are unavailable, not zero.",
+    "thinking_tokens": "Explicit thoughtsTokenCount only. The field is absent throughout, so reported total is null; configured thinkingBudget=0 is not substituted as a usage measurement.",
+    "sum_reported": "Partial sum of numeric values on physical rows; null if no numeric value exists. Missing/error usage is not treated as zero.",
+    "complete_total": "Only numeric when all applicable physical attempts report the field; otherwise null.",
+    "embedding_usage": "Embedding/countTokens usage is not recorded in these ledgers. Numeric token totals remain unavailable.",
+    "cost": "No verified tariff or invoice applied; cost remains unknown.",
+    "qa_arm_attribution": "Physical usage grouped by producer arm is not marginal arm cost because identical requests share responses."
+  },
+  "ledger_count": 36,
+  "ledger_refs": [
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007\\conv_0\\api\\api_calls.jsonl",
+      "sha256": "b6090e8ec420ea138f484a3f2442a37316fd3140dfbd734b0a5ce2b69c185b03",
+      "bytes": 746995,
+      "rows": 912,
+      "family": "qa",
+      "phase": "qa",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007\\conv_1\\api\\api_calls.jsonl",
+      "sha256": "739daa3fc4d41793d3765d26a98353a7b027062b6750c42ad30a9fc52889ae51",
+      "bytes": 398929,
+      "rows": 487,
+      "family": "qa",
+      "phase": "qa",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007\\conv_2\\api\\api_calls.jsonl",
+      "sha256": "7e8caa9cb4b0f50976725774f6e31f23360cf227c9ec6937e5d5612101810aaf",
+      "bytes": 747088,
+      "rows": 912,
+      "family": "qa",
+      "phase": "qa",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007\\conv_3\\api\\api_calls.jsonl",
+      "sha256": "6238c845f363601193c2c5e1cad7001033922d25693fc1998fdf32546e8b5e6c",
+      "bytes": 980813,
+      "rows": 1197,
+      "family": "qa",
+      "phase": "qa",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007\\conv_4\\api\\api_calls.jsonl",
+      "sha256": "c3ff439c67b5b22288b10e1be0441e26316727e206a75785eb774edaad9f31d4",
+      "bytes": 876479,
+      "rows": 1070,
+      "family": "qa",
+      "phase": "qa",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007\\conv_5\\api\\api_calls.jsonl",
+      "sha256": "1b2692b0802ac2533080826f8b1a9af92d316c6009661a11e7d1f9007d58fec2",
+      "bytes": 605373,
+      "rows": 739,
+      "family": "qa",
+      "phase": "qa",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007\\conv_6\\api\\api_calls.jsonl",
+      "sha256": "3e77d37ea8639dba90a3525d9e99e030139b834d8ca2b12a73c17173e31bbc93",
+      "bytes": 736894,
+      "rows": 900,
+      "family": "qa",
+      "phase": "qa",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007\\conv_7\\api\\api_calls.jsonl",
+      "sha256": "fdeefd1c5c6e48c712ee4c05ef92c627680e8bf2fd327d09e4d193fc17112cf6",
+      "bytes": 938112,
+      "rows": 1146,
+      "family": "qa",
+      "phase": "qa",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007\\conv_8\\api\\api_calls.jsonl",
+      "sha256": "d21e37190a2a99d0d6312f7ad76d5f1b3637a1254962ace50136554ecf5ccb23",
+      "bytes": 769415,
+      "rows": 939,
+      "family": "qa",
+      "phase": "qa",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007\\conv_9\\api\\api_calls.jsonl",
+      "sha256": "e5fab709388a026399528e97183a28782114d6a8a5a0d417b635d2c3263a2cec",
+      "bytes": 776489,
+      "rows": 948,
+      "family": "qa",
+      "phase": "qa",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\conv_0\\retrieval_api\\api_calls.jsonl",
+      "sha256": "011c21857189510caa3d07bc294de2c38aa7dbe1d3644e1a680d7937bf0530a2",
+      "bytes": 145436,
+      "rows": 305,
+      "family": "source",
+      "phase": "retrieval",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\conv_1\\retrieval_api\\api_calls.jsonl",
+      "sha256": "c669f5d4ac211b4dcf6b94a0a9ff771da7096a4c98856b8a01536a4797141799",
+      "bytes": 77123,
+      "rows": 162,
+      "family": "source",
+      "phase": "retrieval",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\conv_2\\retrieval_api\\api_calls.jsonl",
+      "sha256": "8fc59c0b5e33bc37657cd7dcf62e6c650059ec63ad122e8750fe9bf6daa39c32",
+      "bytes": 144294,
+      "rows": 303,
+      "family": "source",
+      "phase": "retrieval",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\conv_3\\retrieval_api\\api_calls.jsonl",
+      "sha256": "4ef70c8bcee6f51f1720c931ea5878a5f2d4215175950b902ad320e5db9a9bfd",
+      "bytes": 189566,
+      "rows": 398,
+      "family": "source",
+      "phase": "retrieval",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\conv_4\\retrieval_api\\api_calls.jsonl",
+      "sha256": "c5cc6485f896d1bc8c757fd075553e00ad1e20523f12c797be9b4e3dcb7c647e",
+      "bytes": 169719,
+      "rows": 356,
+      "family": "source",
+      "phase": "retrieval",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\conv_5\\retrieval_api\\api_calls.jsonl",
+      "sha256": "37e00b9eedd5f9ca3870ec325c656a76983f75e52a6b7d48e97b3f774d1735b3",
+      "bytes": 116661,
+      "rows": 245,
+      "family": "source",
+      "phase": "retrieval",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\conv_6\\retrieval_api\\api_calls.jsonl",
+      "sha256": "5bbcff608f4feb9ccd95b75a05d08e21ae1f379116a6da111bbce07f1e8b8dae",
+      "bytes": 143775,
+      "rows": 301,
+      "family": "source",
+      "phase": "retrieval",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\conv_7\\retrieval_api\\api_calls.jsonl",
+      "sha256": "b8b2bbb52f54088935aa42456adf0cee4fe273e1abacabbf7689b5ef72a18f7b",
+      "bytes": 181842,
+      "rows": 382,
+      "family": "source",
+      "phase": "retrieval",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\conv_8\\retrieval_api\\api_calls.jsonl",
+      "sha256": "66b9c4db2435cc71f5a239ab1204664c5ffaf46c918475aa3bd89cec27fa5dbb",
+      "bytes": 150109,
+      "rows": 314,
+      "family": "source",
+      "phase": "retrieval",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\conv_9\\retrieval_api\\api_calls.jsonl",
+      "sha256": "9ddacc04bd9e28926f4a6ad6efc6db014caa17654eb43a843054275f024dae6c",
+      "bytes": 150537,
+      "rows": 316,
+      "family": "source",
+      "phase": "retrieval",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\phases\\closure\\firstpass\\api_calls.jsonl",
+      "sha256": "fb784ab9268402323174bd73a212268f3cd95151539cc6e449ccd87d8a3ce54e",
+      "bytes": 3540319,
+      "rows": 6162,
+      "family": "source",
+      "phase": "closure",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\phases\\multi_compare\\firstpass\\api_calls.jsonl",
+      "sha256": "d015a153287027ec779401ee35133d508a0b4ce2c00feb308bf812424d7c3246",
+      "bytes": 890005,
+      "rows": 1541,
+      "family": "source",
+      "phase": "multi_compare",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\phases\\r03\\firstpass\\api_calls.jsonl",
+      "sha256": "20222506953123e8e7a187be1c05ec10d3cf9001b30096ef3796094057153886",
+      "bytes": 1136571,
+      "rows": 1535,
+      "family": "source",
+      "phase": "r03",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\phases\\r03\\recovery_v1\\api_calls.jsonl",
+      "sha256": "88906dc6f7fbac950a458bbc60bcbb807629f1eaf749a3128a145931ed701631",
+      "bytes": 878091,
+      "rows": 1546,
+      "family": "source",
+      "phase": "r03",
+      "producer": "recovery_v1"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\phases\\rank\\firstpass\\api_calls.jsonl",
+      "sha256": "cc68a2b8090f3a543fdfff61f6438747842e3a008b4a53a3fe3c25827d7fc7db",
+      "bytes": 872368,
+      "rows": 1542,
+      "family": "source",
+      "phase": "rank",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\phases\\support\\firstpass\\api_calls.jsonl",
+      "sha256": "b1c9351223b65d556a47ed0fb66b2e7dbcc8ed3ca56cf5cb1862ab0d562147dd",
+      "bytes": 3080787,
+      "rows": 4731,
+      "family": "source",
+      "phase": "support",
+      "producer": "firstpass"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_0\\session\\native\\api_calls.jsonl",
+      "sha256": "397539a380c915769e252dc319740609c14e25a86cf00e74ece1d69da620a782",
+      "bytes": 56360,
+      "rows": 95,
+      "family": "writer",
+      "phase": "write",
+      "producer": "session"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_1\\session\\native\\api_calls.jsonl",
+      "sha256": "3da64126524a28840a6f03916b94e3a31a277493f31b810cbb5113d15e03bd2a",
+      "bytes": 55783,
+      "rows": 94,
+      "family": "writer",
+      "phase": "write",
+      "producer": "session"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_2\\session\\native\\api_calls.jsonl",
+      "sha256": "25709a9ed46dfba60afab4de86860425931399b60f49b183baeef9d37eb8d74a",
+      "bytes": 95632,
+      "rows": 160,
+      "family": "writer",
+      "phase": "write",
+      "producer": "session"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_3\\session\\native\\api_calls.jsonl",
+      "sha256": "7b90ecc468f581bf7abbf749fdb03ee0a7edf73f278c3a092066e33d8a2686e4",
+      "bytes": 85048,
+      "rows": 143,
+      "family": "writer",
+      "phase": "write",
+      "producer": "session"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_4\\session\\native\\api_calls.jsonl",
+      "sha256": "b460a3473e2337a0a1a915b7ca54470e9d126e9f2a29455ec33e9072c2e51258",
+      "bytes": 86755,
+      "rows": 146,
+      "family": "writer",
+      "phase": "write",
+      "producer": "session"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_5\\session\\native\\api_calls.jsonl",
+      "sha256": "229e78418ffdb775e3f5836ffeb673a00b7548c18714afb35cb77633800099ce",
+      "bytes": 83864,
+      "rows": 141,
+      "family": "writer",
+      "phase": "write",
+      "producer": "session"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_6\\session\\native\\api_calls.jsonl",
+      "sha256": "3c0350b45e79b84a7cf3e5697b4a7de6a90dc2ec5f3260548c73010112862050",
+      "bytes": 92371,
+      "rows": 155,
+      "family": "writer",
+      "phase": "write",
+      "producer": "session"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_7\\session\\native\\api_calls.jsonl",
+      "sha256": "ad1f294a11aaf4f5d157fe8b635f08af51dddc1a95de28b8ec13ec7a8aaa7c15",
+      "bytes": 90194,
+      "rows": 151,
+      "family": "writer",
+      "phase": "write",
+      "producer": "session"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_8\\session\\native\\api_calls.jsonl",
+      "sha256": "03a9b6df37697b7deabfacd6211587c180a762c5e86f1c87bb2b2c3f4e3c67d8",
+      "bytes": 74065,
+      "rows": 125,
+      "family": "writer",
+      "phase": "write",
+      "producer": "session"
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\conv_9\\session\\native\\api_calls.jsonl",
+      "sha256": "98bed2ba4bb8da5494745e5d596d104868215e8998fc208bf9bd233257625602",
+      "bytes": 88660,
+      "rows": 149,
+      "family": "writer",
+      "phase": "write",
+      "producer": "session"
+    }
+  ],
+  "small_control_refs": [
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\run_manifest.json",
+      "sha256": "caee66090e72d9c44da8f90f29f45e648a7bc4672ad672aca4a711c151f03f9e",
+      "bytes": 12371
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_writer_v1_20261007\\controller_status.json",
+      "sha256": "56c2d07ba99bae62eb1b306d005774d4a1baeb71cace178f790da7d0c1b397f4",
+      "bytes": 7128
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_source_v1_20261007\\run_manifest.json",
+      "sha256": "1b9d996384daa5d014bd776e079cfd3eb899e3605489fef4d0bf85286cd46f6a",
+      "bytes": 29937
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007_recovery_v1\\run_manifest.json",
+      "sha256": "7347cf93716fedc04621795ef93b5878726d655aff53555789f1af61131a1c11",
+      "bytes": 6675
+    },
+    {
+      "path": "D:\\jev mem\\runs\\gemini25_ablation_qa_v1_20261007_recovery_v1\\run_outcome.json",
+      "sha256": "095d1d53a4a8c4472e94ed5a3ebcdda53253ba4402be02e33018958a8c51f8ca",
+      "bytes": 608
+    }
+  ],
+  "checks": {
+    "exact_expected_api_ledger_inventory": 36,
+    "all_lines_parse": true,
+    "terminal_newlines": true,
+    "known_models_operations_and_contexts": true,
+    "cache_semantics_without_status_or_attempt": true,
+    "cache_producer_matches_within_same_ledger": {
+      "same_ledger_successful_producer": 2352
+    },
+    "physical_attempt_numbers_bounded_1_to_3": true,
+    "ledger_bytes_unchanged_during_audit": true,
+    "qa_recovery_jobs": 0,
+    "qa_recovery_native_clients": 0,
+    "qa_recovery_api_ledgers": 0
+  },
+  "overall": {
+    "ledger_rows": 30748,
+    "physical_attempts": 28396,
+    "local_cache_events": 2352,
+    "physical_status_counts": {
+      "200": 26702,
+      "402": 1529,
+      "429": 1,
+      "503": 1,
+      "529": 8,
+      "transport_error": 155
+    },
+    "physical_usage_unknown_flag_true": 155,
+    "physical_usage_empty_or_absent": 5082,
+    "unique_physical_ledger_request_hashes": 28231,
+    "extra_physical_attempts_same_ledger_hash": 165,
+    "physical_tokens": {
+      "prompt_tokens": {
+        "sum_reported": 70297112,
+        "attempts_reporting_numeric": 23314,
+        "applicable_attempts_without_numeric_field": 5082,
+        "not_exposed_for_model_operation_attempts": 0,
+        "complete_total": null
+      },
+      "output_tokens": {
+        "sum_reported": 3313712,
+        "attempts_reporting_numeric": 23314,
+        "applicable_attempts_without_numeric_field": 1689,
+        "not_exposed_for_model_operation_attempts": 3393,
+        "complete_total": null
+      },
+      "thinking_tokens": {
+        "sum_reported": null,
+        "attempts_reporting_numeric": 0,
+        "applicable_attempts_without_numeric_field": 8023,
+        "not_exposed_for_model_operation_attempts": 20373,
+        "complete_total": null
+      },
+      "total_tokens": {
+        "sum_reported": 10834405,
+        "attempts_reporting_numeric": 8012,
+        "applicable_attempts_without_numeric_field": 11,
+        "not_exposed_for_model_operation_attempts": 20373,
+        "complete_total": null
+      },
+      "provider_cached_input_tokens": {
+        "sum_reported": 513692,
+        "attempts_reporting_numeric": 65,
+        "applicable_attempts_without_numeric_field": 7958,
+        "not_exposed_for_model_operation_attempts": 20373,
+        "complete_total": null
+      }
+    },
+    "gemini_total_minus_prompt_minus_candidates": {
+      "attempts_observed": 8012,
+      "sum_reported": 0,
+      "nonzero_attempts": 0
+    },
+    "recorded_cost_usd": null,
+    "total_paid_cost_usd": null,
+    "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+  },
+  "by_family": {
+    "qa": {
+      "ledger_rows": 9250,
+      "physical_attempts": 7750,
+      "local_cache_events": 1500,
+      "physical_status_counts": {
+        "200": 7740,
+        "transport_error": 10
+      },
+      "physical_usage_unknown_flag_true": 10,
+      "physical_usage_empty_or_absent": 10,
+      "unique_physical_ledger_request_hashes": 7740,
+      "extra_physical_attempts_same_ledger_hash": 10,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 7988436,
+          "attempts_reporting_numeric": 7740,
+          "applicable_attempts_without_numeric_field": 10,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 62927,
+          "attempts_reporting_numeric": 7740,
+          "applicable_attempts_without_numeric_field": 10,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 7750,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 8051363,
+          "attempts_reporting_numeric": 7740,
+          "applicable_attempts_without_numeric_field": 10,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": 2025,
+          "attempts_reporting_numeric": 2,
+          "applicable_attempts_without_numeric_field": 7748,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 7740,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "source": {
+      "ledger_rows": 20139,
+      "physical_attempts": 19287,
+      "local_cache_events": 852,
+      "physical_status_counts": {
+        "200": 17605,
+        "402": 1529,
+        "529": 8,
+        "transport_error": 145
+      },
+      "physical_usage_unknown_flag_true": 145,
+      "physical_usage_empty_or_absent": 3985,
+      "unique_physical_ledger_request_hashes": 19134,
+      "extra_physical_attempts_same_ledger_hash": 153,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 59664139,
+          "attempts_reporting_numeric": 15302,
+          "applicable_attempts_without_numeric_field": 3985,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 3112280,
+          "attempts_reporting_numeric": 15302,
+          "applicable_attempts_without_numeric_field": 1678,
+          "not_exposed_for_model_operation_attempts": 2307,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 19287,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 19287,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 19287,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "writer": {
+      "ledger_rows": 1359,
+      "physical_attempts": 1359,
+      "local_cache_events": 0,
+      "physical_status_counts": {
+        "200": 1357,
+        "429": 1,
+        "503": 1
+      },
+      "physical_usage_unknown_flag_true": 0,
+      "physical_usage_empty_or_absent": 1087,
+      "unique_physical_ledger_request_hashes": 1357,
+      "extra_physical_attempts_same_ledger_hash": 2,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 2644537,
+          "attempts_reporting_numeric": 272,
+          "applicable_attempts_without_numeric_field": 1087,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 138505,
+          "attempts_reporting_numeric": 272,
+          "applicable_attempts_without_numeric_field": 1,
+          "not_exposed_for_model_operation_attempts": 1086,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 273,
+          "not_exposed_for_model_operation_attempts": 1086,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 2783042,
+          "attempts_reporting_numeric": 272,
+          "applicable_attempts_without_numeric_field": 1,
+          "not_exposed_for_model_operation_attempts": 1086,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": 511667,
+          "attempts_reporting_numeric": 63,
+          "applicable_attempts_without_numeric_field": 210,
+          "not_exposed_for_model_operation_attempts": 1086,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 272,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    }
+  },
+  "by_model": {
+    "gemini-2.5-flash": {
+      "ledger_rows": 9523,
+      "physical_attempts": 8023,
+      "local_cache_events": 1500,
+      "physical_status_counts": {
+        "200": 8012,
+        "503": 1,
+        "transport_error": 10
+      },
+      "physical_usage_unknown_flag_true": 10,
+      "physical_usage_empty_or_absent": 11,
+      "unique_physical_ledger_request_hashes": 8012,
+      "extra_physical_attempts_same_ledger_hash": 11,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 10632973,
+          "attempts_reporting_numeric": 8012,
+          "applicable_attempts_without_numeric_field": 11,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 201432,
+          "attempts_reporting_numeric": 8012,
+          "applicable_attempts_without_numeric_field": 11,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 8023,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 10834405,
+          "attempts_reporting_numeric": 8012,
+          "applicable_attempts_without_numeric_field": 11,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": 513692,
+          "attempts_reporting_numeric": 65,
+          "applicable_attempts_without_numeric_field": 7958,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 8012,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "gemini-embedding-001": {
+      "ledger_rows": 4168,
+      "physical_attempts": 3393,
+      "local_cache_events": 775,
+      "physical_status_counts": {
+        "200": 3388,
+        "429": 1,
+        "transport_error": 4
+      },
+      "physical_usage_unknown_flag_true": 4,
+      "physical_usage_empty_or_absent": 3393,
+      "unique_physical_ledger_request_hashes": 3388,
+      "extra_physical_attempts_same_ledger_hash": 5,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 3393,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 3393,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 3393,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 3393,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 3393,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "jev-1.13.0": {
+      "ledger_rows": 17057,
+      "physical_attempts": 16980,
+      "local_cache_events": 77,
+      "physical_status_counts": {
+        "200": 15302,
+        "402": 1529,
+        "529": 8,
+        "transport_error": 141
+      },
+      "physical_usage_unknown_flag_true": 141,
+      "physical_usage_empty_or_absent": 1678,
+      "unique_physical_ledger_request_hashes": 16831,
+      "extra_physical_attempts_same_ledger_hash": 149,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 59664139,
+          "attempts_reporting_numeric": 15302,
+          "applicable_attempts_without_numeric_field": 1678,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 3112280,
+          "attempts_reporting_numeric": 15302,
+          "applicable_attempts_without_numeric_field": 1678,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 16980,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 16980,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 16980,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    }
+  },
+  "by_phase_producer": {
+    "qa/qa/firstpass": {
+      "ledger_rows": 9250,
+      "physical_attempts": 7750,
+      "local_cache_events": 1500,
+      "physical_status_counts": {
+        "200": 7740,
+        "transport_error": 10
+      },
+      "physical_usage_unknown_flag_true": 10,
+      "physical_usage_empty_or_absent": 10,
+      "unique_physical_ledger_request_hashes": 7740,
+      "extra_physical_attempts_same_ledger_hash": 10,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 7988436,
+          "attempts_reporting_numeric": 7740,
+          "applicable_attempts_without_numeric_field": 10,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 62927,
+          "attempts_reporting_numeric": 7740,
+          "applicable_attempts_without_numeric_field": 10,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 7750,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 8051363,
+          "attempts_reporting_numeric": 7740,
+          "applicable_attempts_without_numeric_field": 10,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": 2025,
+          "attempts_reporting_numeric": 2,
+          "applicable_attempts_without_numeric_field": 7748,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 7740,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "source/closure/firstpass": {
+      "ledger_rows": 6162,
+      "physical_attempts": 6118,
+      "local_cache_events": 44,
+      "physical_status_counts": {
+        "200": 6113,
+        "transport_error": 5
+      },
+      "physical_usage_unknown_flag_true": 5,
+      "physical_usage_empty_or_absent": 5,
+      "unique_physical_ledger_request_hashes": 6113,
+      "extra_physical_attempts_same_ledger_hash": 5,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 11149355,
+          "attempts_reporting_numeric": 6113,
+          "applicable_attempts_without_numeric_field": 5,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 324674,
+          "attempts_reporting_numeric": 6113,
+          "applicable_attempts_without_numeric_field": 5,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 6118,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 6118,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 6118,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "source/multi_compare/firstpass": {
+      "ledger_rows": 1541,
+      "physical_attempts": 1530,
+      "local_cache_events": 11,
+      "physical_status_counts": {
+        "200": 1529,
+        "transport_error": 1
+      },
+      "physical_usage_unknown_flag_true": 1,
+      "physical_usage_empty_or_absent": 1,
+      "unique_physical_ledger_request_hashes": 1529,
+      "extra_physical_attempts_same_ledger_hash": 1,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 4535581,
+          "attempts_reporting_numeric": 1529,
+          "applicable_attempts_without_numeric_field": 1,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 113828,
+          "attempts_reporting_numeric": 1529,
+          "applicable_attempts_without_numeric_field": 1,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1530,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1530,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1530,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "source/r03/firstpass": {
+      "ledger_rows": 1535,
+      "physical_attempts": 1535,
+      "local_cache_events": 0,
+      "physical_status_counts": {
+        "402": 1529,
+        "transport_error": 6
+      },
+      "physical_usage_unknown_flag_true": 6,
+      "physical_usage_empty_or_absent": 1535,
+      "unique_physical_ledger_request_hashes": 1529,
+      "extra_physical_attempts_same_ledger_hash": 6,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 1535,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 1535,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1535,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1535,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1535,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "source/r03/recovery_v1": {
+      "ledger_rows": 1546,
+      "physical_attempts": 1535,
+      "local_cache_events": 11,
+      "physical_status_counts": {
+        "200": 1529,
+        "529": 5,
+        "transport_error": 1
+      },
+      "physical_usage_unknown_flag_true": 1,
+      "physical_usage_empty_or_absent": 6,
+      "unique_physical_ledger_request_hashes": 1529,
+      "extra_physical_attempts_same_ledger_hash": 6,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 32846397,
+          "attempts_reporting_numeric": 1529,
+          "applicable_attempts_without_numeric_field": 6,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 2207876,
+          "attempts_reporting_numeric": 1529,
+          "applicable_attempts_without_numeric_field": 6,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1535,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1535,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1535,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "source/rank/firstpass": {
+      "ledger_rows": 1542,
+      "physical_attempts": 1531,
+      "local_cache_events": 11,
+      "physical_status_counts": {
+        "200": 1529,
+        "transport_error": 2
+      },
+      "physical_usage_unknown_flag_true": 2,
+      "physical_usage_empty_or_absent": 2,
+      "unique_physical_ledger_request_hashes": 1529,
+      "extra_physical_attempts_same_ledger_hash": 2,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 2941034,
+          "attempts_reporting_numeric": 1529,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 116150,
+          "attempts_reporting_numeric": 1529,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1531,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1531,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 1531,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "source/retrieval/firstpass": {
+      "ledger_rows": 3082,
+      "physical_attempts": 2307,
+      "local_cache_events": 775,
+      "physical_status_counts": {
+        "200": 2303,
+        "transport_error": 4
+      },
+      "physical_usage_unknown_flag_true": 4,
+      "physical_usage_empty_or_absent": 2307,
+      "unique_physical_ledger_request_hashes": 2303,
+      "extra_physical_attempts_same_ledger_hash": 4,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 2307,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 2307,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 2307,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 2307,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 2307,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "source/support/firstpass": {
+      "ledger_rows": 4731,
+      "physical_attempts": 4731,
+      "local_cache_events": 0,
+      "physical_status_counts": {
+        "200": 4602,
+        "529": 3,
+        "transport_error": 126
+      },
+      "physical_usage_unknown_flag_true": 126,
+      "physical_usage_empty_or_absent": 129,
+      "unique_physical_ledger_request_hashes": 4602,
+      "extra_physical_attempts_same_ledger_hash": 129,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 8191772,
+          "attempts_reporting_numeric": 4602,
+          "applicable_attempts_without_numeric_field": 129,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 349752,
+          "attempts_reporting_numeric": 4602,
+          "applicable_attempts_without_numeric_field": 129,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 4731,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 4731,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 4731,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "writer/write/session": {
+      "ledger_rows": 1359,
+      "physical_attempts": 1359,
+      "local_cache_events": 0,
+      "physical_status_counts": {
+        "200": 1357,
+        "429": 1,
+        "503": 1
+      },
+      "physical_usage_unknown_flag_true": 0,
+      "physical_usage_empty_or_absent": 1087,
+      "unique_physical_ledger_request_hashes": 1357,
+      "extra_physical_attempts_same_ledger_hash": 2,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 2644537,
+          "attempts_reporting_numeric": 272,
+          "applicable_attempts_without_numeric_field": 1087,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 138505,
+          "attempts_reporting_numeric": 272,
+          "applicable_attempts_without_numeric_field": 1,
+          "not_exposed_for_model_operation_attempts": 1086,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 273,
+          "not_exposed_for_model_operation_attempts": 1086,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 2783042,
+          "attempts_reporting_numeric": 272,
+          "applicable_attempts_without_numeric_field": 1,
+          "not_exposed_for_model_operation_attempts": 1086,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": 511667,
+          "attempts_reporting_numeric": 63,
+          "applicable_attempts_without_numeric_field": 210,
+          "not_exposed_for_model_operation_attempts": 1086,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 272,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    }
+  },
+  "by_stage_model_operation": {
+    "qa / qa_reader_gemini25_ablation_plain_v1 / gemini-2.5-flash / generateContent": {
+      "ledger_rows": 4628,
+      "physical_attempts": 4590,
+      "local_cache_events": 38,
+      "physical_status_counts": {
+        "200": 4582,
+        "transport_error": 8
+      },
+      "physical_usage_unknown_flag_true": 8,
+      "physical_usage_empty_or_absent": 8,
+      "unique_physical_ledger_request_hashes": 4582,
+      "extra_physical_attempts_same_ledger_hash": 8,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 6782078,
+          "attempts_reporting_numeric": 4582,
+          "applicable_attempts_without_numeric_field": 8,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 53453,
+          "attempts_reporting_numeric": 4582,
+          "applicable_attempts_without_numeric_field": 8,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 4590,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 6835531,
+          "attempts_reporting_numeric": 4582,
+          "applicable_attempts_without_numeric_field": 8,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": 2025,
+          "attempts_reporting_numeric": 2,
+          "applicable_attempts_without_numeric_field": 4588,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 4582,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "qa / reference_judge_gemini25_ablation_plain_v1 / gemini-2.5-flash / generateContent": {
+      "ledger_rows": 4622,
+      "physical_attempts": 3160,
+      "local_cache_events": 1462,
+      "physical_status_counts": {
+        "200": 3158,
+        "transport_error": 2
+      },
+      "physical_usage_unknown_flag_true": 2,
+      "physical_usage_empty_or_absent": 2,
+      "unique_physical_ledger_request_hashes": 3158,
+      "extra_physical_attempts_same_ledger_hash": 2,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 1206358,
+          "attempts_reporting_numeric": 3158,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 9474,
+          "attempts_reporting_numeric": 3158,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 3160,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 1215832,
+          "attempts_reporting_numeric": 3158,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 3160,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 3158,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "source / gemini25_ablation_jev_v1 / jev-1.13.0 / systemone": {
+      "ledger_rows": 17057,
+      "physical_attempts": 16980,
+      "local_cache_events": 77,
+      "physical_status_counts": {
+        "200": 15302,
+        "402": 1529,
+        "529": 8,
+        "transport_error": 141
+      },
+      "physical_usage_unknown_flag_true": 141,
+      "physical_usage_empty_or_absent": 1678,
+      "unique_physical_ledger_request_hashes": 16831,
+      "extra_physical_attempts_same_ledger_hash": 149,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 59664139,
+          "attempts_reporting_numeric": 15302,
+          "applicable_attempts_without_numeric_field": 1678,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 3112280,
+          "attempts_reporting_numeric": 15302,
+          "applicable_attempts_without_numeric_field": 1678,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 16980,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 16980,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 16980,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "source / mem0_embedding_search / gemini-embedding-001 / batchEmbedContents": {
+      "ledger_rows": 3082,
+      "physical_attempts": 2307,
+      "local_cache_events": 775,
+      "physical_status_counts": {
+        "200": 2303,
+        "transport_error": 4
+      },
+      "physical_usage_unknown_flag_true": 4,
+      "physical_usage_empty_or_absent": 2307,
+      "unique_physical_ledger_request_hashes": 2303,
+      "extra_physical_attempts_same_ledger_hash": 4,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 2307,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 2307,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 2307,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 2307,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 2307,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "writer / mem0_embedding_add / gemini-embedding-001 / batchEmbedContents": {
+      "ledger_rows": 546,
+      "physical_attempts": 546,
+      "local_cache_events": 0,
+      "physical_status_counts": {
+        "200": 545,
+        "429": 1
+      },
+      "physical_usage_unknown_flag_true": 0,
+      "physical_usage_empty_or_absent": 546,
+      "unique_physical_ledger_request_hashes": 545,
+      "extra_physical_attempts_same_ledger_hash": 1,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 546,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 546,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 546,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 546,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 546,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "writer / mem0_embedding_search / gemini-embedding-001 / batchEmbedContents": {
+      "ledger_rows": 272,
+      "physical_attempts": 272,
+      "local_cache_events": 0,
+      "physical_status_counts": {
+        "200": 272
+      },
+      "physical_usage_unknown_flag_true": 0,
+      "physical_usage_empty_or_absent": 272,
+      "unique_physical_ledger_request_hashes": 272,
+      "extra_physical_attempts_same_ledger_hash": 0,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 272,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 272,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 272,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 272,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 272,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "writer / mem0_embedding_search_length_check / gemini-embedding-001 / countTokens": {
+      "ledger_rows": 268,
+      "physical_attempts": 268,
+      "local_cache_events": 0,
+      "physical_status_counts": {
+        "200": 268
+      },
+      "physical_usage_unknown_flag_true": 0,
+      "physical_usage_empty_or_absent": 268,
+      "unique_physical_ledger_request_hashes": 268,
+      "extra_physical_attempts_same_ledger_hash": 0,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 268,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 268,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 268,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 268,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 0,
+          "not_exposed_for_model_operation_attempts": 268,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 0,
+        "sum_reported": null,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "writer / mem0_extract / gemini-2.5-flash / generateContent": {
+      "ledger_rows": 273,
+      "physical_attempts": 273,
+      "local_cache_events": 0,
+      "physical_status_counts": {
+        "200": 272,
+        "503": 1
+      },
+      "physical_usage_unknown_flag_true": 0,
+      "physical_usage_empty_or_absent": 1,
+      "unique_physical_ledger_request_hashes": 272,
+      "extra_physical_attempts_same_ledger_hash": 1,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 2644537,
+          "attempts_reporting_numeric": 272,
+          "applicable_attempts_without_numeric_field": 1,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 138505,
+          "attempts_reporting_numeric": 272,
+          "applicable_attempts_without_numeric_field": 1,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 273,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 2783042,
+          "attempts_reporting_numeric": 272,
+          "applicable_attempts_without_numeric_field": 1,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": 511667,
+          "attempts_reporting_numeric": 63,
+          "applicable_attempts_without_numeric_field": 210,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 272,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    }
+  },
+  "qa_by_component": {
+    "judge": {
+      "ledger_rows": 4622,
+      "physical_attempts": 3160,
+      "local_cache_events": 1462,
+      "physical_status_counts": {
+        "200": 3158,
+        "transport_error": 2
+      },
+      "physical_usage_unknown_flag_true": 2,
+      "physical_usage_empty_or_absent": 2,
+      "unique_physical_ledger_request_hashes": 3158,
+      "extra_physical_attempts_same_ledger_hash": 2,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 1206358,
+          "attempts_reporting_numeric": 3158,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 9474,
+          "attempts_reporting_numeric": 3158,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 3160,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 1215832,
+          "attempts_reporting_numeric": 3158,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 3160,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 3158,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "reader": {
+      "ledger_rows": 4628,
+      "physical_attempts": 4590,
+      "local_cache_events": 38,
+      "physical_status_counts": {
+        "200": 4582,
+        "transport_error": 8
+      },
+      "physical_usage_unknown_flag_true": 8,
+      "physical_usage_empty_or_absent": 8,
+      "unique_physical_ledger_request_hashes": 4582,
+      "extra_physical_attempts_same_ledger_hash": 8,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 6782078,
+          "attempts_reporting_numeric": 4582,
+          "applicable_attempts_without_numeric_field": 8,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 53453,
+          "attempts_reporting_numeric": 4582,
+          "applicable_attempts_without_numeric_field": 8,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 4590,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 6835531,
+          "attempts_reporting_numeric": 4582,
+          "applicable_attempts_without_numeric_field": 8,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": 2025,
+          "attempts_reporting_numeric": 2,
+          "applicable_attempts_without_numeric_field": 4588,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 4582,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    }
+  },
+  "qa_by_producer_arm": {
+    "baseline": {
+      "ledger_rows": 3082,
+      "physical_attempts": 2997,
+      "local_cache_events": 85,
+      "physical_status_counts": {
+        "200": 2995,
+        "transport_error": 2
+      },
+      "physical_usage_unknown_flag_true": 2,
+      "physical_usage_empty_or_absent": 2,
+      "unique_physical_ledger_request_hashes": 2995,
+      "extra_physical_attempts_same_ledger_hash": 2,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 2549420,
+          "attempts_reporting_numeric": 2995,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 20753,
+          "attempts_reporting_numeric": 2995,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 2997,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 2570173,
+          "attempts_reporting_numeric": 2995,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 2997,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 2995,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "original_multi_source_closure": {
+      "ledger_rows": 3086,
+      "physical_attempts": 2356,
+      "local_cache_events": 730,
+      "physical_status_counts": {
+        "200": 2350,
+        "transport_error": 6
+      },
+      "physical_usage_unknown_flag_true": 6,
+      "physical_usage_empty_or_absent": 6,
+      "unique_physical_ledger_request_hashes": 2350,
+      "extra_physical_attempts_same_ledger_hash": 6,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 3106920,
+          "attempts_reporting_numeric": 2350,
+          "applicable_attempts_without_numeric_field": 6,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 21465,
+          "attempts_reporting_numeric": 2350,
+          "applicable_attempts_without_numeric_field": 6,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 2356,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 3128385,
+          "attempts_reporting_numeric": 2350,
+          "applicable_attempts_without_numeric_field": 6,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 2356,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 2350,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    },
+    "r03_original": {
+      "ledger_rows": 3082,
+      "physical_attempts": 2397,
+      "local_cache_events": 685,
+      "physical_status_counts": {
+        "200": 2395,
+        "transport_error": 2
+      },
+      "physical_usage_unknown_flag_true": 2,
+      "physical_usage_empty_or_absent": 2,
+      "unique_physical_ledger_request_hashes": 2395,
+      "extra_physical_attempts_same_ledger_hash": 2,
+      "physical_tokens": {
+        "prompt_tokens": {
+          "sum_reported": 2332096,
+          "attempts_reporting_numeric": 2395,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "output_tokens": {
+          "sum_reported": 20709,
+          "attempts_reporting_numeric": 2395,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "thinking_tokens": {
+          "sum_reported": null,
+          "attempts_reporting_numeric": 0,
+          "applicable_attempts_without_numeric_field": 2397,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "total_tokens": {
+          "sum_reported": 2352805,
+          "attempts_reporting_numeric": 2395,
+          "applicable_attempts_without_numeric_field": 2,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        },
+        "provider_cached_input_tokens": {
+          "sum_reported": 2025,
+          "attempts_reporting_numeric": 2,
+          "applicable_attempts_without_numeric_field": 2395,
+          "not_exposed_for_model_operation_attempts": 0,
+          "complete_total": null
+        }
+      },
+      "gemini_total_minus_prompt_minus_candidates": {
+        "attempts_observed": 2395,
+        "sum_reported": 0,
+        "nonzero_attempts": 0
+      },
+      "recorded_cost_usd": null,
+      "total_paid_cost_usd": null,
+      "cost_status": "unknown_no_invoice_or_verified_tariff_applied"
+    }
+  },
+  "model_calls_during_audit": 0,
+  "credential_reads": 0,
+  "production_writes": 0,
+  "seal_algorithm": "SHA256 canonical UTF8 JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon), excluding content_sha256",
+  "content_sha256": "196ad0645699b01f84e7442c464bed5f3f361d83f7253948973c9c1e8f504d05"
+}

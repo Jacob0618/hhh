@@ -1,0 +1,266 @@
+% ACL 2027 working draft. Official ACL style files are unmodified.
+% Only the selected original-R03 + new-R05 + C pipeline is reported as ours.
+% Empty experiment subsections are intentional; see writing_plan_zh.md.
+\documentclass[11pt]{article}
+\usepackage[review]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{amsmath,amssymb,booktabs}
+
+\newcommand{\method}{JEV-guided memory}
+\newcommand{\qfs}{\textsc{QFS}}
+\newcommand{\ser}{\textsc{SER}}
+\newcommand{\jev}{\mathcal{J}}
+\newcommand{\topk}{\operatorname{Top}}
+
+\title{JEV-Guided Fact Selection and Source Evidence Recovery\\
+for Conversational Memory}
+\author{Anonymous ACL submission}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Conversational agents use compact memories to answer questions about an expanding interaction history. However, a retrieved fact can match the question's topic without supplying the requested information, while a useful fact can omit details preserved in its original dialogue. These two problems call for decisions at different levels: which facts to present and which source details to recover. We introduce a JEV-guided memory pipeline that combines Query-Conditioned Fact Selection with Source Evidence Recovery over an existing Mem0 memory bank. The first module scores the explicit usefulness of candidate facts and retains a fixed set of twenty records. The second locates bounded source windows, compares supported alternatives, and adds adjacent turns when they help resolve a requested relation. It appends at most two source passages while preserving the selected fact text and order. On a fixed evaluation of 1,540 LoCoMo questions with Gemini 3.8 Flash, the complete pipeline achieves 60.238 official F1 and 84.545\% LLM-as-a-Judge accuracy. Progressive removal of source recovery and then fact selection reduces the Judge score to 76.818\% and 74.870\%, respectively. A separate Gemini 2.5 Flash reconstruction achieves 59.884 F1 and 84.091\% Judge accuracy, an 8.506-point Judge gain over its own base condition. Both cumulative comparisons support combining fact selection with access to source detail under their respective protocols.
+\end{abstract}
+
+\section{Introduction}
+Conversational agents must answer questions whose evidence is distributed across earlier interactions. A user may refer to a previously mentioned person, ask when a plan was completed, or request several details discussed in different sessions. External memory makes such history accessible without placing the entire conversation into every answer prompt. Yet storage alone does not solve the problem: the system must decide which parts of the history should reach the answer model. Evaluation on long conversations shows that both temporal reasoning and the recovery of dispersed information remain difficult \citep{maharana-etal-2024-evaluating}. Increasing the input length also does not ensure that a language model will use the relevant information reliably \citep{liu-etal-2024-lost}. Constructing the answer context is therefore an essential part of conversational memory.
+
+Existing approaches address this problem through different memory representations and retrieval procedures. Mem0 extracts and manages salient information as persistent memories \citep{chhikara2025mem0}; MemGPT manages access to different memory tiers \citep{packer2023memgpt}; and A-MEM links structured notes as new information arrives \citep{xu2025amem}. MemGAS further associates multiple granularities of conversational information and selects among them for a query \citep{xu2025memgas}. These approaches make useful history retrievable, but they also expose a distinction between two decisions. A system must first choose a memory record that is useful for the question, and then determine whether the record's stored wording exposes the details needed to answer it. The latter decision matters when a compact memory and its original dialogue provide different amounts of information.
+
+We focus on two limitations at this interface. \textbf{First, retrieval relevance can differ from explicit answer usefulness.} A fact may mention the right person or event while describing an attribute other than the one requested. With a fixed fact budget, such records compete with facts that supply the requested relation, value, or list item. \textbf{Second, useful facts can leave source details implicit.} Compression may preserve an event but omit its condition, speaker attribution, or temporal wording. A narrowly localized source window can also omit the neighboring reply that resolves a reference. In this case, reranking the compressed facts alone cannot expose the missing wording to the reader. Conversely, attaching a larger passage indiscriminately can introduce competing details. The practical question is how to recover relevant source information while retaining the useful evidence already selected.
+
+To address these limitations, we develop \method{}, a two-module pipeline operating on an existing Mem0 fact bank. \textbf{Query-Conditioned Fact Selection (\qfs{})} uses JEV to assess whether each candidate explicitly supplies information requested by the question, selects twenty facts, and preserves their original relative order. \textbf{Source Evidence Recovery (\ser{})} starts from a small set of source anchors associated with those facts. It uses partial-support judgments to propose alternative windows, compares each alternative with its original window, and tests whether adjacent turns resolve a concrete evidence relation. The resulting passages are ranked for information less explicit in their own anchor facts, and at most two are appended before answer generation. On the fixed 1,540-question LoCoMo evaluation with Gemini 3.8 Flash, the full pipeline obtains 60.238 official F1 and 84.545\% Judge accuracy. A progressive component-removal analysis shows a 7.727-point Judge decrease after removing \ser{}, followed by a further 1.948-point decrease after removing \qfs{}. Rebuilding the memory and evaluation with Gemini 2.5 Flash preserves this ordering, with positive cumulative increments for fact selection and subsequent source recovery.
+
+\section{Methodology}
+We first define the memory and source inputs. We then describe fact selection and source recovery in their execution order. Both modules use typed JEV judgments; the final answer is generated by a separate language model.
+
+\subsection{Preliminaries}
+Let a conversation contain ordered turns $D=(t_1,\ldots,t_T)$ grouped into dated sessions. An existing memory writer produces records $m=(\mathrm{id},x,d)$, where $x$ is the stored fact text and $d$ is its observation date. Each record is associated with an input scope $\sigma(m)$ containing the source turns exposed during the corresponding memory operation. This scope restricts where source recovery may search; it does not certify that every scoped turn supports the fact. We retain original speaker information and distinguish the date of an observation from the date of the event it describes.
+
+For a question $q$ with reference date $d_q$, the base Mem0 retriever returns an ordered list $B(q)$ of twenty facts. We construct a bounded candidate list $\mathcal{P}(q)$ that contains $B(q)$, additional native candidates, and lexical candidates from the same conversation's fact bank. The measured list has eighty unique records. Its exact construction and ordering are specified in Appendix~\ref{app:implementation}. The final fact budget remains $K=20$. Source recovery may extend the text presented with selected records, so a fixed fact count is not a fixed token budget.
+
+We write $\jev(P;z)\in[0,1]$ for JEV's returned affirmative score for predicate $P$ evaluated on inputs $z$. JEV accepts typed questions against a shared state and provides structured values directly \citep{typesafe2026jev}. We use its binary \texttt{Noul} interface for selection and source decisions. These scores are operational ranking and gating signals; we do not assume that they are calibrated probabilities of factual correctness for this task.
+
+\subsection{Query-Conditioned Fact Selection}
+\label{sec:qfs}
+The purpose of \qfs{} is to distinguish explicit answer information from broad topical relevance. For each candidate, the predicate asks whether the fact supplies at least one item requested by the question, with the appropriate actor, event, relation, or value. A requested list member or an explicit link in a multipart answer may qualify. Mentioning the same topic or name without supplying requested information does not. The judgment also distinguishes plans from completed events and preserves negation and attribution.
+
+For candidate $m_i$ in the fixed pool, we obtain
+\begin{equation}
+ p_i = \jev(P_{\mathrm{fact}};q,d_q,x_i,d_i).
+ \label{eq:fact-score}
+\end{equation}
+The candidate judgments are batched with the question and its reference date as shared state. We select membership by descending score, using the candidate index to break ties, and restore the original pool order for presentation:
+\begin{equation}
+ \begin{aligned}
+ I_q &= \topk_K\bigl((p_i,-i)_{i=1}^{|\mathcal{P}(q)|}\bigr),\\
+ S(q) &= (m_i\in\mathcal{P}(q):i\in I_q).
+ \end{aligned}
+ \label{eq:fact-selection}
+\end{equation}
+Here, $I_q$ is an index set, and $S(q)$ is the subsequence in pool order. There is no absolute score threshold: \qfs{} retains twenty facts when the required scores are available. The module makes individual usefulness judgments, rather than optimizing a joint coverage objective. It therefore does not certify that the selected set is sufficient to answer the question.
+
+\subsection{Source Evidence Recovery}
+\label{sec:ser}
+\ser{} supplements selected facts with bounded quotations from their associated input scopes. It separates locating a potentially useful source window from deciding whether that window should replace or extend the current one. Neighboring evidence completion is an internal step of this module.
+
+\paragraph{Anchor admission.}
+For each fact in $S(q)$, we score eligible source turns with BM25 against both the question and the fact text. A center must have positive scores for both. Its initial window contains the center and up to one complete turn on each side, within the same session and input scope. We choose one window per fact by question score, then fact score, then source position. After deduplicating identical windows, we retain at most four candidates using the same lexical priorities. Each admitted window remains attached to its original anchor fact; later steps do not introduce anchors outside this set.
+
+\paragraph{Supported alternatives.}
+A lexically selected center may not expose the most useful portion of a fact's source. To obtain alternatives, we construct up to eight windows per fact, ranked by fact--turn BM25 and source order. These windows have the same initial three-turn bound. Query-independent JEV judgments test whether each window directly supports at least one substantive atomic claim in the fact, preserving its subject, relation, and material conditions. For a window $w$, the eligible subset is
+\begin{equation}
+ \mathcal{W}^{+}_m=\{w\in\mathcal{W}_m:
+ \jev(P_{\mathrm{sup}};m,w)>0.5\}.
+ \label{eq:partial-support}
+\end{equation}
+This is a partial-support locator, not verification of the entire fact. For each admitted anchor, we propose at most one eligible window different from the original. Alternatives are ranked by whole-window question BM25, then support score, then source position. The question-BM25 corpus contains all of that fact's eligible windows before the support-score filter is applied.
+
+\paragraph{Guarded window replacement.}
+The support test alone does not establish that an alternative is better for the current question. Let $w_m^0$ be the original window and $w_m^a$ its proposed alternative. We ask JEV whether the alternative adds or clarifies an explicit requested detail while retaining the original window's question-relevant support. The predicate rejects larger size or related-topic overlap as sufficient reasons for replacement. With comparison score $r_m=\jev(P_{\mathrm{rep}};q,d_q,m,w_m^0,w_m^a)$, we apply
+\begin{equation}
+ \bar w_m=
+ \begin{cases}
+ w_m^a,&r_m>0.5,\\
+ w_m^0,&\text{otherwise}.
+ \end{cases}
+ \label{eq:replacement}
+\end{equation}
+When no eligible alternative exists, the original window is retained. The retention criterion is a model judgment, not a formal guarantee that no useful evidence will be lost. If accepted windows collide, we keep the earlier candidate and merge its source aliases without admitting a replacement anchor.
+
+\paragraph{Neighboring evidence completion.}
+A window may contain a question, pronoun, or event description whose interpretation depends on an adjacent turn. Starting from $\bar w_m$, we consider three extensions: add one complete turn on the left, one on the right, or one on each side. Each extension must remain in the same session and input scope. JEV tests whether the added text supplies a requested answer, referent, attribution, condition, or temporal relation that is missing or unresolved in the base window. We accept the highest-scoring extension only when its score exceeds $0.5$; ties favor fewer added turns and then the fixed left/right/both order. Otherwise, we retain the base window. Every resulting packet contains at most five turns and occupies at most 4,096 UTF-8 bytes. Oversized packets are excluded as whole units rather than truncated.
+
+\paragraph{Local ranking and context assembly.}
+After completion and deduplication, we rank the remaining packets by whether they provide information requested by $q$ that is absent or less explicit in their own anchor facts. This judgment is local: it does not claim that the information is absent from all other selected facts. We retain the top two packets, with no additional acceptance threshold; if at most two remain, all are retained without this ranking call. Selected packets are appended to their anchor records:
+\begin{equation}
+ \tilde x_m =
+ \begin{cases}
+ x_m\mathbin{\Vert}\mathrm{quote}(w_m^*),&m\in A_q,\\
+ x_m,&m\notin A_q,
+ \end{cases}
+ \label{eq:assembly}
+\end{equation}
+where $w_m^*$ is the final packet after completion and deduplication, $A_q$ contains at most two anchors, and $\Vert$ denotes concatenation. The fact text remains an unchanged prefix; record identities, observation dates, and order are retained. Quotations preserve source turn identifiers and speaker text, with machine captions identified separately. The answer model receives the resulting twenty-record context and the original question. No reference answer, question category, or generated answer is used in these selection decisions.
+
+\section{Experiments}
+\subsection{Experimental Settings}
+\paragraph{Dataset.}
+We evaluate on a fixed set of 1,540 questions from the ten conversations in LoCoMo \citep{maharana-etal-2024-evaluating}. The set contains 282 multi-hop, 321 temporal, 96 open-domain, and 841 single-hop questions (categories 1--4); adversarial questions are outside this evaluation. We preserve the original questions and reference answers. The original Gemini 3.8 cohort uses 1,637 facts produced from 272 sessions. A separate Gemini 2.5 cohort rewrites the same 272 sessions into ten new conversation banks containing 2,301 facts. Conditions within each model cohort share their bank and question set; the banks are not shared across models. The source module does not rewrite either bank.
+
+\paragraph{Metrics.}
+We report the official LoCoMo F1 implementation, including its category-specific processing, on a 0--100 scale. It is distinct from an additional custom token-overlap score retained in our experiment records. We also report LLM-as-a-Judge accuracy as the percentage of accepted answers. The Judge uses the topic- and date-tolerant semantics of the Mem0 paper-era evaluation prompt, with its output format changed to plain \texttt{[[yes]]} or \texttt{[[no]]}. It receives the question, reference answer, and generated answer, rather than the retrieved evidence. Thus, this score measures agreement with that fixed grading protocol, not independently verified source faithfulness. Appendix~\ref{app:evaluation} records the metric and prompt provenance.
+
+\paragraph{Implementation.}
+The original cohort uses the experiment's fixed Gemini 3.8 Flash endpoint with low thinking for the memory writer, answer model, and Judge. The reconstruction uses Gemini 2.5 Flash for all three roles with \texttt{thinkingBudget=0}; this setting is not equivalent to Gemini 3.8's low thinking. Temperature is unspecified in both cohorts. Reader and Judge have an 8,192-token output cap and return plain text. The Reader requests the shortest complete answer without a hard word limit. Memory embeddings use Gemini Embedding 001 with 768 dimensions, and all typed decisions use JEV 1.13.0. The base condition uses Mem0's native twenty-record retrieval. \qfs{} uses the fixed hybrid-pool construction detailed in Appendix~\ref{app:implementation}; the source variants retain its selected twenty records. Configuration and prompts remain fixed across conditions within each cohort. The reconstruction retains the scientific functions, selection rules, question reference dates, and Reader/Judge prompt text, but recomputes the memory, retrieval, and JEV decisions.
+
+\paragraph{Execution and comparison scope.}
+Each condition has one valid evaluated outcome per question. Exact request reuse is permitted only when the complete request and original response are verified. The Gemini 3.8 Mem0 and \qfs{}-only references are inherited in this way; reuse is not an independent repeat. Gemini 2.5 inherits no Gemini 3.8 fact identifiers, selection results, JEV scores, or QA answers. Exact requests may be cached within the new cohort. Technical failures are distinguished from incorrect answers, and legitimate negative Judge labels are not retried. All three conditions in each cohort have 1,540 valid Reader and Judge outcomes, so their valid and fixed-denominator means coincide. For Gemini 2.5, all 4,620 logical QA slots complete in the accepted first-pass view and the subsequent QA recovery set is empty; bounded transport retries remain recorded separately. The method was selected after exploration on these conversations, so both cohorts evaluate previously examined data.
+
+\subsection{Main Results}
+Table~\ref{tab:main} reports the selected full pipeline in the original Gemini 3.8 cohort. It obtains 60.238 official F1 and 84.545\% Judge accuracy, corresponding to 1,302 accepted answers out of 1,540. Baseline cells are reserved for results under a matched evaluation protocol.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrr}
+\toprule
+Method & Official F1 & Judge (\%)\\
+\midrule
+Mem0 & & \\
+MemGPT & & \\
+A-MEM & & \\
+MemGAS & & \\
+\midrule
+\method{} (ours) & \textbf{60.238} & \textbf{84.545}\\
+\bottomrule
+\end{tabular}
+\caption{Gemini 3.8 QA results on the fixed 1,540-question set. Only our selected full configuration (\qfs{} + \ser{}) is populated in this draft. Empty baseline cells indicate results not yet included, not zero scores.}
+\label{tab:main}
+\end{table}
+
+\subsection{Progressive Component Removal}
+Table~\ref{tab:removal} follows the removal order of the pipeline in the Gemini 3.8 cohort. Removing Source Evidence Recovery, including neighboring completion, lowers official F1 from 60.238 to 52.547 and Judge accuracy from 84.545\% to 76.818\%. This corresponds to a decrease of 7.691 F1 points and 7.727 Judge percentage points. Subsequently removing Query-Conditioned Fact Selection returns to the base Mem0 condition, with 51.044 F1 and 74.870\% Judge accuracy. The second removal decreases Judge accuracy by a further 1.948 points.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccrr}
+\toprule
+Configuration & \qfs{} & \ser{} & F1 & Judge\\
+\midrule
+Full & + & + & 60.238 & 84.545\\
+w/o \ser{} & + & -- & 52.547 & 76.818\\
+w/o \ser{}, \qfs{} & -- & -- & 51.044 & 74.870\\
+\bottomrule
+\end{tabular}
+\caption{Gemini 3.8 progressive removal on the same 1,540 questions. \qfs{}: Query-Conditioned Fact Selection; \ser{}: Source Evidence Recovery, including neighboring completion. The last row removes both modules and is the Mem0 base condition. Judge scores are percentages.}
+\label{tab:removal}
+\end{table}
+
+The complete pipeline improves over the base condition by 9.194 F1 points and 9.675 Judge points, with a net increase of 149 accepted answers. The larger observed step in this chain comes from adding source recovery to selected facts. However, the chain is cumulative rather than a full factorial ablation: it does not include source recovery without fact selection, and it does not separate window comparison from neighboring completion. In addition, the \qfs{} contrast includes its candidate-pool configuration, while \ser{} adds source tokens.
+
+\subsection{Gemini 2.5 Cumulative Ablation}
+\label{sec:gemini25}
+Table~\ref{tab:gemini25} reports the same cumulative chain on the newly written Gemini 2.5 banks. Adding \qfs{} raises official F1 from 53.222 to 54.887 and Judge accuracy from 75.584\% to 78.766\%, a 3.182-percentage-point Judge increment. Adding \ser{}, including neighboring completion, then raises F1 to 59.884 and Judge accuracy to 84.091\%, a further 5.325-point Judge increment conditional on \qfs{}. The full pipeline gains 6.663 F1 points and 8.506 Judge points over its own base condition. It changes 163 Judge outcomes from incorrect to correct and 32 from correct to incorrect, yielding 131 additional accepted answers.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+Configuration & F1 & Custom F1 & Judge\\
+\midrule
+Mem0 base & 53.222 & 51.139 & 75.584\\
++ \qfs{} & 54.887 & 52.499 & 78.766\\
+Full (\qfs{} + \ser{}) & 59.884 & 57.408 & 84.091\\
+\bottomrule
+\end{tabular}
+\caption{Gemini 2.5 cumulative ablation, each row with 1,540 valid Reader and Judge outcomes. F1 denotes official LoCoMo F1; Custom F1 is the separate token-overlap metric. Both F1 scores use a 0--100 scale, and Judge scores are percentages. \ser{} includes neighboring completion.}
+\label{tab:gemini25}
+\end{table}
+
+The ordering agrees with the Gemini 3.8 chain under this reconstructed protocol. These are within-cohort comparisons: Writer, Reader, Judge, thinking configuration, and resulting memory content change across model cohorts. Their absolute scores therefore cannot isolate a Judge-model effect. The Gemini 2.5 chain also has no source-only condition and does not separate \ser{} from neighboring completion. Its positive increments are conditional point estimates from one run on the same exposed conversations, rather than evidence of independently isolated component effects or repeated-run stability.
+
+% Intentionally empty: user requested titles only for experiments still needed.
+\subsection{Selector Controls}
+\label{sec:selector-controls}
+
+\subsection{Module Decomposition}
+\label{sec:module-decomposition}
+
+\subsection{Matched-Token Comparison}
+\label{sec:token-control}
+
+\subsection{Generalization}
+\label{sec:generalization}
+
+\subsection{Evidence Analysis}
+\label{sec:evidence-analysis}
+
+\subsection{Hyperparameter Analysis}
+\label{sec:hyperparameters}
+
+\section{Related Work}
+\paragraph{External memory for conversational agents.}
+Retrieval-augmented generation couples retrieved information with answer generation \citep{lewis2020rag}. Conversational memory additionally requires retaining user-specific information across interactions. MemGPT organizes access across memory tiers \citep{packer2023memgpt}, while Mem0 focuses on extracting, consolidating, and retrieving salient memories \citep{chhikara2025mem0}. A-MEM develops linked memory notes that can evolve as new notes arrive \citep{xu2025amem}. Our approach operates after memory writing: it retains an existing fact bank and changes the evidence presented for a question.
+
+\paragraph{Memory association and evidence granularity.}
+MemGAS associates information at multiple granularities and uses query-dependent routing and filtering \citep{xu2025memgas}. It demonstrates the importance of considering how stored units and retrieval interact. Our design uses a different interface: selected fact records remain the context backbone, while bounded quotations are recovered from their associated source scopes. The two levels are connected through explicit anchor facts. Source recovery is restricted to those anchors rather than a search over a newly constructed multi-granularity memory graph.
+
+\paragraph{Typed decisions for memory control.}
+The contemporaneous Jev-Mem system of \citet{jiang2026jevmem} uses a System-One controller for memory organization and adaptive retrieval over several graph relations. Our work shares the use of typed JEV decisions but studies a narrower fact-selection and source-recovery pipeline on Mem0. Within this pipeline, predicates distinguish fact usefulness, partial source support, window replacement, and adjacent evidence completion, while the original fact bank remains unchanged.
+
+\section{Conclusion}
+We presented a JEV-guided conversational memory pipeline with two stages: Query-Conditioned Fact Selection and Source Evidence Recovery. The former selects facts by their explicit usefulness for a question; the latter recovers bounded source detail through supported alternatives, guarded replacement, and neighboring completion. On 1,540 fixed LoCoMo questions, the full pipeline achieves 60.238 official F1 and 84.545\% Judge accuracy with Gemini 3.8 Flash. A separate Gemini 2.5 Flash reconstruction achieves 59.884 F1 and 84.091\% Judge accuracy. Both cumulative chains support combining fact selection with source access, with the larger conditional improvement occurring at the source-recovery stage. Further controls are needed to separate the effects of source information, selection policy, and context length.
+
+\section*{Limitations}
+The evaluation covers ten conversations that were repeatedly examined during method development. Selecting the reported configuration from this exploration introduces selection bias, and neither model cohort should be interpreted as an unseen test cohort. Exact request inheritance in Gemini 3.8 and within-cohort request caching in Gemini 2.5 create dependence between conditions; neither provides independent repeated-run evidence. The Gemini 2.5 reconstruction changes Writer, Reader, Judge, thinking configuration, and memory content together, so the comparison does not identify which change explains any cross-model difference.
+
+The reported cumulative chains lack the fact-selection-off/source-recovery-on condition and do not isolate the internal source steps. The base retriever and \qfs{} also differ in candidate-pool construction. Consequently, the measured gains do not identify a pure causal benefit of JEV over a same-candidate lexical or generative selector. Source attachments increase the context budget, and all Gemini 3.8 full-method questions received two attachments. We have not demonstrated a query-level decision to omit supplementation or a reduction in end-to-end cost.
+
+Source recovery remains limited by the admitted anchors and their input scopes. A positive partial-support score does not validate the whole fact, and accepted neighboring text can distract the Reader even when useful evidence remains present. Observation dates may differ from event dates; the method preserves this distinction but does not implement general temporal normalization. JEV scores have not been calibrated for these predicates.
+
+Finally, the Judge is a model-based, relatively permissive grader. It can accept topical overlap without establishing complete evidence support, and it does not see the source conversation. Its score is not interchangeable with human accuracy or retrieval recall. Official F1 supplies a separate lexical measure, with its own category-specific behavior. External baseline comparisons, matched-token controls, and systematic evidence and human-grading checks remain to be completed. API usage is retained in the experiment records, but incomplete price or usage fields prevent a complete monetary-cost claim.
+
+\section*{Ethics Statement}
+This work uses an existing conversational benchmark rather than newly collected private conversations. The source passages can contain personal descriptions and sensitive attributes, so recovered text should remain subject to the access controls and retention rules of the underlying memory system. Sending memory or dialogue text to hosted models has privacy implications in deployment. Our local evaluation does not establish safe handling of real user data. Public availability is not treated as permission to redistribute every dataset or upstream artifact; any release requires checking the applicable terms and removing credentials and unnecessary raw personal content.
+
+\section*{AI Assistance Disclosure}
+AI assistants were used for implementation support, experiment auditing, literature and structure analysis, and drafting. The manuscript's numerical claims are tied to preserved experiment records. Agent agreement is not a substitute for independent human validation.
+
+\bibliography{references}
+
+\appendix
+\section{Implementation Details}
+\label{app:implementation}
+\paragraph{Candidate-pool construction.}
+The ordered pool starts with the twenty native baseline records. It then takes up to forty further records from the original native candidate list, preserving their order, followed by up to twenty positive-BM25 records from the conversation's full fact bank that are outside the entire original native eighty-record list. Any remaining capacity is filled with unused native candidates. IDs are deduplicated, and the total is capped at eighty. This construction preserves the native baseline as a subset while permitting lexical candidates from outside the native list. The same frozen pool and its order are reused across refinement conditions within each model cohort; Gemini 2.5 pools are rebuilt from its new banks. The base condition itself uses its native twenty records.
+
+\paragraph{Lexical source localization.}
+BM25 uses $k_1=1.2$ and $b=0.75$. Query and fact scores use the union of the selected facts' permitted source turns; each fact selects centers only in its own scope. Identical windows are assigned to the anchor with the highest fact score, then earliest fact slot and center. Global admission ranks windows by question score, fact score, fact slot, and center position. Source dates are excluded from lexical scoring. Machine captions remain separately marked annotations; image-search queries and media markup are excluded from speaker text.
+
+\paragraph{Support and context bounds.}
+Query-independent support candidates are generated from each fact's own scope, with at most eight centers, evaluated in batches of up to four judgments. Each initial packet contains the center and its available immediate neighbors. The support, replacement, and neighboring-completion gates all use a strict score threshold greater than $0.5$. Final packet ranking has no such threshold. Deduplication after replacement or completion does not refill the four-anchor list. The maximum two appended packets each contain at most five complete turns and 4,096 UTF-8 bytes; these are byte bounds, not token bounds.
+
+\paragraph{Failure behavior.}
+Unavailable fact-selection scores retain the original baseline list rather than imputing missing probabilities. An unavailable source-replacement judgment retains the original window, and an unavailable completion judgment retains the unextended window. A final ranking failure returns the selected twenty facts without source additions. Unknown or incomplete request histories require review rather than being treated as ordinary negative scores. Successful responses are reused only by complete request identity; scientific outcomes and technical failure records are kept separately. The final reported rows have no missing scores.
+
+\section{Evaluation Protocol}
+\label{app:evaluation}
+\paragraph{Official F1.}
+The local metric follows the LoCoMo evaluation implementation at commit \texttt{cbfbc1dba6bc}.\footnote{\url{https://github.com/snap-research/locomo/blob/cbfbc1dba6bc53d00625212a0f22d55ffee7c1fc/task_eval/evaluation.py}} Normalization and Porter stemming are applied as in that implementation. Category 1 averages the best overlap for each comma-separated reference part; it is not a complete-set exactness score. Category 3 uses the reference text preceding the first semicolon for F1. Categories 2--4 otherwise use the corresponding normalized token F1. The Judge receives the complete reference answer under the separate fixed grading protocol.
+
+\paragraph{Reader and Judge.}
+The Reader is instructed to preserve attribution, negation, plans, and changes over time; combine supported details; include required list items; and return only the shortest complete answer. Its full text is saved before F1 calculation and Judge evaluation. The Judge's semantic instructions are taken from the Mem0 paper-era evaluation source at commit \texttt{cdee6a4ff0c0}.\footnote{\url{https://github.com/mem0ai/mem0/blob/cdee6a4ff0c0cdf1757b21c9792fe00299bb80ed/evaluation/metrics/llm_judge.py}} The output directive is adapted to a plain affirmative or negative label. This is a format variant of that source, not a byte-identical native prompt. We do not adopt later grading rules that explicitly allow partial lists or a fixed date-error tolerance.
+
+\paragraph{Denominators and provenance.}
+In the Gemini 3.8 cohort, the full pipeline has 1,302 accepted answers, the fact-selection-only condition has 1,183, and the base condition has 1,153, each out of 1,540. Their final offline audit replays the saved requests and responses and reports no invalid artifacts. The corresponding Gemini 2.5 counts are 1,295, 1,213, and 1,164. Official F1 is averaged per question. Every reported row has a valid Reader answer and Judge label for all planned questions; no zero-imputation is used. The Gemini 2.5 final summary reports no invalid artifacts, and an independent offline comparison reproduces all 4,620 per-question official/custom F1 values and Judge outcomes. Its accepted first-pass and final QA views agree, with no QA recovery slots. This QA status does not erase the separately recorded precomputation failures and their completed recovery.
+
+\end{document}

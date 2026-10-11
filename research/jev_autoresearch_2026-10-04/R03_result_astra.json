@@ -1,0 +1,374 @@
+{
+  "schema": "r03-result-astra-v1",
+  "status": "ACCEPT_FORMAL_RESULT_R04_PENDING_DISCUSSION",
+  "formal_summary": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r03_final_summary.json",
+    "sha256": "2bedf7c3f7fd9b0507e2084191e1a40422795d727388281e5f06b2e90a950df3"
+  },
+  "audit_status": "no_invalid_artifacts",
+  "audit_errors": [],
+  "model_calls": 0,
+  "production_modified": false,
+  "fixed_denominator": 1540,
+  "metrics": {
+    "baseline_correct": 1153,
+    "cheap_correct": 1031,
+    "jev_correct": 1176,
+    "jev_gain": 47,
+    "jev_loss": 24,
+    "jev_net_pp": 1.4935064935064934,
+    "cheap_gain": 37,
+    "cheap_loss": 159,
+    "official_f1": {
+      "baseline": 0.5104400011392458,
+      "cheap": 0.45797657815380877,
+      "jev": 0.5273559992603246
+    },
+    "threshold1200_met": false,
+    "missing_each_arm": 0
+  },
+  "review_scope": {
+    "fixed_sample": {
+      "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r03_postterminal_packets_v1\\case_packets.json",
+      "sha256": "0aa64ba8dfe40e43bc2b4474c5fd2aab2f4165142fb8576c25b8051e72cacf47"
+    },
+    "fixed_sample_arms": {
+      "cheap": 11,
+      "jev": 5
+    },
+    "primary_indices": [
+      1,
+      4,
+      7,
+      10,
+      13
+    ],
+    "peer_indices": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+    ],
+    "all_loss_packet": {
+      "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r03_all_jev_losses_v1\\case_packets.json",
+      "sha256": "d0a32ca7b8208b85aab2fe7ad268dce49fcc8c8dada7312e8471934acaa21d1c"
+    },
+    "primary_loss_indices": [
+      1,
+      4,
+      7,
+      10,
+      13,
+      16,
+      19,
+      22
+    ],
+    "additional_peer_loss": [
+      "c9_q60",
+      "c8_q70"
+    ],
+    "read_materials": "All union fact texts/dates/membership/positions and cited original turns for listed cases; additionally complete c1session18,c5session12/24/28,c8session21. Not exhaustive fullbank semantic adjudication, not human gold."
+  },
+  "fixed_cases": [
+    {
+      "qid": "c8_q72",
+      "direction": "loss",
+      "finding": "删December actualhike c1fade64、留May hiatus，时间事件证据变弱"
+    },
+    {
+      "qid": "c7_q75",
+      "direction": "gain",
+      "finding": "302c carddescription仍rank1；新答案仍未命名ExplodingKittens，原D27:12说忘了名称；Judge接受描述而非恢复名称"
+    },
+    {
+      "qid": "c8_q110",
+      "direction": "loss",
+      "finding": "删Evan knee b3bf128a，原D9:2明确lastFriday twistedknee"
+    },
+    {
+      "qid": "c1_q22",
+      "direction": "gain",
+      "finding": "054591c5仍rank1；D13:4截至Jun13已developed不是开发恰在Jun13"
+    },
+    {
+      "qid": "c3_q85",
+      "direction": "loss",
+      "finding": "filming-own-movie f7d4a8f3仍6→5，原D29:1明确filming；director/filmmaker角色推理与利用变化，不能称核心丢失"
+    }
+  ],
+  "jev_losses": [
+    {
+      "qid": "c5_q34",
+      "interpretation": "retained_temporal_endpoints",
+      "finding": "f2110d99 Buddy 与44a1acf3 Toby均保留，Toby 12→10。D12:1 July11新小狗、D24:2 October19 recently；支持约三月，但不是两个精确领养日。删项不是这两个端点。",
+      "source_turns": [
+        "D12:1",
+        "D24:2",
+        "D24:6"
+      ]
+    },
+    {
+      "qid": "c0_q6",
+      "interpretation": "retained_explicit_historical_plan",
+      "finding": "c4f64a03 June camping仍rank1，实际D2:7 May25 nextmonth。Q无明确历史时点而refdate已October；不得称答案被移至中间或已丢。",
+      "source_turns": [
+        "D2:7"
+      ]
+    },
+    {
+      "qid": "c8_q48",
+      "interpretation": "retained_and_added_list_evidence",
+      "finding": "保留diet/exercise d532、hike c1fa、salad a2c1、yoga62c1，并新增running aefd；新回答却只有Weight Watchers，列表利用不足与新增相关主题干扰均可解释，未确证因果。",
+      "source_turns": [
+        "D8:1",
+        "D9:1",
+        "D21:9",
+        "D22:1"
+      ]
+    },
+    {
+      "qid": "c7_q19",
+      "interpretation": "retained_multi_event_inference",
+      "finding": "77a9 Paris2010及1607 Paris2022均保留并前移至2/3。两次Paris经历→至少两次France需要地理与访问推理，不能断言完整总次数。",
+      "source_turns": [
+        "D1:8",
+        "D2:24"
+      ]
+    },
+    {
+      "qid": "c7_q124",
+      "interpretation": "retained_explicit_list",
+      "finding": "6a96 gathering information/videos/guide仍rank3，D10:20直接支持。新回答只保留找时地与October outing，不是删掉三项。",
+      "source_turns": [
+        "D10:20"
+      ]
+    },
+    {
+      "qid": "c1_q80",
+      "interpretation": "lost_event_context_bridge",
+      "finding": "删7c6930f1 networking-event，保留bc0f41c9三项plans并9→3。完整D18:6–10包含event、advice、后续plans连续问答；D18:10 your advice仍有指代语气，但局部关系桥确实比N0弱。",
+      "source_turns": [
+        "D18:6",
+        "D18:8",
+        "D18:9",
+        "D18:10"
+      ]
+    },
+    {
+      "qid": "c4_q55",
+      "interpretation": "judge_wording_and_source_date_ambiguity",
+      "finding": "B early2023(under year beforeDec) YES，新short early2023 NO，均非goldMay。948a temporal-duration仍rank1，新加入b6ae May signed-team；签新队不等首次职业生涯。不能归因于丢正确日期或替gold改源。",
+      "source_turns": [
+        "D1:3",
+        "D21:4"
+      ]
+    },
+    {
+      "qid": "c5_q47",
+      "interpretation": "retained_temporal_endpoints",
+      "finding": "Buddy recently与Scout shortly-before-Nov22仍rank1/2；原完整D24与D28领养/命名对应清晰但recently不是精确日。新Insufficient不是两个端点被删。",
+      "source_turns": [
+        "D24:2",
+        "D24:6",
+        "D28:6",
+        "D28:8"
+      ]
+    }
+  ],
+  "peer_challenges": [
+    {
+      "qid": "c5_q41",
+      "finding": "同组保留冲突breed；answer framing而非解决历史矛盾"
+    },
+    {
+      "qid": "c5_q47",
+      "finding": "两端保留，见全部loss主审"
+    },
+    {
+      "qid": "c6_q111",
+      "finding": "新增John Witcher3 848f84f0，原D19:7明确；不是只加other actor同游戏"
+    },
+    {
+      "qid": "c9_q60",
+      "finding": "guitar与necklace仍rank1/2；D16:14 custommade不明说gift，D4:26necklace gift明确"
+    },
+    {
+      "qid": "c4_q8",
+      "finding": "UnderArmour wish与unnamed endorsement均保留；goldlikely允许推断，不是新确认合同"
+    },
+    {
+      "qid": "c1_q80",
+      "finding": "删event context见全部loss主审"
+    },
+    {
+      "qid": "c8_q70",
+      "finding": "婚期与相识期均保留并更前；D5:1与完整D21 lastweek间约4–5月，新five vs旧4to5是精度/判分口径，不能叫丢日期"
+    }
+  ],
+  "cost": {
+    "jev_score_known_input_tokens": 33075027,
+    "jev_score_known_output_tokens": 2207876,
+    "jev_score_physical": 1530,
+    "jev_score_transport_usage_unknown": 1,
+    "qa_physical_usage": {
+      "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+      "available": true,
+      "physical_attempts": 4138,
+      "cache_events": 188,
+      "physical_status_counts": {
+        "http_success": 4132,
+        "transport_or_unknown": 6
+      },
+      "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+      "physical_attempts_by_model": {
+        "gemini-3.8-flash": 4138
+      },
+      "usage_unknown_attempts": 6,
+      "token_fields": {
+        "prompt": {
+          "recorded_attempts": 4132,
+          "missing_attempts": 6,
+          "recorded_token_sum": 4529166
+        },
+        "output": {
+          "recorded_attempts": 4128,
+          "missing_attempts": 10,
+          "recorded_token_sum": 26600
+        },
+        "thinking": {
+          "recorded_attempts": 2688,
+          "missing_attempts": 1450,
+          "recorded_token_sum": 488832
+        },
+        "total": {
+          "recorded_attempts": 4132,
+          "missing_attempts": 6,
+          "recorded_token_sum": 5044598
+        }
+      },
+      "missing_ledgers": [],
+      "total_cost_usd": null,
+      "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+      "missing_thinking_is_not_zero": true
+    },
+    "qa_usage_by_stage": {
+      "reader": {
+        "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+        "available": true,
+        "physical_attempts": 3057,
+        "cache_events": 22,
+        "physical_status_counts": {
+          "http_success": 3051,
+          "transport_or_unknown": 6
+        },
+        "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+        "physical_attempts_by_model": {
+          "gemini-3.8-flash": 3057
+        },
+        "usage_unknown_attempts": 6,
+        "token_fields": {
+          "prompt": {
+            "recorded_attempts": 3051,
+            "missing_attempts": 6,
+            "recorded_token_sum": 4119169
+          },
+          "output": {
+            "recorded_attempts": 3047,
+            "missing_attempts": 10,
+            "recorded_token_sum": 23387
+          },
+          "thinking": {
+            "recorded_attempts": 1958,
+            "missing_attempts": 1099,
+            "recorded_token_sum": 428832
+          },
+          "total": {
+            "recorded_attempts": 3051,
+            "missing_attempts": 6,
+            "recorded_token_sum": 4571388
+          }
+        },
+        "missing_ledgers": [],
+        "total_cost_usd": null,
+        "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+        "missing_thinking_is_not_zero": true
+      },
+      "judge": {
+        "scope": "Actual supplied ledger rows only; cache usage is excluded from physical token sums",
+        "available": true,
+        "physical_attempts": 1081,
+        "cache_events": 166,
+        "physical_status_counts": {
+          "http_success": 1081
+        },
+        "availability_semantics": "available means expected ledger files were present, not a proof of complete dispatch accounting; consult intent_inventory",
+        "physical_attempts_by_model": {
+          "gemini-3.8-flash": 1081
+        },
+        "usage_unknown_attempts": 0,
+        "token_fields": {
+          "prompt": {
+            "recorded_attempts": 1081,
+            "missing_attempts": 0,
+            "recorded_token_sum": 409997
+          },
+          "output": {
+            "recorded_attempts": 1081,
+            "missing_attempts": 0,
+            "recorded_token_sum": 3213
+          },
+          "thinking": {
+            "recorded_attempts": 730,
+            "missing_attempts": 351,
+            "recorded_token_sum": 60000
+          },
+          "total": {
+            "recorded_attempts": 1081,
+            "missing_attempts": 0,
+            "recorded_token_sum": 473210
+          }
+        },
+        "missing_ledgers": [],
+        "total_cost_usd": null,
+        "pricing_status": "No new Gemini3.8/JEV/embedding tariff is adopted; recorded usage is not a paid invoice",
+        "missing_thinking_is_not_zero": true
+      }
+    },
+    "bill_usd": null,
+    "cold_start_warning": "Historical inherited producers are not new dispatch, but cannot be counted as free cold-start inference."
+  },
+  "limits": [
+    "47 gains and24losses are paired labels, not47source-supported causal repairs.",
+    "Weak BM25 control loses122; superiority to it cannot replace +23 vsN0.",
+    "Fixed20count is not token matching; changed membership also changes length and absolute positions.",
+    "Repeatedly exposed1540/10conv exploratory cohort, no independent heldout or calibrated probability claim.",
+    "Source-scope coverage is a proxy, not semantic multi-hop recall.",
+    "Same exact-answer reuse induces correlated outcomes and avoids a repeatedJudge lottery; literal-different near-identical answers can still get differentJudge labels.",
+    "No eligible technical failure; no recovery justified.",
+    "R01/R02/R03 are same selection organization family, not two independent successful components."
+  ],
+  "literature": [
+    {
+      "url": "https://arxiv.org/html/2411.06037v3",
+      "read": "section3.1-3.2",
+      "status": "preprint",
+      "use": "Sufficiency relative to supplied context is not truth or guaranteed Reader correctness; selectiveaccuracy is not fixed1540accuracy."
+    },
+    {
+      "url": "https://trec.nist.gov/pubs/trec34/papers/WING-II.rag.pdf",
+      "read": "sections2-4",
+      "status": "TREC2025 technical report",
+      "use": "Submodular ngram/host diversity is design motivation only. Both NoLLM and primary share selected evidencebundle; Table1 does not isolate selector gain."
+    }
+  ],
+  "r04_options": {
+    "A": "Bounded same-source copy-only supplementation with shared candidatepool/explicit information-tokenbudget, not yet concrete.",
+    "B": "Frozen N0 and R03 actual Reader answer choice against common factunion; no new Reader, unchanged exactJudge outcomes, fullcoldstarttwoReaders+R03selector costs. Not independent secondcomponent.",
+    "B_oracle_ceiling_correct": 1200,
+    "B_oracle_is_offline_only": true,
+    "B_limits": "All47gains andnone24loss would be required to reach1200; bothanswerswrong cannot improve. Do not expand candidates by gold or retryReaders.",
+    "preference": "B is quickest direct test of incomplete/abstaining answers with retained evidence, but final choice awaits actual peer objections; no R04 launch signoff."
+  }
+}

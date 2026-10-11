@@ -1,0 +1,148 @@
+{
+  "schema": "r02-result-independent-astra-v1",
+  "reviewer": "Astra",
+  "created_utc": "2026-10-04T00:08:38.369333+00:00",
+  "vote": "ACCEPT_R02_RESULT",
+  "formal_summary": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r02_final_summary.json",
+    "sha256": "754b358eaed96bd1cedae8540c9ad174eaa7b33a546440b8f7513a41149ad16e"
+  },
+  "audit_status": "no_invalid_artifacts",
+  "metrics_independently_recomputed": {
+    "baseline": {
+      "n": 1540,
+      "correct": 1153.0,
+      "gains": 0,
+      "losses": 0,
+      "answer_changes": 0,
+      "f1": 0.5104400011392458
+    },
+    "cheap": {
+      "n": 1540,
+      "correct": 1150.0,
+      "gains": 23,
+      "losses": 26,
+      "answer_changes": 554,
+      "f1": 0.5108107534179603
+    },
+    "jev": {
+      "n": 1540,
+      "correct": 1155.0,
+      "gains": 26,
+      "losses": 24,
+      "answer_changes": 560,
+      "f1": 0.5105207999472952
+    }
+  },
+  "missing": 0,
+  "technical_recovery_required": false,
+  "strict_gt3pp_minimum": 1200,
+  "successful_components": 0,
+  "case_packets": {
+    "path": "D:\\jev mem\\research\\jev_autoresearch_2026-10-04\\r02_postterminal_packets_v1\\case_packets.json",
+    "sha256": "369dd3c4a29921acb59e4a1dd7327701d822f13f2db202eb5744749d8123e734"
+  },
+  "primary_cases": [
+    {
+      "index": 1,
+      "qid": "c9_q60",
+      "reading": "guitar1→2; necklace2→1; answer drops guitar. D16:14 had this custom made by artist friend does not explicitly establish gift. Not unambiguous support lost; exact gift relation remains uncertain even in original session16.",
+      "source": [
+        "D4:24",
+        "D4:26",
+        "D16:13–20"
+      ]
+    },
+    {
+      "index": 4,
+      "qid": "c3_q87",
+      "reading": "Tampa fact10→5; Insufficient→Florida. Requires geographical world knowledge; source D29:6 says Tampa, not state. Consistent with changed utilization, not proof of pure explicit support or position mechanism.",
+      "source": [
+        "D29:6"
+      ]
+    },
+    {
+      "index": 7,
+      "qid": "c1_q63",
+      "reading": "Internship fact1→4; part-time internship→Insufficient. Q says May23; actual session12 May27 says just accepted. Cannot establish Writer incorrect date or repair to May23 from this source.",
+      "source": [
+        "D12:1–5"
+      ]
+    },
+    {
+      "index": 10,
+      "qid": "c1_q22",
+      "reading": "Core presentation fact1→1; insufficient→By June13. Source at June13 says have developed, establishing upper time bound, not precise development date. Gain does not require target promotion.",
+      "source": [
+        "D13:4–5"
+      ]
+    },
+    {
+      "index": 13,
+      "qid": "c9_q39",
+      "reading": "Subaru remains1; classic muscle car2→3; Dodge Charger→Insufficient. No gold source anchors in packet. Answer depends on preference inference and vehicle class knowledge; do not label exact explicit evidence lost.",
+      "source": []
+    }
+  ],
+  "peer_cases_actual_read": [
+    {
+      "index": 0,
+      "qid": "c4_q38",
+      "counterpoint": "UK travel aggregation combines London and UK; selected facts do not alone prove exhaustive frequency. Multiple actual visits support relative answer, not universal count guarantee."
+    },
+    {
+      "index": 3,
+      "qid": "c1_q10",
+      "counterpoint": "Core collaboration stays1; source Feb8 says just teamed up, not exacteventdate; cannot attribute abstention to moving relevant target down."
+    },
+    {
+      "index": 6,
+      "qid": "c1_q49",
+      "counterpoint": "Cozy target moves12→14 yet answer improves; disproves simple target-front narrative for this pair."
+    },
+    {
+      "index": 9,
+      "qid": "c7_q19",
+      "counterpoint": "Paris2010 and Paris2022 support at least2 visits with geography inference, not exhaustive total; dates/entity aggregation still needed."
+    },
+    {
+      "index": 12,
+      "qid": "c8_q20",
+      "counterpoint": "Recipe facts rise; healthycookbook is a recommendation inference, not quotedgift fact. Score utility relative to query can coexist with nonextractive answer."
+    },
+    {
+      "index": 15,
+      "qid": "c6_q88",
+      "counterpoint": "Core stays1. Full May8session D10:2 says yesterday, supporting May7storedfact; Q asksMay8. Do not change fact to fit question."
+    }
+  ],
+  "source_contexts_read": [
+    "conv1 session5/session12 and relevant session13 turns",
+    "conv6 fullsession10",
+    "conv9 fullsession16",
+    "all five main packet source anchors/neighbors; all six peer packet source anchors"
+  ],
+  "inference_limits": [
+    "Same20 cannot improve evidence availability/recall. This estimates this ordering pipeline outcome on exposedcohort, not attention causalmechanism.",
+    "Single stochastic Reader realization and historicalcached baseline cannot distinguish inputorder effects from sampling/modeltime noise; exactJudge reuse removes sameanswer rejudging noise only.",
+    "Newanswer can change Judge strictness; Judgecorrect is modelmetric not humantruth.",
+    "No lexical/predicate calibration or second independent successful component established.",
+    "Fixed16pair sampling is not population mechanism prevalence."
+  ],
+  "next_direction_preference": "R03 frozenR01 common80 pointwise top20 membership; output frozenpool order; cheap samepool. Await exactprotocol threevotes; no API authorization by this review alone.",
+  "rejected_immediate_alternative": "Source-access/localrepair adds text, supportmapping, and budget changes. Current samples mostly ambiguous eventdate/relation or alreadyretained support; no sufficiently broad precise repair opportunity shown. Retain source work as later independent hypothesis.",
+  "sources_actually_read": [
+    {
+      "url": "https://aclanthology.org/2024.tacl-1.9.pdf",
+      "sections": "2.1,5 and opening discussion",
+      "supports": "Controlledposition motivation; retrievalrecall need not translate to Readerutility. Singleanswerdocument design differs from multi-event memories."
+    },
+    {
+      "url": "https://aclanthology.org/2024.findings-acl.890.pdf",
+      "sections": "3.2,4.1,Limitations",
+      "supports": "Attentioncalibration is distinct from blackbox ranking; bias may be useful and causes not definitively established."
+    }
+  ],
+  "ai_assisted_semantic_review_not_human_gold": true,
+  "new_model_api_calls": 0
+}

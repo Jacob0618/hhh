@@ -1,0 +1,80 @@
+{
+  "schema": "module-stack-research-protocol-v1",
+  "arms": [
+    "baseline",
+    "pool_old_bm25",
+    "pool_old_jev",
+    "pool_new_bm25",
+    "pool_new_jev",
+    "stack_source",
+    "stack_support",
+    "stack_closure",
+    "stack_support_closure"
+  ],
+  "questions_per_arm": 1540,
+  "source_core": {
+    "schema": "source-support-stack-v1-protocol",
+    "policy": {
+      "version": "source-support-stack-v1",
+      "support_center_cap": 8,
+      "questions_per_request": 4,
+      "support_threshold_strict_gt": 0.5,
+      "closure_threshold_strict_gt": 0.5,
+      "closure_extra_left": 1,
+      "closure_extra_right": 1,
+      "closure_turn_cap": 5,
+      "candidate_cap": 4,
+      "attachment_cap": 2,
+      "attachment_utf8_byte_cap": 4096,
+      "signature_utf8_byte_cap": 131072,
+      "support_scope": "single_fact_current_input_scope",
+      "query_corpus": "full_original20_current_scope_union",
+      "support_tie": "original_center_position",
+      "closure_tie": "fewest_new_turns_then_variant_order",
+      "closure_collision": "earliest_original_candidate_merge_aliases_no_refill",
+      "support_label": "partial_support_locator",
+      "rank_failure": "unchanged_original20",
+      "calibration": "uncalibrated_operational_majority_threshold_not_truth_probability"
+    },
+    "support_predicate": "Does this quoted source window directly support at least one substantive atomic claim in the displayed original memory, with the same subject, relation and material conditions? Preserve speaker attribution, negation, quantities, planned versus completed status and temporal wording; do not invent a bridge between events. A related topic or a question without its answer is insufficient. Judge only this memory and source window. The source observation date is not necessarily the event date, and machine captions are annotations rather than speaker assertions. This judgment locates possible partial support; it does not certify the whole memory.",
+    "closure_predicate": "Compared with the displayed base source window, do the added complete adjacent turns supply an explicit answer, referent, speaker attribution, condition or temporal relationship needed to interpret evidence requested by the question and missing or unresolved in the base window? Added text must close a concrete evidence relation, not merely mention a related topic. Judge only the displayed original memory, base window and proposed extension. Preserve negation and planned versus completed status; do not invent event bridges. Source observation date is not event date and machine captions are annotations. A larger window alone is not a benefit.",
+    "local_predicate": "Does this quoted source context provide an explicit detail, relation, condition, speaker attribution, or temporal wording requested by the question that is absent or less explicit in this one original memory? A partial requested list item may count. Judge only the displayed source and this memory; do not assume completeness of the other19 memories or full conversation. Do not invent a bridge or treat source observation date or machine caption as a speaker assertion/event date. Related topic alone is insufficient."
+  },
+  "main_ladder": [
+    "baseline",
+    "pool_old_jev",
+    "pool_new_jev",
+    "stack_source"
+  ],
+  "upstream_factorial": {
+    "old_pool": [
+      "pool_old_bm25",
+      "pool_old_jev"
+    ],
+    "new_pool": [
+      "pool_new_bm25",
+      "pool_new_jev"
+    ]
+  },
+  "source_factorial": {
+    "S0C0": "stack_source",
+    "S1C0": "stack_support",
+    "S0C1": "stack_closure",
+    "S1C1": "stack_support_closure"
+  },
+  "upstream_record_reuse": "frozen archived selected20 only; four upstream arms freshly evaluated; no historical raw/API cache fabricated",
+  "baseline_reuse": "existing exact full-request original raw proof only",
+  "source_base": "pool_new_jev same ordered original20 in all four source arms",
+  "gold_visible_to_selection": false,
+  "qa_policy": "frozen Gemini3.8 Reader/Judge low thinking, no temperature,8192 pure text; no prompt/word-limit changes",
+  "uniform_recovery": "one known technical failure recovery phase per finished phase; original provider retries2 in each phase; no valid NO retry; unknown producer blocks dependent work",
+  "scope": "current fact input scope in same original conversation/session; full turns, no gold; S partial support is not whole fact certification",
+  "interpretation": [
+    "pool_new_bm25 is not N0+discovery-only; discovery is a pool intervention, not a defined native selector",
+    "R06 overlaps R03; R04 is post-Reader and is not forced into an upstream chain",
+    "S/C are mechanisms inside source supplementation; do not claim independent high-level contributions without matched contrasts",
+    "20 facts is not equal source bytes/tokens; report actual output input token and selected source size",
+    "single generation; exact request caches shared; do not infer independent stability",
+    "no new writer,bank,index,embedding; preserve original immutable state"
+  ]
+}

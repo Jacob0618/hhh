@@ -1,0 +1,242 @@
+{
+  "schema": "module-stack-logical-reader-token-size-v1",
+  "source_sha256": "ee1039384934b84b6da183dbe4c13904ca9355fdcdf3d2b633c8813b80123686",
+  "model_calls": 0,
+  "by_arm": {
+    "baseline": {
+      "promptTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2075806,
+        "mean_over_recorded": 1347.925974025974
+      },
+      "candidatesTokenCount": {
+        "recorded": 1538,
+        "missing": 2,
+        "recorded_sum": 12160,
+        "mean_over_recorded": 7.906371911573472
+      },
+      "thoughtsTokenCount": {
+        "recorded": 996,
+        "missing": 544,
+        "recorded_sum": 225850,
+        "mean_over_recorded": 226.7570281124498
+      },
+      "totalTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2313816,
+        "mean_over_recorded": 1502.4779220779221
+      }
+    },
+    "pool_old_bm25": {
+      "promptTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2077012,
+        "mean_over_recorded": 1348.709090909091
+      },
+      "candidatesTokenCount": {
+        "recorded": 1538,
+        "missing": 2,
+        "recorded_sum": 11124,
+        "mean_over_recorded": 7.232769830949285
+      },
+      "thoughtsTokenCount": {
+        "recorded": 984,
+        "missing": 556,
+        "recorded_sum": 189290,
+        "mean_over_recorded": 192.3678861788618
+      },
+      "totalTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2277426,
+        "mean_over_recorded": 1478.848051948052
+      }
+    },
+    "pool_old_jev": {
+      "promptTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2081123,
+        "mean_over_recorded": 1351.3785714285714
+      },
+      "candidatesTokenCount": {
+        "recorded": 1538,
+        "missing": 2,
+        "recorded_sum": 13075,
+        "mean_over_recorded": 8.501300390117034
+      },
+      "thoughtsTokenCount": {
+        "recorded": 978,
+        "missing": 562,
+        "recorded_sum": 220328,
+        "mean_over_recorded": 225.28425357873212
+      },
+      "totalTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2314526,
+        "mean_over_recorded": 1502.938961038961
+      }
+    },
+    "pool_new_bm25": {
+      "promptTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2078551,
+        "mean_over_recorded": 1349.7084415584416
+      },
+      "candidatesTokenCount": {
+        "recorded": 1533,
+        "missing": 7,
+        "recorded_sum": 10909,
+        "mean_over_recorded": 7.116112198303979
+      },
+      "thoughtsTokenCount": {
+        "recorded": 983,
+        "missing": 557,
+        "recorded_sum": 214003,
+        "mean_over_recorded": 217.70396744659206
+      },
+      "totalTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2303463,
+        "mean_over_recorded": 1495.7551948051948
+      }
+    },
+    "pool_new_jev": {
+      "promptTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2079942,
+        "mean_over_recorded": 1350.6116883116883
+      },
+      "candidatesTokenCount": {
+        "recorded": 1534,
+        "missing": 6,
+        "recorded_sum": 13165,
+        "mean_over_recorded": 8.582138200782268
+      },
+      "thoughtsTokenCount": {
+        "recorded": 966,
+        "missing": 574,
+        "recorded_sum": 221138,
+        "mean_over_recorded": 228.92132505175982
+      },
+      "totalTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2314245,
+        "mean_over_recorded": 1502.7564935064936
+      }
+    },
+    "stack_source": {
+      "promptTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2843757,
+        "mean_over_recorded": 1846.5954545454545
+      },
+      "candidatesTokenCount": {
+        "recorded": 1537,
+        "missing": 3,
+        "recorded_sum": 14056,
+        "mean_over_recorded": 9.14508783344177
+      },
+      "thoughtsTokenCount": {
+        "recorded": 709,
+        "missing": 831,
+        "recorded_sum": 186856,
+        "mean_over_recorded": 263.54866008462625
+      },
+      "totalTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 3044669,
+        "mean_over_recorded": 1977.0577922077923
+      }
+    },
+    "stack_support": {
+      "promptTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2856049,
+        "mean_over_recorded": 1854.5772727272727
+      },
+      "candidatesTokenCount": {
+        "recorded": 1537,
+        "missing": 3,
+        "recorded_sum": 13819,
+        "mean_over_recorded": 8.99089134677944
+      },
+      "thoughtsTokenCount": {
+        "recorded": 725,
+        "missing": 815,
+        "recorded_sum": 169347,
+        "mean_over_recorded": 233.58206896551724
+      },
+      "totalTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 3039215,
+        "mean_over_recorded": 1973.5162337662337
+      }
+    },
+    "stack_closure": {
+      "promptTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2872335,
+        "mean_over_recorded": 1865.1525974025974
+      },
+      "candidatesTokenCount": {
+        "recorded": 1537,
+        "missing": 3,
+        "recorded_sum": 14130,
+        "mean_over_recorded": 9.193233571893298
+      },
+      "thoughtsTokenCount": {
+        "recorded": 688,
+        "missing": 852,
+        "recorded_sum": 178915,
+        "mean_over_recorded": 260.05087209302326
+      },
+      "totalTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 3065380,
+        "mean_over_recorded": 1990.5064935064936
+      }
+    },
+    "stack_support_closure": {
+      "promptTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 2885910,
+        "mean_over_recorded": 1873.9675324675325
+      },
+      "candidatesTokenCount": {
+        "recorded": 1536,
+        "missing": 4,
+        "recorded_sum": 13978,
+        "mean_over_recorded": 9.100260416666666
+      },
+      "thoughtsTokenCount": {
+        "recorded": 699,
+        "missing": 841,
+        "recorded_sum": 164235,
+        "mean_over_recorded": 234.95708154506437
+      },
+      "totalTokenCount": {
+        "recorded": 1540,
+        "missing": 0,
+        "recorded_sum": 3064123,
+        "mean_over_recorded": 1989.6902597402598
+      }
+    }
+  },
+  "semantics": "Logical Reader evidence/request token sizes with cache/inherited usage repeated per job; not fresh paid cost or independent samples. Missing fields are not zero. Judge excluded."
+}
